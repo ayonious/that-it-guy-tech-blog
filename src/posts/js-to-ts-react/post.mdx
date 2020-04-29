@@ -1,0 +1,61 @@
+---
+title: Migrating from JS to TS - React
+slug: js-to-ts-react
+image: ./images/brown-and-white-swallowtail-butterfly-under-white-green-and-63643.jpg
+date: "2020-03-23"
+published: yes
+tags: [js, nodejs]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+
+### Step1:
+
+Add a tsconfig.json file
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```json
+{
+  "include": ["./src/*", "test"],
+  "compilerOptions": {
+    "lib": ["dom", "es2015"],
+    "jsx": "react",
+    "target": "es5",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  }
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+### Step2:
+
+Change all .js file extension to .tsx or ts depending on react related files or simple other js files
+
+### Step3:
+
+Change the imports/Exports
+
+### Step4:
+
+Add Interface for all Props and States
+
+### Step5:
+
+In case you have some module.css files its better to use Styles components

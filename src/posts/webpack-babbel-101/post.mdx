@@ -1,0 +1,121 @@
+---
+title: Hello world on Webpack and babel
+slug: webpack-babel-101
+image: ./images/brown-gift-box-with-black-ribbon-3927233.jpg
+date: "2020-04-19"
+published: yes
+tags: [js, nodejs, react, babel, webpack]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+import { Link } from "gatsby";
+
+If you are new to react you might be starting a new react project using create-react-app. But then you never really get to configure this babel and Webpack. So here Im describing the bare min of babel and Webpack.
+
+# Babel
+
+Official definition is: Babel is a JS compiler. This is something that converts our modern JS to plain ES5 that can run in any browser.
+
+My definition is: We use JSX in react and lots of cool feature of ECMA script. babel ocnverts them in ES5
+
+# Babel code examples
+
+in the file of .babelrc I use this. This actually tells
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ]
+}
+
+// if no targets are specified, @babel/preset-env will transform all ECMAScript 2015+ code by default.
+// @babel/preset-react is for transforming the react code
+// typescript is understandable what it does
+// some others are
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+You can configure babel to tell which browser to be this compatible to. or als omention range of versions of browsers.
+
+Here is a pure html code that tells browser that to understand this code part you need babel compiler
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```html
+<script type="text/babel">
+  function Printtr(props) {
+    return <h1>{props.input}</h1>;
+  }
+  var App = <Printtr input="This is app" />;
+  ReactDOM.render(App, document.getElementById("root"));
+</script>
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Webpack
+
+Imagine you write a project in React. Now browsers dont understand react. This react project needs to be converted to pure js and html bundle. And also all those styles-components / scss that you used needs also to be converted to something that your browser understands. Webpack is the tool that will convert this react project into browser understandable bundle.
+
+So after babel has turned the code into ES5 basic js code now its time for Webpack to put all these into the bundle and make it production ready.
+
+# Webpack Usage from Examples
+
+You will see words like `babel-loader`, `html-loader`. These things actually takes those code and puts them into the bundle.
+
+Here are some config part of webpack.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```json
+{
+  "rules": [
+    {
+      "test": /\.(js|jsx)$/, //taking all js files created by babel and put it in production bundle
+      "exclude": /node_modules/,
+      "use": {
+        "loader": "babel-loader"
+      }
+    },
+    {
+      "test": /\.html$/, //taking also the html file (index.html)
+      "use": [
+        {
+          "loader": "html-loader"
+        }
+      ]
+    }
+  ]
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+If you are trying to learn webpack and babel hello world here is a project that I use as template for react projects <a href="https://github.com/ayonious/template-react">Template-react-project</a>
+
+Similar template project for Typescript <a href="https://github.com/ayonious/template-react-ts">Template-react-ts-project</a>
+
+# Source:
+
+1. This one is the best with all explanation https://www.valentinog.com/blog/babel/
+2. https://www.youtube.com/watch?v=TzdEpgONurw
+3. This one is a little outdated but still good to read and learn: https://medium.com/@dinyangetoh/getting-started-with-react-webpack-and-bootstrap-27e95ff634ef

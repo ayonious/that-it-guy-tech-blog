@@ -1,0 +1,54 @@
+---
+title: Node Eventloop
+slug: nodejs-eventloop
+image: ./images/brown-rope-tangled-and-formed-into-heart-shape-on-brown-113737.jpg
+date: "2020-04-11"
+published: yes
+tags: [js, nodejs]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+
+Lets talk about how practically asynchronous behaviour of js in Practical looks like.
+
+# A Question
+
+What do you think is the output here?
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+let n = 1;
+
+async function addOne () {
+  num + = await 1;
+  console.log(num);
+}
+
+addOne();
+
+num += 10;
+console.log(num);setTimeout(function(){ alert("Hello"); }, 3000);
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+Its like this:
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+10
+1
+```
+
+</Highlight>
+
+</CodeDivWrapper>

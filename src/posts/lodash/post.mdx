@@ -1,0 +1,123 @@
+---
+title: Reasons to Love Lodash
+slug: lodash
+image: ./images/white-wooden-blocks-on-blue-surface-3716540.jpg
+date: "2020-04-14"
+published: yes
+tags: [js, nodejs]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+
+While Writing about lodash I realized there is another library that is nicely used for datastructures.
+
+# Array Operation
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+_.uniq([1, 2, 3, 3]); // [1,2,3]
+_.difference([1, 2, 3], [3, 4]); // [1,2]
+_.remove([1, 2, 3], (val) => val % 2 === 0); // [1,3]
+_.reverse([1, 2, 3]); // [3, 2, 1]
+_.join(["a", "b", "c"], "_"); // a_b_c
+_.last([1, 2, 3]); // 3
+_.lastIndexOf([1, 2, 3, 3], 3); // 3
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# String Operation
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+_.camelCase("Foo ball"); // 'fooBall'
+_.camelCase("Foo---ball"); // 'fooBall'
+_.capitalize("MINa"); // => 'Mina'
+_.endsWith("abcd", "d"); //true
+_.endsWith("abcd", "cd"); //true
+_.trim("kkabckkk ", "k "); // 'abc'
+_.trimEnd("kkabckkk ", "k "); // 'kkabc'
+_.trimStart("kkabckkk ", "k "); // 'abckkk'
+_.split("A B C", " "); // ['A', 'B']
+_.toLower("--Fac-Boy--"); // '--fac-boy--'
+_.toUpper("--Fac-Boy--"); // '--FAC-BOY--'
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Deep clone
+
+get a clone of obj. with a different address in memory. no bullshit.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const student = {
+  name: "sd",
+  result: {
+    math: "A",
+    language: "B",
+    history: "C",
+  },
+};
+const copy = _.cloneDeep(student);
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Times loop
+
+pass a function to be called multiple times and fill array with returns
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const randomNumbers = _.times(3, Math.random());
+// [.32, .444, .123]
+
+_.times(3, () => {
+  console.log("printing");
+});
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Random Numbers
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+_.random(10); // [0,10] int numbers
+_.random(2, 10); // [2,10] int numbers
+_.random(2, 10, true); // [2,10] floating numbers
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+Other good Sources:
+
+1. https://colintoh.com/blog/lodash-10-javascript-utility-functions-stop-rewriting
+2. https://areknawo.com/lodash-and-usefulness-of-utility-libraries/

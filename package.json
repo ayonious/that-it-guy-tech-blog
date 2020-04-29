@@ -1,0 +1,43 @@
+{
+  "name": "personal-tech-blog",
+  "private": true,
+  "description": "A simple tech blog created with Gatsby",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.9.12",
+    "@mdx-js/mdx": "^1.6.0",
+    "@mdx-js/react": "^1.6.0",
+    "gatsby": "^2.21.1",
+    "gatsby-image": "^2.4.0",
+    "gatsby-plugin-mdx": "^1.2.1",
+    "gatsby-plugin-sharp": "^2.6.0",
+    "gatsby-plugin-styled-components": "^3.3.0",
+    "gatsby-plugin-typescript": "^2.4.0",
+    "gatsby-remark-images": "^3.3.0",
+    "gatsby-source-filesystem": "^2.3.0",
+    "gatsby-transformer-sharp": "^2.5.0",
+    "jquery": "^3.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-highlight.js": "^1.0.7",
+    "react-icons": "^3.10.0",
+    "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.3.36",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "@types/react-fontawesome": "^1.6.4",
+    "@types/styled-components": "^5.1.0",
+    "prettier": "^2.0.5"
+  }
+}

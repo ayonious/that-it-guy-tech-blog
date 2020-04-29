@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&family=Noto+Sans&display=swap");
+
+* {
+  margin: 0px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin-top: 0;
+  margin-left: -2rem;
+  margin-bottom: 2rem;
+}
+
+.header-anchor {
+  opacity: 0;
+  color: darkgray;
+}
+
+h1:hover > .header-anchor {
+  opacity: 1;
+}
+
+a {
+  color: darksalmon;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+}
+
+:root {
+  --maxWidth: 750px;
+  --maxWidthHeader: 950px;
+  --width: 85vw;
+}

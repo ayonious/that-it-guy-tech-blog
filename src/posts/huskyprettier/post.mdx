@@ -1,0 +1,134 @@
+---
+title: Husky and Prettier
+slug: husky-prettier
+image: ./images/assorted-blur-close-up-container-1115128.jpg
+date: "2020-03-16"
+published: yes
+tags: [js, nodejs]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+
+The formatting is something everyone should follow same rules using some basic tools. In js world most popular formatter is prettier. Husky on top of it makes it just hussle less
+
+# Prettier
+
+## Installation
+
+First install the thingy as dev dependency
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+npm install --save-dev prettier
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+Now add this config file `.prettierrc`
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```json
+{
+  "endOfLine": "lf",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5"
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+Now add this config file `.prettierignore` to ignore some files being formatted
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```text
+.cache
+package.json
+package-lock.json
+public
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+run prettier on your Project
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+prettier --write \"\*_/_.{js,jsx,json,md}\"
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+add this as script in your package.json file to make your life easier
+
+![Husky Pic](./images/clouds-girl-mountain-dog-36372.jpg)
+
+# Husky
+
+Only having prettier means you have to format yourself. But maybe you want this formatting to be done automatically every time you push some code to git. Thats where husky comes in
+
+## Installation
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+npm install pretty-quick husky --save-dev
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## Config file
+
+create file `.huskyrc.json` in root of the folder
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```json
+{
+  "hooks": {
+    "pre-push": "pretty-quick --staged"
+  }
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+This will ensure every time you push your code to github your code will be formatted with husky.
+After each push things will look like this
+
+![After each push things will look like this](./images/husky-console.png)
+
+## Source: 
+
+1. https://prettier.io/docs/en/precommit.html#option-2-pretty-quickhttpsgithubcomazzpretty-quick
+2. https://www.npmjs.com/package/husky

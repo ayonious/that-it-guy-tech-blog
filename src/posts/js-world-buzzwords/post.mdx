@@ -1,0 +1,107 @@
+---
+title: JS programming buzzwords
+slug: js-buzzwords
+image: ./images/yellow-petaled-flower-with-black-yellow-bee-during-daytime-63641.jpg
+date: "2020-04-02"
+published: yes
+tags: [js, nodejs]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+import { Link } from "gatsby";
+
+I have been working with JS related technology for a while now and every now and then I just confuse whether nodejs is a language or not.
+
+I use the term _nodejs_ in the same way as _js_. For example I would say
+_Do you know JS?_ and _Do you know nodejs?_ as very similar contexts assuming nodejs to be an advanced js or something like that.
+
+So here Im trying to shortlist all my confusing works so that every now and then I can just remind myself :D
+
+## JS
+
+- Its a language
+- All browsers have JavaScript engines that run the JavaScript of web pages
+
+## Nodejs
+
+- A runtime environment of JS. Or a compiler or JS
+- Written in (js + c) this compiler can compile JS programs
+- Nodejs = (V8 + some libraries)
+- is the JS running Engine used by Chrome (V8) additing some other libraries like (io/networking) so that you can do backend stuffs
+
+### So what does it mean when I say I wrote a project in noejs?
+
+Its simply that you created a js project and compiled it using node. For example when do bootstrap a project using npm init its actually running all the compilation/testing using node.
+
+## npm (node package manager)
+
+- managing package of your js project and also by default runs your program with node
+
+## Ecma script
+
+- Its a standard/ set of rules
+- Js is an implementation of Ecma script
+
+## Typescript
+
+- programming language developed (by Microsoft)
+- it compiles your project into a js project that you can run with node.
+
+# JSX
+
+This is neither a HTML nor a string. This is called JSX.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```jsx
+const element = <h1>Hello, world!</h1>;
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+- JavaScript XML, an XML-like syntax extension of JavaScript
+- ITS NOT A LANGUAGE. (According to nerds on internet)
+- Its a suger coating on top of Js. This code will be transpiled to js by babel
+- After compilation jsx turns into normal
+- This is created by facebook.
+- You need babel language definition for the code written in jsx + js to be understandable
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```jsx
+<script type="text/babel">
+  function Printtr(props) {
+    return <h1>{props.input}</h1>
+  }
+  var App = <Printtr input="This is app" />;
+  ReactDOM.render(App, document.getElementById('root'));
+</script>
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+By telling "text/babel" you are saying that babel should transpile this code into pure javascript code.
+
+# Babel
+
+- A language definition.
+- This is used to understand code of both ES6 and JSX
+- This tranpilies jsx to js
+
+More about babel and webpack you can <Link to={"/blogs/webpack-babel-101"}>Find it here</Link>.
+
+# Webpack
+
+- Converts your react project into ES5 understandable (all browser understandable) code
+- Makes a production build of your project.
+
+More about babel and webpack you can <Link to={"/blogs/webpack-babel-101"}>Find it here</Link>.

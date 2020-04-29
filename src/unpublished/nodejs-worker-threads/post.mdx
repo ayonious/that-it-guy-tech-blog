@@ -1,0 +1,41 @@
+---
+title: Features of Nodejs 9
+slug: nodejs-9-features
+image: ./images/white-flush-door-2820153.jpg
+date: "2020-04-11"
+published: yes
+tags: [js, nodejs]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+
+Since Im exploring newest version features of all languages I thoguht why not also look at node and see what the heck are they doing in new versions.
+
+## Private class fields
+
+```js
+Class Student {
+  #name = 'No Name';
+
+  get name() {
+  return this.#name;
+  }
+
+  set name(newName) {
+  this.#name = newName;
+  }
+}
+
+const student = new Student();
+console.log(student.name()); // No Name
+console.log(student.#name); // Error
+```
+
+# Heap dump
+
+Now node generates a heap dump that can be used to tackle memory issues
+
+## Source:
+
+1. https://levelup.gitconnected.com/whats-new-in-node-12-e00111ffb83f

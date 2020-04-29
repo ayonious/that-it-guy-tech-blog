@@ -1,0 +1,125 @@
+---
+title: Yarn/Npm Link
+slug: npm-yarn-link
+image: ./images/black-coated-cord-3531829.jpg
+date: "2020-04-12"
+published: yes
+tags: [js, nodejs]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+import { Link } from "gatsby";
+
+First thing you shold do before publishing any package or component is testing it locally. Link is what you need then.
+
+# NPM Link
+
+In the package repo
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+npm link
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+In your testing repo
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+npm link <name-of-the-package>
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+Another good example of npm link for command line tools can be found <Link to="/blogs/node-cli">Here</Link>.
+
+# Yarn Link
+
+For Yarn You also might need to use this yalc thing.
+
+First publish:
+From the library:
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+yarn build
+yalc publish
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+From the testing repository:
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+yalc add "my-package“
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+With each update in the library:
+From the library:
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+yarn build
+yalc publish
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+From the testing repository:
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+yalc update "my-package“
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+Remove this connection from test repo:
+From the testing repository:
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+yalc remove "my-package“
+```
+
+</Highlight>
+
+</CodeDivWrapper>

@@ -1,0 +1,300 @@
+---
+title: ECMA Script Historical features
+slug: ecma
+image: ./images/person-holding-brown-card-311716.jpg
+date: "2020-04-08"
+published: yes
+tags: [js, nodejs]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+
+After writing about buzzwords I checked about ecma script and found out a lot of things that were mind blowing during this version change. Here are the most mind blowing changes that I could sum up from internet
+
+# ECMAscript 2015 (ES6)
+
+## Multi lines Strings
+
+Rememer this nightmare?
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+var someText =
+  "As I tell you, \n" +
+  "some joke, \t\n" +
+  "about me, \t\n" +
+  "ont laugh please, \t\n";
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+Just us backticks
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+var someText = `As I tell you, 
+  some joke,
+  about me,
+  ont laugh please`;
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## Arrow functions
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const fn = () => {
+  console.log(10);
+};
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## Object destructure
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const { name, value } = obj;
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## Default value of function param
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+function (intput = '0', values=[]) {
+  return input;
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## New Array Functions: Functional Programming?
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const a = [1,2,3];
+const b = a.map(elem => elem*2).filter(v1 => v1 > 6);
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## Object literals
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const name = "ayon";
+const age = "22";
+const height = "180cm";
+const person = {
+  name,
+  age,
+  height,
+};
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## Class declarations
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+class Person {
+  constructo(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+class CoolPerson extens Person {
+  constructo(superpower) {
+    super("Nl", 23);
+    this.superPower = superpower;
+  }
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## String literals
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const name = "Human";
+const a = `My name is ${name}`;
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## String literals
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const name = "Human";
+const a = `My name is ${name}`;
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# ECMAscript 2016 (ES7) and ECMAscript 2017 (ES8)
+
+## Exponential operator
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const age = 2 ** 4; // 16
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## Object.includes
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const age = [1, 2, 3];
+if (age.includes(1)) {
+  console.log(true);
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## Object.values Object.entries Object.keys
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const person = {
+  name: 'asdf'
+  age: 12,
+}
+Object.values(person) // ['asdf',12]
+Object.keys(person) // ['name', 'age']
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## async await
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+async function someFunction() {
+  await someAsyncFunction();
+}
+await someFunction();
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# ECMAscript 2018
+
+## Spread operator
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```
+const person = {
+  name: 'asdf',
+  age: 12,
+}
+const personAgain = {
+  school: 'some good one'
+  ...person
+} // {school: 'some good one', name: 'asdf', age: 12, }
+```
+
+```
+const person = {
+  name: 'asdf',
+  age: 12,
+  school: 'no school'
+}
+const {name, ...others} = person;
+// others = { age: 12, school: 'no school' }
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+There are few other things I would just mention but wont describe more in details as I dont use them much
+
+## Regex
+
+## Prmise.prototype.finally()
+
+## Asynchronous Iteration

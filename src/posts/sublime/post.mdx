@@ -1,0 +1,98 @@
+---
+title: Sublime Setup
+slug: sublime
+image: ./images/closeup-photography-of-sliced-calamondin-1047261.jpg
+date: "2020-03-15"
+published: yes
+tags: [js, nodejs]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+
+An amazing light weight Editor. Must to have. I se it for all kind of string related operations on any set of data. Lets checkout how we can set it up like a pro
+
+## Installation
+
+Just google sublime text. Download the installer for mac click on it. its easy and simple
+
+## Open a directory in sublime from command line
+
+This is the first feature I setup after installing Sublime text. Lets test this command and see if the magic can work. First lets goto some folder which you want to open in sublime.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl .
+```
+
+</Highlight>
+  
+</CodeDivWrapper>
+
+If this command works that means you can copy this in system path and run it as a command. Lets do this
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+cp /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+Now test it:
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+subl .
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## Install package control in sublime
+
+All the features that Im going to describe probably most of them will need this as dependency.
+You need to install Package Control that will help you install plugins in sublime.
+Here is the where you will find instructions to install it https://packagecontrol.io/installation
+
+## Install a plugin using Package Control
+
+Step1: cmd+shift+p
+
+Step2: This will open a list in Sublime. Select this one
+`Package Control: install package`
+
+Step3: Now you will get list of all options of plugins. Install the ones that you want.
+
+## Useful shortcuts
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+ctrl+P              to find a file
+ctrl+f              find string in a file
+cmd+shift+f         find string /regex in entire project
+cmd + shift + l     if you select multiple lines this will allow
+                    to edit all lines at the same time.
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+## Sources
+
+1. https://packagecontrol.io/installation

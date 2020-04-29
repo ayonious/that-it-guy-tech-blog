@@ -1,0 +1,54 @@
+---
+title: Nodejs compiling process
+slug: nodejs-compiling
+image: ./images/flight-pigeon-twig-36715.jpg
+date: "2020-04-17"
+published: yes
+tags: [js, nodejs]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+
+Is nodejs a compiler of interpreter? Js is a scripting language so nodejs should be an interpreter right? But actually its a little complicated to answer like this.
+
+# Compiler
+
+- Reads the whole program and creates another version of the program that will be executed later.
+- takes more time to execute because first it needs to create this machine readable "byte code" and then execute it.
+
+# Intepreter
+
+- Reads the program line by line and executes them.
+- takes less time because executable thing is already ready
+- This is what JS was used to be long time ago
+
+# JS Engine
+
+- converting js code to machine code some engine is required
+- V8 for Chrome, Spidermonkey for firefox these are the engines that are used
+
+# ECMA script
+
+- Since all these engines are converting js to machine code there has to be some standard to be followed by all browsers.
+- ECMA script is the standard for that
+- WHenever the versioning of JS is asked its meant Version of ECMAScript (ES6/7)
+
+# Nodejs structure
+
+- A compiler: Turbo fan
+- A interpreter: Igniter
+- Igniter creates the bytecode that immediately starts running
+- based on the data that is received on the running program, Turbo fan starts optimizing the machine code and the machine code is replaced in runtime
+- One example of this smart machine code optimization is: how nodejs realizes the types of some param. When same type of input is passed it optimizes the code to always take that kind of input
+
+# So is it a compiled or interpreted language?
+
+- Its a Just in time (JIT) compiled language.
+- C++ is a ahead of time(AOT) compiled language
+- V8 creates some machine code before executing. Then while executing it creates more machine code and updates already existing machine codes
+
+## Source:
+
+1. https://blog.bitsrc.io/how-does-javascript-really-work-part-1-7681dd54a36d
+2. https://www.youtube.com/watch?v=p-iiEDtpy6I

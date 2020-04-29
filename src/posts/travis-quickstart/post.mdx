@@ -1,0 +1,113 @@
+---
+title: Travis for Publishing npmjs package
+slug: travis-quickstart
+image: ./images/person-playing-a-instrument-164735.jpg
+date: "2020-04-17"
+published: yes
+tags: [travis, deployment, npmjs, opensource, tools]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+import { Link } from "gatsby";
+
+Not sure why always during deploying with Travis I spend at least 2 hours fighting with keys and pr checkers. Time to write it down. So here are the steps you can follow to setup travis for your opesource projects
+
+# Travis access into github repo
+
+Firstly make sure you enable that repo from travis-ci.org so travis has access to your repo. Its an easy step you can config from travis-ci.org settings.
+
+# PR checker
+
+We can use travis just to add pr checkers. This step is useful because we can add differnt kind of unit tests and linting tests here. My favorite template for this part is this.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+language: node_js
+node_js:
+  - stable
+  - '--lts'
+before_script:
+  - npm run setup
+  - npm run build
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -e TRAVIS_NODE_VERSION
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+Please copy this from an update library git repo.
+
+# Publish to npmjs
+
+Now this is the critical shit.
+
+First you need to generate a token from
+https://www.npmjs.com/settings/[username]/tokens/
+
+Now make sure you have travis cli installed. Then run this command in your project folder.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+travis setup npm
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+You will be asked the token you got from npmjs. and also make sure to encrypt the API key. Not all the needed variables are auto generated. Here is the full set of variables.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+deploy:
+  provider: npm
+  edge: true
+  email: [your email]
+  skip_cleanup: true
+  api_key:
+    secure: [yourkey]
+  on:
+    branch: master
+    node_js: '--lts'
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+- Make sure also to check the latest git npmjs library repo not to miss anything.
+- Make sure you commit this and merge it. Check if you got something in npmjs
+
+Dont forget these fields in package.json without these you will have missing files in published package. Or Program wont be runnable
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```json
+{
+  "files": ["dist"],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts"
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Source:
+
+1. https://docs.travis-ci.com/user/deployment/npm/
