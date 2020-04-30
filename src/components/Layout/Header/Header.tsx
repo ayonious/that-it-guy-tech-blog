@@ -6,6 +6,7 @@ import ThemeContext, {
   revertThemes,
   Themes,
 } from "../../../Context/ThemeContext";
+
 import { NavBar, NavCenter, NavHeader } from "./styles";
 
 const Header = () => {
