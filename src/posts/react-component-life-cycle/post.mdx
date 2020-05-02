@@ -1,0 +1,64 @@
+---
+title: React Component Life cycle
+slug: react-component-life-cycle
+image: ./images/bicycle-bike-brakes-cycle-545004.jpg
+date: "2020-04-23"
+published: yes
+tags: [js, nodejs, react]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+import { Link } from "gatsby";
+
+React's components have a life cycle: Initialization ,update, destroy. During these times you can perform lot of operations that you cant do during the render time. Recently I found some of these situations and wanted to explore all other reacts lifeCycleFunctions.
+
+# Simple React Component Life Cycle
+
+In simple form the life cycle consists of 4 stages:
+
+1. Initiaze
+2. Mount
+3. Update
+4. Unmount
+
+then from step4(unmount) it can go back to step1(initiaze)
+
+# Phase:Initialize
+
+This is when constructor is called and states are created as singleton variables. Props are injected.
+
+# Phase: Mount
+
+When the component is mounted in the DOM
+
+- Event exactly before this phase: componentWillMount()
+- Event during this phase: render()
+- Event exactly after this phase: componentDidMount()
+
+### NOTE: Dont make any data chagne during componentWillMount.
+
+# Phase: Update
+
+- Event exactly before this phase: componentWillUpdate()
+- Event during this phase: render()
+- Event exactly after this phase: componentDidUpdate()
+- Special: Event exactly before this phase: somponentShouldUpdate(): returns a boolean to understand whether the rerendering will be done.
+
+## Differnce between Mount and update
+
+- Mount is called only in the first time.
+- Update is called for each sequential render(). This happens usually due to state chagne
+
+# Phase: Unmount
+
+This occurs for example During DOM reconciliation process (this happens during re rendering) if a component does not exist anymore
+
+- Event exactly before this phase: componentWillUnmount()
+
+# Source
+
+1. Simple explanation of reacts states: https://www.freecodecamp.org/news/how-to-understand-a-components-lifecycle-methods-in-reactjs-e1a609840630/
+2. when component unmounts: https://stackoverflow.com/questions/41498756/when-does-a-component-unmount
+3. Official explanation: https://reactjs.org/docs/react-component.html#componentwillunmount
+4. A good Picture view of life cycle: http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/

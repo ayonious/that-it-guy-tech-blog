@@ -7,8 +7,7 @@ export const LinkDivWrapper = styled.div`
     display: inline-block;
     color: ${(p) => p.theme.mainBlack};
     text-decoration: none;
-    text-transform: capitalize;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     margin-bottom: 2rem;
     :hover {
       background: ${(p) => p.theme.mainBlack};
