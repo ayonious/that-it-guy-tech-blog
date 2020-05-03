@@ -1,0 +1,159 @@
+---
+title: CommonJs or ECMA Modules?
+slug: js-modules-commonjs-es
+image: ./images/competition-dispute-goats-37323.jpg
+date: "2020-04-27"
+published: yes
+tags: [js, nodejs, commonjs]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+
+The name common js kind of suggests some kind of version of JS. But in reality its scope is much smaller. It only defines the module system of js projects. I saw this commonjs in some places either while configuring Typescript or configuring some other framework. Time to look at it more closely
+
+# Commonjs
+
+Commonjs is a way to modularize your js projects. Lets look at this simple 2 file js program.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+// lib.js
+function pythagoras(x, y) {
+  return x * x + y * y;
+}
+
+module.exports = {
+  sq: pythagoras,
+};
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+// index.js
+const { sq } = require("./lib");
+
+console.log(sq(1, 2));
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+Run it using
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+node injex.js
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+Thats what common js does. This is what is understood by all browsers and legacy systems. Now lets talk about new module system.
+
+# ECMA modules
+
+ES6 has created some rules for modules.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+// lib.js
+export function pythagoras(x, y) {
+  return x * x + y * y;
+}
+
+export function pythagoras2(x, y) {
+  return x * x + y * y;
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+// index.js
+import { pythagoras } from "./lib.mjs";
+
+console.log(pythagoras(1, 2));
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+Run it using
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+node --experimental-modules index.mjs
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+You will see the output what you expect. Now this feature in nodejs is not present by default. Still nodejs by default uses this Commonjs module system.
+
+# The difference in syntax
+
+- `require` -> commonjs
+- `import` -> ECMA script
+
+# The confusion
+
+Now confusion occurs to me because every now and then I see code like this
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+import React from 'react';
+
+import styles from '../../css/about.module.css';
+import Title from '../Title';
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+So how come we are able to see those imports? We are supposed to use require to make it work right?
+
+# The enlightment
+
+The reason behind this is the transpilers. We use Babel or Typescript that transpiles the ES6 module system code into commonjs style and then all looks happy and good.
+
+# Source
+
+1. ECMA modules: https://nodejs.org/api/esm.html#esm_enabling
+2. Commonjs modules: https://adrianmejia.com/getting-started-with-node-js-modules-require-exports-imports-npm-and-beyond/
+3. Commonjs more info: https://medium.com/@cgcrutch18/commonjs-what-why-and-how-64ed9f31aa46
