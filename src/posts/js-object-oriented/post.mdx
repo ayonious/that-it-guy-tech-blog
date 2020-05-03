@@ -1,0 +1,113 @@
+---
+title: Is Js OOP
+slug: js-object-oriented
+image: ./images/assorted-ceramics-on-wooden-shelves-3626588.jpg
+date: "2020-04-28"
+published: yes
+tags: [js, oop]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+
+Js is an OOP. But not classbased but rather prototype based language. What the hell does it actually mean?
+
+# OOP
+
+To be a language OOP it needs to have objects (in classical system by: classes). On top it should have properties:
+
+1. Inheritance
+2. Encapsulation
+3. Polymorphism
+
+But js creates this objects through prototypes.
+
+# JS as OOP
+
+you can definitely create objects. just like this
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const a = { name: "sam", age: 23 };
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+But then how do you create class kind of object definition in JS?
+
+# Method1: By constuctor
+
+constuctor is a function that you call with new operator.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+function Student(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+Student.prototype.studentType = function () {
+  return `${this.name} ${this.age}`;
+};
+
+Student.prototype.secondName = "some shit";
+
+let firstguy = new Student("john", 22);
+console.log(firstguy.studentType);
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Method2: Object.create
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const st1 = {
+  name = 'John';
+  age = 12;
+}
+
+const st2 = Object.create(st1);
+// st2 will inherit properties from st1
+
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Detailed shit
+
+Now every object in js inherits all the properties from its parent. When you create a function that creates this object this function actually creates a template object and every time you create a new object this template object provides all its properties.
+
+- Any object can be cloned from another object. the clone will share same prps of its parents.
+
+# So that means
+
+When you do some thing like Student.prototype.studentType = function
+
+This tells all the object to have an extra ref to that property.
+
+# Method3: by classes 😮
+
+After saying all those shit about how js is not class based language now Im saying you can do classes in js. Well actually class in js is just a layer on top of prototype
+
+I will write a new article on this about using classes in JS.
+
+# Source
+
+1. https://stackoverflow.com/questions/107464/is-javascript-object-oriented
+2. What does it mean that Javascript is a prototype based language? https://stackoverflow.com/questions/186244/what-does-it-mean-that-javascript-is-a-prototype-based-language
