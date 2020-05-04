@@ -1,0 +1,34 @@
+---
+title: Fucntions in arrow or normal way
+slug: js-arrow-vs-normal-function
+image: ./images/close-up-cubes-daytime-design-1154775.jpg
+date: "2020-05-01"
+published: yes
+tags: [js]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+
+# Some other confusing places for this
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+function parentA() {
+  let val = 20;
+  function B() {
+    let val = 10;
+    console.log(this.val);
+  }
+
+  return B;
+}
+parentA()(); // undefined
+```
+
+</Highlight>
+
+</CodeDivWrapper>
