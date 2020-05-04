@@ -32,3 +32,31 @@ parentA()(); // undefined
 </Highlight>
 
 </CodeDivWrapper>
+
+# The confusion of this with arrow with this
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+function A() {
+  return {
+    a: 10,
+    getVal: function getA() {
+      console.log(this.a); // here we can access this.a
+      const funArray = () => {
+        return this.a; // so this arrow function can also access this.a
+        // arrow function lexically taking this from the time it was created
+      };
+      return funArray;
+    },
+  };
+}
+
+console.log(A().getVal()()); //10 10
+```
+
+</Highlight>
+
+</CodeDivWrapper>

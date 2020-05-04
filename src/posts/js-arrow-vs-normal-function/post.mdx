@@ -1,5 +1,5 @@
 ---
-title: Fucntions in arrow or normal way
+title: Js Fucntions in arrow or normal way
 slug: js-arrow-vs-normal-function
 image: ./images/close-up-cubes-daytime-design-1154775.jpg
 date: "2020-05-01"
@@ -65,45 +65,28 @@ No
 
 Arrow function syntax uses "lexical scoping" to figure out what should be "this". Lexical scope is a fancy way of saying it uses this from the surrounding scope.
 
-# Some other confusing places for this
+# The confusion of this with arrow with this
 
 <CodeDivWrapper>
 
 <Highlight>
 
 ```js
-function parentA() {
-  let val = 20;
-  function B() {
-    let val = 10;
-    console.log(this.val);
-  }
-
-  return B;
+function A() {
+  return {
+    a: 10,
+    getVal: function getA() {
+      console.log(this.a); // here we can access this.a
+      const funArray = () => {
+        return this.a; // so this arrow function can also access this.a
+        // arrow function lexically taking this from the time it was created
+      };
+      return funArray;
+    },
+  };
 }
-parentA()(); // undefined
-```
 
-</Highlight>
-
-</CodeDivWrapper>
-
-<CodeDivWrapper>
-
-<Highlight>
-
-```js
-function parentA() {
-  let val = 20;
-
-  function B() {
-    let val = 10;
-    console.log(this.val);
-  }
-
-  return B;
-}
-parentA()(); // undefined, this points to current object not the parent
+console.log(A().getVal()()); //10 10
 ```
 
 </Highlight>
