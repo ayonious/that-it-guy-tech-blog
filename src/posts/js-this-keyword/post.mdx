@@ -1,7 +1,7 @@
 ---
-title: Fucntions in arrow or normal way
-slug: js-arrow-vs-normal-function
-image: ./images/close-up-cubes-daytime-design-1154775.jpg
+title: JS this keyword
+slug: js-this-keyword
+image: ./images/person-pointing-on-white-textile-34753.jpg
 date: "2020-05-01"
 published: yes
 tags: [js]
@@ -10,7 +10,34 @@ tags: [js]
 import { CodeDivWrapper } from "../../css/commonstyles";
 import Highlight from "react-highlight.js";
 
-# Some other confusing places for this
+this is a pointer to the current object.
+
+# Simple example
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const parentA = {
+  val: 20;
+  A: {
+    val: 10,
+    getVal: function () { //ES5 way
+      return this.val; //10
+    }
+    getVal: () => { //ES6 way
+      return this.val; // undefined, be careful this might be this of the parent
+    }
+  }
+};
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Some other confusing example
 
 <CodeDivWrapper>
 
@@ -26,14 +53,16 @@ function parentA() {
 
   return B;
 }
-parentA()(); // undefined
+parentA()(); // undefined, this works only for object, a function body is not an object
 ```
 
 </Highlight>
 
 </CodeDivWrapper>
 
-# The confusion of this with arrow with this
+# The confusion of this with arrow function
+
+Inside arrow this will point only to nearest parent's this.
 
 <CodeDivWrapper>
 

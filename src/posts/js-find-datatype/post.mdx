@@ -1,0 +1,38 @@
+---
+title: Finding type of data in JS
+slug: js-find-datatype
+image: ./images/black-binocular-on-round-device-63901.jpg
+date: "2020-05-04"
+published: yes
+tags: [js]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+
+JS is not a strictly typed language. So its not really easy to find out ways to say what type the input is. I will keep this post like a cheatsheet to find out all data types
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+// string
+let isString = (inp) => typeof inp === "string";
+
+// boolean
+let isString = (inp) => typeof inp === "boolean";
+
+// number
+let isString = (inp) => typeof inp === "number";
+
+// Array
+let isArray = (inp) => typeof inp === "object" && inp.constructor === Array;
+
+// Object
+let isObject = (inp) => typeof inp === "object" && inp.constructor === Object;
+```
+
+</Highlight>
+
+</CodeDivWrapper>

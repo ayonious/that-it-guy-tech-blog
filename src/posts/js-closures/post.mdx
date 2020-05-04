@@ -47,7 +47,7 @@ console.log(a.get()); // 3
 
 </CodeDivWrapper>
 
-## Keeping a snapshot of the outer scope variables
+## Keeping a ref of the outer scope variables
 
 <CodeDivWrapper>
 
@@ -91,7 +91,7 @@ Yes they are also accessible and changeable
 
 <Highlight>
 
-```jsx
+```js
 function B() {
   let c = 10;
   let b = 10;
@@ -124,6 +124,46 @@ const a = B()();
 console.log(a.getArrow()); // 13
 a.change();
 console.log(a.getArrow()); // 8
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# What happens if the variables change?
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+for (let i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, i * 1000);
+}
+
+// output: 0 1 2 3 4
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+I hope you dont use var :(
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+for (var i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, i * 1000);
+}
+
+// output: 5 5 5 5 5
 ```
 
 </Highlight>
