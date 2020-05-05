@@ -17,6 +17,12 @@ const saveThemeInLocalStorage = (themeName) => {
 
 const fetchLocalStorageThemeOrDefault = (): ThemeDetails => {
   const themeName = fetchLocalStorageTheme() || Themes.dark;
+  console.log(
+    "themeName",
+    "fetchLocalStorageThemeOrDefault",
+    themeName,
+    mapThemeNameToDetails[themeName]
+  );
   return mapThemeNameToDetails[themeName];
 };
 
@@ -24,6 +30,7 @@ const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(fetchLocalStorageThemeOrDefault);
   const value = { theme, setTheme };
 
+  console.log("ThemeProvider", theme);
   useEffect(() => {
     saveThemeInLocalStorage(theme.themeName);
   }, [theme]);
