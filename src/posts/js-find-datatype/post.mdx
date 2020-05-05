@@ -26,6 +26,9 @@ let isBoolean = (inp) => typeof inp === "boolean";
 // number
 let isNumber = (inp) => typeof inp === "number";
 
+// number
+let isWholeNumber = (inp) => isNumber(inp) && inp % 1 === 0;
+
 // Array
 let isArray = (inp) => typeof inp === "object" && inp.constructor === Array;
 
