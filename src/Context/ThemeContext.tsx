@@ -1,6 +1,6 @@
 import React from "react";
 
-interface ThemeDetails {
+export interface ThemeDetails {
   themeName: Themes;
   mainGrey: String;
   mainWhite: String;
@@ -27,6 +27,11 @@ export const darkTheme: ThemeDetails = {
   mainWhite: "#302f2f",
   mainBlack: "rgb(255, 255, 255)",
   darkGrey: "#ecececc0",
+};
+
+export const mapThemeNameToDetails = {
+  [Themes.dark]: darkTheme,
+  [Themes.white]: whiteTheme,
 };
 
 export const revertThemes = {
