@@ -25,6 +25,8 @@ let isBoolean = (inp) => typeof inp === "boolean";
 
 // number
 let isNumber = (inp) => typeof inp === "number";
+// isNumber(NaN) = true
+// isNumber(Infinity) = true
 
 // number
 let isWholeNumber = (inp) => isNumber(inp) && inp % 1 === 0;
