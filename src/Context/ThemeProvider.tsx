@@ -6,7 +6,9 @@ import ThemeContext, {
 } from "./ThemeContext";
 
 const fetchLocalStorageTheme = () => {
-  return localStorage.getItem("theme");
+  const ret = localStorage.getItem("theme");
+  console.log("fetchLocalStorageTheme", ret);
+  return ret;
 };
 
 const saveThemeInLocalStorage = (themeName) => {
