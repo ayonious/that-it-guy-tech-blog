@@ -1,0 +1,264 @@
+---
+title: Js Promise Async and Await
+slug: js-async-await-promise
+image: ./images/man-in-black-long-sleeved-shirt-and-woman-in-black-dress-888899.jpg
+date: "2020-05-04"
+published: yes
+tags: [js, async]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+import { Link } from "gatsby";
+
+Async await has some interesting features that I often forget and make mistake. Time to put them in my cheatsheet.
+
+# Rules of returning promise to an asyn function
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const step2 = async () => {
+  return await 2;
+};
+
+const step1 = async () => {
+  return await step2();
+};
+
+const log = async () => {
+  const val = await step1();
+  console.log(val);
+};
+
+log();
+// 2
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+make some change
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const step2 = async () => {
+  return await 2;
+};
+
+const step1 = async () => {
+  return step2(); // removed await
+};
+
+const log = async () => {
+  const val = await step1();
+  console.log(val);
+};
+
+log();
+// 2
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+More change
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const step2 = async () => {
+  return 2; // removed await
+};
+
+const step1 = async () => {
+  return step2();
+};
+
+const log = async () => {
+  const val = await step1();
+  console.log(val);
+};
+
+log();
+// 2
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+More... and.. boom
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const step2 = async () => {
+  return 2;
+};
+
+const step1 = async () => {
+  return step2();
+};
+
+const log = async () => {
+  const val = step1(); // removed await
+  console.log(val);
+};
+
+log();
+// Promise { <pending> }
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# So, The Rule of promise wrapping
+
+- Async will wrap a synchronous value with a promise.
+- But if its a promise already then it will not again wrap it.
+- Returning await of promise in a async function is useless.
+
+Lets check some more examples for this
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const step2 = async () => {
+  const val = 2;
+  return val; // async will wrap this val with promise
+};
+
+const step1 = async () => {
+  const val = step2(); // returns Promise(2)
+  return val; // this will not wrap the already existing promise with another promise
+};
+
+const log = async () => {
+  const val = await step1(); // step1() = Promise(2)
+  console.log(val);
+};
+
+log(); // 2
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# try catch block missing the exception for not awaiting.
+
+In case there is a try catch block around a promise. The promise should be awaited for the catch block to get the error. Otherwise it will miss it
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+const step2 = async (inp) => {
+  if (inp === 2) {
+    return inp;
+  }
+  throw Error("some error");
+};
+
+const step1 = async (inp) => {
+  let val;
+  try {
+    val = step2(inp);
+  } catch (e) {
+    console.log("error happened"); // this will never work if step2 is async
+  }
+  return val;
+};
+
+const log = async (inp) => {
+  const val = await step1(inp);
+  console.log(val);
+};
+
+// log(2) will otuput 2
+log(3); // there is no log for "error happened" but a big runtime error of "some error"
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+If you look at execution flow it will look like this
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
+callstack [step1]
+-------------------
+call log(3)
+
+callstack [step2]
+-------------------
+...(empty)
+
+callstack [step3]
+-------------------
+const val = await step1(inp);
+console.log(val);
+
+
+callstack [step4]
+-------------------
+async {
+  let val;
+  try {
+    val = step2(inp);
+  } catch (e) {
+    console.log("error happened");
+  }
+  return val;
+}
+const val = await step1(inp);
+console.log(val);
+
+callstack [step5]
+-------------------
+async {
+  val = Promise(step2); // not yet going inside
+  return val;
+}
+const val = await step1(inp);
+console.log(val);
+
+
+callstack [step6]
+-------------------
+const val = await step2(inp);
+console.log(val);
+
+
+callstack [step7]
+-------------------
+async {
+  throw Error("some error"); // throws error
+}
+const val = await step2(inp);
+console.log(val); // skipped forerror
+```
+
+</Highlight>
+
+</CodeDivWrapper>
