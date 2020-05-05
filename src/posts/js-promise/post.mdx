@@ -280,33 +280,3 @@ end
 </Highlight>
 
 </CodeDivWrapper>
-
-# When body of promise is executed?
-
-Immediately when you create it
-
-<CodeDivWrapper>
-
-<Highlight>
-
-```js
-const step1 = async () => 1;
-
-const step2 = async () => 2;
-
-const array = [step1(), step2()]; // started the execution here already
-
-let promise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    reject("Program ended");
-  }, 2000);
-}); // here the execution already started
-```
-
-</Highlight>
-
-</CodeDivWrapper>
-
-# Source
-
-1. When body of promise is executed: https://stackoverflow.com/questions/42118900/when-is-the-body-of-a-promise-executed
