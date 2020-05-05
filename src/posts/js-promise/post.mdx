@@ -254,7 +254,7 @@ const array = [step1(), step2()];
 const fun = async () => {
   let vals = "initial val";
   console.log("fun starting");
-  await Promise.all(array).then(
+  Promise.all(array).then(
     (res) => {
       vals = res;
       console.log(vals, "asd");
