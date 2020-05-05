@@ -19,7 +19,7 @@ const fetchLocalStorageThemeOrDefault = (): ThemeDetails => {
 };
 
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(fetchLocalStorageThemeOrDefault());
+  const [theme, setTheme] = useState(fetchLocalStorageThemeOrDefault);
   const value = { theme, setTheme };
 
   useEffect(() => {
