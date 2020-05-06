@@ -27,13 +27,16 @@ const fetchLocalStorageThemeOrDefault = (): ThemeDetails => {
 };
 
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(fetchLocalStorageThemeOrDefault);
+  const [theme, setTheme] = useState(mapThemeNameToDetails[Themes.dark]);
   const value = { theme, setTheme };
 
+  /*
   console.log("ThemeProvider", theme);
   useEffect(() => {
     saveThemeInLocalStorage(theme.themeName);
   }, [theme]);
+  */
+
   return (
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );

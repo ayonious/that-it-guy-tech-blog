@@ -13,6 +13,7 @@ export enum Themes {
   "white" = "white",
 }
 
+
 const whiteTheme: ThemeDetails = {
   themeName: Themes.white,
   mainGrey: "#ecececc0",
