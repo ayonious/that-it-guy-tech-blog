@@ -3,17 +3,17 @@ import Header from "./Layout/Header/Header";
 import Footer from "./Layout/Footer/Footer";
 
 import ThemeContext from "../Context/ThemeContext";
-import { TopMostDivWrapper } from "../css/commonstyles";
+import ThemedTopMostDivWrapper from "./ThemedTopMostDivWrapper";
 
 const Layout = ({ children }) => {
   return (
     <ThemeContext.Consumer>
       {({ theme }) => (
-        <TopMostDivWrapper theme={theme}>
+        <ThemedTopMostDivWrapper theme={theme}>
           <Header />
           {children}
           <Footer />
-        </TopMostDivWrapper>
+        </ThemedTopMostDivWrapper>
       )}
     </ThemeContext.Consumer>
   );
