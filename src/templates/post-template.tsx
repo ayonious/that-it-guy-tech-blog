@@ -44,7 +44,7 @@ const postTemplate = ({ data }: TemplateData) => {
         {({ theme }) => (
           <TemplateDivWrapper theme={theme}>
             <LinkDivWrapper theme={theme}>
-              <Link to="/">back to Home Page</Link>
+              <Link to="/">{"< back to Home Page"}</Link>
             </LinkDivWrapper>
             <div>
               <TitleDivWrapper>{title}</TitleDivWrapper>
