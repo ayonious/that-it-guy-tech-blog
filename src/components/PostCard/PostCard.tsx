@@ -46,7 +46,7 @@ const PostCard = ({ post }: PostCardData) => {
               <TagsList tags={tags} />
               <p>{post.excerpt}</p>
               <LinkDivWrapper theme={theme}>
-                <Link to={`blogs/${slug}`}>Read More</Link>
+                <Link to={`blogs/${slug}`}>Read</Link>
               </LinkDivWrapper>
             </div>
           </InfoDivWrapper>
