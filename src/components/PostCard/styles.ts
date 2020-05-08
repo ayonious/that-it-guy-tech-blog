@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardArticleWrapper = styled.article`
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-top: 2px solid ${(p) => p.theme.mainGrey};
   background: ${(p) => p.theme.mainWhite};
   padding: 1rem;
@@ -15,13 +15,13 @@ export const CardArticleWrapper = styled.article`
 export const CardImageWrapper = styled.div`
   div {
     @media only screen and (min-width: 768px) {
-      height: 300px;
+      height: 350px;
     }
   }
 `;
 
 export const InfoDivWrapper = styled.div`
-  height: 300px;
+  height: 350px;
   padding: 1rem 0;
   @media only screen and (min-width: 768px) {
     display: flex;
