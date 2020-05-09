@@ -15,6 +15,8 @@ Nodejs is a single threaded application (not exactly). So what does it mean? and
 # Why good
 
 - No need: Deadlock, Race Condition, Starvation, Priority Inversion, Livelock
+- if calls are all asynchronous then nodejs backend applications are considered really fast.
+- for sync calls all requests will be queued and thus the response time will be slower.
 
 Lets check this code
 
@@ -63,3 +65,4 @@ Now think the same in other languages. Java, C++, dotNet you always have multipl
 # Source
 
 1. Why single threaded is good? https://www.quora.com/What-are-the-disadvantages-of-being-single-threaded-for-a-language-or-framework-Why-are-Node-and-JavaScript-still-designed-to-be-single-threaded
+2. Comparison Java and Nodejs: https://da-14.com/blog/nodejs-vs-java-backend-language-large-software-development
