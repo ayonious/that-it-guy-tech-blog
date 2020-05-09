@@ -52,9 +52,7 @@ async fetchDatafromDb()  {
 }
 
 console.log("start of one thread");
-const promise = Promise(fetchDatafromDb())
-
-promise.then( res => {
+fetchDatafromDb().then( res => {
   console.log("res arrived", res);}
 )
 ```
