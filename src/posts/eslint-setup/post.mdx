@@ -1,0 +1,128 @@
+---
+title: Eslint
+slug: eslint-setup
+image: ./images/adult-american-football-athlete-audience-209954.jpg
+date: "2020-04-10"
+published: yes
+tags: [eslint, npmjs, tools]
+---
+
+import { CodeDivWrapper } from "../../css/commonstyles";
+import Highlight from "react-highlight.js";
+import { Link } from "gatsby";
+
+Take few minutes to setup this amazing tool and be happy with code quality for rest of its lifetime. here Im going to describe how to setup eslint.
+
+# Step1: Install dependencies
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+npm i eslint -D
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Step2: Add lint task in my package.json
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```json
+{
+  "scripts": {
+    "lint": "eslint --ext=js,ts,json ."
+  }
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Step3: Add lint in your build step.
+
+For my travis config after adding eslint the build step looked like this. This is to make sure if linting dont work then fail the build.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```yaml
+before_script:
+  - npm run lint
+  - npm run setup
+  - npm run build
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Step4: Add eslint config options
+
+You can run this command to step by step choose what eslint config you need for your project.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+npm run lint -- --init
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+My .eslintrc.json looks like this.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```json
+{
+  "env": {
+    "es6": true,
+    "jest": true
+  },
+  "extends": ["airbnb-base"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-console": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "comma-dangle": "off"
+  }
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Step5: exclude .eslintrc.json from config files
+
+I excluded this file from
+
+1. .gitignore
+2. .npmignore
+
+# Source:
+
+1. https://medium.com/dailyjs/adding-eslint-to-your-project-7bd4feca35a8
