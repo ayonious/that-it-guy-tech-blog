@@ -1,5 +1,5 @@
 ---
-title: Eslint
+title: Eslint (with prettier)
 slug: eslint-setup
 image: ./images/adult-american-football-athlete-audience-209954.jpg
 date: "2020-04-10"
@@ -123,6 +123,49 @@ I excluded this file from
 1. .gitignore
 2. .npmignore
 
+# prettier
+
+Because Im using both eslint and prettier these 2 sometimes start fighting with each other. Lets look at how to put them in the same room.
+
+Here are the extra installation process of eslint with prettier.
+
+# Step1: dependencies
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```bash
+npm i eslint-config-prettier eslint-plugin-prettier -D
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
+# Step2: Config
+
+Extend your elint config file with these.
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```json
+{
+  "extends": ["prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"]
+  }
+}
+```
+
+</Highlight>
+
+</CodeDivWrapper>
+
 # Source:
 
 1. https://medium.com/dailyjs/adding-eslint-to-your-project-7bd4feca35a8
+2. with prettier: https://prettier.io/docs/en/integrating-with-linters.html
