@@ -14,7 +14,7 @@
   </a>
 </p>
 
-![Screenshot](https://github.com/ayonious/that-it-guy-tech-blog/blob/master/DocumentationAssets/front-page.png)
+![Screenshot](https://github.com/ayonious/that-it-guy-tech-blog/blob/master/DocumentationAssets/front-page.2.png)
 
 ## 🎓 Gatsby things that I learnted in this project
 
