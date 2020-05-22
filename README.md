@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://app.netlify.com/sites/it-guys-tech-blog/deploys">
+  <a href="https://app.netlify.com/sites/that-it-guy/deploys">
     <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/e15f1837-6f79-42fe-98f4-59016ed63297/deploy-status">
   </a>
   <a href="https://david-dm.org/ayonious/that-it-guy-tech-blog">
@@ -14,7 +14,7 @@
   </a>
 </p>
 
-![Screenshot](https://github.com/ayonious/that-it-guy-tech-blog/blob/master/DocumentationAssets/front-page.2.png)
+![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front-page.2.png)
 
 ## 🎓 Gatsby things that I learnted in this project
 
