@@ -50,7 +50,7 @@ Done using Context. useContext. Context.Provider Context.Consumer
 
 useState
 
-## 💄Styles
+## 💄 Styles
 
 1. Mostly are pure css styles
 2. And some material-ui
