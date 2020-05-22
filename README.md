@@ -16,7 +16,7 @@
 
 ![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front-page.2.png)
 
-## 🎓 Gatsby things that I learnted in this project
+## 🎓 Gatsby things that I learnt in this project
 
 1.  **gatsby-plugin-mdx**
 
