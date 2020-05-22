@@ -54,6 +54,7 @@ useState
 
 1. Mostly are pure css styles
 2. And some material-ui
+3. Styled Components
 
 ## 🚀 Deploy
 
