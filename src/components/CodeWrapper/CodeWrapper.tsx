@@ -1,5 +1,4 @@
 import React from "react";
-
 import { CodeDivWrapper, CopyButtonWrapper } from "./styles";
 
 const CopyButton = () => {

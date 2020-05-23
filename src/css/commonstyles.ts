@@ -16,14 +16,6 @@ export const LinkDivWrapper = styled.div`
   }
 `;
 
-export const CodeDivWrapper = styled.div`
-  color: rgb(255, 255, 255);
-  background: #232323;
-  padding: 15px;
-  border-radius: 8px;
-  margin: 0 -1rem 1.5rem;
-`;
-
 export const TopMostDivWrapper = styled.div`
   font-family: "Comic Neue", cursive;
   background: ${(p) => p.theme.mainWhite};
