@@ -10,6 +10,7 @@ interface Props {
 
 class PostDetails extends Component<Props, any> {
   componentDidMount() {
+    // adding hashed urls
     $("h1").wrapInner(`<span class="temporary_magic"></span>`);
 
     $(".temporary_magic").each((ind, val) => {
