@@ -1,6 +1,6 @@
 ---
 title: ECMA Script Historical features
-slug: ecma
+slug: ecmascript-history
 image: ./images/person-holding-brown-card-311716.jpg
 date: "2020-04-08"
 published: yes
@@ -16,7 +16,7 @@ After writing about buzzwords I checked about ecma script and found out a lot of
 
 ## Multi lines Strings
 
-Rememer this nightmare?
+Remember this nightmare?
 
 <CodeDivWrapper>
 
@@ -251,7 +251,7 @@ await someFunction();
 
 <Highlight>
 
-```
+```js
 const person = {
   name: 'asdf',
   age: 12,
@@ -262,13 +262,21 @@ const personAgain = {
 } // {school: 'some good one', name: 'asdf', age: 12, }
 ```
 
-```
+</Highlight>
+
+</CodeDivWrapper>
+
+<CodeDivWrapper>
+
+<Highlight>
+
+```js
 const person = {
-  name: 'asdf',
+  name: "asdf",
   age: 12,
-  school: 'no school'
-}
-const {name, ...others} = person;
+  school: "no school",
+};
+const { name, ...others } = person;
 // others = { age: 12, school: 'no school' }
 ```
 
