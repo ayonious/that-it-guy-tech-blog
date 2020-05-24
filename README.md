@@ -46,12 +46,12 @@ https://that-it-guy.netlify.app/blogs/jquery-react#the-problem
 
 Done using Context. useContext. Context.Provider Context.Consumer
 
-7. **Code SYntax**
+7. **Code Syntax**
 
 - Code syntax highlighting using Highlight.js
 - Adding a copy button for each code block
 
-7. **Some other hooks**
+8. **Some other hooks**
 
 useState
 
