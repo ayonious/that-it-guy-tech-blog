@@ -8,8 +8,11 @@ export const CodeDivWrapper = styled.div`
 `;
 
 /*
-Show this only when you hover on its parents
+${CodeDivWrapper}:hover & : => Show this only when you hover on its parents
+:focus { outline: 0; }   => after clicking dont show that blue border around the button
+:hover { cursor: pointer; } => on hover change the cursor to a hand
 */
+
 export const CopyButtonWrapper = styled.button`
   display: none;
   ${CodeDivWrapper}:hover & {
@@ -20,6 +23,9 @@ export const CopyButtonWrapper = styled.button`
     border-radius: 4px;
     :focus {
       outline: 0;
+    }
+    :hover {
+      cursor: pointer;
     }
   }
 `;
