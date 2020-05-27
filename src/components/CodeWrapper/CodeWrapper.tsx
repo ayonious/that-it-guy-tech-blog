@@ -42,7 +42,7 @@ const CodeWrapper = ({ children }) => {
   return (
     <CodeDivWrapper>
       <CopyButton onCopy={() => witeInClipboard(codeText)} />
-      <Highlight>{children}</Highlight>
+      <Highlight language={"dummy_val"}>{children}</Highlight>
     </CodeDivWrapper>
   );
 };
