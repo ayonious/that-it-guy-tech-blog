@@ -8,15 +8,12 @@ tags: [js, nodejs]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 While Writing about lodash I realized there is another library that is nicely used for datastructures.
 
 # Array Operation
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 _.uniq([1, 2, 3, 3]); // [1,2,3]
@@ -28,15 +25,11 @@ _.last([1, 2, 3]); // 3
 _.lastIndexOf([1, 2, 3, 3], 3); // 3
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # String Operation
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 _.camelCase("Foo ball"); // 'fooBall'
@@ -52,8 +45,6 @@ _.toLower("--Fac-Boy--"); // '--fac-boy--'
 _.toUpper("--Fac-Boy--"); // '--FAC-BOY--'
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Deep clone
@@ -61,8 +52,6 @@ _.toUpper("--Fac-Boy--"); // '--FAC-BOY--'
 get a clone of obj. with a different address in memory. no bullshit.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const student = {
@@ -76,8 +65,6 @@ const student = {
 const copy = _.cloneDeep(student);
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Times loop
@@ -85,8 +72,6 @@ const copy = _.cloneDeep(student);
 pass a function to be called multiple times and fill array with returns
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const randomNumbers = _.times(3, Math.random());
@@ -97,23 +82,17 @@ _.times(3, () => {
 });
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Random Numbers
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```js
 _.random(10); // [0,10] int numbers
 _.random(2, 10); // [2,10] int numbers
 _.random(2, 10, true); // [2,10] floating numbers
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

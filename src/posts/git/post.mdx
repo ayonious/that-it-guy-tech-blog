@@ -8,7 +8,6 @@ tags: [js, nodejs]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 I checked my history of commands ran in past 3 days and 90% of these commands are just git commands. No Wonder you always need to have your own alias and feel like THAT IT GUY
 
@@ -18,8 +17,6 @@ First thing that you can optimize is this. Create some aliases
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 git config --global alias.a "!git add ."
 git config --global alias.c "!git commit -m 'auto generated message' "
@@ -27,7 +24,5 @@ git config --global alias.p "!git push origin $(git rev-parse --abbrev-ref HEAD)
 git config --global alias.ac "!git a; git c"
 git config --global alias.acp "!git ac; git p"
 ```
-
-</Highlight>
 
 </CodeDivWrapper>

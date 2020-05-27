@@ -8,15 +8,12 @@ tags: [js]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 this is a pointer to the current object.
 
 # Simple example
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const parentA = {
@@ -33,15 +30,11 @@ const parentA = {
 };
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Some other confusing example
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 function parentA() {
@@ -56,8 +49,6 @@ function parentA() {
 parentA()(); // undefined, this works only for object, a function body is not an object
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # The confusion of this with arrow function
@@ -65,8 +56,6 @@ parentA()(); // undefined, this works only for object, a function body is not an
 Inside arrow this will point only to nearest parent's this.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 function A() {
@@ -85,7 +74,5 @@ function A() {
 
 console.log(A().getVal()()); //10 10
 ```
-
-</Highlight>
 
 </CodeDivWrapper>

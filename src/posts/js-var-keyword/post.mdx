@@ -8,7 +8,6 @@ tags: [js]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 Every now and then I see this keyword and it surprizes me about its scope. I hope and pray I will never use it anywhere. But understanding legacy code is also my job sometimes. So here goes my effort to understand this shit.
 
@@ -18,8 +17,6 @@ var scope is immediate function.
 let scope is immediate curly braces {}
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 function prog() {
@@ -32,13 +29,9 @@ function prog() {
 prog();
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 function prog() {
@@ -51,8 +44,6 @@ function prog() {
 prog();
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Hoisting
@@ -61,21 +52,15 @@ if you have used var you dont nee to declare it before using it. If you declare 
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```js
 console.log(a); //undefined
 var a = 1;
 console.log(a); // 1
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 console.log(a); //ReferenceError:: Cannot access 'a' before initialization
@@ -83,15 +68,11 @@ let a = 1;
 console.log(a);
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Some other confusing example
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 for (let i = 0; i < 5; i++) {
@@ -103,15 +84,11 @@ for (let i = 0; i < 5; i++) {
 // output: 0 1 2 3 4
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 I hope you dont use var :(
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 for (var i = 0; i < 5; i++) {
@@ -122,8 +99,6 @@ for (var i = 0; i < 5; i++) {
 
 // output: 5 5 5 5 5
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

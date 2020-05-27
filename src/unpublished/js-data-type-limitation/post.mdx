@@ -8,7 +8,6 @@ tags: [js, data]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 After working for so long with Js I realized how much unprepared I am for competetive programming. I was just assuming all integer value to be in range either [1,2^32] or [1,2^64] just like any other programming languge. But I was dissapointed. So I needed to checkout the js docs to figure out myseties.
 
@@ -17,8 +16,6 @@ After working for so long with Js I realized how much unprepared I am for compet
 Commonjs is a way to modularize your js projects. Lets look at this simple 2 file js program.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 // lib.js
@@ -31,13 +28,9 @@ module.exports = {
 };
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 // index.js
@@ -46,21 +39,15 @@ const { sq } = require("./lib");
 console.log(sq(1, 2));
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 Run it using
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 node injex.js
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -71,8 +58,6 @@ Thats what common js does. This is what is understood by all browsers and legacy
 ES6 has created some rules for modules.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 // lib.js
@@ -85,13 +70,9 @@ export function pythagoras2(x, y) {
 }
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 // index.js
@@ -100,21 +81,15 @@ import { pythagoras } from "./lib.mjs";
 console.log(pythagoras(1, 2));
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 Run it using
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 node --experimental-modules index.mjs
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -131,8 +106,6 @@ Now confusion occurs to me because every now and then I see code like this
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
@@ -141,8 +114,6 @@ import React from 'react';
 import styles from '../../css/about.module.css';
 import Title from '../Title';
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

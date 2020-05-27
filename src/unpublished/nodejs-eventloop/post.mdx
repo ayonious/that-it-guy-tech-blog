@@ -8,7 +8,6 @@ tags: [js, nodejs, eventloop, asynchronous]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 This shit again. I often hear about it but never actually understood what this has to do with practical programming. So lets try to find out
 
@@ -17,8 +16,6 @@ This shit again. I often hear about it but never actually understood what this h
 What do you think is the output here?
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 setTimeout(function () {
@@ -33,22 +30,16 @@ for (let i = 1; i <= 10000; i++) {
 console.log("D");
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 Output
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 D
 C
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

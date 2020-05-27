@@ -8,13 +8,10 @@ tags: [js, nodejs]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 Every language has a callstack. So does nodejs. Lets look at this simple code.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const Sum = (current, sum) => {
@@ -28,15 +25,11 @@ const Sum = (current, sum) => {
 Sum(100, 0); // find 1 + 2 + .... + n
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 How much do you think you can increase the value current? It depends on callstack. Now nodejs having this eventloop can be handy and save us here. Lets look at this
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const Sum = (current, sum) => {
@@ -54,8 +47,6 @@ const Sum = (current, sum) => {
 Sum(100, 0); // find 1 + 2 + .... + n
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 Now this one is a little slow to run but will not run into the call stack error that the first Solution would give.
@@ -65,8 +56,6 @@ Now this one is a little slow to run but will not run into the call stack error 
 Lets look at solution 1s call stack
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```text
 // Sum(5, 0);
@@ -81,8 +70,6 @@ Sum(1, 14)
 Sum(0, 15)
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 Now all this callstack is going to sit on memory and keep taking more space. When it reaches the space limit it will crash.
@@ -90,8 +77,6 @@ Now all this callstack is going to sit on memory and keep taking more space. Whe
 Lets look at second solution
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```text
 // Sum(5, 0);
@@ -114,8 +99,6 @@ pushtoEventLoop(Sum(3, 9))
 ...
 Sum(0, 15)
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CodeDivWrapper, CopyButtonWrapper } from "./styles";
+import Highlight from "react-highlight.js";
 
 const witeInClipboard = (text) => {
   navigator.clipboard.writeText(text);
@@ -41,7 +42,7 @@ const CodeWrapper = ({ children }) => {
   return (
     <CodeDivWrapper>
       <CopyButton onCopy={() => witeInClipboard(codeText)} />
-      {children}
+      <Highlight>{children}</Highlight>
     </CodeDivWrapper>
   );
 };

@@ -8,7 +8,6 @@ tags: [js]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 TLDR: you cant compare 2 objects using any default Js functions. Immediately after writing about
 
@@ -17,8 +16,6 @@ TLDR: you cant compare 2 objects using any default Js functions. Immediately aft
 Lets look at this example
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const a = { a: 1, b: 2, c: { a: 1 } };
@@ -29,8 +26,6 @@ a == b; // false
 JSON.stringify(a) === JSON.stringify(b); // true
 JSON.stringify(a) === JSON.stringify(c); // false
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

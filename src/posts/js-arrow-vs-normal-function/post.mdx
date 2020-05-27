@@ -8,15 +8,12 @@ tags: [js]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 Normal function is ES5 style and arrow is the new ES6 styles.
 
 # The Syntax difference
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 function A() {
@@ -30,15 +27,11 @@ const B = () => {
 };
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Application difference: This key word
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const parentA = {
@@ -55,8 +48,6 @@ const parentA = {
 };
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # So this will always be unsuable in ES6?
@@ -68,8 +59,6 @@ Arrow function syntax uses "lexical scoping" to figure out what should be "this"
 # The confusion of this with arrow with this
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 function A() {
@@ -88,7 +77,5 @@ function A() {
 
 console.log(A().getVal()()); //10 10
 ```
-
-</Highlight>
 
 </CodeDivWrapper>

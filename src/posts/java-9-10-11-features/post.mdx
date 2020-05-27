@@ -8,7 +8,6 @@ tags: [js, nodejs]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 Why am I concerned about java when I migrated into this fullstack world? Well Im still practicing competitive programming. And Im doing it in java. And also all kind of algorithmic programming solutions are somehow still considered good using java. Maybe I will learn nodejs to do this.
 
@@ -19,8 +18,6 @@ Why am I concerned about java when I migrated into this fullstack world? Well Im
 java has now Read-Eval-Print Loop (REPL) tool
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```bash
 // you can find all imports already added in jshell
@@ -56,8 +53,6 @@ jshell> /exit
 |  Goodbye
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 ## Optional.ifPresentOrElse() Optional.or()
@@ -66,20 +61,14 @@ It was such a relieve for my to finally have this command. No need to create cla
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```java
 Optional<Something> opt = Optional.of(something);
 opt.ifPresentOrElse( () -> {System.out.println("present";)}, () -> {System.out.println("absent";)} )
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```java
 Optional<Something> opt1 = Optional.of(something);
@@ -87,15 +76,11 @@ Optional<Something> opt2 = Optional.empty();
 Optional<Something> existingOpt = opt2.or(() -> opt1);
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 ## Immutable Collections
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```java
 jshell> List list = List.of("a", "b", "c");
@@ -108,15 +93,11 @@ jshell> Set set = Set.of("a", "c", "b");
 set ==> [a, b, c]
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 ## Stream Api improvemts: dropWhile() / takeWhile()
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```java
 jshell> Stream.of(1,2,2,3,2,4,2,1,1).takeWhile(i -> i < 3 ).forEach(System.out::println);
@@ -130,8 +111,6 @@ jshell> Stream.of(1,2,2,3,2,4).dropWhile(i -> i < 3 ).forEach(System.out::printl
 4
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Java10
@@ -142,14 +121,10 @@ No more defining the variable type in Java you can simply use var.
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```java
 jshell> var name = "myname"; // infers String
 name ==> "myname"
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -161,13 +136,9 @@ This single line is enough to run a java Program. No need to create executable a
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 java File.java
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

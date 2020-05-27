@@ -8,7 +8,7 @@ tags: [eslint, npmjs, tools]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
+
 import { Link } from "gatsby";
 
 Take few minutes to setup this amazing tool and be happy with code quality for rest of its lifetime. here Im going to describe how to setup eslint.
@@ -17,21 +17,15 @@ Take few minutes to setup this amazing tool and be happy with code quality for r
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 npm i eslint -D
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
 # Step2: Add lint task in my package.json
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```json
 {
@@ -41,8 +35,6 @@ npm i eslint -D
 }
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Step3: Add lint in your build step.
@@ -51,16 +43,12 @@ For my travis config after adding eslint the build step looked like this. This i
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```yaml
 before_script:
   - npm run lint
   - npm run setup
   - npm run build
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -70,21 +58,15 @@ You can run this command to step by step choose what eslint config you need for 
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 npm run lint -- --init
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
 My .eslintrc.json looks like this.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```json
 {
@@ -112,8 +94,6 @@ My .eslintrc.json looks like this.
 }
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Step5: exclude .eslintrc.json from config files
@@ -133,13 +113,9 @@ Here are the extra installation process of eslint with prettier.
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 npm i eslint-config-prettier eslint-plugin-prettier -D
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -148,8 +124,6 @@ npm i eslint-config-prettier eslint-plugin-prettier -D
 Extend your elint config file with these.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```json
 {
@@ -160,8 +134,6 @@ Extend your elint config file with these.
   }
 }
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

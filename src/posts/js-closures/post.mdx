@@ -8,7 +8,6 @@ tags: [js]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 When a function is created the function saves the states of the variables in its outer scope. During running that function it can access it. Closure is called this feature where inner function has access to outer functions variables.
 
@@ -17,8 +16,6 @@ When a function is created the function saves the states of the variables in its
 ## Private/Public elements
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 function A() {
@@ -43,15 +40,11 @@ const a = A();
 console.log(a.get()); // 3
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 ## Keeping a ref of the outer scope variables
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```jsx
 class Dashboard extends Component {
@@ -79,8 +72,6 @@ class Dashboard extends Component {
 }
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # What about variables from grand parent scope
@@ -88,8 +79,6 @@ class Dashboard extends Component {
 Yes they are also accessible and changeable
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 function B() {
@@ -126,15 +115,11 @@ a.change();
 console.log(a.getArrow()); // 8
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # What happens if the variables change?
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 for (let i = 0; i < 5; i++) {
@@ -146,15 +131,11 @@ for (let i = 0; i < 5; i++) {
 // output: 0 1 2 3 4
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 I hope you dont use var :(
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 for (var i = 0; i < 5; i++) {
@@ -165,8 +146,6 @@ for (var i = 0; i < 5; i++) {
 
 // output: 5 5 5 5 5
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

@@ -8,7 +8,6 @@ tags: [js, oop]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 Js is an OOP. But not classbased but rather prototype based language. What the hell does it actually mean?
 
@@ -28,13 +27,9 @@ you can definitely create objects. just like this
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```js
 const a = { name: "sam", age: 23 };
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -45,8 +40,6 @@ But then how do you create class kind of object definition in JS?
 constuctor is a function that you call with new operator.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 function Student(name, age) {
@@ -64,15 +57,11 @@ let firstguy = new Student("john", 22);
 console.log(firstguy.studentType);
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Method2: Object.create
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const st1 = {
@@ -84,8 +73,6 @@ const st2 = Object.create(st1);
 // st2 will inherit properties from st1
 
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

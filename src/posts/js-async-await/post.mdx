@@ -8,7 +8,7 @@ tags: [js, async]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
+
 import { Link } from "gatsby";
 
 Async await has some interesting features that I often forget and make mistake. Time to put them in my cheatsheet.
@@ -16,8 +16,6 @@ Async await has some interesting features that I often forget and make mistake. 
 # Rules of returning promise to an asyn function
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const step2 = async () => {
@@ -37,15 +35,11 @@ log();
 // 2
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 make some change
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const step2 = async () => {
@@ -65,15 +59,11 @@ log();
 // 2
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 More change
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const step2 = async () => {
@@ -93,15 +83,11 @@ log();
 // 2
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 More... and.. boom
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const step2 = async () => {
@@ -121,8 +107,6 @@ log();
 // Promise { <pending> }
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # So, The Rule of promise wrapping
@@ -134,8 +118,6 @@ log();
 Lets check some more examples for this
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const step2 = async () => {
@@ -156,8 +138,6 @@ const log = async () => {
 log(); // 2
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # try catch block missing the exception for not awaiting.
@@ -165,8 +145,6 @@ log(); // 2
 In case there is a try catch block around a promise. The promise should be awaited for the catch block to get the error. Otherwise it will miss it
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const step2 = async (inp) => {
@@ -195,15 +173,11 @@ const log = async (inp) => {
 log(3); // there is no log for "error happened" but a big runtime error of "some error"
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 If you look at execution flow it will look like this
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 callstack [step1]
@@ -258,7 +232,5 @@ async {
 const val = await step2(inp);
 console.log(val); // skipped forerror
 ```
-
-</Highlight>
 
 </CodeDivWrapper>

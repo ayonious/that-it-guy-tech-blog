@@ -8,7 +8,6 @@ tags: [js]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 Whats the difference? The first answer came to my mind was ref equal checking and value checking. That is WRONG. Lets take a look at real difference.
 
@@ -16,15 +15,11 @@ Whats the difference? The first answer came to my mind was ref equal checking an
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```js
 0 == "0"; // true
 false == 0; //true
 undefined == null; // true
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -36,15 +31,11 @@ This is exact operator for matching data. if they are of difference types they w
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```js
 0 === "0"; // false
 false === 0; //false
 undefined === null; // false
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

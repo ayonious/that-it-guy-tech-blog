@@ -8,7 +8,6 @@ tags: [js, nodejs]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 After writing about buzzwords I checked about ecma script and found out a lot of things that were mind blowing during this version change. Here are the most mind blowing changes that I could sum up from internet
 
@@ -20,8 +19,6 @@ Remember this nightmare?
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```js
 var someText =
   "As I tell you, \n" +
@@ -30,15 +27,11 @@ var someText =
   "ont laugh please, \t\n";
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 Just use backticks
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 var someText = `As I tell you, 
@@ -47,15 +40,11 @@ var someText = `As I tell you,
   ont laugh please`;
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 ## Arrow functions
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const fn = () => {
@@ -63,21 +52,15 @@ const fn = () => {
 };
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 ## Object destructure
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```js
 const { name, value } = obj;
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -85,15 +68,11 @@ const { name, value } = obj;
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```js
 function (intput = '0', values=[]) {
   return input;
 }
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -101,23 +80,17 @@ function (intput = '0', values=[]) {
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```js
 const a = [1,2,3];
 const b = a.map(elem => elem*2).filter(v1 => v1 > 6);
 }
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 ## Object literals
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const name = "ayon";
@@ -130,15 +103,11 @@ const person = {
 };
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 ## Class declarations
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 class Person {
@@ -155,22 +124,16 @@ class CoolPerson extens Person {
 }
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 ## String literals
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```js
 const name = "Human";
 const a = `My name is ${name}`;
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -180,21 +143,15 @@ const a = `My name is ${name}`;
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```js
 const age = 2 ** 4; // 16
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
 ## Object.includes
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const age = [1, 2, 3];
@@ -203,15 +160,11 @@ if (age.includes(1)) {
 }
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 ## Object.values Object.entries Object.keys
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const person = {
@@ -222,15 +175,11 @@ Object.values(person) // ['asdf',12]
 Object.keys(person) // ['name', 'age']
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 ## async await
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 async function someFunction() {
@@ -239,8 +188,6 @@ async function someFunction() {
 await someFunction();
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # ECMAscript 2018
@@ -248,8 +195,6 @@ await someFunction();
 ## Spread operator
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const person = {
@@ -262,13 +207,9 @@ const personAgain = {
 } // {school: 'some good one', name: 'asdf', age: 12, }
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const person = {
@@ -279,8 +220,6 @@ const person = {
 const { name, ...others } = person;
 // others = { age: 12, school: 'no school' }
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

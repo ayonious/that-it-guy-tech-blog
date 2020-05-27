@@ -8,7 +8,7 @@ tags: [js, nodejs]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
+
 import { Link } from "gatsby";
 
 First thing you shold do before publishing any package or component is testing it locally. Link is what you need then.
@@ -19,13 +19,9 @@ In the package repo
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 npm link
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -33,13 +29,9 @@ In your testing repo
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 npm link <name-of-the-package>
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -54,14 +46,10 @@ From the library:
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 yarn build
 yalc publish
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -69,13 +57,9 @@ From the testing repository:
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 yalc add "my-package“
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -84,14 +68,10 @@ From the library:
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 yarn build
 yalc publish
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -99,13 +79,9 @@ From the testing repository:
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 yalc update "my-package“
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -114,12 +90,8 @@ From the testing repository:
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 yalc remove "my-package“
 ```
-
-</Highlight>
 
 </CodeDivWrapper>

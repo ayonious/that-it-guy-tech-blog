@@ -8,7 +8,7 @@ tags: [js, nodejs, react]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
+
 import { Link } from "gatsby";
 
 React has 2 ways for creating components. I see this everytime and get puzzled why they look so different. At first I felt like there is a difference in applications because there are some functions that the class provides that I dont have in component
@@ -16,8 +16,6 @@ React has 2 ways for creating components. I see this everytime and get puzzled w
 # Class way of definiing react Component
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```jsx
 export default class CountryReults extends React.Component<Props, State> {
@@ -46,15 +44,11 @@ export default class CountryReults extends React.Component<Props, State> {
 }
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # The fucntional approach for this
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```jsx
 const CountryReults = (props: Props) => {
@@ -76,8 +70,6 @@ const CountryReults = (props: Props) => {
   );
 };
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

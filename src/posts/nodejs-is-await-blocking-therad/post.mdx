@@ -8,7 +8,6 @@ tags: [js, nodejs, threads, anync]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 # TLDR: NO
 
@@ -17,8 +16,6 @@ This was one of the biggest misconceptions I had. I always looked at the code of
 Just look at this code
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 async fetchDatafromDb()  {
@@ -31,8 +28,6 @@ const res = await fetchDatafromDb();
 console.log("res arrived", res);
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 Now the golden qustion is while the thread is `waiting` for the fetchDatafromDb can some other request start processing?
@@ -42,8 +37,6 @@ Yes.
 This async/await is just a syntax suger around promise. If you write the equivalent Promise it will be clearer why await is not blocking
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 async fetchDatafromDb()  {
@@ -57,8 +50,6 @@ fetchDatafromDb().then( res => {
 )
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 Here its clear that you can just start processing other requests while this thread is waiting on the response of database fetch.
@@ -66,8 +57,6 @@ Here its clear that you can just start processing other requests while this thre
 Another pracitcal example. This one page server
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const express = require("express");
@@ -92,8 +81,6 @@ app.listen(3000, function () {
   console.log("Example app listening on port 3000!");
 });
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

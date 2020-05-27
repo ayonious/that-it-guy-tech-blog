@@ -8,7 +8,7 @@ tags: [js, async]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
+
 import { Link } from "gatsby";
 
 Time to explore some solid examples of Promise. In js its so easy to just throw a promise with async.
@@ -19,21 +19,15 @@ to create a promise you use the class Promise
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```js
 let promise = new Promise( (res,rej) => { // your executable things} )
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
 You start the threads running when you call the promise with .then() method and give proper res,rej functions
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 promise.then(
@@ -48,8 +42,6 @@ promise.then(
 );
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 Promise.then() is not a blocking operation.
@@ -57,8 +49,6 @@ Promise.then() is not a blocking operation.
 Its a way to create async threads in js. Make sure you understand how the eventloop works to understand the output of this.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 let promise = new Promise((resolve, reject) => {
@@ -114,8 +104,6 @@ Program ended 2
 */
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Promise.all
@@ -123,8 +111,6 @@ Program ended 2
 Used for parallel execution of multiple processes.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const step1 = async () => {
@@ -151,8 +137,6 @@ console.log(3);
 */
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 ## Some notes:
@@ -166,8 +150,6 @@ console.log(3);
 - call await
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const step1 = async () => 1;
@@ -192,15 +174,11 @@ const fun = async () => {
 fun();
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Complicated case with Promise
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 const step1 = async () => 1;
@@ -236,8 +214,6 @@ end
 */
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Promise chaining
@@ -245,8 +221,6 @@ end
 A good example of promise chaining.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```js
 let promise = (data) =>
@@ -327,7 +301,5 @@ resolved
 rejected
 */
 ```
-
-</Highlight>
 
 </CodeDivWrapper>

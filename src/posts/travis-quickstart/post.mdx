@@ -8,7 +8,7 @@ tags: [travis, deployment, npmjs, opensource, tools]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
+
 import { Link } from "gatsby";
 
 Not sure why always during deploying with Travis I spend at least 2 hours fighting with keys and pr checkers. Time to write it down. So here are the steps you can follow to setup travis for your opesource projects
@@ -23,8 +23,6 @@ We can use travis just to add pr checkers. This step is useful because we can ad
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 language: node_js
 node_js:
@@ -36,8 +34,6 @@ before_script:
 after_success:
   - bash <(curl -s https://codecov.io/bash) -e TRAVIS_NODE_VERSION
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -54,21 +50,15 @@ Now make sure you have travis cli installed. Then run this command in your proje
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 travis setup npm
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
 You will be asked the token you got from npmjs. and also make sure to encrypt the API key. Not all the needed variables are auto generated. Here is the full set of variables.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```bash
 deploy:
@@ -83,8 +73,6 @@ deploy:
     node_js: '--lts'
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 - Make sure also to check the latest git npmjs library repo not to miss anything.
@@ -94,8 +82,6 @@ Dont forget these fields in package.json without these you will have missing fil
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```json
 {
   "files": ["dist"],
@@ -103,8 +89,6 @@ Dont forget these fields in package.json without these you will have missing fil
   "types": "dist/index.d.ts"
 }
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

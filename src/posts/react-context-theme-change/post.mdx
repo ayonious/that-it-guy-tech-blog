@@ -8,7 +8,7 @@ tags: [js, nodejs, react, context]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
+
 import { Link } from "gatsby";
 
 Context is a very simple thing. A global storage to save all common data. Then all the children uses those variables. This is helpful because you dont need to pass to all the nexted subchildren the same props all the way from the top component. There is another interesting application I found for react Context. Its changing the theme of your website. Let me describe the process here.
@@ -18,8 +18,6 @@ Context is a very simple thing. A global storage to save all common data. Then a
 Just a simple configuration with all variables. Also contains the React.createContext with default values
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```jsx
 // ThemeContext.tsx
@@ -61,8 +59,6 @@ const ThemeContext = React.createContext({
 export default ThemeContext;
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Step2: Create the Theme context Provider
@@ -70,8 +66,6 @@ export default ThemeContext;
 This is one root Component (maybe your Layout) that initiates all your other components. This part needs to be singleton for the context to be singleton
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```jsx
 // ThemeProvider.tsx
@@ -89,8 +83,6 @@ const ThemeProvider = ({ children }) => {
 
 export default ThemeProvider;
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -100,8 +92,6 @@ This is a wrapper that you need to wrap around every root Component. This initia
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```jsx
 // ThemeProvider.tsx
 import React, { useState } from "react";
@@ -119,8 +109,6 @@ const ThemeProvider = ({ children }) => {
 export default ThemeProvider;
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Step4: Create the Theme context Consumer that switches
@@ -128,8 +116,6 @@ export default ThemeProvider;
 This is one of the comsumer of the contxt that can change the context. See how it uses the setTheme function
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```jsx
 // Header.tsx
@@ -159,8 +145,6 @@ const Header = () => {
 export default Header;
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 # Step5: Create Other normal Consumer of Context
@@ -168,8 +152,6 @@ export default Header;
 These are easy simple consumers of Context
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```jsx
 // Footer.tsx
@@ -194,8 +176,6 @@ class Footer extends Component<any, any> {
 
 export default Footer;
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

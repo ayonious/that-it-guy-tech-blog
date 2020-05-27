@@ -8,7 +8,7 @@ tags: [js, react, jquery]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
+
 import { Link } from "gatsby";
 
 Jquery reminds me of some very old technology. I did hear about this in some places but never saw any application. So mostly I was staying away from learning it. Recently I found a problem that I could not find any solution using our cool new Framework and technology. Somewhere in internet I found an old school jquery solution. So here let me tell you what this jquery can do and how you can use it in our modern react projects.
@@ -21,8 +21,6 @@ Imagine there is a particular class (lets call this magic-class). Any component 
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```jsx
 <div class="magic-class">contentText</div>
 
@@ -33,8 +31,6 @@ Imagine there is a particular class (lets call this magic-class). Any component 
   <span>contentText</span>
 </div>
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -64,8 +60,6 @@ Now lets talk about solution with jquery. After the dom is rendered you can run 
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```jsx
 import $ from "jquery";
 import React, { Component } from "react";
@@ -93,15 +87,11 @@ class PostDetails extends Component<any, any> {
 export default PostDetails;
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 And here is a simple css for that
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```css
 .header-anchor {
@@ -112,8 +102,6 @@ And here is a simple css for that
   opacity: 1;
 }
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

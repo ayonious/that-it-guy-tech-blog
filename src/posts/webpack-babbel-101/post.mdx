@@ -8,7 +8,7 @@ tags: [js, nodejs, react, babel, webpack]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
+
 import { Link } from "gatsby";
 
 If you are new to react you might be starting a new react project using create-react-app. But then you never really get to configure this babel and Webpack. So here Im describing the bare min of babel and Webpack.
@@ -25,8 +25,6 @@ in the file of .babelrc I use this. This actually tells
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 {
   "presets": [
@@ -42,8 +40,6 @@ in the file of .babelrc I use this. This actually tells
 // some others are
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 You can configure babel to tell which browser to be this compatible to. or als omention range of versions of browsers.
@@ -51,8 +47,6 @@ You can configure babel to tell which browser to be this compatible to. or als o
 Here is a pure html code that tells browser that to understand this code part you need babel compiler
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```html
 <script type="text/babel">
@@ -63,8 +57,6 @@ Here is a pure html code that tells browser that to understand this code part yo
   ReactDOM.render(App, document.getElementById("root"));
 </script>
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -81,8 +73,6 @@ You will see words like `babel-loader`, `html-loader`. These things actually tak
 Here are some config part of webpack.
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```json
 {
@@ -105,8 +95,6 @@ Here are some config part of webpack.
   ]
 }
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 

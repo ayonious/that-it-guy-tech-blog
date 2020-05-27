@@ -8,7 +8,6 @@ tags: [js, nodejs]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
-import Highlight from "react-highlight.js";
 
 The formatting is something everyone should follow same rules using some basic tools. In js world most popular formatter is prettier. Husky on top of it makes it just hussle less
 
@@ -20,21 +19,15 @@ First install the thingy as dev dependency
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 npm install --save-dev prettier
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
 Now add this config file `.prettierrc`
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```json
 {
@@ -46,15 +39,11 @@ Now add this config file `.prettierrc`
 }
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 Now add this config file `.prettierignore` to ignore some files being formatted
 
 <CodeDivWrapper>
-
-<Highlight>
 
 ```text
 .cache
@@ -63,21 +52,15 @@ package-lock.json
 public
 ```
 
-</Highlight>
-
 </CodeDivWrapper>
 
 run prettier on your Project
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 prettier --write \"\*_/_.{js,jsx,json,md}\"
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -93,13 +76,9 @@ Only having prettier means you have to format yourself. But maybe you want this 
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```bash
 npm install pretty-quick husky --save-dev
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
@@ -109,8 +88,6 @@ create file `.huskyrc.json` in root of the folder
 
 <CodeDivWrapper>
 
-<Highlight>
-
 ```json
 {
   "hooks": {
@@ -118,8 +95,6 @@ create file `.huskyrc.json` in root of the folder
   }
 }
 ```
-
-</Highlight>
 
 </CodeDivWrapper>
 
