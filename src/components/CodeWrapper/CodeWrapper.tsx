@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { CodeDivWrapper, CopyButtonWrapper } from "./styles";
 
 const witeInClipboard = (text) => {
   navigator.clipboard.writeText(text);
 };
 
+const changeTextTemporarily = (changeText) => {
+  changeText("Copied!");
+  setTimeout(() => changeText("Copy"), 1000);
+};
+
 const CopyButton = (props) => {
+  const [text, changetext] = useState("copy");
   return (
-    <CopyButtonWrapper onClick={props.onCopy}>
-      <span>copy</span>
+    <CopyButtonWrapper
+      onClick={() => {
+        props.onCopy();
+        changeTextTemporarily(changetext);
+      }}
+    >
+      <span>{text}</span>
     </CopyButtonWrapper>
   );
 };

@@ -12,4 +12,7 @@ export const CopyButtonWrapper = styled.button`
   color: rgb(255, 255, 255);
   background: #232323;
   border-radius: 4px;
+  :focus {
+    outline: 0;
+  }
 `;
