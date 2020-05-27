@@ -8,11 +8,15 @@ export const CodeDivWrapper = styled.div`
 `;
 
 export const CopyButtonWrapper = styled.button`
-  float: right;
-  color: rgb(255, 255, 255);
-  background: #232323;
-  border-radius: 4px;
-  :focus {
-    outline: 0;
+  display: none;
+  ${CodeDivWrapper}:hover & {
+    display: block;
+    float: right;
+    color: rgb(255, 255, 255);
+    background: #232323;
+    border-radius: 4px;
+    :focus {
+      outline: 0;
+    }
   }
 `;
