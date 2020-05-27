@@ -36,7 +36,6 @@
     "@types/jquery": "^3.3.38",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
-    "@types/react-fontawesome": "^1.6.4",
     "@types/react-highlight.js": "^1.0.0",
     "@types/styled-components": "^5.1.0",
     "prettier": "^2.0.5"
