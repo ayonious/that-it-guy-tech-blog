@@ -7,6 +7,9 @@ export const CodeDivWrapper = styled.div`
   margin: 0 -1rem 1.5rem;
 `;
 
+/*
+Show this only when you hover on its parents
+*/
 export const CopyButtonWrapper = styled.button`
   display: none;
   ${CodeDivWrapper}:hover & {
