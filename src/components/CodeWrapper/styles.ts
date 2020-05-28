@@ -13,19 +13,18 @@ ${CodeDivWrapper}:hover & : => Show this only when you hover on its parents
 :hover { cursor: pointer; } => on hover change the cursor to a hand
 */
 
-export const CopyButtonWrapper = styled.button`
+export const CopyButtonWrapper = styled.div`
   display: none;
   ${CodeDivWrapper}:hover & {
     display: block;
     float: right;
-    color: rgb(255, 255, 255);
+    padding: 2px 4px;
+    color: rgb(150, 150, 150);
+    border-style: solid;
+    border-color: rgb(150, 150, 150);
+    border-width: 1px;
     background: #232323;
     border-radius: 4px;
-    :focus {
-      outline: 0;
-    }
-    :hover {
-      cursor: pointer;
-    }
+    cursor: pointer;
   }
 `;
