@@ -303,3 +303,148 @@ rejected
 ```
 
 </CodeDivWrapper>
+
+# Pormise resolve ways
+
+### await
+
+Yes you can await on Promise
+
+<CodeDivWrapper>
+
+```js
+let promise = (data) =>
+  new Promise((res, rej) => {
+    if (data) {
+      res("resolved"); // input of res will be returned by await
+    } else {
+      rej("rejected");
+    }
+  });
+
+// this is a way to resolve
+async function some() {
+  const data = await promise(true); // resolved
+  console.log(1);
+  console.log(data);
+}
+
+some();
+```
+
+</CodeDivWrapper>
+
+### then
+
+<CodeDivWrapper>
+
+```js
+let promise = (data) =>
+  new Promise((res, rej) => {
+    if (data) {
+      res("resolved"); // input of res will be `data` for then
+    } else {
+      rej("rejected");
+    }
+  });
+
+// this is another way to resolve
+promise(true).then((data) => {
+  console.log(2);
+  console.log(data);
+});
+```
+
+</CodeDivWrapper>
+
+### Quiz
+
+Whats the output?
+
+<CodeDivWrapper>
+
+```js
+let promise = (data) =>
+  new Promise((res, rej) => {
+    if (data) {
+      res("resolved");
+    } else {
+      rej("rejected");
+    }
+  });
+
+async function some() {
+  const data = await promise(true);
+  console.log(1);
+  console.log(data);
+}
+
+promise(true).then((data) => {
+  console.log(2);
+  console.log(data);
+});
+
+console.log("start");
+some();
+console.log("end");
+
+/*
+start
+end
+2
+resolved
+1
+*/
+```
+
+</CodeDivWrapper>
+
+# Promisify
+
+There is a lot of async functions that takes a callback function. For example **_readFile(fileName, callbackFunction)_**
+
+Callback functions passing and chaining can look really nested and complex.
+
+<CodeDivWrapper>
+
+```js
+fs.writeFile("file.json", data, (err, fileData) => {
+  if (err) throw err;
+  fs.readFile("file.json", (err, fileData) => {
+    if (err) {
+      throw err;
+    }
+    const fileData2 = JSON.parse(fd.toString());
+    fileData2.changeVal = "10";
+    fs.writeFile("file.json", correctData, (err, fd) => {
+      if (err) throw err;
+    });
+  });
+});
+```
+
+</CodeDivWrapper>
+
+NOTE: Callback functions always take error first.
+
+One way to make this code human readable. (Or at least me readable ) is using **promisify**
+
+<CodeDivWrapper>
+
+```js
+const { promisify } = require("util");
+
+const fileReadPromisify = promisify(fs.readFile);
+const fileWritePromisify = promisify(fs.writeFile);
+
+try {
+  await fileWritePromisify("file.json", data);
+  const fileData = await fileReadPromisify("file.json");
+  fileData.changeVal = "10";
+  await fileWritePromisify("file.json", fileData);
+} catch (err) {
+  console.log(err.message);
+}
+```
+
+</CodeDivWrapper>
