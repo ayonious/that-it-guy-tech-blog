@@ -1,6 +1,5 @@
 {
   "name": "personal-tech-blog",
-  "private": true,
   "description": "A simple tech blog created with Gatsby",
   "version": "0.0.0",
   "license": "MIT",
