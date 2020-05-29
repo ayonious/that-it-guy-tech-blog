@@ -14,15 +14,17 @@ cursor: pointer; => change the cursor to a hand
 */
 
 export const CopyButtonWrapper = styled.div`
-  display: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  float: right;
+  padding: 1px 4px;
+  color: rgb(250, 250, 250);
+  border: 2px solid rgb(150, 150, 150);
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
   ${CodeDivWrapper}:hover & {
-    display: block;
-    float: right;
-    padding: 1px 4px;
-    color: rgb(250, 250, 250);
-    border: 2px solid rgb(150, 150, 150);
-    font-size: 12px;
-    border-radius: 4px;
-    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s;
   }
 `;
