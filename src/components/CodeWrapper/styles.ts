@@ -18,12 +18,10 @@ export const CopyButtonWrapper = styled.div`
   ${CodeDivWrapper}:hover & {
     display: block;
     float: right;
-    padding: 2px 4px;
-    color: rgb(150, 150, 150);
-    border-style: solid;
-    border-color: rgb(150, 150, 150);
-    border-width: 1px;
-    background: #232323;
+    padding: 1px 4px;
+    color: rgb(250, 250, 250);
+    border: 2px solid rgb(150, 150, 150);
+    font-size: 12px;
     border-radius: 4px;
     cursor: pointer;
   }

@@ -7,12 +7,12 @@ const witeInClipboard = (text) => {
 };
 
 const changeTextTemporarily = (changeText) => {
-  changeText("Copied!");
-  setTimeout(() => changeText("Copy"), 1000);
+  changeText("Copied ✅");
+  setTimeout(() => changeText("Copy 📋"), 1000);
 };
 
 const CopyButton = (props) => {
-  const [text, changetext] = useState("copy");
+  const [text, changetext] = useState("copy 📋");
   return (
     <CopyButtonWrapper
       onClick={() => {
