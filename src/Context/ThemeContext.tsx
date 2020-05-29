@@ -13,19 +13,18 @@ export enum Themes {
   "white" = "white",
 }
 
-
 const whiteTheme: ThemeDetails = {
   themeName: Themes.white,
   mainGrey: "#ecececc0",
   mainWhite: "rgb(255, 255, 255)",
-  mainBlack: "#302f2f",
+  mainBlack: "rgb(25, 25, 25)",
   darkGrey: "#8e8e8e",
 };
 
 export const darkTheme: ThemeDetails = {
   themeName: Themes.dark,
   mainGrey: "#8e8e8e",
-  mainWhite: "#302f2f",
+  mainWhite: "rgb(25, 25, 25)",
   mainBlack: "rgb(255, 255, 255)",
   darkGrey: "#ecececc0",
 };
