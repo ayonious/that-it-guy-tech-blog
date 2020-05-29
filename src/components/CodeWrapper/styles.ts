@@ -9,7 +9,6 @@ export const CodeDivWrapper = styled.div`
 
 /*
 ${CodeDivWrapper}:hover & : => Show this only when you hover on its parents
-:focus { outline: 0; }   => after clicking dont show that blue border around the button
 cursor: pointer; => change the cursor to a hand
 */
 
