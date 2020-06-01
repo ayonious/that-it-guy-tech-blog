@@ -1,10 +1,10 @@
 ---
-title: Configure my Fish Shell
-slug: fish
+title: React Reducer in Short Example
+slug: react-reducer
 image: ./images/person-holding-compass-841286.jpg
-date: "2020-06-31"
+date: "2020-05-29"
 published: yes
-tags: [js, react]
+tags: [js, react, reducer]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper/CodeWrapper";
@@ -28,7 +28,7 @@ import React, { useState } from "react";
 
 import ColorDetails from "../components/ColorDetails";
 
-const CounterScreen = () => {
+const ColorHome = () => {
   const [red, changeRed] = useState(0); // initialize 1
   const [green, changeGreen] = useState(0); // initialize 2
   const [blue, changeBlue] = useState(0); // initialize 3.... ah shit :(
@@ -37,27 +37,27 @@ const CounterScreen = () => {
     <>
       <ColorDetails
         color="Red"
-        onDecrease={() => changeRed(red - 15)}
-        onIncrease={() => changeRed(red + 15)}
+        onDecrease={() => changeRed(red - 20)}
+        onIncrease={() => changeRed(red + 20)}
       />
       <ColorDetails
         color="Green"
-        onDecrease={() => changeGreen(green - 15)}
-        onIncrease={() => changeGreen(green + 15)}
+        onDecrease={() => changeGreen(green - 20)}
+        onIncrease={() => changeGreen(green + 20)}
       />
       <ColorDetails
         color="Blue"
-        onDecrease={() => changeBlue(blue - 15)}
-        onIncrease={() => changeBlue(blue + 15)}
+        onDecrease={() => changeBlue(blue - 20)}
+        onIncrease={() => changeBlue(blue + 20)}
       />
       <span>
-        Color is: {state.red} {state.green} {state.blue}
+        Combined Color is: {state.red} {state.green} {state.blue}
       </span>
     </>
   );
 };
 
-export default CounterScreen;
+export default ColorHome;
 ```
 
 </CodeDivWrapper>
@@ -75,41 +75,41 @@ import ColorDetails from "../components/ColorDetails";
 
 const reducer = (state, action) => {
   // state = { red: 0, green: 0, blue: 0 }
-  // action = { color: 'red', addedVal: 15 }
+  // action = { color: 'red', addedVal: 20 }
 
   const copyState = { ...state };
   copyState[action.color] = copyState[action.color] + action.addedVal;
   return copyState;
 };
 
-const CounterScreen = () => {
+const ColorHome = () => {
   const [state, dispatch] = useReducer(reducer, { red: 0, green: 0, blue: 0 }); // lot cleaner code
 
   return (
     <>
       <ColorDetails
         color="Red"
-        onDecrease={() => dispatch({ color: "red", addedVal: -15 })}
-        onIncrease={() => dispatch({ color: "red", addedVal: 15 })}
+        onDecrease={() => dispatch({ color: "red", addedVal: -20 })}
+        onIncrease={() => dispatch({ color: "red", addedVal: 20 })}
       />
       <ColorDetails
         color="Green"
-        onDecrease={() => dispatch({ color: "green", addedVal: -15 })}
-        onIncrease={() => dispatch({ color: "green", addedVal: 15 })}
+        onDecrease={() => dispatch({ color: "green", addedVal: -20 })}
+        onIncrease={() => dispatch({ color: "green", addedVal: 20 })}
       />
       <ColorDetails
         color="Blue"
-        onDecrease={() => dispatch({ color: "blue", addedVal: -15 })}
-        onIncrease={() => dispatch({ color: "blue", addedVal: 15 })}
+        onDecrease={() => dispatch({ color: "blue", addedVal: -20 })}
+        onIncrease={() => dispatch({ color: "blue", addedVal: 20 })}
       />
       <span>
-        Color is: {state.red} {state.green} {state.blue}
+        Combined Color is: {state.red} {state.green} {state.blue}
       </span>
     </>
   );
 };
 
-export default CounterScreen;
+export default ColorHome;
 ```
 
 </CodeDivWrapper>
