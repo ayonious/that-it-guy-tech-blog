@@ -22,4 +22,5 @@ export const SpanWrapper = styled.span`
 
 export const NavBar = styled.nav`
   padding: 0 0rem;
+  margin-top: auto;
 `;
