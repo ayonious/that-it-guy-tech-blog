@@ -40,7 +40,9 @@ export const revertThemes = {
 };
 
 const ThemeContext = React.createContext({
-  theme: darkTheme,
+  theme: window
+    ? mapThemeNameToDetails[localStorage.getItem("theme")]
+    : darkTheme,
   setTheme: (inp) => {},
 });
 

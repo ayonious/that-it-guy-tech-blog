@@ -10,22 +10,23 @@ import ThemeContext, {
 const ThemeSwitcher = () => {
   return (
     <ThemeContext.Consumer>
-      {({ theme, setTheme }) => (
-        <FormControlLabel
-          control={
-            <Switch
-              size="medium"
-              checked={theme.themeName === Themes.dark}
-              onClick={() => {
-                setTheme(revertThemes[theme.themeName]);
-              }}
-            />
-          }
-          label={
-            theme.themeName === Themes.dark ? "🌚 Dark Theme" : "🌞 Light Theme"
-          }
-        />
-      )}
+      {({ theme, setTheme }) => {
+        const isDark = theme.themeName === Themes.dark;
+        return (
+          <FormControlLabel
+            control={
+              <Switch
+                size="medium"
+                checked={isDark}
+                onClick={() => {
+                  setTheme(revertThemes[theme.themeName]);
+                }}
+              />
+            }
+            label={isDark ? "🌚 Dark Theme" : "🌞 Light Theme"}
+          />
+        );
+      }}
     </ThemeContext.Consumer>
   );
 };
