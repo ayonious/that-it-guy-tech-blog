@@ -12,7 +12,6 @@ const ThemeSwitcher = () => {
   } = useContext(Context);
   const isDark = theme.themeName === Themes.dark;
 
-  /*
   useEffect(() => {
     console.log("testing language in context");
     const themeInLocalStorage = localStorage.getItem("selectedTheme");
@@ -30,7 +29,6 @@ const ThemeSwitcher = () => {
       changeTheme(themeInLocalStorage);
     }
   }, []);
-  */
 
   console.log("current theme is", theme, isDark);
 
