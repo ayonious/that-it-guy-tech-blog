@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { TagDivWrapper } from "./styles";
 
-import ThemeContext from "../../Context/ThemeContext";
+import { Context } from "../../Context/ThemeContext";
 
 interface TagData {
   tags: string[];
 }
 
 const TagsList = ({ tags }: TagData) => {
+  const { theme } = useContext(Context);
+
   return (
     <div>
       {tags.map((tag) => (
-        <ThemeContext.Consumer>
-          {({ theme }) => <TagDivWrapper theme={theme}>#{tag}</TagDivWrapper>}
-        </ThemeContext.Consumer>
+        <TagDivWrapper theme={theme}>#{tag}</TagDivWrapper>
       ))}
     </div>
   );

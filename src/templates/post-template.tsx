@@ -1,7 +1,7 @@
 import { graphql, Link } from "gatsby";
 import Image from "gatsby-image";
 import PostDetails from "../components/PostDetails";
-import React from "react";
+import React, { useContext } from "react";
 import {
   TemplateDivWrapper,
   PostTagDivWrapper,
@@ -11,7 +11,7 @@ import {
 } from "../css/postTemplate";
 import { LinkDivWrapper } from "../css/commonstyles";
 
-import ThemeContext from "../Context/ThemeContext";
+import { Context } from "../Context/ThemeContext";
 import Layout from "../components/Layout";
 
 interface TemplateData {
@@ -37,33 +37,30 @@ const postTemplate = ({ data }: TemplateData) => {
   const { title, date, image, tags } = data.mdx.frontmatter;
   const { body } = data.mdx;
   const img = image.childImageSharp.fluid;
+  const { theme } = useContext(Context);
 
   return (
     <Layout>
-      <ThemeContext.Consumer>
-        {({ theme }) => (
-          <TemplateDivWrapper theme={theme}>
-            <LinkDivWrapper theme={theme}>
-              <Link to="/">{"< back to Home Page"}</Link>
-            </LinkDivWrapper>
-            <div>
-              <TitleDivWrapper>{title}</TitleDivWrapper>
-              <DateDivWrapper>
-                <span>{date}</span>
-              </DateDivWrapper>
-              <TagsDivWrapper>
-                {tags.map((tag, index) => (
-                  <PostTagDivWrapper key={index} theme={theme}>
-                    #{tag}
-                  </PostTagDivWrapper>
-                ))}
-              </TagsDivWrapper>
-            </div>
-            <Image fluid={img} />
-            <PostDetails body={body} />
-          </TemplateDivWrapper>
-        )}
-      </ThemeContext.Consumer>
+      <TemplateDivWrapper theme={theme}>
+        <LinkDivWrapper theme={theme}>
+          <Link to="/">{"< back to Home Page"}</Link>
+        </LinkDivWrapper>
+        <div>
+          <TitleDivWrapper>{title}</TitleDivWrapper>
+          <DateDivWrapper>
+            <span>{date}</span>
+          </DateDivWrapper>
+          <TagsDivWrapper>
+            {tags.map((tag, index) => (
+              <PostTagDivWrapper key={index} theme={theme}>
+                #{tag}
+              </PostTagDivWrapper>
+            ))}
+          </TagsDivWrapper>
+        </div>
+        <Image fluid={img} />
+        <PostDetails body={body} />
+      </TemplateDivWrapper>
     </Layout>
   );
 };

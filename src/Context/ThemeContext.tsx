@@ -1,47 +1,29 @@
 import React from "react";
+import createThemeContext from "./createThemeContext";
+import { darkTheme } from "./ThemeEnums";
 
-export interface ThemeDetails {
-  themeName: Themes;
-  mainGrey: String;
-  mainWhite: String;
-  mainBlack: String;
-  darkGrey: String;
-}
-
-export enum Themes {
-  "dark" = "dark",
-  "white" = "white",
-}
-
-const whiteTheme: ThemeDetails = {
-  themeName: Themes.white,
-  mainGrey: "#ecececc0",
-  mainWhite: "rgb(255, 255, 255)",
-  mainBlack: "rgb(25, 25, 25)",
-  darkGrey: "#8e8e8e",
+const themeReducer = (state, action) => {
+  switch (action.type) {
+    case "change_theme":
+      localStorage.setItem("selectedTheme", action.theme);
+      return {
+        theme: action.language,
+      };
+    default:
+      return state;
+  }
 };
 
-export const darkTheme: ThemeDetails = {
-  themeName: Themes.dark,
-  mainGrey: "#8e8e8e",
-  mainWhite: "rgb(25, 25, 25)",
-  mainBlack: "rgb(255, 255, 255)",
-  darkGrey: "#ecececc0",
+const changeTheme = (dispatch) => {
+  return (theme) => {
+    dispatch({ type: "change_theme", theme });
+  };
 };
 
-export const mapThemeNameToDetails = {
-  [Themes.dark]: darkTheme,
-  [Themes.white]: whiteTheme,
-};
-
-export const revertThemes = {
-  [Themes.dark]: whiteTheme,
-  [Themes.white]: darkTheme,
-};
-
-const ThemeContext = React.createContext({
-  theme: darkTheme,
-  setTheme: (inp) => {},
-});
-
-export default ThemeContext;
+export const { Context, Provider } = createThemeContext(
+  themeReducer,
+  { changeTheme },
+  {
+    theme: darkTheme,
+  }
+);

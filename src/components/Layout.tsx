@@ -1,21 +1,19 @@
-import React from "react";
-import Header from "./Layout/Header/Header";
-import Footer from "./Layout/Footer/Footer";
+import React, { useContext } from "react";
 
-import ThemeContext from "../Context/ThemeContext";
+import { Context } from "../Context/ThemeContext";
 import { TopMostDivWrapper } from "../css/commonstyles";
+import Footer from "./Layout/Footer/Footer";
+import Header from "./Layout/Header/Header";
 
 const Layout = ({ children }) => {
+  const { theme } = useContext(Context);
+
   return (
-    <ThemeContext.Consumer>
-      {({ theme }) => (
-        <TopMostDivWrapper theme={theme}>
-          <Header />
-          {children}
-          <Footer />
-        </TopMostDivWrapper>
-      )}
-    </ThemeContext.Consumer>
+    <TopMostDivWrapper theme={theme}>
+      <Header />
+      {children}
+      <Footer />
+    </TopMostDivWrapper>
   );
 };
 
