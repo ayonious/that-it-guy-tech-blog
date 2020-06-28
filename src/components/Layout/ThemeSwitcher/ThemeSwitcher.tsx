@@ -2,7 +2,8 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
 import React, { useContext, useEffect } from "react";
 
-import { Context, revertThemes, Themes } from "../../../Context/ThemeContext";
+import { Context } from "../../../Context/ThemeContext";
+import { revertThemes, Themes } from "../../../Context/ThemeEnums";
 
 const ThemeSwitcher = () => {
   const { theme, changeTheme } = useContext(Context);

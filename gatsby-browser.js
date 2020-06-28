@@ -3,7 +3,7 @@ import "./node_modules/highlight.js/styles/railscasts.css";
 import "./src/css/layout.css";
 
 import React from "react";
-import Provider from "./src/Context/ThemeContext";
+import { Provider } from "./src/Context/ThemeContext";
 
 // this is a gatsby function
 export const wrapRootElement = ({ element }) => {

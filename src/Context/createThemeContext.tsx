@@ -8,7 +8,7 @@ export default (reducer, actions, initialState) => {
   });
 
   const Provider = ({ children }) => {
-    const [state, dispatch] = useReducer(reducer, initialState);
+    const [theme, dispatch] = useReducer(reducer, initialState);
 
     // actions === { addBlogPost: (dispatch) => { return () => {} } }
     const boundActions = {};
@@ -17,7 +17,7 @@ export default (reducer, actions, initialState) => {
     }
 
     return (
-      <Context.Provider value={{ ...state, ...boundActions }}>
+      <Context.Provider value={{ theme, ...boundActions }}>
         {children}
       </Context.Provider>
     );
