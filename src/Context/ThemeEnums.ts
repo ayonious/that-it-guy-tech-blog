@@ -33,6 +33,6 @@ export const mapThemeNameToDetails = {
 };
 
 export const revertThemes = {
-  [Themes.dark]: whiteTheme,
-  [Themes.white]: darkTheme,
+  dark: "white",
+  white: "dark",
 };
