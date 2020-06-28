@@ -3,12 +3,14 @@ import { darkTheme } from "./ThemeEnums";
 
 export default (reducer, actions, initialState) => {
   const Context = React.createContext({
-    theme: darkTheme,
+    state: {
+      theme: darkTheme,
+    },
     changeTheme: (inp) => {},
   });
 
   const Provider = ({ children }) => {
-    const [theme, dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState);
 
     // actions === { addBlogPost: (dispatch) => { return () => {} } }
     const boundActions = {};
@@ -17,7 +19,7 @@ export default (reducer, actions, initialState) => {
     }
 
     return (
-      <Context.Provider value={{ theme, ...boundActions }}>
+      <Context.Provider value={{ state, ...boundActions }}>
         {children}
       </Context.Provider>
     );

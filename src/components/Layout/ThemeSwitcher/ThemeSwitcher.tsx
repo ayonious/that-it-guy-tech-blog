@@ -6,21 +6,33 @@ import { Context } from "../../../Context/ThemeContext";
 import { revertThemes, Themes } from "../../../Context/ThemeEnums";
 
 const ThemeSwitcher = () => {
-  const { theme, changeTheme } = useContext(Context);
+  const {
+    state: { theme },
+    changeTheme,
+  } = useContext(Context);
   const isDark = theme.themeName === Themes.dark;
 
+  /*
   useEffect(() => {
     console.log("testing language in context");
     const themeInLocalStorage = localStorage.getItem("selectedTheme");
-    if (themeInLocalStorage && themeInLocalStorage !== theme) {
-      changeTheme(themeInLocalStorage);
+    if (!["white", "dark"].includes(themeInLocalStorage)) {
+      if (["white", "dark"].includes(theme.themeName)) {
+        console.log("changeTheme(theme.themeName);", theme.themeName);
+        changeTheme(theme.themeName);
+      }
+    } else if (themeInLocalStorage && themeInLocalStorage !== theme.themeName) {
       console.log(
         "changed theme in context",
-        `selectedLanguageInLopcalStorage = ${themeInLocalStorage}`,
-        `state.selectedLanguage = ${theme}`
+        `themeInLocalStorage = ${themeInLocalStorage}`,
+        `state.theme = ${theme.themeName}`
       );
+      changeTheme(themeInLocalStorage);
     }
   }, []);
+  */
+
+  console.log("current theme is", theme, isDark);
 
   return (
     <FormControlLabel
@@ -29,6 +41,11 @@ const ThemeSwitcher = () => {
           size="medium"
           checked={isDark}
           onClick={() => {
+            console.log(
+              "theme switcher",
+              theme.themeName,
+              revertThemes[theme.themeName]
+            );
             changeTheme(revertThemes[theme.themeName]);
           }}
         />

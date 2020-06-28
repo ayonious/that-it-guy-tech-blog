@@ -8,7 +8,9 @@ interface TagData {
 }
 
 const TagsList = ({ tags }: TagData) => {
-  const { theme } = useContext(Context);
+  const {
+    state: { theme },
+  } = useContext(Context);
 
   return (
     <div>

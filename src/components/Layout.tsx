@@ -6,7 +6,9 @@ import Footer from "./Layout/Footer/Footer";
 import Header from "./Layout/Header/Header";
 
 const Layout = ({ children }) => {
-  const { theme } = useContext(Context);
+  const {
+    state: { theme },
+  } = useContext(Context);
 
   return (
     <TopMostDivWrapper theme={theme}>

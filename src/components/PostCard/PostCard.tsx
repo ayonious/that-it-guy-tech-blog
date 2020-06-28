@@ -30,7 +30,9 @@ const PostCard = ({ post }: PostCardData) => {
   const { title, date, slug, tags } = post.frontmatter;
   const img = post.frontmatter.image.childImageSharp.fluid;
 
-  const { theme } = useContext(Context);
+  const {
+    state: { theme },
+  } = useContext(Context);
 
   return (
     <CardArticleWrapper theme={theme}>

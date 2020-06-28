@@ -37,7 +37,9 @@ const postTemplate = ({ data }: TemplateData) => {
   const { title, date, image, tags } = data.mdx.frontmatter;
   const { body } = data.mdx;
   const img = image.childImageSharp.fluid;
-  const { theme } = useContext(Context);
+  const {
+    state: { theme },
+  } = useContext(Context);
 
   return (
     <Layout>

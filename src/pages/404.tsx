@@ -8,7 +8,9 @@ import { PostsSectionWrapper } from "../components/PostList/styles";
 import { Context } from "../Context/ThemeContext";
 
 const Error = () => {
-  const { theme } = useContext(Context);
+  const {
+    state: { theme },
+  } = useContext(Context);
 
   return (
     <Layout>

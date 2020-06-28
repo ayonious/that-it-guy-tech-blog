@@ -2,10 +2,10 @@ import React from "react";
 import createThemeContext from "./createThemeContext";
 import { darkTheme, mapThemeNameToDetails } from "./ThemeEnums";
 
-const themeReducer = (state, action) => {
+const themeReducer = (state, action: { type: string; theme: string }) => {
   switch (action.type) {
     case "change_theme":
-      localStorage.setItem("selectedTheme", action.theme);
+      //localStorage.setItem("selectedTheme", action.theme);
       return {
         theme: mapThemeNameToDetails[action.theme],
       };
@@ -15,7 +15,7 @@ const themeReducer = (state, action) => {
 };
 
 const changeTheme = (dispatch) => {
-  return (theme) => {
+  return (theme: string) => {
     dispatch({ type: "change_theme", theme });
   };
 };

@@ -12,7 +12,9 @@ import {
 } from "./styles";
 
 const Footer = () => {
-  const { theme } = useContext(Context);
+  const {
+    state: { theme },
+  } = useContext(Context);
 
   return (
     <NavBar>
