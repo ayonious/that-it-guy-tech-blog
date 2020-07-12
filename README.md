@@ -14,7 +14,7 @@
   </a>
 </p>
 
-![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front-page.2.png)
+![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front.page.3.png)
 
 # 🎁Features
 
@@ -62,8 +62,6 @@ useState, useContext, useCallback
 # 🖼 Screenshot and Design
 
 ## 🎨 Theming
-
-Change night/dark mode of your website
 
 ![Themes](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/themes.png)
 
