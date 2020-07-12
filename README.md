@@ -16,7 +16,7 @@
 
 ![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front-page.2.png)
 
-## 🎓 Gatsby things that I learnt in this project
+# 🎁Features
 
 1.  **gatsby-plugin-mdx**
 
@@ -51,16 +51,36 @@ Done using Context. useContext. Context.Provider Context.Consumer
 - Code syntax highlighting using Highlight.js
 - Adding a copy button for each code block
 
-8. **Some other hooks**
+8. **Lazy loading**
 
-useState
+- If you have too many posts it will try to load them one by one based on your screen scroll position
 
-## 💄 Styles
+9. **Some other hooks**
 
-1. Mostly are pure css styles
+useState, useContext, useCallback
+
+# 🖼 Screenshot and Design
+
+## 🎨 Theming
+
+Change night/dark mode of your website
+
+![Themes](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/themes.png)
+
+## Syntax highlighting with Code copy
+
+![SyntaxHighlight](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/syntax.highlighting.png)
+
+## Filter by Post Tags
+
+![Filter](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/filter.png)
+
+# 💄 Styles
+
+1. Mostly are Styled Components
 2. And some material-ui
-3. Styled Components
+3. Some pure css styles
 
-## 🚀 Deploy
+# 🚀 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ayonious/that-it-guy-tech-blog)

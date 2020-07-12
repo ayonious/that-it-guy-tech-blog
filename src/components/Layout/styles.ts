@@ -7,5 +7,4 @@ export const TopMostDivWrapper = styled.div`
   min-height: 100vh;
   flex-direction: column;
   display: flex;
-  margin: 0px;
 `;
