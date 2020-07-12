@@ -1,0 +1,155 @@
+---
+title: Closures in js
+slug: js-closures
+image: ./images/backlit-dawn-foggy-friendship-697243.jpg
+date: "2020-04-30"
+published: yes
+tags: [js]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+When a function is created the function saves the states of the variables in its outer scope. During running that function it can access it. Closure is called this feature where inner function has access to outer functions variables.
+
+# Closure Applications
+
+## Private/Public elements
+
+<CodeDivWrapper>
+
+```js
+function A() {
+  let a = 1,
+    b = 2; //these remain private
+  function calculate() {
+    return a + b;
+  }
+
+  const calculateArrow = () => {
+    return a + b;
+  };
+
+  return {
+    get: calculate, // public function will be only get
+    getArrow: calculateArrow, // this also works
+  };
+}
+
+const a = A();
+
+console.log(a.get()); // 3
+```
+
+</CodeDivWrapper>
+
+## Keeping a ref of the outer scope variables
+
+<CodeDivWrapper>
+
+```jsx
+class Dashboard extends Component {
+  render() {
+    const { name } = this.props;
+
+    function printname() {
+      // you have written probably functions like this
+      // many times without noticing that Im not passing the name
+      // as a param for this function :P
+      console.log(name);
+    }
+
+    const printnameArrow = () => {
+      // Arrow functions can also access parents variables
+      console.log(name);
+    };
+
+    return (
+      <div onClick={printname}>
+        <span>{name}</span>
+      </div>
+    );
+  }
+}
+```
+
+</CodeDivWrapper>
+
+# What about variables from grand parent scope
+
+Yes they are also accessible and changeable
+
+<CodeDivWrapper>
+
+```js
+function B() {
+  let c = 10;
+  let b = 10;
+  function A() {
+    let a = 1,
+      b = 2; // this is overridden with the previous b in parent
+    function calculate() {
+      return a + b;
+    }
+
+    const calculateArrow = () => {
+      return a + b + c; // it can see variables from all around its scope
+    };
+
+    const change = () => {
+      c = 5;
+    };
+
+    return {
+      get: calculate, // public function will be only get
+      getArrow: calculateArrow, // this also works
+      change: change, // can also change variables from grand parents
+    };
+  }
+  return A;
+}
+
+const a = B()();
+
+console.log(a.getArrow()); // 13
+a.change();
+console.log(a.getArrow()); // 8
+```
+
+</CodeDivWrapper>
+
+# What happens if the variables change?
+
+<CodeDivWrapper>
+
+```js
+for (let i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, i * 1000);
+}
+
+// output: 0 1 2 3 4
+```
+
+</CodeDivWrapper>
+
+I hope you dont use var :(
+
+<CodeDivWrapper>
+
+```js
+for (var i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, i * 1000);
+}
+
+// output: 5 5 5 5 5
+```
+
+</CodeDivWrapper>
+
+# Source
+
+1. https://medium.com/@prashantramnyc/javascript-closures-simplified-d0d23fa06ba4
+2. Practical usages of Closures: https://stackoverflow.com/questions/15426854/practical-usage-examples-of-javascript-closures

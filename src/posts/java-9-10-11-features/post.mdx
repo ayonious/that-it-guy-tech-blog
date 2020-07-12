@@ -1,0 +1,149 @@
+---
+title: New features of Java 9,10,11
+slug: java-9-10-11
+image: ./images/person-standing-on-concrete-floor-with-number-11-paint-1655998.jpg
+date: "2020-04-01"
+published: yes
+tags: [js, nodejs]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Why am I concerned about java when I migrated into this fullstack world? Well Im still practicing competitive programming. And Im doing it in java. And also all kind of algorithmic programming solutions are somehow still considered good using java. Maybe I will learn nodejs to do this.
+
+# Java9
+
+## jshell
+
+java has now Read-Eval-Print Loop (REPL) tool
+
+<CodeDivWrapper>
+
+```bash
+// you can find all imports already added in jshell
+jshell> /imports
+|    import java.io.*
+|    import java.math.*
+|    import java.net.*
+|    import java.nio.file.*
+|    import java.util.*
+|    import java.util.concurrent.*
+|    import java.util.function.*
+|    import java.util.prefs.*
+|    import java.util.regex.*
+|    import java.util.stream.*
+
+// similar system commands
+jshell> /vars
+jshell> /methods
+jshell> /exit
+
+// lets try it out
+
+jshell> public void printInConsole(String input){ System.out.println("here is " + input); }
+|  created method printInConsole(String)
+
+jshell>  printInConsole("something");
+here is something
+
+jshell> /methods
+|    void printInConsole(String)
+
+jshell> /exit
+|  Goodbye
+```
+
+</CodeDivWrapper>
+
+## Optional.ifPresentOrElse() Optional.or()
+
+It was such a relieve for my to finally have this command. No need to create class files and then run shit.
+
+<CodeDivWrapper>
+
+```java
+Optional<Something> opt = Optional.of(something);
+opt.ifPresentOrElse( () -> {System.out.println("present";)}, () -> {System.out.println("absent";)} )
+```
+
+</CodeDivWrapper>
+
+<CodeDivWrapper>
+
+```java
+Optional<Something> opt1 = Optional.of(something);
+Optional<Something> opt2 = Optional.empty();
+Optional<Something> existingOpt = opt2.or(() -> opt1);
+```
+
+</CodeDivWrapper>
+
+## Immutable Collections
+
+<CodeDivWrapper>
+
+```java
+jshell> List list = List.of("a", "b", "c");
+list ==> [a, b, c]
+
+jshell> Map map = Map.of("a", "1", "c", 1);
+map ==> {a=1, c=1}
+
+jshell> Set set = Set.of("a", "c", "b");
+set ==> [a, b, c]
+```
+
+</CodeDivWrapper>
+
+## Stream Api improvemts: dropWhile() / takeWhile()
+
+<CodeDivWrapper>
+
+```java
+jshell> Stream.of(1,2,2,3,2,4,2,1,1).takeWhile(i -> i < 3 ).forEach(System.out::println);
+1
+2
+2
+
+jshell> Stream.of(1,2,2,3,2,4).dropWhile(i -> i < 3 ).forEach(System.out::println);
+3
+2
+4
+```
+
+</CodeDivWrapper>
+
+# Java10
+
+## var
+
+No more defining the variable type in Java you can simply use var.
+
+<CodeDivWrapper>
+
+```java
+jshell> var name = "myname"; // infers String
+name ==> "myname"
+```
+
+</CodeDivWrapper>
+
+# Java11
+
+## Single line java file running
+
+This single line is enough to run a java Program. No need to create executable and then run it.
+
+<CodeDivWrapper>
+
+```bash
+java File.java
+```
+
+</CodeDivWrapper>
+
+## More good resources:
+
+1. https://codete.com/blog/java-8-java-11-quick-guide/
+
+2. https://www.journaldev.com/13121/java-9-features-with-examples

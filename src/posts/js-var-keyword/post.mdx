@@ -1,0 +1,110 @@
+---
+title: JS var keyword
+slug: js-var-keyword
+image: ./images/selective-focus-photo-of-person-holding-joker-playing-card-2838511.jpg
+date: "2020-05-03"
+published: yes
+tags: [js]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Every now and then I see this keyword and it surprizes me about its scope. I hope and pray I will never use it anywhere. But understanding legacy code is also my job sometimes. So here goes my effort to understand this shit.
+
+# Scope
+
+var scope is immediate function.
+let scope is immediate curly braces {}
+
+<CodeDivWrapper>
+
+```js
+function prog() {
+  for (var i = 1; i < 4; i++) {
+    console.log(i);
+  } // 1 2 3
+  console.log(i); // 4
+}
+
+prog();
+```
+
+</CodeDivWrapper>
+
+<CodeDivWrapper>
+
+```js
+function prog() {
+  for (let i = 1; i < 4; i++) {
+    console.log(i);
+  } // 1 2 3
+  console.log(i); // error
+}
+
+prog();
+```
+
+</CodeDivWrapper>
+
+# Hoisting
+
+if you have used var you dont nee to declare it before using it. If you declare it even at end it will be considered declated with undefined
+
+<CodeDivWrapper>
+
+```js
+console.log(a); //undefined
+var a = 1;
+console.log(a); // 1
+```
+
+</CodeDivWrapper>
+
+<CodeDivWrapper>
+
+```js
+console.log(a); //ReferenceError:: Cannot access 'a' before initialization
+let a = 1;
+console.log(a);
+```
+
+</CodeDivWrapper>
+
+# Some other confusing example
+
+<CodeDivWrapper>
+
+```js
+for (let i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, i * 1000);
+}
+
+// output: 0 1 2 3 4
+```
+
+</CodeDivWrapper>
+
+I hope you dont use var :(
+
+<CodeDivWrapper>
+
+```js
+for (var i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, i * 1000);
+}
+
+// output: 5 5 5 5 5
+```
+
+</CodeDivWrapper>
+
+There are some other weird behaviours but I dont want to get overloaded understanding all of these cases: Just read them here
+https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var
+
+# Source
+
+1. https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var

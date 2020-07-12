@@ -1,0 +1,232 @@
+---
+title: ECMA Script Historical features
+slug: ecmascript-history
+image: ./images/person-holding-brown-card-311716.jpg
+date: "2020-04-08"
+published: yes
+tags: [js, nodejs]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+After writing about buzzwords I checked about ecma script and found out a lot of things that were mind blowing during this version change. Here are the most mind blowing changes that I could sum up from internet
+
+# ECMAscript 2015 (ES6)
+
+## Multi lines Strings
+
+Remember this nightmare?
+
+<CodeDivWrapper>
+
+```js
+var someText =
+  "As I tell you, \n" +
+  "some joke, \t\n" +
+  "about me, \t\n" +
+  "ont laugh please, \t\n";
+```
+
+</CodeDivWrapper>
+
+Just use backticks
+
+<CodeDivWrapper>
+
+```js
+var someText = `As I tell you, 
+  some joke,
+  about me,
+  ont laugh please`;
+```
+
+</CodeDivWrapper>
+
+## Arrow functions
+
+<CodeDivWrapper>
+
+```js
+const fn = () => {
+  console.log(10);
+};
+```
+
+</CodeDivWrapper>
+
+## Object destructure
+
+<CodeDivWrapper>
+
+```js
+const { name, value } = obj;
+```
+
+</CodeDivWrapper>
+
+## Default value of function param
+
+<CodeDivWrapper>
+
+```js
+function (intput = '0', values=[]) {
+  return input;
+}
+```
+
+</CodeDivWrapper>
+
+## New Array Functions: Functional Programming?
+
+<CodeDivWrapper>
+
+```js
+const a = [1,2,3];
+const b = a.map(elem => elem*2).filter(v1 => v1 > 6);
+}
+```
+
+</CodeDivWrapper>
+
+## Object literals
+
+<CodeDivWrapper>
+
+```js
+const name = "ayon";
+const age = "22";
+const height = "180cm";
+const person = {
+  name,
+  age,
+  height,
+};
+```
+
+</CodeDivWrapper>
+
+## Class declarations
+
+<CodeDivWrapper>
+
+```js
+class Person {
+  constructo(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+class CoolPerson extens Person {
+  constructo(superpower) {
+    super("Nl", 23);
+    this.superPower = superpower;
+  }
+}
+```
+
+</CodeDivWrapper>
+
+## String literals
+
+<CodeDivWrapper>
+
+```js
+const name = "Human";
+const a = `My name is ${name}`;
+```
+
+</CodeDivWrapper>
+
+# ECMAscript 2016 (ES7) and ECMAscript 2017 (ES8)
+
+## Exponential operator
+
+<CodeDivWrapper>
+
+```js
+const age = 2 ** 4; // 16
+```
+
+</CodeDivWrapper>
+
+## Object.includes
+
+<CodeDivWrapper>
+
+```js
+const age = [1, 2, 3];
+if (age.includes(1)) {
+  console.log(true);
+}
+```
+
+</CodeDivWrapper>
+
+## Object.values Object.entries Object.keys
+
+<CodeDivWrapper>
+
+```js
+const person = {
+  name: 'asdf'
+  age: 12,
+}
+Object.values(person) // ['asdf',12]
+Object.keys(person) // ['name', 'age']
+```
+
+</CodeDivWrapper>
+
+## async await
+
+<CodeDivWrapper>
+
+```js
+async function someFunction() {
+  await someAsyncFunction();
+}
+await someFunction();
+```
+
+</CodeDivWrapper>
+
+# ECMAscript 2018
+
+## Spread operator
+
+<CodeDivWrapper>
+
+```js
+const person = {
+  name: 'asdf',
+  age: 12,
+}
+const personAgain = {
+  school: 'some good one'
+  ...person
+} // {school: 'some good one', name: 'asdf', age: 12, }
+```
+
+</CodeDivWrapper>
+
+<CodeDivWrapper>
+
+```js
+const person = {
+  name: "asdf",
+  age: 12,
+  school: "no school",
+};
+const { name, ...others } = person;
+// others = { age: 12, school: 'no school' }
+```
+
+</CodeDivWrapper>
+
+There are few other things I would just mention but wont describe more in details as I dont use them much
+
+## Regex
+
+## Prmise.prototype.finally()
+
+## Asynchronous Iteration

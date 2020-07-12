@@ -1,0 +1,127 @@
+---
+title: Create cli tool using Typescript
+slug: node-cli
+image: ./images/black-half-faced-helmet-on-gray-concrete-wall-1323208.jpg
+date: "2020-04-18"
+published: yes
+tags: [js, nodejs, typescript, cli]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Just created my first cli tool in Typescript. Sharing here the experience and steps
+
+# Target tool
+
+I want to create a command line tool that will do something like this
+
+<CodeDivWrapper>
+
+```bash
+ctc '[{ "index":3, "text":"I would like some gelb bananen bitte", "value":200 }, { "index":4, "text":"I hope batch update is working", "value":300   } ]'
+
+//output
+
+┌───────┬──────────────────────────────────────┬───────┐
+│ index │                                 text │ value │
+├───────┼──────────────────────────────────────┼───────┤
+│     3 │ I would like some gelb bananen bitte │   200 │
+│     4 │       I hope batch update is working │   300 │
+└───────┴──────────────────────────────────────┴───────┘
+```
+
+</CodeDivWrapper>
+
+Lets follow these steps to make it happen
+
+# Make index.ts command line runnable
+
+Add this line at the beginning of your code to make your program running by bash command
+
+<CodeDivWrapper>
+
+```bash
+#!/usr/bin/env node
+```
+
+</CodeDivWrapper>
+
+# change in package.json
+
+First add bin field. This declares which commands you can run
+
+<CodeDivWrapper>
+
+```json
+{
+  "bin": {
+    "ctc": "dist/index.js"
+  }
+}
+```
+
+</CodeDivWrapper>
+
+# Adding nodes types
+
+This is required because you might use process.argv to read the command line arguments
+
+<CodeDivWrapper>
+
+```bash
+npm intall --save-dev @types/node
+```
+
+</CodeDivWrapper>
+
+Also add this in tsconfig files
+
+<CodeDivWrapper>
+
+```json
+{
+  "compilerOptions": {
+    "types": ["node"]
+  }
+}
+```
+
+</CodeDivWrapper>
+
+# Testing
+
+Fisrt install transpile and install it globally
+
+<CodeDivWrapper>
+
+```bash
+npx tsc ; npm link
+```
+
+</CodeDivWrapper>
+
+Now run the program
+
+<CodeDivWrapper>
+
+```bash
+ctc '[{ "index":3, "text":"I would like some gelb bananen bitte", "value":200 }, { "index":4, "text":"I hope batch update is working", "value":300   } ]'
+
+
+//output
+┌───────┬──────────────────────────────────────┬───────┐
+│ index │                                 text │ value │
+├───────┼──────────────────────────────────────┼───────┤
+│     3 │ I would like some gelb bananen bitte │   200 │
+│     4 │       I hope batch update is working │   300 │
+└───────┴──────────────────────────────────────┴───────┘
+```
+
+</CodeDivWrapper>
+
+# Source
+
+1. Same but in nodejs. https://blog.bitsrc.io/how-to-build-a-command-line-cli-tool-in-nodejs-b8072b291f81
+2. in ts: https://itnext.io/how-to-create-your-own-typescript-cli-with-node-js-1faf7095ef89
+3. https://stackoverflow.com/questions/53529521/typescript-error-cannot-find-name-process
+4. Nice article on how to write test of you cli: https://medium.com/@zorrodg/integration-tests-on-node-js-cli-part-1-why-and-how-fa5b1ba552fe

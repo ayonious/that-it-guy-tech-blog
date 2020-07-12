@@ -1,0 +1,115 @@
+---
+title: React Reducer a Short Example
+slug: react-reducer
+image: ./images/person-holding-compass-841286.jpg
+date: "2020-05-29"
+published: yes
+tags: [js, react, reducer]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+I often see this thing but never understood how it could be used for making life easier. Finally found some good examples and decided to make a summary application of this.
+
+# The sample problem
+
+Imgine you have 3 state variables.
+They change based on some button clicks.
+All these states are combined to get another text.
+
+## A sample Without reducer
+
+See how you need to initiale each single variable separately. And then write similar kind of function for each one of them
+
+<CodeDivWrapper>
+
+```jsx
+import React, { useState } from "react";
+
+import ColorDetails from "../components/ColorDetails";
+
+const ColorHome = () => {
+  const [red, changeRed] = useState(0); // initialize 1
+  const [green, changeGreen] = useState(0); // initialize 2
+  const [blue, changeBlue] = useState(0); // initialize 3.... ah shit :(
+
+  return (
+    <>
+      <ColorDetails
+        color="Red"
+        onDecrease={() => changeRed(red - 20)}
+        onIncrease={() => changeRed(red + 20)}
+      />
+      <ColorDetails
+        color="Green"
+        onDecrease={() => changeGreen(green - 20)}
+        onIncrease={() => changeGreen(green + 20)}
+      />
+      <ColorDetails
+        color="Blue"
+        onDecrease={() => changeBlue(blue - 20)}
+        onIncrease={() => changeBlue(blue + 20)}
+      />
+      <span>
+        Combined Color is: {state.red} {state.green} {state.blue}
+      </span>
+    </>
+  );
+};
+
+export default ColorHome;
+```
+
+</CodeDivWrapper>
+
+## Now with Reducer
+
+See how initialization is now cleaner in one single line. All the calculation of new state object is separated from the component code.
+
+<CodeDivWrapper>
+
+```js
+import React, { useReducer } from "react";
+
+import ColorDetails from "../components/ColorDetails";
+
+const reducer = (state, action) => {
+  // state = { red: 0, green: 0, blue: 0 }
+  // action = { color: 'red', addedVal: 20 }
+
+  const copyState = { ...state };
+  copyState[action.color] = copyState[action.color] + action.addedVal;
+  return copyState;
+};
+
+const ColorHome = () => {
+  const [state, dispatch] = useReducer(reducer, { red: 0, green: 0, blue: 0 }); // lot cleaner code
+
+  return (
+    <>
+      <ColorDetails
+        color="Red"
+        onDecrease={() => dispatch({ color: "red", addedVal: -20 })}
+        onIncrease={() => dispatch({ color: "red", addedVal: 20 })}
+      />
+      <ColorDetails
+        color="Green"
+        onDecrease={() => dispatch({ color: "green", addedVal: -20 })}
+        onIncrease={() => dispatch({ color: "green", addedVal: 20 })}
+      />
+      <ColorDetails
+        color="Blue"
+        onDecrease={() => dispatch({ color: "blue", addedVal: -20 })}
+        onIncrease={() => dispatch({ color: "blue", addedVal: 20 })}
+      />
+      <span>
+        Combined Color is: {state.red} {state.green} {state.blue}
+      </span>
+    </>
+  );
+};
+
+export default ColorHome;
+```
+
+</CodeDivWrapper>

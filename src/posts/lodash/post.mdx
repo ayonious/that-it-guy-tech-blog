@@ -1,0 +1,118 @@
+---
+title: Reasons to Love Lodash
+slug: lodash
+image: ./images/white-wooden-blocks-on-blue-surface-3716540.jpg
+date: "2020-04-14"
+published: yes
+tags: [js, nodejs]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+While Writing about lodash I realized there is another library that is nicely used for datastructures.
+
+# Array Operation
+
+<CodeDivWrapper>
+
+```js
+_.uniq([1, 2, 3, 3]); // [1,2,3]
+_.difference([1, 2, 3], [3, 4]); // [1,2]
+_.remove([1, 2, 3], (val) => val % 2 === 0); // [1,3]
+_.reverse([1, 2, 3]); // [3, 2, 1]
+_.join(["a", "b", "c"], "_"); // a_b_c
+_.last([1, 2, 3]); // 3
+_.lastIndexOf([1, 2, 3, 3], 3); // 3
+```
+
+</CodeDivWrapper>
+
+# String Operation
+
+<CodeDivWrapper>
+
+```js
+_.camelCase("Foo ball"); // 'fooBall'
+_.camelCase("Foo---ball"); // 'fooBall'
+_.capitalize("MINa"); // => 'Mina'
+_.endsWith("abcd", "d"); //true
+_.endsWith("abcd", "cd"); //true
+_.trim("kkabckkk ", "k "); // 'abc'
+_.trimEnd("kkabckkk ", "k "); // 'kkabc'
+_.trimStart("kkabckkk ", "k "); // 'abckkk'
+_.split("A B C", " "); // ['A', 'B']
+_.toLower("--Fac-Boy--"); // '--fac-boy--'
+_.toUpper("--Fac-Boy--"); // '--FAC-BOY--'
+```
+
+</CodeDivWrapper>
+
+# Deep clone
+
+get a clone of obj. with a different address in memory. no bullshit.
+
+<CodeDivWrapper>
+
+```js
+const student = {
+  name: "sd",
+  result: {
+    math: "A",
+    language: "B",
+    history: "C",
+  },
+};
+const copy = _.cloneDeep(student);
+```
+
+</CodeDivWrapper>
+
+# Times loop
+
+pass a function to be called multiple times and fill array with returns
+
+<CodeDivWrapper>
+
+```js
+const randomNumbers = _.times(3, Math.random());
+// [.32, .444, .123]
+
+_.times(3, () => {
+  console.log("printing");
+});
+```
+
+</CodeDivWrapper>
+
+# Random Numbers
+
+<CodeDivWrapper>
+
+```js
+_.random(10); // [0,10] int numbers
+_.random(2, 10); // [2,10] int numbers
+_.random(2, 10, true); // [2,10] floating numbers
+```
+
+</CodeDivWrapper>
+
+# Throttle and Debounce
+
+<CodeDivWrapper>
+
+```js
+import _ from "lodash";
+
+const scrollListener = () => {
+  console.log("handle scroll event");
+};
+// this will fire this event only once in 100ms
+document.addEventListener("scroll", _.throttle(scrollListener, 100));
+```
+
+</CodeDivWrapper>
+
+Other good Sources:
+
+1. https://colintoh.com/blog/lodash-10-javascript-utility-functions-stop-rewriting
+2. https://areknawo.com/lodash-and-usefulness-of-utility-libraries/

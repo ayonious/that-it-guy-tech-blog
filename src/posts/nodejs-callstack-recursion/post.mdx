@@ -1,0 +1,105 @@
+---
+title: Nodejs Callstack recursion with eventloop
+slug: nodejs-callstack-recursion
+image: ./images/brown-hen-near-white-egg-on-nest-195226.jpg
+date: "2020-05-06"
+published: yes
+tags: [js, nodejs]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Every language has a callstack. So does nodejs. Lets look at this simple code.
+
+<CodeDivWrapper>
+
+```js
+const Sum = (current, sum) => {
+  if (current === 0) {
+    console.log(sum);
+    return;
+  }
+  Sum(current - 1, sum + current);
+};
+
+Sum(100, 0); // find 1 + 2 + .... + n
+```
+
+</CodeDivWrapper>
+
+How much do you think you can increase the value current? It depends on callstack. Now nodejs having this eventloop can be handy and save us here. Lets look at this
+
+<CodeDivWrapper>
+
+```js
+const Sum = (current, sum) => {
+  const Sum = (current, sum) => {
+    if (current === 0) {
+      console.log(sum);
+      return;
+    }
+    setTimeout(() => Sum(current - 1, sum + current), 0);
+  };
+
+  Sum(100, 0); // find 1 + 2 + .... + n
+};
+
+Sum(100, 0); // find 1 + 2 + .... + n
+```
+
+</CodeDivWrapper>
+
+Now this one is a little slow to run but will not run into the call stack error that the first Solution would give.
+
+# Why is this working?
+
+Lets look at solution 1s call stack
+
+<CodeDivWrapper>
+
+```text
+// Sum(5, 0);
+
+
+// call stack will look like this (kinda)
+Sum(5, 0)
+Sum(4, 5)
+Sum(3, 9)
+Sum(2, 12)
+Sum(1, 14)
+Sum(0, 15)
+```
+
+</CodeDivWrapper>
+
+Now all this callstack is going to sit on memory and keep taking more space. When it reaches the space limit it will crash.
+
+Lets look at second solution
+
+<CodeDivWrapper>
+
+```text
+// Sum(5, 0);
+
+
+// call stack [step1]
+Sum(5, 0)
+pushtoEventLoop(Sum(4, 5))
+
+// call stack [step2]
+pushtoEventLoop(Sum(4, 5))
+
+// call stack [step3]
+pushtoEventLoop(Sum(4, 5))
+
+// call stack [step4]
+Sum(4, 5)
+pushtoEventLoop(Sum(3, 9))
+
+...
+Sum(0, 15)
+```
+
+</CodeDivWrapper>
+
+This way call stack is never getting overloaded. So memory will not over flow.

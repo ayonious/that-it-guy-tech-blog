@@ -1,0 +1,450 @@
+---
+title: Js Promise
+slug: js-promise
+image: ./images/man-in-black-long-sleeved-shirt-and-woman-in-black-dress-888899.jpg
+date: "2020-05-05"
+published: yes
+tags: [js, async]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+import { Link } from "gatsby";
+
+Time to explore some solid examples of Promise. In js its so easy to just throw a promise with async.
+
+# Promise
+
+to create a promise you use the class Promise
+
+<CodeDivWrapper>
+
+```js
+let promise = new Promise( (res,rej) => { // your executable things} )
+```
+
+</CodeDivWrapper>
+
+You start the threads running when you call the promise with .then() method and give proper res,rej functions
+
+<CodeDivWrapper>
+
+```js
+promise.then(
+  (data) => {
+    //resolve function
+    console.log(data + " 1");
+  },
+  (data) => {
+    //reject function
+    console.error(data + " 1");
+  }
+);
+```
+
+</CodeDivWrapper>
+
+Promise.then() is not a blocking operation.
+
+Its a way to create async threads in js. Make sure you understand how the eventloop works to understand the output of this.
+
+<CodeDivWrapper>
+
+```js
+let promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("Program ended");
+  }, 2000);
+});
+
+let promiseShort = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("Program ended quicly");
+  }, 500);
+});
+
+console.log(1);
+promise.then(
+  (data) => {
+    console.log(data + " 1");
+  },
+  (data) => {
+    console.error(data + " 1");
+  }
+);
+console.log(2);
+
+promise.then(
+  (data) => {
+    console.log(data + " 2");
+  },
+  (data) => {
+    console.error(data + " 2");
+  }
+);
+console.log(3);
+
+promiseShort.then(
+  (data) => {
+    console.log(data + " 3");
+  },
+  (data) => {
+    console.error(data + " 3");
+  }
+);
+console.log(4);
+/*
+1
+2
+3
+4
+Program ended quicly 3
+Program ended 1
+Program ended 2
+*/
+```
+
+</CodeDivWrapper>
+
+# Promise.all
+
+Used for parallel execution of multiple processes.
+
+<CodeDivWrapper>
+
+```js
+const step1 = async () => {
+  return 1;
+};
+
+const step2 = async () => {
+  return 2;
+};
+
+const array = [step1(), step2()];
+Promise.all(array).then(
+  (res) => {
+    console.log(res);
+  },
+  (err) => {
+    console.log("error occurred in at least one of the promise resolution");
+  }
+);
+console.log(3);
+/*
+3
+[1, 2]
+*/
+```
+
+</CodeDivWrapper>
+
+## Some notes:
+
+- In case of error in at least one of the promises only the error will be logged and the successful results wont be seen of others.
+- Promise.all is NOT a blocking operation
+
+# How to make Promise all to be blocking
+
+- put it inside async method
+- call await
+
+<CodeDivWrapper>
+
+```js
+const step1 = async () => 1;
+
+const step2 = async () => 2;
+
+const array = [step1(), step2()];
+
+const fun = async () => {
+  let vals = [];
+  await Promise.all(array).then(
+    // here its awaiting things
+    (res) => {
+      vals = res; // here it has access to all the stack variables
+    },
+    (err) => {
+      console.log("error occurred in at least one of the promise resolution");
+    }
+  );
+};
+
+fun();
+```
+
+</CodeDivWrapper>
+
+# Complicated case with Promise
+
+<CodeDivWrapper>
+
+```js
+const step1 = async () => 1;
+
+const step2 = async () => 2;
+
+const array = [step1(), step2()];
+
+const fun = async () => {
+  let vals = "initial val";
+  console.log("fun starting"); // print first
+  Promise.all(array).then(
+    // this sent to queue
+    (res) => {
+      vals = res;
+      console.log(vals, "asd");
+    },
+    (err) => {
+      console.log("error occurred in at least one of the promise resolution");
+    }
+  );
+  console.log(vals); //print second
+};
+
+fun(); // since its called from a sync scope this will get put in call stack
+
+console.log("end"); // third print
+/*
+fun starting
+initial val
+end
+[ 1, 2 ] asd
+*/
+```
+
+</CodeDivWrapper>
+
+# Promise chaining
+
+A good example of promise chaining.
+
+<CodeDivWrapper>
+
+```js
+let promise = (data) =>
+  new Promise((res, rej) => {
+    if (data) {
+      res("resolved");
+    } else {
+      rej("rejected");
+    }
+  });
+
+promise(true)
+  .then((data) => {
+    console.log("1");
+    console.log(data);
+    return promise(true);
+  })
+  .then((data) => {
+    console.log("2");
+    console.log(data);
+    return promise(false);
+  })
+  .then((data) => {
+    console.log("3");
+    console.log(data);
+    return promise(false);
+  })
+  .catch((data) => {
+    console.log("4");
+    console.log(data);
+    return promise(true);
+  })
+  .catch((data) => {
+    console.log("5");
+    console.log(data);
+    return promise(true);
+  })
+  .catch((data) => {
+    console.log("6");
+    console.log(data);
+    return promise(true);
+  })
+  .catch((data) => {
+    console.log("7");
+    console.log(data);
+    return promise(true);
+  })
+  .then((data) => {
+    console.log("8");
+    console.log(data);
+    return promise(false);
+  })
+  .then(
+    (data) => {
+      console.log("9.1");
+      console.log(data);
+    },
+    (data) => {
+      console.log("9.2");
+      console.log(data);
+    }
+  )
+  .catch((data) => {
+    console.log("10");
+    console.log(data);
+  });
+
+/*
+  1
+resolved
+2
+resolved
+4
+rejected
+8
+resolved
+9.2
+rejected
+*/
+```
+
+</CodeDivWrapper>
+
+# Pormise resolve ways
+
+### await
+
+Yes you can await on Promise
+
+<CodeDivWrapper>
+
+```js
+let promise = (data) =>
+  new Promise((res, rej) => {
+    if (data) {
+      res("resolved"); // input of res will be returned by await
+    } else {
+      rej("rejected");
+    }
+  });
+
+// this is a way to resolve
+async function some() {
+  const data = await promise(true); // resolved
+  console.log(1);
+  console.log(data);
+}
+
+some();
+```
+
+</CodeDivWrapper>
+
+### then
+
+<CodeDivWrapper>
+
+```js
+let promise = (data) =>
+  new Promise((res, rej) => {
+    if (data) {
+      res("resolved"); // input of res will be `data` for then
+    } else {
+      rej("rejected");
+    }
+  });
+
+// this is another way to resolve
+promise(true).then((data) => {
+  console.log(2);
+  console.log(data);
+});
+```
+
+</CodeDivWrapper>
+
+### Quiz
+
+Whats the output?
+
+<CodeDivWrapper>
+
+```js
+let promise = (data) =>
+  new Promise((res, rej) => {
+    if (data) {
+      res("resolved");
+    } else {
+      rej("rejected");
+    }
+  });
+
+async function some() {
+  const data = await promise(true);
+  console.log(1);
+  console.log(data);
+}
+
+promise(true).then((data) => {
+  console.log(2);
+  console.log(data);
+});
+
+console.log("start");
+some();
+console.log("end");
+
+/*
+start
+end
+2
+resolved
+1
+*/
+```
+
+</CodeDivWrapper>
+
+# Promisify
+
+There is a lot of async functions that takes a callback function. For example **_readFile(fileName, callbackFunction)_**
+
+Callback functions passing and chaining can look really nested and complex.
+
+<CodeDivWrapper>
+
+```js
+fs.writeFile("file.json", data, (err, fileData) => {
+  if (err) throw err;
+  fs.readFile("file.json", (err, fileData) => {
+    if (err) {
+      throw err;
+    }
+    const fileData2 = JSON.parse(fd.toString());
+    fileData2.changeVal = "10";
+    fs.writeFile("file.json", correctData, (err, fd) => {
+      if (err) throw err;
+    });
+  });
+});
+```
+
+</CodeDivWrapper>
+
+NOTE: Callback functions always take error first.
+
+One way to make this code human readable. (Or at least me readable ) is using **promisify**
+
+<CodeDivWrapper>
+
+```js
+const { promisify } = require("util");
+
+const fileReadPromisify = promisify(fs.readFile);
+const fileWritePromisify = promisify(fs.writeFile);
+
+try {
+  await fileWritePromisify("file.json", data);
+  const fileData = await fileReadPromisify("file.json");
+  fileData.changeVal = "10";
+  await fileWritePromisify("file.json", fileData);
+} catch (err) {
+  console.log(err.message);
+}
+```
+
+</CodeDivWrapper>

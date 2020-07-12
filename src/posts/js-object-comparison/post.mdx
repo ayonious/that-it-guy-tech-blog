@@ -1,0 +1,40 @@
+---
+title: How to compare 2 objects in JS
+slug: js-object-comparison
+image: ./images/red-blue-and-orange-umbrella-lot-918781.jpg
+date: "2020-05-08"
+published: yes
+tags: [js]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+TLDR: you cant compare 2 objects using any default Js functions. Immediately after writing about
+
+# What options can we think about?
+
+Lets look at this example
+
+<CodeDivWrapper>
+
+```js
+const a = { a: 1, b: 2, c: { a: 1 } };
+const b = { a: 1, b: 2, c: { a: 1 } };
+const c = { b: 2, a: 1, c: { a: 1 } };
+a === b; // false
+a == b; // false
+JSON.stringify(a) === JSON.stringify(b); // true
+JSON.stringify(a) === JSON.stringify(c); // false
+```
+
+</CodeDivWrapper>
+
+JSON.stringify() was Close enough right? But sorry you cant do this because in js all objects are ordered. meeans the order you add them in the object matters.
+
+# Solution
+
+Write your own comparison function. :P
+
+# Source
+
+1. https://stackoverflow.com/questions/201183/how-to-determine-equality-for-two-javascript-objects

@@ -1,0 +1,74 @@
+---
+title: Features of Nodejs 12
+slug: nodejs-12-features
+image: ./images/sparkler-new-year-s-eve-sylvester-sparks-38196.jpg
+date: "2020-04-13"
+published: yes
+tags: [js, nodejs]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Since Im exploring newest version features of all languages I thoguht why not also look at node and see what the heck are they doing in new versions.
+
+As usual I will talk about only the features that I liked most.
+
+# Private class fields
+
+<CodeDivWrapper>
+
+```js
+Class Student {
+  #name = 'No Name';
+
+  get name() {
+  return this.#name;
+  }
+
+  set name(newName) {
+  this.#name = newName;
+  }
+}
+
+const student = new Student();
+console.log(student.name()); // No Name
+console.log(student.#name); // Error
+```
+
+</CodeDivWrapper>
+
+# Default values set
+
+Now you can set the values without putting them in constructor
+
+<CodeDivWrapper>
+
+```js
+Class Student {
+  name = 'Default Name';
+  // constructo() { this.name = 'Default Name'} not needed
+}
+
+const student = new Student();
+console.log(student.name); // Default Name
+```
+
+</CodeDivWrapper>
+
+# Heap dump
+
+Now node generates a heap dump that can be used to tackle memory issues
+
+# more improvement on Worker Threads
+
+I have another blog on what can this worker threads do. THis one has now imporved
+
+# Async stack trace
+
+Previously in case of async functions calling each other it was difficult to tell where the problem started. Because only the last async function was shown and rest were trimmed
+you can see the full stack trace
+
+## Source:
+
+1. https://levelup.gitconnected.com/whats-new-in-node-12-e00111ffb83f
+2. https://blog.risingstack.com/node-js-12-new-features/

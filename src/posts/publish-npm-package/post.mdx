@@ -1,0 +1,49 @@
+---
+title: Publishing your first npm package
+slug: publish-npm-package
+image: ./images/space-rocket-launching-73871.jpg
+date: "2020-04-12"
+published: yes
+tags: [js, nodejs]
+---
+
+import { Link } from "gatsby";
+
+I created few npm packages and one of them is looking pretty good. Im going to write down about the dos of publishing a package in npmjs
+
+# Testing locally
+
+Most important step. Not just with unit tests inside the Project but also making sure from outside the project you cant handle. Read more about this on my post on npm link <Link to="/blogs/npm-yarn-link">here</Link>.
+
+# Publish bare minumum files needed
+
+Add .gitignore and .npmignore files. A sample npm ignore file would look like <a href="https://github.com/ayonious/console-table-printer/blob/master/.npmignore"><span>this</span></a>
+
+# Create auto deployment
+
+You dont want to deploy yourself everytime you publish. I use travis for this. Its free for opensource projects so far.
+
+# Semantic release
+
+Instead updating verision everytime yourself let semantic release do this. I often forget to update the versions and waste time redeploying it again.
+
+# Make it look appealing to users
+
+By adding these buttons and features
+
+1. test coverage
+2. adding license checker
+3. Adding typescript
+4. Prettier and Husky
+
+# Auto Dependency updates
+
+Make it automated with Renovate. More about this can be found in my post about renovate <Link to="/blogs/renovate">here</Link>
+
+# Post publish Testing
+
+Best way to test is testing on Production. I created a repo that gets automatically updated whenever I update packages. If this this update fails that means things didnt go right.
+
+For TS: <a href="https://github.com/ayonious/my-npm-packages-tester-ts"><span>TS Project Link</span></a>
+
+For JS: <a href="https://github.com/ayonious/my-npm-packages-tester"><span>JS Project Link</span></a>
