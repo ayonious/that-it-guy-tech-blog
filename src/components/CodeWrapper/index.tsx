@@ -12,7 +12,7 @@ const changeTextTemporarily = (changeText) => {
 };
 
 const CopyButton = (props) => {
-  const [text, changetext] = useState("copy 📋");
+  const [text, changetext] = useState("Copy 📋");
   return (
     <CopyButtonWrapper
       onClick={() => {
