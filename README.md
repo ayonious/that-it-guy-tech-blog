@@ -59,6 +59,28 @@ Done using Context. useContext. Context.Provider Context.Consumer
 
 useState, useContext, useCallback
 
+10. **gatsby-plugin-playground**
+
+You can use a nice UI for running graphql queries. Lot better than the default graphql UI.
+
+11. **gatsby-plugin-react-helmet**
+
+SEO. Create special meta for your root html website that helps BOTs detect your website and understand its purpose.
+
+12. **gatsby-plugin-offline**, **gatsby-plugin-manifest**
+
+2 Steps for making your website Progressive Web App:
+
+- gatsby-plugin-manifest:
+
+https://www.gatsbyjs.org/docs/progressive-web-app/#it-must-include-a-web-app-manifest
+Gatsby provides a plugin interface to add support for shipping a manifest with your site.
+
+- gatsby-plugin-offline:
+
+https://www.gatsbyjs.org/docs/progressive-web-app/#it-must-implement-a-service-worker
+Gatsby also provides a plugin interface to create and load a service worker into your site
+
 # 🖼 Screenshot and Design
 
 ## 🎨 Theming

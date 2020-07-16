@@ -33,5 +33,17 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-playground`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `ThatItGuy`,
+        short_name: `ThatItGuy`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 };
