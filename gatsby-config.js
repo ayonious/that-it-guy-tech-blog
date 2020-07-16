@@ -36,8 +36,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `ThatItGuy`,
-        short_name: `ThatItGuy`,
+        name: `That IT Guy - Tech Blog`,
+        short_name: `That IT Guy`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
