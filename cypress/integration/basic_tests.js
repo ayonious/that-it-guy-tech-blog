@@ -1,6 +1,6 @@
 describe("Integration Tests", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:8000/blogs/js-throttling-debounce");
+    cy.visit("http://localhost:9000/blogs/js-throttling-debounce");
   });
 
   it("Blog page should have => 1.back button, 2.Dark Theme Text 3. Page Content", () => {
