@@ -112,3 +112,4 @@ Gatsby also provides a plugin interface to create and load a service worker into
 # 🚀 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ayonious/that-it-guy-tech-blog)
+
