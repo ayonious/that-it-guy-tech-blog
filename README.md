@@ -14,7 +14,11 @@
   </a>
 </p>
 
+> A technical Blog created by Gatsby. You can use it to write non tech blogs as well
+
 ![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front.page.3.png)
+
+### [Check the Demo ✨](https://that-it-guy.netlify.com/)
 
 # 🎁Features
 
@@ -80,6 +84,10 @@ Gatsby provides a plugin interface to add support for shipping a manifest with y
 
 https://www.gatsbyjs.org/docs/progressive-web-app/#it-must-implement-a-service-worker
 Gatsby also provides a plugin interface to create and load a service worker into your site
+
+# Lighthouse Score 💯
+
+![Lighthouse Score](DocumentationAssets/lighthouse.png)
 
 # 🖼 Screenshot and Design
 
