@@ -13,6 +13,8 @@ cache:
     - "~/.cache"
     - node_modules
 
+script: echo "testing"
+
 jobs:
   include:
     - stage: PR Checker Compilation
