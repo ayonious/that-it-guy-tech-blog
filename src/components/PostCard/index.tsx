@@ -6,7 +6,7 @@ import StyledButton from "../StyledButton";
 import TagsList from "../TagsList";
 import { CardArticleWrapper, CardImageWrapper, InfoDivWrapper } from "./styles";
 
-interface PostCardData {
+export interface PostCardData {
   post: {
     frontmatter: {
       title: string;

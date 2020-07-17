@@ -1,0 +1,5 @@
+{
+  "testRegex": "./test/.*.tsx$",
+  "collectCoverage": true,
+  "preset": "ts-jest"
+}
