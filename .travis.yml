@@ -12,15 +12,8 @@ cache:
     - "~/.npm"
     - "~/.cache"
     - node_modules
-
-script: echo "testing"
-
-jobs:
-  include:
-    - stage: PR Checker Compilation
-      script:
-        - yarn build
-    - stage: PR Checker Testing
-      script:
-        - yarn build
-        - yarn test-integration
+script:
+  - yarn build
+  - yarn test-integration
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -e TRAVIS_NODE_VERSION
