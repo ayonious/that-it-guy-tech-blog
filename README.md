@@ -2,7 +2,11 @@
   Technical Blog using Gatsby
 </h1>
 
+
 <p align="center">
+  <a href="https://travis-ci.org/ayonious/that-it-guy-tech-blog">
+    <img alt="Build Status" src="https://travis-ci.org/ayonious/that-it-guy-tech-blog.svg?branch=master">
+  </a>
   <a href="https://app.netlify.com/sites/that-it-guy/deploys">
     <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/e15f1837-6f79-42fe-98f4-59016ed63297/deploy-status">
   </a>
