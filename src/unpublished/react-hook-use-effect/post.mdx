@@ -1,0 +1,50 @@
+---
+title: React Hooks - useEffect
+slug: react-hooks-useEffect
+image: ./images/black-umbrella-hang-on-the-floating-hook-rack-1309095.jpg
+date: "2020-06-28"
+published: no
+tags: [js, react, hooks]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+import { Link } from "gatsby";
+
+Its called "Side Effects Hook". I started using it more and more and discovered some interesting nature of this.
+
+# Why useEffect
+
+Because previously the code in Class component would be like this
+
+## Initialize something
+
+Initialize some values from database to fill in some states.
+
+But now thanks to hooks we can make the code as short as this.
+
+<CodeDivWrapper>
+
+```js
+const ShowElements = () => {
+  const [values, setValues] = useState([]);
+
+  // this will make sure this will run only once after the component is
+  useEffect(() => {
+    const data = Database.fetchValues();
+    setValues(data);
+  }, []);
+
+  return (
+    <>
+      {values.map((val) => {
+        <span>val</span>;
+      })}
+    </>
+  );
+};
+```
+
+</CodeDivWrapper>
+
+useEffect(() => {}, []);

@@ -1,0 +1,78 @@
+---
+title: JS this keyword
+slug: js-this-keyword
+image: ./images/person-pointing-on-white-textile-34753.jpg
+date: "2020-05-01"
+published: yes
+tags: [js]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+this is a pointer to the current object.
+
+# Simple example
+
+<CodeDivWrapper>
+
+```js
+const parentA = {
+  val: 20;
+  A: {
+    val: 10,
+    getVal: function () { //ES5 way
+      return this.val; //10
+    }
+    getVal: () => { //ES6 way
+      return this.val; // undefined, be careful this might be this of the parent
+    }
+  }
+};
+```
+
+</CodeDivWrapper>
+
+# Some other confusing example
+
+<CodeDivWrapper>
+
+```js
+function parentA() {
+  let val = 20;
+  function B() {
+    let val = 10;
+    console.log(this.val);
+  }
+
+  return B;
+}
+parentA()(); // undefined, this works only for object, a function body is not an object
+```
+
+</CodeDivWrapper>
+
+# The confusion of this with arrow function
+
+Inside arrow this will point only to nearest parent's this.
+
+<CodeDivWrapper>
+
+```js
+function A() {
+  return {
+    a: 10,
+    getVal: function getA() {
+      console.log(this.a); // here we can access this.a
+      const funArray = () => {
+        return this.a; // so this arrow function can also access this.a
+        // arrow function lexically taking this from the time it was created
+      };
+      return funArray;
+    },
+  };
+}
+
+console.log(A().getVal()()); //10 10
+```
+
+</CodeDivWrapper>

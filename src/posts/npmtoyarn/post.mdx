@@ -1,0 +1,34 @@
+---
+title: Migrating from NPM to yarn
+slug: npm-to-yarn
+image: ./images/time-for-change-sign-with-led-light-2277784.jpg
+date: "2020-03-15"
+published: yes
+tags: [js, nodejs]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+We have started migrating from npm to yarn and the process was quite neat and clean.
+
+## Steps
+
+1. remove all package-lock.json
+
+2. run yarn. yarn.lock file will be created
+
+3. Thats all
+
+Now its time to know the equivalent commands in yarn that you used in npm
+
+<CodeDivWrapper>
+
+```bash
+npm install -> yarn
+npm run [script] -> yarn run [script]
+npm test -> yarn test
+npm install [package] --save -> yarn add [package]
+npm install [package] --save-dev -> yarn add [package] --dev
+```
+
+</CodeDivWrapper>

@@ -1,0 +1,57 @@
+---
+title: Node Eventloop
+slug: nodejs-eventloop
+image: ./images/brown-rope-tangled-and-formed-into-heart-shape-on-brown-113737.jpg
+date: "2020-04-25"
+published: yes
+tags: [js, nodejs, eventloop, asynchronous]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+This shit again. I often hear about it but never actually understood what this has to do with practical programming. So lets try to find out
+
+# A Question
+
+What do you think is the output here?
+
+<CodeDivWrapper>
+
+```js
+setTimeout(function () {
+  console.log("C");
+}, 0);
+// many many thigns
+let sum = 1;
+for (let i = 1; i <= 10000; i++) {
+  sum += i;
+}
+
+console.log("D");
+```
+
+</CodeDivWrapper>
+
+Output
+
+<CodeDivWrapper>
+
+```bash
+D
+C
+```
+
+</CodeDivWrapper>
+
+# Why
+
+The reason behind this mystery is eventloop. In short answer eventloop takes a task from taskqueue only when current callstack is empty. Unless the callstack is not empty eventloop just stays there.
+
+# Eventloop explanation
+
+Best video I know to understand eventloop is just this:
+https://www.youtube.com/watch?v=8aGhZQkoFbQ
+
+# My short notes on eventloop
+
+So when

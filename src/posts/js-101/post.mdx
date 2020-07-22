@@ -1,0 +1,98 @@
+---
+title: Js 101
+slug: js-101
+image: ./images/dog-tough-small-puppy-69372.jpg
+date: "2019-08-14"
+published: yes
+tags: [js, nodejs]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+import { Link } from "gatsby";
+
+There is lot of Advanced libraries out there that we get used to. But then at the end language accepts the feature of that these advanced libraries provide. So we should also look at these features to fasten our speed with the language.
+
+# Array operations
+
+<CodeDivWrapper>
+
+```js
+const ascorder = (a, b) => a - b;
+[2, 2, 1]
+  .sort(ascorder) // [1,2,2]
+
+  [(1, 2, 3)].reverse() // [3,2,1]
+  [(1, 2, 3)].map((val) => val * 2) // [2,4,6]
+  [(1, 2, 3)].filter((val) => val < 2) // [1]
+
+  [(1, 2, 3)].flatMap((val) => [val, val * 2]) // [1, 2, 2, 4, 3, 6]
+  [([1, 2], [2, 3])].flatMap((val) => val); // [1, 2, 2, 3]
+const a = [1, [2, 3], [4, 5, [6, 7]]];
+a.flat(); // [1, 2, 3, 4 , 5, [2,6]]
+a.flat().flat(); // [1, 2, 3, 4, 5, 2, 6]
+a.flat(Infinity); // [1, 2, 3, 4, 5, 2, 6]
+
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+[1, 2, 3]
+  .reduce(reducer) // 6
+
+  [(1, 2, 3)].reduce(reducer, 4) // 4 + 1 + 2 + 3 = 10
+
+  [(1, 2, 1, 1, 2)].lastIndexOf(2) // 4
+  [(1, 2, 1, 1, 2)].indexOf(2) // 1
+
+  [(1, 2, 1, 1, 2)].join("_") // "1_2_1_1_2"
+
+  [(1, 2)].concat([3]); // [1, 2, 3]
+
+for (let val of [3, 4, 5]) {
+  console.log(val);
+} // 3 4 5
+```
+
+</CodeDivWrapper>
+
+# Object operations
+
+<CodeDivWrapper>
+
+```js
+const obj = Object.fromEntries([
+  ["a", 1],
+  ["b", 2],
+]); // { a: 1, b:2 }
+
+Object.keys(obj); // ["a", "b"]
+Object.values(obj); // [1, 2]
+
+Object.entries(oo); // [ ["a", 1],["b", 2]]
+
+Object.assing({ a: 1, b: 2 }, { c: 1, d: 2 }); // {a: 1, b: 2, c: 1, d: 2}
+```
+
+</CodeDivWrapper>
+
+# String Operation
+
+<CodeDivWrapper>
+
+```js
+const len = "aa".length;
+"a".includes("a"); // true
+" a ".trimStart(); // "a "
+" a ".trimEnd(); // " a"
+" a ".trim(); // "a"
+"c abb c".split(" "); // ["c", "abb", "c"];
+```
+
+</CodeDivWrapper>
+
+# Promises
+
+I should have an entire post about this Promises. <Link to={"/blogs/js-promises"}>Read Here</Link>.
+
+# Source
+
+1. https://www.freecodecamp.org/news/promise-all-in-javascript-with-example-6c8c5aea3e32/

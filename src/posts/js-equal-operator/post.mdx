@@ -1,0 +1,42 @@
+---
+title: == or === ?
+slug: js-equal-operator
+image: ./images/person-holding-miniature-house-toy-comparing-on-real-2634202.jpg
+date: "2020-05-08"
+published: yes
+tags: [js]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Whats the difference? The first answer came to my mind was ref equal checking and value checking. That is WRONG. Lets take a look at real difference.
+
+# Double equal operator (not preferred)
+
+<CodeDivWrapper>
+
+```js
+0 == "0"; // true
+false == 0; //true
+undefined == null; // true
+```
+
+</CodeDivWrapper>
+
+This performs a complex equalization method. if you are trying to compare string with number it tries to make them same data type and then compare them. For some cases its good.
+
+# Tripple equal operator (preferred)
+
+This is exact operator for matching data. if they are of difference types they will never be equal and js dont tries to convert.
+
+<CodeDivWrapper>
+
+```js
+0 === "0"; // false
+false === 0; //false
+undefined === null; // false
+```
+
+</CodeDivWrapper>
+
+NOTE: neither == nor === is good enough to compare 2 objects. For comparing 2 objects best way is to write your own function.

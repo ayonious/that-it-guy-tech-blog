@@ -1,0 +1,99 @@
+---
+title: ECMA Script 2019
+slug: ecma-2019
+image: ./images/black-hello-2019-notebook-on-brown-wooden-surface-1937337.jpg
+date: "2020-04-09"
+published: yes
+tags: [js, nodejs]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Since its the last version I decide to write an entire blog about it.
+
+# ECMAscript 2019 (ES10)
+
+## Array.flatMap() Array.Flat()
+
+<CodeDivWrapper>
+
+```js
+const a = [1, 2, 3];
+a.map((v1) => [v1, v1 * 3]); // [ [1,3], [2,6], [3,9]]
+a.flatMap((v1) => [v1, v1 * 3]); // [ 1, 3, 2, 6, 3, 9]
+```
+
+</CodeDivWrapper>
+
+<CodeDivWrapper>
+
+```js
+const a = [1, [2, 3], [4, 5, [6, 7]]];
+a.flat(); // [1, 2, 3, 4 , 5, [2,6]]
+a.flat().flat(); // [1, 2, 3, 4, 5, 2, 6]
+a.flat(Infinity); // [1, 2, 3, 4, 5, 2, 6]
+```
+
+</CodeDivWrapper>
+
+## Array.sort() is now stable
+
+Stable sort means after sorting the index of elements having same value will still remaing similar comparing to initial array
+
+## String.trimStart() String.trimEnd()
+
+<CodeDivWrapper>
+
+```js
+const a = "  111   ";
+a.trimStart(); // '111   ';
+a.trimEnd(); // '  111';
+```
+
+</CodeDivWrapper>
+
+## try catch optional binding
+
+<CodeDivWrapper>
+
+```js
+try {
+  // somthing bla bla
+} catch {
+  console.log("without need of e");
+}
+```
+
+</CodeDivWrapper>
+
+## Function.toString()
+
+<CodeDivWrapper>
+
+```js
+function a() {
+  console.log("hello");
+}
+
+console.log(a.toString());
+/*
+function a() {
+  console.log("hello");
+}
+*/
+```
+
+</CodeDivWrapper>
+
+## Object.entries()
+
+<CodeDivWrapper>
+
+```js
+const obj = Object.fromEntries([
+  ["a", 1],
+  ["b", 2],
+]); // { a: 1, b:2 }
+```
+
+</CodeDivWrapper>

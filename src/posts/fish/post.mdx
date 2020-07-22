@@ -1,0 +1,93 @@
+---
+title: Configure my Fish Shell
+slug: fish
+image: ./images/close-up-of-koi-fish-1699204.jpg
+date: "2020-04-05"
+published: yes
+tags: [js, nodejs]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Writing the article about git alias gave me a better idea of making alias of everything. Including all my tools like npm and yarn. So here goes my next list
+
+## Installation
+
+Through brew
+
+<CodeDivWrapper>
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+</CodeDivWrapper>
+
+## Configure some cool console imojis
+
+In this you will find a way to add some cool imojis to be added inside your console
+https://medium.com/@joshuacrass/git-fish-prompt-faa389fff07c
+
+## Adding environment variables
+
+<CodeDivWrapper>
+
+```bash
+set -x VAR VAL
+
+# For setting a variable universally
+set -Ux FOO bar
+
+# Sample
+set -x ANDROID_HOME $HOME/Library/Android/sdk
+echo $ANDROID_HOME
+```
+
+</CodeDivWrapper>
+
+## Setting path variable
+
+<CodeDivWrapper>
+
+```bash
+set -U fish_user_paths PATH_TO_BIN $fish_user_paths
+
+# Sample
+set -U fish_user_paths /Applications/Contents/jre/jdk/Contents/Home/bin $fish_user_paths
+```
+
+</CodeDivWrapper>
+
+## Alias
+
+Make surr you add these in your fish config file (~/.config/fish/config.fish) so that it remains after you restart your computer
+
+<CodeDivWrapper>
+
+```bash
+alias g "git"
+alias gacp "git acp"
+alias gac "git ac"
+alias ni "npm install"
+alias na "npm install --save"
+alias nad "npm install --save-dev"
+alias yi "yarn"
+alias ya "yarn add"
+```
+
+</CodeDivWrapper>
+
+## Useful other commands
+
+<CodeDivWrapper>
+
+```bash
+fish_config
+history
+```
+
+</CodeDivWrapper>
+
+## Source
+
+1. setting env variable: https://stackoverflow.com/questions/25632846/how-to-set-environment-variables-in-fish-shell

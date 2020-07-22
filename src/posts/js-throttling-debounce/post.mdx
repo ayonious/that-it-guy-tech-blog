@@ -1,0 +1,79 @@
+---
+title: Throttle and Debounce
+slug: js-throttling-debounce
+image: ./images/clear-glass-with-red-sand-grainer-39396.jpg
+date: "2020-07-05"
+published: yes
+tags: [js, react]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Imagine you put an event listener to scroll event but ccalling only once a second is enough. But during scroll you are getting this event like 100 times a minute. Use Here debounce and throttle to filter out these unwanted events.
+
+I prefet to use the builtin function of Lodash to do this. You can also make this yourself.
+
+# Throttle
+
+Definition: Having a time limit for calling a function. Within this limit it can be called only once
+
+Lets look at this example without throttle
+
+<CodeDivWrapper>
+
+```js
+const scrollListener = () => {
+  console.log("handle scroll event");
+};
+document.addEventListener("scroll", scrollListener);
+```
+
+</CodeDivWrapper>
+
+Once you scroll this will be fired 100 times or more when you are scrolling 🤪. Maybe you needed this event only once.
+
+## The Solution Throttle
+
+<CodeDivWrapper>
+
+```js
+import _ from "lodash";
+
+const scrollListener = () => {
+  console.log("handle scroll event");
+};
+// this will fire only once in 100ms
+document.addEventListener("scroll", _.throttle(scrollListener, 100));
+```
+
+</CodeDivWrapper>
+
+# Debounce
+
+Defintion: Call a function only if it has not been called in last 100 ms (time window).
+
+<CodeDivWrapper>
+
+```js
+import _ from "lodash";
+
+const scrollListener = () => {
+  console.log("search for results");
+};
+// after first key press from user, this will wait for a
+// time of 100ms where user didnt press any keys
+document.addEventListener("press", _.debounce(pressListener, 100));
+```
+
+</CodeDivWrapper>
+
+# Difference
+
+Its a little bit tricky sometimes to understand to difference.
+
+Throttle puts a limit within a timewindow where Function will be called only once.
+Debounce call a function only when in last window time there was no other call.
+
+# Source
+
+1. https://stackoverflow.com/questions/25991367/difference-between-throttling-and-debouncing-a-function

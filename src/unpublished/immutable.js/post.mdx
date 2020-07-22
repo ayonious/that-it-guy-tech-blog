@@ -1,0 +1,48 @@
+---
+title: Simple usages of ImmutableJs
+slug: immutablejs
+image: ./images/closeup-photo-of-primate-1207875.jpg
+date: "2020-04-15"
+published: yes
+tags: [js, nodejs]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Immutable.js provides many Persistent Immutable data structures like: List, Stack, Map, OrderedMap, Set, OrderedSet and Record. Super good if youe planning to do some algorithmic programming.
+
+# Creation of Object
+
+<CodeDivWrapper>
+
+```js
+import { Map, List, fromJS } from "immutablejs";
+
+const person = Map({
+  name: "nah",
+  age: 23,
+  works: List(["eat", "sleep", "code"]),
+  friends: List([
+    Map({
+      type: "conputer",
+      power: 100,
+    }),
+    Map({
+      type: "imgination",
+      power: 1000,
+    }),
+  ]),
+});
+
+const hobbys = fromJs({
+  first: "sleeping",
+  second: "chilling",
+  third: "enjoying",
+});
+
+person.name = "something"; //error
+```
+
+</CodeDivWrapper>
+
+Good other resources:

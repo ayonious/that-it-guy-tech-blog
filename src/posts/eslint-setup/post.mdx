@@ -1,0 +1,143 @@
+---
+title: Eslint (with prettier)
+slug: eslint-setup
+image: ./images/adult-american-football-athlete-audience-209954.jpg
+date: "2020-04-10"
+published: yes
+tags: [eslint, npmjs, tools]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+import { Link } from "gatsby";
+
+Take few minutes to setup this amazing tool and be happy with code quality for rest of its lifetime. here Im going to describe how to setup eslint.
+
+# Step1: Install dependencies
+
+<CodeDivWrapper>
+
+```bash
+npm i eslint -D
+```
+
+</CodeDivWrapper>
+
+# Step2: Add lint task in my package.json
+
+<CodeDivWrapper>
+
+```json
+{
+  "scripts": {
+    "lint": "eslint --ext=js,ts,json ."
+  }
+}
+```
+
+</CodeDivWrapper>
+
+# Step3: Add lint in your build step.
+
+For my travis config after adding eslint the build step looked like this. This is to make sure if linting dont work then fail the build.
+
+<CodeDivWrapper>
+
+```yaml
+before_script:
+  - npm run lint
+  - npm run setup
+  - npm run build
+```
+
+</CodeDivWrapper>
+
+# Step4: Add eslint config options
+
+You can run this command to step by step choose what eslint config you need for your project.
+
+<CodeDivWrapper>
+
+```bash
+npm run lint -- --init
+```
+
+</CodeDivWrapper>
+
+My .eslintrc.json looks like this.
+
+<CodeDivWrapper>
+
+```json
+{
+  "env": {
+    "es6": true,
+    "jest": true
+  },
+  "extends": ["airbnb-base"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-console": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "comma-dangle": "off"
+  }
+}
+```
+
+</CodeDivWrapper>
+
+# Step5: exclude .eslintrc.json from config files
+
+I excluded this file from
+
+1. .gitignore
+2. .npmignore
+
+# prettier
+
+Because Im using both eslint and prettier these 2 sometimes start fighting with each other. Lets look at how to put them in the same room.
+
+Here are the extra installation process of eslint with prettier.
+
+# Step1: dependencies
+
+<CodeDivWrapper>
+
+```bash
+npm i eslint-config-prettier eslint-plugin-prettier -D
+```
+
+</CodeDivWrapper>
+
+# Step2: Config
+
+Extend your elint config file with these.
+
+<CodeDivWrapper>
+
+```json
+{
+  "extends": ["prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"]
+  }
+}
+```
+
+</CodeDivWrapper>
+
+# Source:
+
+1. https://medium.com/dailyjs/adding-eslint-to-your-project-7bd4feca35a8
+2. with prettier: https://prettier.io/docs/en/integrating-with-linters.html

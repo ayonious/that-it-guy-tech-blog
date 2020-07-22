@@ -1,0 +1,204 @@
+---
+title: Theme Change using React Context
+slug: react-context-theme-change
+image: ./images/abstract-art-artistic-background-459799.jpg
+date: "2020-04-21"
+published: yes
+tags: [js, nodejs, react, context]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+import { Link } from "gatsby";
+
+Context is a very simple thing. A global storage to save all common data. Then all the children uses those variables. This is helpful because you dont need to pass to all the nexted subchildren the same props all the way from the top component. There is another interesting application I found for react Context. Its changing the theme of your website. Let me describe the process here.
+
+# Step1: Define different themes and React.createContext
+
+Just a simple configuration with all variables. Also contains the React.createContext with default values
+
+<CodeDivWrapper>
+
+```jsx
+// ThemeContext.tsx
+import React from "react";
+
+interface ThemeDetails {
+  themeName: Themes;
+  mainWhite: String;
+  mainBlack: String;
+}
+
+export enum Themes {
+  "dark" = "dark",
+  "white" = "white",
+}
+
+const whiteTheme: ThemeDetails = {
+  themeName: Themes.white,
+  mainWhite: "rgb(255, 255, 255)",
+  mainBlack: "#302f2f"
+};
+
+export const darkTheme: ThemeDetails = {
+  themeName: Themes.dark,
+  mainWhite: "#302f2f",
+  mainBlack: "rgb(255, 255, 255)",
+};
+
+export const revertThemes = {
+  [Themes.dark]: whiteTheme,
+  [Themes.white]: darkTheme,
+};
+
+const ThemeContext = React.createContext({
+  theme: darkTheme,
+  setTheme: (inp) => {},
+});
+
+export default ThemeContext;
+```
+
+</CodeDivWrapper>
+
+# Step2: Create the Theme context Provider
+
+This is one root Component (maybe your Layout) that initiates all your other components. This part needs to be singleton for the context to be singleton
+
+<CodeDivWrapper>
+
+```jsx
+// ThemeProvider.tsx
+import React, { useState } from "react";
+import ThemeContext, { darkTheme } from "./ThemeContext";
+
+const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState(darkTheme);
+  const value = { theme, setTheme };
+
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
+};
+
+export default ThemeProvider;
+```
+
+</CodeDivWrapper>
+
+# Step3: Create the Theme context Provider
+
+This is a wrapper that you need to wrap around every root Component. This initializes the singleton variables. This also creates a state for changing theme. Making sure once theme is changed all sub components are rendered
+
+<CodeDivWrapper>
+
+```jsx
+// ThemeProvider.tsx
+import React, { useState } from "react";
+import ThemeContext, { darkTheme } from "./ThemeContext";
+
+const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState(darkTheme);
+  const value = { theme, setTheme };
+
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
+};
+
+export default ThemeProvider;
+```
+
+</CodeDivWrapper>
+
+# Step4: Create the Theme context Consumer that switches
+
+This is one of the comsumer of the contxt that can change the context. See how it uses the setTheme function
+
+<CodeDivWrapper>
+
+```jsx
+// Header.tsx
+import React from "react";
+
+import ThemeContext, { revertThemes, Themes } from "../Context/ThemeContext";
+
+import { NavBar, NavSwitch } from "./styles";
+
+const Header = () => {
+  return (
+    <ThemeContext.Consumer>
+      {({ theme, setTheme }) => (
+        <NavBar>
+          <NavSwitch
+            theme={theme}
+            onClick={() => {
+              setTheme(revertThemes[theme.themeName]);
+            }}
+          ></NavSwitch>
+        </NavBar>
+      )}
+    </ThemeContext.Consumer>
+  );
+};
+
+export default Header;
+```
+
+</CodeDivWrapper>
+
+# Step5: Create Other normal Consumer of Context
+
+These are easy simple consumers of Context
+
+<CodeDivWrapper>
+
+```jsx
+// Footer.tsx
+import React, { Component } from "react";
+import { DivWrapper, H1Wrapper } from "./styles";
+
+import ThemeContext, { revertThemes, Themes } from "../Context/ThemeContext";
+
+class Footer extends Component<any, any> {
+  render() {
+    return (
+      <ThemeContext.Consumer>
+        {({ theme }) => (
+          <DivWrapper theme={theme}>
+            <H1Wrapper>Making it work in footer</H1Wrapper>
+          </DivWrapper>
+        )}
+      </ThemeContext.Consumer>
+    );
+  }
+}
+
+export default Footer;
+```
+
+</CodeDivWrapper>
+
+Thats all folks!!
+
+# Things to note
+
+## setTheme State change function
+
+Change of context will not trigger auto re rendering of all your sub components. Make sure you pass that setTheme function to your switch Consumer. This triggers a switch of state in parent component making all children component rerender.
+
+## root of Project for initiating the context Provider
+
+For setting the Context Provider you need to find the actual root of your Project. Just setting in Layout might cause context not being propagated to other pages and each page having their own context.
+
+For gatsby there is a special function called **wrapRootElement** thats where you are suppose to put this context Provider. For react Im not sure yet.
+
+# Sample Project to show theme Change using context
+
+Here is the srouce code <a href="https://github.com/ayonious/react-context-example"> Sample React Context in github </a>
+
+Here is the demo <a href="https://ayonious.github.io/react-context-example">Check Demo</a>
+
+# Source:
+
+1. For gatsby: https://www.gatsbyjs.org/blog/2019-01-31-using-react-context-api-with-gatsby/

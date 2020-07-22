@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+
+* {
+  margin: 0px;
+}
+
+:root {
+  --maxWidth: 750px;
+  --width: 85vw;
+}

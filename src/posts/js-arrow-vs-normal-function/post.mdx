@@ -1,0 +1,81 @@
+---
+title: JS arrow or normal function
+slug: js-arrow-vs-normal-function
+image: ./images/close-up-cubes-daytime-design-1154775.jpg
+date: "2020-05-02"
+published: yes
+tags: [js]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Normal function is ES5 style and arrow is the new ES6 styles.
+
+# The Syntax difference
+
+<CodeDivWrapper>
+
+```js
+function A() {
+  // ES5 way
+  return 10;
+}
+
+const B = () => {
+  // ES6 way
+  return 10;
+};
+```
+
+</CodeDivWrapper>
+
+# Application difference: This key word
+
+<CodeDivWrapper>
+
+```js
+const parentA = {
+  val: 20;
+  A: {
+    val: 10,
+    getVal: function () { //ES5 way
+      return this.val; //10
+    }
+    getVal: () => { //ES6 way
+      return this.val; // undefined, be careful this might be this of the parent
+    }
+  }
+};
+```
+
+</CodeDivWrapper>
+
+# So this will always be unsuable in ES6?
+
+No
+
+Arrow function syntax uses "lexical scoping" to figure out what should be "this". Lexical scope is a fancy way of saying it uses this from the surrounding scope.
+
+# The confusion of this with arrow with this
+
+<CodeDivWrapper>
+
+```js
+function A() {
+  return {
+    a: 10,
+    getVal: function getA() {
+      console.log(this.a); // here we can access this.a
+      const funArray = () => {
+        return this.a; // so this arrow function can also access this.a
+        // arrow function lexically taking this from the time it was created
+      };
+      return funArray;
+    },
+  };
+}
+
+console.log(A().getVal()()); //10 10
+```
+
+</CodeDivWrapper>
