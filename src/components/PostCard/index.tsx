@@ -1,5 +1,5 @@
 import Image from "gatsby-image";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useCallback } from "react";
 
 import { Context } from "../../Context/ThemeContext";
 import StyledButton from "../StyledButton";
@@ -49,12 +49,29 @@ const PostCard = (props: PostCardData) => {
     addFilter,
   } = props;
 
+  const elementId = `postid-${slug}`;
+
   const {
     state: { theme },
   } = useContext(Context);
 
+  const inView = () => {
+    if (
+      document.getElementById(elementId).getBoundingClientRect().bottom <=
+      window.innerHeight
+    ) {
+      console.log(`in view ${elementId}`);
+      document.removeEventListener("scroll", inView);
+    }
+  };
+
+  useEffect(() => {
+    // Throttle: each 1 second make sure only one event is fired
+    document.addEventListener("scroll", inView);
+  });
+
   return (
-    <CardArticleWrapper theme={theme}>
+    <CardArticleWrapper theme={theme} id={elementId}>
       <CardImageWrapper>
         <Image fluid={img} />
       </CardImageWrapper>
