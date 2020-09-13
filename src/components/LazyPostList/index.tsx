@@ -32,10 +32,15 @@ const query = graphql`
 `;
 
 const tryLoadingMore = (toggleUpdating) => {
-  const windowHeight = document.body.offsetHeight;
-  const scrolledHeight = window.pageYOffset;
-  const scrollPercent = (scrolledHeight / windowHeight) * 100.0;
+  const h = document.documentElement;
 
+  // clientHeight = height of the whole page
+  // scrollHeight = height of the scroll bar
+  // when you scroll the scroll bar goes down. When it reaches end it stops scrolling.
+  // This means you never can scroll whole scrollHeight length.
+  // scrollHeight - scrollHeight = amount of scrollable screen
+  // scrollTop = location of the scroll bars top part
+  const scrollPercent = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
   if (scrollPercent > 50) {
     toggleUpdating(true);
   }
