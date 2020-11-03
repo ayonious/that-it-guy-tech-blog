@@ -2,7 +2,6 @@
   Technical Blog using Gatsby
 </h1>
 
-
 <p align="center">
   <a href="https://travis-ci.org/ayonious/that-it-guy-tech-blog">
     <img alt="Build Status" src="https://travis-ci.org/ayonious/that-it-guy-tech-blog.svg?branch=master">
@@ -113,6 +112,6 @@ Gatsby also provides a plugin interface to create and load a service worker into
 2. And some material-ui
 3. Some pure css styles
 
-# 🚀 Deploy
+# 🚀 Deploya
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ayonious/that-it-guy-tech-blog)
