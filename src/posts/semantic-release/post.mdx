@@ -1,0 +1,115 @@
+---
+title: Semantic Release (and setup instruction)
+slug: semantic-release
+image: ./images/pexels-kaboompics-com-5879.jpg
+date: "2020-11-01"
+published: yes
+tags: [semantic, npmjs, npm, package, versioning]
+---
+
+Before I started with semantic-release I had to always remember to update the version in package.json and also create a CHANGELOG muyself. But now with semantic-release I was able to automate this all.
+
+# Workflow for Semantic release
+
+After you create and merge a PR. Based on what was in the header of your PR header commit. semantic will do the following:
+
+1.  analyze your commit message.
+2.  Create CHANGELOG (optional): Gather all the commit messages(which are not yet pushlished) and create a changelog. (or add new change in current CHAGELOG)
+    NOTE: Only way for semantic-release to know which commits are not released is by taking all last commits till a commit tag of format vx.x.x
+3.  Create new versionin package.json and package-lock.json: Bump up the version of the package based on your last vx.x.x commit tag in github and you merged PR's header message.
+    Example: if you commit message was "feat: somethig" and last git version tag was v1.2.3. Then It will create a new version v1.3.0
+4.  Git tag: Create git tag with this new version. Push this tag to github.
+5.  Push changes to Git(optional): Changes of 2+3 will be pushed to your github. This part is optional and you can decide which part you want to push.
+    I personally dont push the package.json/package-lock.json version update.
+6.  Publish to npm
+7.  Publish to GitHub Releases with release note (using 2)
+
+# Adding semantic release to your repo
+
+## Step1: install semantic release
+
+<CodeDivWrapper>
+
+
+```bash
+npm install semantic-release --save-dev
+```
+
+</CodeDivWrapper>
+
+
+## Step2: Create last git tag
+
+If you are adding semantic-release to a repo that was already published in npm before, then you need to make sure the last published version is tagged in GitHub. So checkout that commit in GitHub and create a tag there with format vx.x.x and then push it.
+
+This one is needed for semanticc release to know what will be the next version.
+
+## Step3: .releaserc.json file
+
+This file contains order in which all the plugins will work. This is my template
+
+<CodeDivWrapper>
+
+
+```json
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    "@semantic-release/npm",
+    "@semantic-release/github"
+  ]
+}
+```
+
+</CodeDivWrapper>
+
+
+## Step4: Config Travis
+
+1. create Github token: from https://github.com/settings/tokens
+2. create npm token for publishing
+3. now put them as secured env variables in your travis config file.
+
+<CodeDivWrapper>
+
+
+```bash
+travis encrypt GH_TOKEN="111......asd" --add
+travis encrypt NPM_TOKEN="1e.............ffea" --add
+```
+
+</CodeDivWrapper>
+
+
+4. Now update .travis.yml file like this
+
+<CodeDivWrapper>
+
+
+```json
+deploy:
+  provider: script
+  edge: true
+  cleanup: false
+  script:
+    - npx semantic-release
+  on:
+    branch: master
+    node_js: '--lts'
+env:
+  global:
+    - secure: ......
+    - secure: .....
+```
+
+</CodeDivWrapper>
+
