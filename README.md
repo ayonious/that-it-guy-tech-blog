@@ -9,12 +9,6 @@
   <a href="https://app.netlify.com/sites/that-it-guy/deploys">
     <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/e15f1837-6f79-42fe-98f4-59016ed63297/deploy-status">
   </a>
-  <a href="https://david-dm.org/ayonious/that-it-guy-tech-blog">
-    <img alt="dependencies Status" src="https://david-dm.org/ayonious/that-it-guy-tech-blog/status.svg">
-  </a>
-  <a href="https://david-dm.org/ayonious/that-it-guy-tech-blog?type=dev">
-    <img alt="devDependencies Status" src="https://david-dm.org/ayonious/that-it-guy-tech-blog/dev-status.svg">
-  </a>
 </p>
 
 > A technical Blog created by Gatsby. You can use it to write non tech blogs as well
