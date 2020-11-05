@@ -21,7 +21,7 @@
 
 ![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front.page.3.png)
 
-### [Check the Demo ✨](https://that-it-guy.netlify.com/)
+### [Check the Demo✨](https://that-it-guy.netlify.app)
 
 # 🎁Features
 
