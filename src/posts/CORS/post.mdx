@@ -1,0 +1,39 @@
+---
+title: CORS
+slug: CORS
+image: ./images/pexels-deva-darshan-1044329.jpg
+date: "2020-11-14"
+published: yes
+tags: [browser, security]
+---
+
+Recently while working on some Fullstack Project I stumbled on this Topic. In short the Problem is From one Website I cant make calls to another Website to fetch data.
+
+# CORS(Cross-Origin Resource Sharing)
+
+Its a mechanism on webbrowsers, through which, resources of one domain is allowed to be shared to ONLY same domain/subdomain.
+
+# Example
+
+So imagine you have a server which is public. It could also be a CDN/CMS. Now You created a website and was thinking to fetch data from That server. You think why create a separate backend? Why not just make a call to that server directly from frontend and fetch the data?
+Then you suddenly see your Browser is not letting you see the data fetched from the server. you read the console logs and find out some Error with CORS.
+
+# Why
+
+Simple answer: Security
+
+Long Answer:
+
+With every request browser sends bunch of Headers of Cookies including the Authorization Headers. If these headers are leaked customers account in that website is Leaked. Now imagine you are in one website and somehow there is one Ajax request to another third party service. That service will have all the cookies of the Browser. This will cause your customers information to be leaked.
+
+# How to Tackle
+
+So if you want from frontned Make an Http request to another server there are 2 ways you should make it to fix this Problem.
+
+Firstly, (preferred way) Create your own backend and deploy an api endpoint under same/subdmain. From website frontend call that endpoint. This backend endpoint will call the third party service with only Selected Headers (or none) to fetch the data. This way you are not exposing your Cookies.
+
+Secondly, (less preferred way) make sure the server from which you are getting the Data is in the same domain/subdomain. If this is a third party service this is not a good solution to Fix the Problem because you will continue sending your Cookies but still Browser will think nothing in Leaked seeing same domains/subdomains.
+
+# Source:
+
+1. https://stackoverflow.com/questions/27365303/what-is-the-issue-cors-is-trying-to-solve
