@@ -30,9 +30,9 @@ With every request browser sends bunch of Headers of Cookies including the Autho
 
 So if you want from frontned Make an Http request to another server there are 2 ways you should make it to fix this Problem.
 
-Firstly, (preferred way) Create your own backend and deploy an api endpoint under same/subdmain. From website frontend call that endpoint. This backend endpoint will call the third party service with only Selected Headers (or none) to fetch the data. This way you are not exposing your Cookies.
+Firstly, (preferred way 😇) Create your own backend and deploy an api endpoint under same/subdmain. From website frontend call that endpoint. This backend endpoint will call the third party service with only Selected Headers (or none) to fetch the data. This way you are not exposing your Cookies.
 
-Secondly, (less preferred way) make sure the server from which you are getting the Data is in the same domain/subdomain. If this is a third party service this is not a good solution to Fix the Problem because you will continue sending your Cookies but still Browser will think nothing in Leaked seeing same domains/subdomains.
+Secondly, (less preferred way💀) make sure the server from which you are getting the Data is in the same domain/subdomain. If this is a third party service this is not a good solution to Fix the Problem because you will continue sending your Cookies but still Browser will think nothing in Leaked seeing same domains/subdomains.
 
 # Source:
 
