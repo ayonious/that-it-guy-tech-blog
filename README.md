@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/ayonious/that-it-guy-tech-blog">
+  <a href="https://travis-ci.com/ayonious/that-it-guy-tech-blog">
     <img alt="Build Status" src="https://travis-ci.org/ayonious/that-it-guy-tech-blog.svg?branch=master">
   </a>
   <a href="https://app.netlify.com/sites/that-it-guy/deploys">
