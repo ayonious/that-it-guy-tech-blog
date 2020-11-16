@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
-  "rangeStrategy": "bump",
+  "rangeStrategy": "replace",
   "automerge": true,
   "schedule": "before 3am on Monday",
   "lockFileMaintenance": {
