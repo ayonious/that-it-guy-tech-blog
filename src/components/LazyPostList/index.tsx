@@ -70,9 +70,11 @@ const LazyPostList = () => {
     };
   } = useStaticQuery(query);
   const totalPosts = posts.length;
-  const [totalVisible, changeVisible] = useState(INITIAL_NUMBER_OF_POSTS);
-  const [updating, toggleUpdating] = useState(false);
-  const [filterTags, setFilterTags] = useState([]);
+  const [totalVisible, changeVisible] = useState<number>(
+    INITIAL_NUMBER_OF_POSTS
+  );
+  const [updating, toggleUpdating] = useState<boolean>(false);
+  const [filterTags, setFilterTags] = useState<string[]>([]);
 
   // this variable(listener) is used by 2 different hooks.
   // useCallback makes sure this is the same object
