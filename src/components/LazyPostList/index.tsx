@@ -40,7 +40,7 @@ const tryLoadingMore = (toggleUpdating) => {
   // This means you never can scroll whole scrollHeight length.
   // scrollHeight - scrollHeight = amount of scrollable screen
   // scrollTop = location of the scroll bars top part
-  const scrollPercent = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  const scrollPercent = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
   if (scrollPercent > 50) {
     toggleUpdating(true);
   }
