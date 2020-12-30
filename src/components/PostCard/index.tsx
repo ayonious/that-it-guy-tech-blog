@@ -55,9 +55,6 @@ const PostCard = (props: PostCardData) => {
 
   return (
     <CardArticleWrapper theme={theme}>
-      <CardImageWrapper>
-        <Image fluid={img} />
-      </CardImageWrapper>
       <InfoDivWrapper theme={theme}>
         <InfoHeadlineWrapper>{title}</InfoHeadlineWrapper>
         <InfoDateWrapper>
@@ -71,6 +68,9 @@ const PostCard = (props: PostCardData) => {
           title={"Read More..."}
         />
       </InfoDivWrapper>
+      <CardImageWrapper>
+        <Image fluid={img} />
+      </CardImageWrapper>
     </CardArticleWrapper>
   );
 };
