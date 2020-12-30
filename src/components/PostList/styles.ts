@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const PageTitleWrapper = styled.h1`
   text-align: center;
   letter-spacing: 5px;
-  margin-bottom: 3px;
-  font-size: 48px;
+  margin-bottom: 10px;
+  font-size: 58px;
 `;
 
 export const PageSubTitleWrapper = styled.h1`
@@ -15,7 +15,7 @@ export const PageSubTitleWrapper = styled.h1`
 `;
 
 export const PostsSectionWrapper = styled.section`
-  padding: 4rem 0;
+  padding: 2rem 0;
 `;
 
 export const CenterWrapper = styled.div`
