@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { TagDivWrapper } from "../TagsList/styles";
+import { maxWidth, width } from "../../../config";
 
 export const TitleDivWrapper = styled.div`
   letter-spacing: 5px;
@@ -27,9 +28,9 @@ export const DateDivWrapper = styled.div`
 `;
 
 export const TemplateDivWrapper = styled.div`
-  width: 80vw;
+  width: ${width};
+  max-width: ${maxWidth};
   margin: 1rem auto;
-  max-width: 750px;
   padding: 2rem;
   background: ${(p) => p.theme.mainWhite};
 `;

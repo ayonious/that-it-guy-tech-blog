@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import { Context } from "../../Context/ThemeContext";
-import { TagDivWrapper } from "./styles";
+import { TagDivWrapper, TagsDivWrapper } from "./styles";
 
 interface TagData {
   tags: string[];
@@ -15,13 +15,13 @@ const TagsList = (props: TagData) => {
   } = useContext(Context);
 
   return (
-    <div>
+    <TagsDivWrapper>
       {tags.map((tag, index) => (
         <TagDivWrapper key={index} theme={theme} onClick={() => addFilter(tag)}>
           #{tag}
         </TagDivWrapper>
       ))}
-    </div>
+    </TagsDivWrapper>
   );
 };
 

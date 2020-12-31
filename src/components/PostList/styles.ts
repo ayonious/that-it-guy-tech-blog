@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { maxWidth, width } from "../../../config";
 
 export const PageTitleWrapper = styled.h1`
   text-align: center;
@@ -19,7 +20,7 @@ export const PostsSectionWrapper = styled.section`
 `;
 
 export const CenterWrapper = styled.div`
-  width: var(--width);
+  width: ${width};
   margin: 0 auto;
-  max-width: var(--maxWidth);
+  max-width: ${maxWidth};
 `;
