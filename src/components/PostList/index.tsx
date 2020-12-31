@@ -45,8 +45,6 @@ const PostList = ({
     <PostsSectionWrapper>
       <CenterWrapper>
         <HeaderTagsList tags={filterTags} removeFilter={removeFilter} />
-        <PageTitleWrapper>That IT Guy</PageTitleWrapper>
-        <PageSubTitleWrapper>Personal Tech Blog</PageSubTitleWrapper>
         {visiblePosts.map(({ node }, index) => (
           <PostCard key={index} post={node} addFilter={addFilter} />
         ))}

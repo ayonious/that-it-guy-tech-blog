@@ -1,20 +1,18 @@
 // this is to install code syntax highlighting
-import "../../../node_modules/highlight.js/styles/railscasts.css";
-
 import { graphql } from "gatsby";
 import Image from "gatsby-image";
 import React, { useContext } from "react";
-
+import "../../../node_modules/highlight.js/styles/railscasts.css";
 import { Context } from "../../Context/ThemeContext";
 import Layout from "../Layout";
 import PostDetails from "../PostDetails";
-import StyledButton from "../StyledButton";
 import {
   DateDivWrapper,
   PostTagDivWrapper,
   TagsDivWrapper,
   TemplateDivWrapper,
   TitleDivWrapper,
+  ImageWrapper,
 } from "./styles";
 
 interface TemplateData {
@@ -60,12 +58,9 @@ const postTemplate = ({ data }: TemplateData) => {
   return (
     <Layout seoProps={seoProps}>
       <TemplateDivWrapper theme={theme}>
-        <StyledButton to={`/`} theme={theme} title={"< back to Home Page"} />
         <div>
+          <DateDivWrapper>{date}</DateDivWrapper>
           <TitleDivWrapper>{title}</TitleDivWrapper>
-          <DateDivWrapper>
-            <span>{date}</span>
-          </DateDivWrapper>
           <TagsDivWrapper>
             {tags.map((tag, index) => (
               <PostTagDivWrapper key={index} theme={theme}>
@@ -74,7 +69,9 @@ const postTemplate = ({ data }: TemplateData) => {
             ))}
           </TagsDivWrapper>
         </div>
-        <Image fluid={img} />
+        <ImageWrapper>
+          <Image fluid={img} />
+        </ImageWrapper>
         <PostDetails body={body} />
       </TemplateDivWrapper>
     </Layout>

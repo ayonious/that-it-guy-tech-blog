@@ -1,25 +1,28 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { TagDivWrapper } from '../TagsList/styles';
+import { TagDivWrapper } from "../TagsList/styles";
 
 export const TitleDivWrapper = styled.div`
   letter-spacing: 5px;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
   font-size: 48px;
-  text-align: center;
+  text-align: left;
+`;
+
+export const ImageWrapper = styled.div`
+  margin-top: 30px;
+  margin-bottom: 10px;
 `;
 
 export const TagsDivWrapper = styled.div`
-  text-align: center;
+  text-align: left;
 `;
 
 export const DateDivWrapper = styled.div`
-  letter-spacing: 5px;
   text-transform: capitalize;
   font-size: 14px;
-  text-align: center;
-  margin-bottom: 3rem;
+  text-align: left;
 `;
 
 export const TemplateDivWrapper = styled.div`

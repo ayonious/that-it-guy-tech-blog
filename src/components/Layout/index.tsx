@@ -9,7 +9,7 @@ import SEO from "./SEO";
 interface Props {
   seoProps?: {
     title?: string;
-    desription?: string;
+    description?: string;
   };
   children: any;
 }
@@ -21,7 +21,7 @@ const Layout = ({ children, seoProps }: Props) => {
 
   return (
     <>
-      <SEO title={seoProps?.title} description={seoProps?.desription} />
+      <SEO title={seoProps?.title} description={seoProps?.description} />
       <TopMostDivWrapper theme={theme}>
         <Header />
         {children}
