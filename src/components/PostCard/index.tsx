@@ -10,7 +10,7 @@ import {
   InfoDivWrapper,
   InfoDateWrapper,
   InfoHeadlineWrapper,
-  InfoExccerptWrapper,
+  InfoExcerptWrapper,
 } from "./styles";
 
 export interface PostCardData {
@@ -55,22 +55,20 @@ const PostCard = (props: PostCardData) => {
 
   return (
     <CardArticleWrapper theme={theme}>
+      <CardImageWrapper>
+        <Image fluid={img} />
+      </CardImageWrapper>
       <InfoDivWrapper theme={theme}>
         <InfoHeadlineWrapper>{title}</InfoHeadlineWrapper>
-        <InfoDateWrapper>
-          <span> {date} </span>
-        </InfoDateWrapper>
+        <InfoDateWrapper>{date}</InfoDateWrapper>
         <TagsList tags={tags} addFilter={addFilter} />
-        <InfoExccerptWrapper>{excerpt}</InfoExccerptWrapper>
+        <InfoExcerptWrapper>{excerpt}</InfoExcerptWrapper>
         <StyledButton
           to={`blogs/${slug}`}
           theme={theme}
           title={"Read More..."}
         />
       </InfoDivWrapper>
-      <CardImageWrapper>
-        <Image fluid={img} />
-      </CardImageWrapper>
     </CardArticleWrapper>
   );
 };
