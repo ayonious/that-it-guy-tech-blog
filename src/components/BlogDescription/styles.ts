@@ -23,11 +23,12 @@ export const DateDivWrapper = styled.div`
   text-transform: capitalize;
   font-size: 14px;
   text-align: left;
+  color: rgb(155, 155, 155);
 `;
 
 export const TemplateDivWrapper = styled.div`
   width: 80vw;
-  margin: 4rem auto;
+  margin: 1rem auto;
   max-width: 750px;
   padding: 2rem;
   background: ${(p) => p.theme.mainWhite};
