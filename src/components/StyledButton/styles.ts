@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { showBorders } from "../../../config";
+import { showDebugBorders } from "../../../config";
 export const LinkDivWrapper = styled.div`
-  border: ${showBorders ? "3px solid blue" : ""};
+  border: ${showDebugBorders ? "3px solid blue" : ""};
   a {
     border: 1px solid ${(p) => p.theme.mainBlack};
     padding: 4px 8px;

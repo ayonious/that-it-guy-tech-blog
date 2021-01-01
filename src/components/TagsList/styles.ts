@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import { showBorders } from "../../../config";
+import { showDebugBorders } from "../../../config";
 
 export const TagsDivWrapper = styled.div`
-  border: ${showBorders ? "2px solid orange" : ""};
+  border: ${showDebugBorders ? "2px solid green" : ""};
   display: flex;
   flex-direction: row;
 `;
 
 export const TagDivWrapper = styled.div`
-  border: ${showBorders ? "2px solid yellow" : ""};
+  border: ${showDebugBorders ? "2px solid yellow" : ""};
   background: ${(p) => p.theme.mainBlack};
   border-radius: 7px;
   padding: 0.2px 4px;

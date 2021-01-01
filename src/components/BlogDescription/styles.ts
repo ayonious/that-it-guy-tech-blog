@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { TagDivWrapper } from "../TagsList/styles";
-import { maxWidth, width } from "../../../config";
+import { maxWidth, width, showDebugBorders } from "../../../config";
 
 export const TitleDivWrapper = styled.div`
   letter-spacing: 5px;
@@ -33,6 +33,7 @@ export const TemplateDivWrapper = styled.div`
   margin: 1rem auto;
   padding: 2rem;
   background: ${(p) => p.theme.mainWhite};
+  border: ${showDebugBorders ? "2px solid red" : ""};
 `;
 
 export const PostTagDivWrapper = styled(TagDivWrapper)`

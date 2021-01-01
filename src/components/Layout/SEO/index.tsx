@@ -45,7 +45,12 @@ function SEO({ description, title }: Props) {
           content: helmetDescription,
         },
       ]}
-    />
+    >
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap"
+      />
+    </Helmet>
   );
 }
 

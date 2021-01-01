@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { minDesktopSize, showBorders } from "../../../config";
+import { minDesktopSize, showDebugBorders } from "../../../config";
 
 const bodyHeight = "250px";
 const imageBodyWidth = "250px";
@@ -14,7 +14,7 @@ export const CardArticleWrapper = styled.article`
     flex-direction: row;
   }
   width: 1000px;
-  border: ${showBorders ? "2px solid pink" : ""};
+  border: ${showDebugBorders ? "2px solid pink" : ""};
 `;
 
 export const CardImageWrapper = styled.div`
@@ -32,7 +32,7 @@ export const InfoDivWrapper = styled.div`
   flex-direction: column;
   justify-content: left;
   padding: 0 1rem;
-  border: ${showBorders ? "2px solid green" : ""};
+  border: ${showDebugBorders ? "2px solid green" : ""};
   width: ${infoBodyWidth};
 `;
 
@@ -41,7 +41,7 @@ export const InfoHeadlineWrapper = styled.span`
   margin-bottom: 5px;
   text-align: left;
   width: 600px;
-  border: ${showBorders ? "2px solid blue" : ""};
+  border: ${showDebugBorders ? "2px solid blue" : ""};
   @media only screen and (min-width: ${minDesktopSize}) {
     text-overflow: clip;
   }
@@ -49,12 +49,12 @@ export const InfoHeadlineWrapper = styled.span`
 
 export const InfoDateWrapper = styled.h6`
   color: ${(p) => p.theme.mainBlack};
-  border: ${showBorders ? "2px solid green" : ""};
+  border: ${showDebugBorders ? "2px solid green" : ""};
   text-align: left;
 `;
 
 export const InfoExcerptWrapper = styled.p`
   padding: 25px 0 35px 0;
   text-align: left;
-  border: ${showBorders ? "2px solid green" : ""};
+  border: ${showDebugBorders ? "2px solid green" : ""};
 `;
