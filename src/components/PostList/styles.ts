@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { maxWidth, width } from "../../../config";
+import { maxWidth, width, showDebugBorders } from "../../../config";
 
 export const PageTitleWrapper = styled.h1`
   text-align: center;
@@ -15,12 +15,11 @@ export const PageSubTitleWrapper = styled.h1`
   margin-bottom: 3rem;
 `;
 
-export const PostsSectionWrapper = styled.section`
-  padding: 2rem 0;
-`;
-
-export const CenterWrapper = styled.div`
+export const PostsSectionWrapper = styled.div`
   width: ${width};
-  margin: 0 auto;
   max-width: ${maxWidth};
+  margin: 1rem auto;
+  padding: 2rem;
+  background: ${(p) => p.theme.mainWhite};
+  border: ${showDebugBorders ? "2px solid red" : ""};
 `;

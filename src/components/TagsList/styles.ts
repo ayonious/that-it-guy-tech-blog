@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { showDebugBorders } from "../../../config";
+import { showDebugBorders, transitionAnimationStyle } from "../../../config";
 
 export const TagsDivWrapper = styled.div`
   border: ${showDebugBorders ? "2px solid green" : ""};
@@ -18,11 +18,11 @@ export const TagDivWrapper = styled.div`
   margin-bottom: 0.1rem;
   font-size: 0.9rem;
   margin-right: 0.2rem;
-  transition: all 0.3s ease-in-out;
+  transition: ${transitionAnimationStyle};
   border: 1px solid transparent;
   cursor: pointer;
   :hover {
-    transition: all 0.3s ease-in-out;
+    transition: ${transitionAnimationStyle};
     border: 1px solid ${(p) => p.theme.mainGrey};
   }
 `;

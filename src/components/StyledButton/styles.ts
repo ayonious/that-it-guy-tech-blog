@@ -1,15 +1,13 @@
 import styled from "styled-components";
-import { showDebugBorders } from "../../../config";
+import { showDebugBorders, transitionAnimationStyle } from "../../../config";
 export const LinkDivWrapper = styled.div`
   border: ${showDebugBorders ? "3px solid blue" : ""};
   a {
     border: 1px solid ${(p) => p.theme.mainBlack};
     padding: 4px 8px;
-    display: inline-block;
     color: ${(p) => p.theme.mainBlack};
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
-    margin-bottom: 2rem;
+    transition: ${transitionAnimationStyle};
     :hover {
       background: ${(p) => p.theme.mainBlack};
       color: ${(p) => p.theme.mainWhite};

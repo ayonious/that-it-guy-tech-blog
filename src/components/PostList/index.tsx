@@ -43,12 +43,10 @@ const PostList = ({
   const visiblePosts = posts.slice(0, totalVisible);
   return (
     <PostsSectionWrapper>
-      <CenterWrapper>
-        <HeaderTagsList tags={filterTags} removeFilter={removeFilter} />
-        {visiblePosts.map(({ node }, index) => (
-          <PostCard key={index} post={node} addFilter={addFilter} />
-        ))}
-      </CenterWrapper>
+      <HeaderTagsList tags={filterTags} removeFilter={removeFilter} />
+      {visiblePosts.map(({ node }, index) => (
+        <PostCard key={index} post={node} addFilter={addFilter} />
+      ))}
     </PostsSectionWrapper>
   );
 };

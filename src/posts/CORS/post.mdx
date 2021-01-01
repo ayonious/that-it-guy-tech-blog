@@ -28,7 +28,7 @@ With every request browser sends bunch of Headers of Cookies including the Autho
 
 # How to Tackle
 
-So if you want from frontned Make an Http request to another server there are 2 ways you should make it to fix this Problem.
+So if you want from frontend Make an Http request to another server there are 2 ways you should make it to fix this Problem.
 
 Firstly, (preferred way 😇) Create your own backend and deploy an api endpoint under same/subdmain. From website frontend call that endpoint. This backend endpoint will call the third party service with only Selected Headers (or none) to fetch the data. This way you are not exposing your Cookies.
 

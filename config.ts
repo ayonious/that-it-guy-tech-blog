@@ -4,8 +4,11 @@ export const minDesktopSize = "768px";
 export const maxWidth = "750px";
 export const width = "80vw";
 
+// default animation delays
+export const transitionAnimationStyle = "all 0.35s ease-in-out";
+
 // debugging variables
-export const showDebugBorders = true;
+export const showDebugBorders = false;
 
 export const themes = {
   white: {
