@@ -17,7 +17,7 @@ If you are new to react you might be starting a new react project using create-r
 
 Official definition is: Babel is a JS compiler. This is something that converts our modern JS to plain ES5 that can run in any browser.
 
-My definition is: We use JSX in react and lots of cool feature of ECMA script. babel ocnverts them in ES5
+My definition is: We use JSX in react and lots of cool feature of ECMA script. babel converts them in ES5
 
 # Babel code examples
 
@@ -42,7 +42,7 @@ in the file of .babelrc I use this. This actually tells
 
 </CodeDivWrapper>
 
-You can configure babel to tell which browser to be this compatible to. or als omention range of versions of browsers.
+You can configure babel to tell which browser to be this compatible to. or as mention range of versions of browsers.
 
 Here is a pure html code that tells browser that to understand this code part you need babel compiler
 
@@ -50,10 +50,10 @@ Here is a pure html code that tells browser that to understand this code part yo
 
 ```html
 <script type="text/babel">
-  function Printtr(props) {
+  function PrintR(props) {
     return <h1>{props.input}</h1>;
   }
-  var App = <Printtr input="This is app" />;
+  var App = <PrintR input="This is app" />;
   ReactDOM.render(App, document.getElementById("root"));
 </script>
 ```
