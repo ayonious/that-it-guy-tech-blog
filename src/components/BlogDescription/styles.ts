@@ -4,7 +4,6 @@ import { TagDivWrapper } from "../TagsList/styles";
 import { maxWidth, width, showDebugBorders } from "../../../config";
 
 export const TitleDivWrapper = styled.div`
-  letter-spacing: 5px;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
   font-size: 48px;

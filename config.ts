@@ -8,7 +8,7 @@ export const width = "80vw";
 export const transitionAnimationStyle = "all 0.35s ease-in-out";
 
 // debugging variables
-export const showDebugBorders = false;
+export const showDebugBorders = true;
 
 export const themes = {
   white: {

@@ -5,6 +5,7 @@ export const TagsDivWrapper = styled.div`
   border: ${showDebugBorders ? "2px solid green" : ""};
   display: flex;
   flex-direction: row;
+  margin-top: 0.5rem;
 `;
 
 export const TagDivWrapper = styled.div`

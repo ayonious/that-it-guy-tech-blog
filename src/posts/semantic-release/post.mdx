@@ -9,14 +9,14 @@ tags: [semantic, npmjs, npm, package, versioning, deployment]
 
 import CodeDivWrapper from "../../components/CodeWrapper";
 
-Before I started with semantic-release I had to always remember to update the version in package.json and also create a CHANGELOG muyself. But now with semantic-release I was able to automate this all.
+Before I started with semantic-release I had to always remember to update the version in package.json and also create a CHANGELOG myself. But now with semantic-release I was able to automate this all.
 
 # Workflow for Semantic release
 
 After you create and merge a PR. Based on what was in the header of your PR header commit. semantic will do the following:
 
 1.  analyze your commit message.
-2.  Create CHANGELOG (optional): Gather all the commit messages(which are not yet published) and create a changelog. (or add new change in current CHAGELOG)
+2.  Create CHANGELOG (optional): Gather all the commit messages(which are not yet published) and create a changelog. (or add new change in current CHANGELOG)
     NOTE: Only way for semantic-release to know which commits are not released is by taking all last commits till a commit tag of format vx.x.x
 3.  Create new versioning package.json and package-lock.json: Bump up the version of the package based on your last vx.x.x commit tag in github and you merged PR's header message.
     Example: if you commit message was "feat: something" and last git version tag was v1.2.3. Then It will create a new version v1.3.0

@@ -3,10 +3,9 @@ import { minDesktopSize, showDebugBorders } from "../../../config";
 
 const bodyHeight = "250px";
 const imageBodyWidth = "250px";
-const infoBodyWidth = "550px";
 
 export const CardArticleWrapper = styled.article`
-  border-top: 2px solid ${(p) => p.theme.mainGrey};
+  border: 2px solid ${(p) => p.theme.mainGrey};
   margin-bottom: 2rem;
   text-align: center;
   border: ${showDebugBorders ? "2px solid pink" : ""};
@@ -29,9 +28,10 @@ export const InfoDivWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: left;
-  margin-left: 1rem;
+  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border: ${showDebugBorders ? "2px solid black" : ""};
-  width: ${infoBodyWidth};
 `;
 
 export const InfoHeadlineWrapper = styled.span`
@@ -39,6 +39,7 @@ export const InfoHeadlineWrapper = styled.span`
   margin-bottom: 5px;
   text-align: left;
   border: ${showDebugBorders ? "2px solid blue" : ""};
+  text-overflow: clip;
   @media only screen and (min-width: ${minDesktopSize}) {
     text-overflow: clip;
   }
@@ -53,5 +54,14 @@ export const InfoDateWrapper = styled.h6`
 export const InfoExcerptWrapper = styled.p`
   margin-top: 1rem;
   text-align: left;
+  text-overflow: clip;
+  border: ${showDebugBorders ? "2px solid green" : ""};
+`;
+
+export const ButtonWrapper = styled.div`
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   border: ${showDebugBorders ? "2px solid green" : ""};
 `;

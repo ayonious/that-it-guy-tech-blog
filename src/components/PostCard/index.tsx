@@ -11,6 +11,7 @@ import {
   InfoDateWrapper,
   InfoHeadlineWrapper,
   InfoExcerptWrapper,
+  ButtonWrapper,
 } from "./styles";
 
 export interface PostCardData {
@@ -63,11 +64,13 @@ const PostCard = (props: PostCardData) => {
         <InfoDateWrapper>{date}</InfoDateWrapper>
         <TagsList tags={tags} addFilter={addFilter} />
         <InfoExcerptWrapper>{excerpt}</InfoExcerptWrapper>
-        <StyledButton
-          to={`blogs/${slug}`}
-          theme={theme}
-          title={"Read More..."}
-        />
+        <ButtonWrapper>
+          <StyledButton
+            to={`blogs/${slug}`}
+            theme={theme}
+            title={"Read More..."}
+          />
+        </ButtonWrapper>
       </InfoDivWrapper>
     </CardArticleWrapper>
   );
