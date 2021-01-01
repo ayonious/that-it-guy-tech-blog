@@ -1,10 +1,10 @@
 ---
 title: Is await on async function blocking my thread?
-slug: nodejs-is-await-blocking-therad
+slug: nodejs-is-await-blocking-thread
 image: ./images/plastic-animal-toys-on-wooden-surface-1319572.jpg
 date: "2020-05-07"
 published: yes
-tags: [js, nodejs, threads, anync]
+tags: [js, nodejs, threads, async]
 ---
 
 import CodeDivWrapper from "../../components/CodeWrapper";
@@ -18,34 +18,34 @@ Just look at this code
 <CodeDivWrapper>
 
 ```js
-async fetchDatafromDb()  {
+async fetchDataFromDb()  {
   const res = await db.fetch();
   return res;
 }
 
 console.log("start of one thread");
-const res = await fetchDatafromDb();
+const res = await fetchDataFromDb();
 console.log("res arrived", res);
 ```
 
 </CodeDivWrapper>
 
-Now the golden qustion is while the thread is `waiting` for the fetchDatafromDb can some other request start processing?
+Now the golden question is while the thread is `waiting` for the fetchDataFromDb can some other request start processing?
 
 Yes.
 
-This async/await is just a syntax suger around promise. If you write the equivalent Promise it will be clearer why await is not blocking
+This async/await is just a syntax sugar around promise. If you write the equivalent Promise it will be clearer why await is not blocking
 
 <CodeDivWrapper>
 
 ```js
-async fetchDatafromDb()  {
+async fetchDataFromDb()  {
   const res = await db.fetch();
   return res;
 }
 
 console.log("start of one thread");
-fetchDatafromDb().then( res => {
+fetchDataFromDb().then( res => {
   console.log("res arrived", res);}
 )
 ```
@@ -54,7 +54,7 @@ fetchDatafromDb().then( res => {
 
 Here its clear that you can just start processing other requests while this thread is waiting on the response of database fetch.
 
-Another pracitcal example. This one page server
+Another practical example. This one page server
 
 <CodeDivWrapper>
 
@@ -74,7 +74,7 @@ app.get("/fetch", async (req, res) => {
   console.log("started");
   const result = await fetch();
   res.json(result);
-  console.log("endded");
+  console.log("ended");
 });
 
 app.listen(3000, function () {

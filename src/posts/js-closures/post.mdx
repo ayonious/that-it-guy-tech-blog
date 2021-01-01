@@ -51,20 +51,20 @@ class Dashboard extends Component {
   render() {
     const { name } = this.props;
 
-    function printname() {
+    function printName() {
       // you have written probably functions like this
       // many times without noticing that Im not passing the name
       // as a param for this function :P
       console.log(name);
     }
 
-    const printnameArrow = () => {
+    const printNameArrow = () => {
       // Arrow functions can also access parents variables
       console.log(name);
     };
 
     return (
-      <div onClick={printname}>
+      <div onClick={printName}>
         <span>{name}</span>
       </div>
     );
@@ -133,7 +133,7 @@ for (let i = 0; i < 5; i++) {
 
 </CodeDivWrapper>
 
-I hope you dont use var :(
+I hope you don't use var :(
 
 <CodeDivWrapper>
 

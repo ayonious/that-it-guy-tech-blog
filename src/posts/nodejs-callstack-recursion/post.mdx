@@ -84,17 +84,17 @@ Lets look at second solution
 
 // call stack [step1]
 Sum(5, 0)
-pushtoEventLoop(Sum(4, 5))
+pushToEventLoop(Sum(4, 5))
 
 // call stack [step2]
-pushtoEventLoop(Sum(4, 5))
+pushToEventLoop(Sum(4, 5))
 
 // call stack [step3]
-pushtoEventLoop(Sum(4, 5))
+pushToEventLoop(Sum(4, 5))
 
 // call stack [step4]
 Sum(4, 5)
-pushtoEventLoop(Sum(3, 9))
+pushToEventLoop(Sum(3, 9))
 
 ...
 Sum(0, 15)

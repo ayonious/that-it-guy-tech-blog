@@ -17,12 +17,12 @@ React's components have a life cycle: Initialization ,update, destroy. During th
 
 In simple form the life cycle consists of 4 stages:
 
-1. Initiaze
+1. Initialize
 2. Mount
 3. Update
 4. Unmount
 
-then from step4(unmount) it can go back to step1(initiaze)
+then from step4(Unmount) it can go back to step1(Initialize)
 
 # Phase:Initialize
 
@@ -36,16 +36,16 @@ When the component is mounted in the DOM
 - Event during this phase: render()
 - Event exactly after this phase: componentDidMount()
 
-### NOTE: Dont make any data chagne during componentWillMount.
+### NOTE: don't make any data change during componentWillMount.
 
 # Phase: Update
 
 - Event exactly before this phase: componentWillUpdate()
 - Event during this phase: render()
 - Event exactly after this phase: componentDidUpdate()
-- Special: Event exactly before this phase: somponentShouldUpdate(): returns a boolean to understand whether the rerendering will be done.
+- Special: Event exactly before this phase: componentShouldUpdate(): returns a boolean to understand whether the re-rendering will be done.
 
-## Differnce between Mount and update
+## Difference between Mount and update
 
 - Mount is called only in the first time.
 - Update is called for each sequential render(). This happens usually due to state chagne

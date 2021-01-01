@@ -9,9 +9,9 @@ tags: [js, react]
 
 import CodeDivWrapper from "../../components/CodeWrapper";
 
-Imagine you put an event listener to scroll event but ccalling only once a second is enough. But during scroll you are getting this event like 100 times a minute. Use Here debounce and throttle to filter out these unwanted events.
+Imagine you put an event listener to scroll event but calling only once a second is enough. But during scroll you are getting this event like 100 times a minute. Use Here debounce and throttle to filter out these unwanted events.
 
-I prefet to use the builtin function of Lodash to do this. You can also make this yourself.
+I prefer to use the builtin function of Lodash to do this. You can also make this yourself.
 
 # Throttle
 
@@ -50,7 +50,7 @@ document.addEventListener("scroll", _.throttle(scrollListener, 100));
 
 # Debounce
 
-Defintion: Call a function only if it has not been called in last 100 ms (time window).
+Definition: Call a function only if it has not been called in last 100 ms (time window).
 
 <CodeDivWrapper>
 
@@ -61,7 +61,7 @@ const scrollListener = () => {
   console.log("search for results");
 };
 // after first key press from user, this will wait for a
-// time of 100ms where user didnt press any keys
+// time of 100ms where user didn't press any keys
 document.addEventListener("press", _.debounce(pressListener, 100));
 ```
 
