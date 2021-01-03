@@ -1,3 +1,6 @@
+export const PageTitle = "That IT Guy";
+export const PageSubTitle = "Personal Tech Blog";
+// if screen goes smaller than this it will convert the other small view
 export const minDesktopSize = "768px";
 
 // visible part of all the content

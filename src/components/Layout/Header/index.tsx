@@ -8,6 +8,7 @@ import {
   PageTitleWrapper,
   LinkDivWrapper,
 } from "./styles";
+import { PageSubTitle, PageTitle } from "../../../../config";
 
 const Header = () => {
   const {
@@ -19,8 +20,8 @@ const Header = () => {
       <ThemeSwitcher />
       <LinkDivWrapper theme={theme}>
         <Link to={"/"}>
-          <PageTitleWrapper>That IT Guy</PageTitleWrapper>
-          <PageSubTitleWrapper>Personal Tech Blog</PageSubTitleWrapper>
+          <PageTitleWrapper>{PageTitle}</PageTitleWrapper>
+          <PageSubTitleWrapper>{PageSubTitle}</PageSubTitleWrapper>
         </Link>
       </LinkDivWrapper>
     </NavBar>
