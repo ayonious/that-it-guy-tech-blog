@@ -3,10 +3,13 @@ describe("Integration Tests", () => {
     cy.visit("http://localhost:9000/blogs/js-throttling-debounce");
   });
 
-  it("Blog page should have => 1.back button, 2.Dark Theme Text 3. Page Content", () => {
-    // Buttons
-    cy.contains("back to Home Page");
+  it("Blog page should have => 1.Page title 2.Dark Theme Text 3. Page Content", () => {
+    // Head Title
+    cy.contains("That IT Guy");
 
+    // Sub Title
+    cy.contains("Personal Tech Blog");
+    
     // Theme
     cy.contains("Dark Theme");
 
