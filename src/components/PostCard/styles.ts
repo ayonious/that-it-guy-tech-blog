@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { minDesktopSize, showDebugBorders } from "../../../config";
+import { minTabletSize, showDebugBorders } from "../../../config";
 
 const bodyHeight = "250px";
 const imageBodyWidth = "250px";
@@ -9,7 +9,7 @@ export const CardArticleWrapper = styled.article`
   margin-bottom: 2rem;
   text-align: center;
   border: ${showDebugBorders ? "2px solid pink" : ""};
-  @media only screen and (min-width: ${minDesktopSize}) {
+  @media only screen and (min-width: ${minTabletSize}) {
     display: flex;
     flex-direction: row;
   }
@@ -17,7 +17,7 @@ export const CardArticleWrapper = styled.article`
 
 export const CardImageWrapper = styled.div`
   div {
-    @media only screen and (min-width: ${minDesktopSize}) {
+    @media only screen and (min-width: ${minTabletSize}) {
       height: ${bodyHeight};
       width: ${imageBodyWidth};
     }
@@ -40,7 +40,7 @@ export const InfoHeadlineWrapper = styled.span`
   text-align: left;
   border: ${showDebugBorders ? "2px solid blue" : ""};
   text-overflow: clip;
-  @media only screen and (min-width: ${minDesktopSize}) {
+  @media only screen and (min-width: ${minTabletSize}) {
     text-overflow: clip;
   }
 `;

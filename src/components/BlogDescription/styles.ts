@@ -17,6 +17,8 @@ export const ImageWrapper = styled.div`
 
 export const TagsDivWrapper = styled.div`
   text-align: left;
+  display: flex;
+  flex-direction: row;
 `;
 
 export const DateDivWrapper = styled.div`

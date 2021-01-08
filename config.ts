@@ -1,7 +1,7 @@
 export const PageTitle = "That IT Guy";
 export const PageSubTitle = "Personal Tech Blog";
 // if screen goes smaller than this it will convert the other small view
-export const minDesktopSize = "768px";
+export const minTabletSize = "769px";
 
 // visible part of all the content
 export const maxWidth = "750px";
@@ -11,7 +11,7 @@ export const width = "80vw";
 export const transitionAnimationStyle = "all 0.35s ease-in-out";
 
 // debugging variables
-export const showDebugBorders = true;
+export const showDebugBorders = false;
 
 export const themes = {
   white: {

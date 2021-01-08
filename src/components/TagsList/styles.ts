@@ -5,6 +5,7 @@ export const TagsDivWrapper = styled.div`
   border: ${showDebugBorders ? "2px solid green" : ""};
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-top: 0.5rem;
 `;
 
@@ -13,7 +14,6 @@ export const TagDivWrapper = styled.div`
   background: ${(p) => p.theme.mainBlack};
   border-radius: 7px;
   padding: 0.2px 4px;
-  display: inline-block;
   color: ${(p) => p.theme.mainWhite};
   margin-top: 0.1rem;
   margin-bottom: 0.1rem;
