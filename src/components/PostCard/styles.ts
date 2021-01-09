@@ -1,16 +1,13 @@
 import styled from "styled-components";
 import { minTabletSize, showDebugBorders, borderRadius } from "../../../config";
 
-const bodyHeight = "250px";
 const imageBodyWidth = "250px";
 
-const miniBodyHeight = "100px";
 const miniImageBodyWidth = "100px";
 
 export const CardArticleWrapper = styled.article`
   border: 2px solid ${(p) => p.theme.mainGrey};
-  border-top-right-radius: ${borderRadius};
-  border-bottom-right-radius: ${borderRadius};
+  border-radius: ${borderRadius};
   margin-bottom: 2rem;
   text-align: center;
   border: ${showDebugBorders ? "2px solid pink" : ""};
@@ -27,7 +24,8 @@ export const CardImageWrapper = styled.div`
   }
   div {
     @media only screen and (min-width: ${minTabletSize}) {
-      height: ${bodyHeight};
+      border-top-left-radius: ${borderRadius};
+      border-bottom-left-radius: ${borderRadius};
       width: ${imageBodyWidth};
     }
   }
@@ -39,7 +37,6 @@ export const MiniCardImageWrapper = styled.div`
     display: none;
   }
   div {
-    height: ${miniBodyHeight};
     width: ${miniImageBodyWidth};
   }
 `;
