@@ -24,14 +24,13 @@ export interface Post {
 interface Props {
   posts: Post[];
   totalVisible: number;
-  allTags: string[];
 }
 
-const PostList = ({ posts, totalVisible, allTags }: Props) => {
+const PostList = ({ posts, totalVisible }: Props) => {
   const visiblePosts = posts.slice(0, totalVisible);
   return (
     <PostsSectionWrapper>
-      <HeaderTagsList allTags={allTags} />
+      <HeaderTagsList />
       {visiblePosts.map(({ node }, index) => (
         <PostCard key={index} post={node} />
       ))}

@@ -1,8 +1,8 @@
-import React, { useReducer } from "react";
+import React, { useReducer, createContext } from "react";
 import { darkTheme } from "./ThemeEnums";
 
 export default (reducer: any, actions: any, initialState: any) => {
-  const Context = React.createContext({
+  const Context = createContext({
     state: {
       theme: darkTheme,
     },
@@ -12,7 +12,6 @@ export default (reducer: any, actions: any, initialState: any) => {
   const Provider = ({ children }: any) => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
-    // actions === { addBlogPost: (dispatch) => { return () => {} } }
     const boundActions: any = {};
     for (let key in actions) {
       boundActions[key] = actions[key](dispatch);

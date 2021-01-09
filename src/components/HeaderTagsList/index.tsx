@@ -4,8 +4,9 @@ import Select from "react-select";
 import { Context as TagFilterContext } from "../../Context/TagFilter/TagFilterContext";
 import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
 import { HeaderTagsWrapper, CustomSelectStyles } from "./styles";
+import useTags from "../../Hooks/useTags";
 
-const HeaderTagsList = ({ allTags }: { allTags: string[] }) => {
+const HeaderTagsList = () => {
   const {
     state: { theme },
   } = useContext(ThemeContext);
@@ -16,6 +17,8 @@ const HeaderTagsList = ({ allTags }: { allTags: string[] }) => {
     addTag,
     clearTags,
   } = useContext(TagFilterContext);
+
+  const allTags: string[] = useTags() || [];
 
   return (
     <HeaderTagsWrapper>

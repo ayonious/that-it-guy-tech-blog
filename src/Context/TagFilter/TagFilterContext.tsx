@@ -1,6 +1,6 @@
 import React from "react";
 import createTagFilterContext from "./createTagFilterContext";
-
+import useTags from "./useTags";
 interface ContextProps {
   tags: string[];
 }

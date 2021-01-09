@@ -13,7 +13,7 @@
 
 > A technical Blog created by Gatsby. You can use it to write non tech blogs as well
 
-![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front.page.3.png)
+![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front.page.4.png)
 
 ### [Check the Demo✨](https://that-it-guy.netlify.app)
 
@@ -90,7 +90,7 @@ Gatsby also provides a plugin interface to create and load a service worker into
 
 ## 🎨 Theming
 
-![Themes](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/themes.png)
+![Themes](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/themes.1.png)
 
 ## Syntax highlighting with Code copy
 
@@ -98,7 +98,7 @@ Gatsby also provides a plugin interface to create and load a service worker into
 
 ## Filter by Post Tags
 
-![Filter](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/filter.png)
+![Filter](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/filter.1.png)
 
 # 💄 Styles
 

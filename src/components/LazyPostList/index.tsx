@@ -109,17 +109,7 @@ const LazyPostList = () => {
 
   const filteredPosts = filterPosts(tags, posts);
 
-  const allTags = _.uniq(
-    _.flatMap(posts.map((edge) => edge.node.frontmatter.tags))
-  );
-
-  return (
-    <PostList
-      allTags={allTags}
-      posts={filteredPosts}
-      totalVisible={totalVisible}
-    />
-  );
+  return <PostList posts={filteredPosts} totalVisible={totalVisible} />;
 };
 
 export default LazyPostList;
