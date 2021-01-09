@@ -1,12 +1,8 @@
 import * as React from "react";
-import {
-  CenterWrapper,
-  PostsSectionWrapper,
-  PageTitleWrapper,
-  PageSubTitleWrapper,
-} from "./styles";
-import PostCard from "../PostCard";
+
 import HeaderTagsList from "../HeaderTagsList";
+import PostCard from "../PostCard";
+import { PostsSectionWrapper } from "./styles";
 
 export interface Post {
   node: {
@@ -28,24 +24,16 @@ export interface Post {
 interface Props {
   posts: Post[];
   totalVisible: number;
-  addFilter: any;
-  removeFilter: any;
-  filterTags: string[];
+  allTags: string[];
 }
 
-const PostList = ({
-  posts,
-  totalVisible,
-  filterTags,
-  addFilter,
-  removeFilter,
-}: Props) => {
+const PostList = ({ posts, totalVisible, allTags }: Props) => {
   const visiblePosts = posts.slice(0, totalVisible);
   return (
     <PostsSectionWrapper>
-      <HeaderTagsList tags={filterTags} removeFilter={removeFilter} />
+      <HeaderTagsList allTags={allTags} />
       {visiblePosts.map(({ node }, index) => (
-        <PostCard key={index} post={node} addFilter={addFilter} />
+        <PostCard key={index} post={node} />
       ))}
     </PostsSectionWrapper>
   );

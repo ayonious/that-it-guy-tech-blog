@@ -1,7 +1,7 @@
 import Image from "gatsby-image";
 import React, { useContext } from "react";
 
-import { Context } from "../../Context/ThemeContext";
+import { Context } from "../../Context/Theme/ThemeContext";
 import StyledButton from "../StyledButton";
 import TagsList from "../TagsList";
 import {
@@ -30,7 +30,6 @@ export interface PostCardData {
     excerpt: string;
   };
   key: number;
-  addFilter: any;
 }
 
 const PostCard = (props: PostCardData) => {
@@ -47,7 +46,6 @@ const PostCard = (props: PostCardData) => {
       },
       excerpt,
     },
-    addFilter,
   } = props;
 
   const {
@@ -62,7 +60,7 @@ const PostCard = (props: PostCardData) => {
       <InfoDivWrapper theme={theme}>
         <InfoHeadlineWrapper>{title}</InfoHeadlineWrapper>
         <InfoDateWrapper>{date}</InfoDateWrapper>
-        <TagsList tags={tags} addFilter={addFilter} />
+        <TagsList tags={tags} />
         <InfoExcerptWrapper>{excerpt}</InfoExcerptWrapper>
         <ButtonWrapper>
           <StyledButton

@@ -1,39 +1,43 @@
 import React, { useContext } from "react";
+import Select from "react-select";
 
-import { Context } from "../../Context/ThemeContext";
-import {
-  CrossButtonWrapper,
-  FiltersTextWrapper,
-  HeaderTagsWrapper,
-  TagDivWrapper,
-} from "./styles";
+import { Context as TagFilterContext } from "../../Context/TagFilter/TagFilterContext";
+import { Context } from "../../Context/Theme/ThemeContext";
+import { HeaderTagsWrapper, CustomSelectStyles } from "./styles";
 
-interface TagData {
-  tags: string[];
-  removeFilter: any;
-}
-
-const HeaderTagsList = (props: TagData) => {
-  const { tags, removeFilter } = props;
+const HeaderTagsList = ({ allTags }: { allTags: string[] }) => {
   const {
     state: { theme },
   } = useContext(Context);
 
-  if (!tags.length) {
-    return <></>;
-  }
+  const {
+    state: { tags },
+    removeTag,
+    addTag,
+    clearTags,
+  } = useContext(TagFilterContext);
 
   return (
     <HeaderTagsWrapper>
-      <FiltersTextWrapper> Filters: </FiltersTextWrapper>
-      {tags.map((tag, index) => (
-        <TagDivWrapper key={index} theme={theme}>
-          <CrossButtonWrapper onClick={() => removeFilter(tag)}>
-            x
-          </CrossButtonWrapper>
-          <span>{tag}</span>
-        </TagDivWrapper>
-      ))}
+      <Select
+        styles={CustomSelectStyles(theme)}
+        closeMenuOnSelect={false}
+        isMulti
+        placeholder={"Filter By Tags"}
+        options={allTags.map((tag) => ({ label: tag, value: tag }))}
+        onChange={(items, lastEvent) => {
+          console.log(lastEvent);
+          if (lastEvent.action === "select-option") {
+            addTag(lastEvent.option.value);
+          }
+          if (lastEvent.action === "remove-value") {
+            removeTag(lastEvent.removedValue.value);
+          }
+          if (lastEvent.action === "clear") {
+            clearTags();
+          }
+        }}
+      />
     </HeaderTagsWrapper>
   );
 };

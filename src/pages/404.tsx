@@ -8,7 +8,7 @@ import {
   PageSubTitleWrapper,
 } from "../components/PostList/styles";
 
-import { Context } from "../Context/ThemeContext";
+import { Context } from "../Context/Theme/ThemeContext";
 
 const Error = () => {
   const {

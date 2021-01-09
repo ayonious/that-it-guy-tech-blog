@@ -6,7 +6,7 @@ export default (reducer: any, actions: any, initialState: any) => {
     state: {
       theme: darkTheme,
     },
-    changeTheme: () => {},
+    changeTheme: (theme: string) => {},
   });
 
   const Provider = ({ children }: any) => {

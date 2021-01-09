@@ -1,7 +1,8 @@
 import Link from "gatsby-link";
 import React, { useContext } from "react";
 import ThemeSwitcher from "../ThemeSwitcher";
-import { Context } from "../../../Context/ThemeContext";
+import HeaderTagsList from "../../HeaderTagsList";
+import { Context } from "../../../Context/Theme/ThemeContext";
 import {
   NavBar,
   PageSubTitleWrapper,
@@ -10,7 +11,11 @@ import {
 } from "./styles";
 import { PageSubTitle, PageTitle } from "../../../../config";
 
-const Header = () => {
+interface Props {
+  isHome?: boolean;
+}
+
+const Header = ({ isHome }: Props) => {
   const {
     state: { theme },
   } = useContext(Context);

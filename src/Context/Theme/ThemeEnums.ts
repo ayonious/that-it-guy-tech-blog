@@ -1,4 +1,4 @@
-import { themes } from "../../config";
+import { themes } from "../../../config";
 export interface ThemeDetails {
   themeName: Themes;
   mainGrey: String;

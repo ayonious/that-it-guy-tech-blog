@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GoMarkGithub } from "react-icons/go";
 
-import { Context } from "../../../Context/ThemeContext";
+import { Context } from "../../../Context/Theme/ThemeContext";
 import {
   IconWrapper,
   LinkCenter,

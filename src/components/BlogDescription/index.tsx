@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Image from "gatsby-image";
 import React, { useContext } from "react";
 import "../../../node_modules/highlight.js/styles/railscasts.css";
-import { Context } from "../../Context/ThemeContext";
+import { Context } from "../../Context/Theme/ThemeContext";
 import Layout from "../Layout";
 import PostDetails from "../PostDetails";
 import {

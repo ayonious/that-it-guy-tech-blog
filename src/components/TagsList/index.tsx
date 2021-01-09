@@ -1,23 +1,26 @@
 import React, { useContext } from "react";
 
-import { Context } from "../../Context/ThemeContext";
+import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
+import { Context as TagFilterContext } from "../../Context/TagFilter/TagFilterContext";
 import { TagDivWrapper, TagsDivWrapper } from "./styles";
 
 interface TagData {
   tags: string[];
-  addFilter: any;
 }
 
 const TagsList = (props: TagData) => {
-  const { tags, addFilter } = props;
+  const { tags } = props;
+
   const {
     state: { theme },
-  } = useContext(Context);
+  } = useContext(ThemeContext);
+
+  const { addTag } = useContext(TagFilterContext);
 
   return (
     <TagsDivWrapper>
       {tags.map((tag, index) => (
-        <TagDivWrapper key={index} theme={theme} onClick={() => addFilter(tag)}>
+        <TagDivWrapper key={index} theme={theme} onClick={() => addTag(tag)}>
           #{tag}
         </TagDivWrapper>
       ))}

@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useContext } from "react";
 import _ from "lodash";
 import PostList, { Post } from "../PostList";
 import { graphql, useStaticQuery } from "gatsby";
+import { Context as TagFilterContext } from "../../Context/TagFilter/TagFilterContext";
 
 const query = graphql`
   {
@@ -74,7 +75,10 @@ const LazyPostList = () => {
     INITIAL_NUMBER_OF_POSTS
   );
   const [updating, toggleUpdating] = useState<boolean>(false);
-  const [filterTags, setFilterTags] = useState<string[]>([]);
+
+  const {
+    state: { tags },
+  } = useContext(TagFilterContext);
 
   // this variable(listener) is used by 2 different hooks.
   // useCallback makes sure this is the same object
@@ -103,25 +107,17 @@ const LazyPostList = () => {
     }
   }, [updating, totalVisible]);
 
-  const filteredPosts = filterPosts(filterTags, posts);
+  const filteredPosts = filterPosts(tags, posts);
 
-  const addFilter = (newWord: string) => {
-    if (!filterTags.includes(newWord)) {
-      setFilterTags([...filterTags, newWord]);
-    }
-  };
-
-  const removeFilter = (wordToRemove: string) => {
-    setFilterTags(filterTags.filter((word) => word !== wordToRemove));
-  };
+  const allTags = _.uniq(
+    _.flatMap(posts.map((edge) => edge.node.frontmatter.tags))
+  );
 
   return (
     <PostList
+      allTags={allTags}
       posts={filteredPosts}
       totalVisible={totalVisible}
-      addFilter={addFilter}
-      filterTags={filterTags}
-      removeFilter={removeFilter}
     />
   );
 };

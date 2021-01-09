@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { Context } from "../../Context/ThemeContext";
+import { Context } from "../../Context/Theme/ThemeContext";
 import { TopMostDivWrapper } from "./styles";
 import Footer from "./Footer";
 import Header from "./Header";

@@ -27,3 +27,5 @@ export const themes = {
     darkGrey: "#ecececc0",
   },
 };
+
+export const borderRadius = "8px";
