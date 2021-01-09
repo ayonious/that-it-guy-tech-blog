@@ -2,7 +2,7 @@ import Link from "gatsby-link";
 import React, { useContext } from "react";
 import ThemeSwitcher from "../ThemeSwitcher";
 import HeaderTagsList from "../../HeaderTagsList";
-import { Context } from "../../../Context/Theme/ThemeContext";
+import { Context as ThemeContext } from "../../../Context/Theme/ThemeContext";
 import {
   NavBar,
   PageSubTitleWrapper,
@@ -18,7 +18,7 @@ interface Props {
 const Header = ({ isHome }: Props) => {
   const {
     state: { theme },
-  } = useContext(Context);
+  } = useContext(ThemeContext);
 
   return (
     <NavBar>

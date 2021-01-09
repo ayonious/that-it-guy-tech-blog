@@ -1,7 +1,7 @@
 import Image from "gatsby-image";
 import React, { useContext } from "react";
 
-import { Context } from "../../Context/Theme/ThemeContext";
+import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
 import StyledButton from "../StyledButton";
 import TagsList from "../TagsList";
 import {
@@ -50,7 +50,7 @@ const PostCard = (props: PostCardData) => {
 
   const {
     state: { theme },
-  } = useContext(Context);
+  } = useContext(ThemeContext);
 
   return (
     <CardArticleWrapper theme={theme}>

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GoMarkGithub } from "react-icons/go";
 
-import { Context } from "../../../Context/Theme/ThemeContext";
+import { Context as ThemeContext } from "../../../Context/Theme/ThemeContext";
 import {
   IconWrapper,
   LinkCenter,
@@ -14,7 +14,7 @@ import {
 const Footer = () => {
   const {
     state: { theme },
-  } = useContext(Context);
+  } = useContext(ThemeContext);
 
   return (
     <NavBar>

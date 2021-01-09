@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { Context } from "../../Context/Theme/ThemeContext";
+import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
 import { TopMostDivWrapper } from "./styles";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -17,7 +17,7 @@ interface Props {
 const Layout = ({ children, seoProps }: Props) => {
   const {
     state: { theme },
-  } = useContext(Context);
+  } = useContext(ThemeContext);
 
   return (
     <>

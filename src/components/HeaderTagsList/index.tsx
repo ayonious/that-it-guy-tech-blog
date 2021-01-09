@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 import Select from "react-select";
 
 import { Context as TagFilterContext } from "../../Context/TagFilter/TagFilterContext";
-import { Context } from "../../Context/Theme/ThemeContext";
+import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
 import { HeaderTagsWrapper, CustomSelectStyles } from "./styles";
 
 const HeaderTagsList = ({ allTags }: { allTags: string[] }) => {
   const {
     state: { theme },
-  } = useContext(Context);
+  } = useContext(ThemeContext);
 
   const {
     state: { tags },
@@ -24,6 +24,7 @@ const HeaderTagsList = ({ allTags }: { allTags: string[] }) => {
         closeMenuOnSelect={false}
         isMulti
         placeholder={"Filter By Tags"}
+        value={tags.map((tag) => ({ label: tag, value: tag }))}
         options={allTags.map((tag) => ({ label: tag, value: tag }))}
         onChange={(items, lastEvent) => {
           console.log(lastEvent);
