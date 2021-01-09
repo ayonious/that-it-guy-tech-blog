@@ -8,10 +8,13 @@ import {
   CardArticleWrapper,
   CardImageWrapper,
   InfoDivWrapper,
+  FlexRowWrapper,
   InfoDateWrapper,
   InfoHeadlineWrapper,
   InfoExcerptWrapper,
   ButtonWrapper,
+  MiniCardImageWrapper,
+  HeadlineAndDateWrapper,
 } from "./styles";
 
 export interface PostCardData {
@@ -58,8 +61,15 @@ const PostCard = (props: PostCardData) => {
         <Image fluid={img} />
       </CardImageWrapper>
       <InfoDivWrapper theme={theme}>
-        <InfoHeadlineWrapper>{title}</InfoHeadlineWrapper>
-        <InfoDateWrapper>{date}</InfoDateWrapper>
+        <FlexRowWrapper>
+          <MiniCardImageWrapper>
+            <Image fluid={img} />
+          </MiniCardImageWrapper>
+          <HeadlineAndDateWrapper>
+            <InfoHeadlineWrapper>{title}</InfoHeadlineWrapper>
+            <InfoDateWrapper>{date}</InfoDateWrapper>
+          </HeadlineAndDateWrapper>
+        </FlexRowWrapper>
         <TagsList tags={tags} />
         <InfoExcerptWrapper>{excerpt}</InfoExcerptWrapper>
         <ButtonWrapper>

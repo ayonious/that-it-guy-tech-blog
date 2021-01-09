@@ -4,6 +4,9 @@ import { minTabletSize, showDebugBorders, borderRadius } from "../../../config";
 const bodyHeight = "250px";
 const imageBodyWidth = "250px";
 
+const miniBodyHeight = "100px";
+const miniImageBodyWidth = "100px";
+
 export const CardArticleWrapper = styled.article`
   border: 2px solid ${(p) => p.theme.mainGrey};
   border-top-right-radius: ${borderRadius};
@@ -18,11 +21,43 @@ export const CardArticleWrapper = styled.article`
 `;
 
 export const CardImageWrapper = styled.div`
+  display: none;
+  @media only screen and (min-width: ${minTabletSize}) {
+    display: flex;
+  }
   div {
     @media only screen and (min-width: ${minTabletSize}) {
       height: ${bodyHeight};
       width: ${imageBodyWidth};
     }
+  }
+`;
+
+export const MiniCardImageWrapper = styled.div`
+  display: flex;
+  @media only screen and (min-width: ${minTabletSize}) {
+    display: none;
+  }
+  div {
+    height: ${miniBodyHeight};
+    width: ${miniImageBodyWidth};
+  }
+`;
+
+export const FlexRowWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  border: ${showDebugBorders ? "2px solid black" : ""};
+`;
+
+export const HeadlineAndDateWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 1rem;
+  border: ${showDebugBorders ? "2px solid black" : ""};
+  @media only screen and (min-width: ${minTabletSize}) {
+    margin-left: 0rem;
   }
 `;
 
