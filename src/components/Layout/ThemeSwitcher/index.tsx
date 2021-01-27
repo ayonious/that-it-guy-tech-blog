@@ -1,9 +1,9 @@
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Switch from "@material-ui/core/Switch";
 import React, { useContext, useEffect } from "react";
+import Switch from "react-switch";
 
 import { Context as ThemeContext } from "../../../Context/Theme/ThemeContext";
 import { revertThemes, Themes } from "../../../Context/Theme/ThemeEnums";
+import { Icon } from "./styles";
 
 const ThemeSwitcher = () => {
   const {
@@ -24,17 +24,14 @@ const ThemeSwitcher = () => {
   }, []);
 
   return (
-    <FormControlLabel
-      control={
-        <Switch
-          size="medium"
-          checked={isDark}
-          onClick={() => {
-            changeTheme(revertThemes[theme.themeName]);
-          }}
-        />
-      }
-      label={isDark ? "🌚 Dark Theme" : "🌞 Light Theme"}
+    <Switch
+      checked={isDark}
+      onChange={() => {
+        changeTheme(revertThemes[theme.themeName]);
+      }}
+      checkedIcon={<Icon>{"🌜"}</Icon>}
+      uncheckedIcon={<Icon>{"🌞"}</Icon>}
+      offColor={"#000000"}
     />
   );
 };

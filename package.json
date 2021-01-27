@@ -17,7 +17,6 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.3",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "gatsby": "^2.31.1",
@@ -40,6 +39,7 @@
     "react-highlight.js": "^1.0.7",
     "react-icons": "^4.1.0",
     "react-select": "^4.0.2",
+    "react-switch": "^6.0.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
