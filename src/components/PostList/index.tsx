@@ -28,6 +28,7 @@ interface Props {
 
 const PostList = ({ posts, totalVisible }: Props) => {
   const visiblePosts = posts.slice(0, totalVisible);
+
   return (
     <PostsSectionWrapper>
       <HeaderTagsList />
