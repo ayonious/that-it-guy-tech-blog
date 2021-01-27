@@ -103,8 +103,7 @@ Gatsby also provides a plugin interface to create and load a service worker into
 # 💄 Styles
 
 1. Mostly are Styled Components
-2. And some material-ui
-3. Some pure css styles
+2. Some pure css styles
 
 # 🚀 Deploy
 
