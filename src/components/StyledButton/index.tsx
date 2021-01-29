@@ -1,7 +1,7 @@
 import Link from "gatsby-link";
 import React from "react";
 
-import { ThemeDetails } from "../../Context/ThemeEnums";
+import ThemeDetails from "../../Context/Theme";
 import { LinkDivWrapper } from "./styles";
 
 export interface Props {

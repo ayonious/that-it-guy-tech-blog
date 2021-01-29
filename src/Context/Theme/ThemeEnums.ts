@@ -31,3 +31,5 @@ export const revertThemes = {
   dark: "white",
   white: "dark",
 };
+
+export default ThemeDetails;

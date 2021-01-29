@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { minTabletSize, showDebugBorders, borderRadius } from "../../../config";
+
+import { borderRadius, minTabletSize, showDebugBorders } from "../../../config";
 
 const imageBodyWidth = "250px";
 
