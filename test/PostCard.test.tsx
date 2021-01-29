@@ -4,7 +4,6 @@ import * as React from "react";
 
 import PostCard from "../src/components/PostCard";
 import { Provider as ThemeProvider } from "../src/Context/Theme/ThemeContext";
-import { Provider as TagProvider } from "../src/Context/TagFilter/TagFilterContext";
 
 it("PostCard renders", () => {
   const postCard = {
@@ -40,9 +39,7 @@ it("PostCard renders", () => {
 
   const tree = render(
     <ThemeProvider>
-      <TagProvider>
-        <PostCard post={postCard.post} key={1} blogUrl="/" />
-      </TagProvider>
+      <PostCard post={postCard.post} key={1} blogUrl="/" />
     </ThemeProvider>
   );
   expect(tree).toMatchSnapshot();
