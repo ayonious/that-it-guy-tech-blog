@@ -1,12 +1,5 @@
 import Image from "gatsby-image";
-import { throttle } from "lodash";
-import React, {
-  createRef,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { useContext } from "react";
 
 import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
 import SlidingComponent from "../SlidingComponent";
@@ -62,29 +55,6 @@ const PostCard = (props: PostCardData) => {
   const {
     state: { theme },
   } = useContext(ThemeContext);
-
-  const inputRef = useRef(null);
-  const [visible, changeVisible] = useState(false);
-
-  const scrollListener = throttle(() => {
-    if (!inputRef.current) {
-      return;
-    }
-    const { clientHeight } = document.documentElement;
-    const top = inputRef.current.getBoundingClientRect().top;
-    const scrollPxFromBottom = clientHeight - top;
-
-    if (scrollPxFromBottom > 20) {
-      changeVisible(true);
-      document.removeEventListener("scroll", scrollListener, true);
-    }
-  }, 500);
-
-  useEffect(() => {
-    scrollListener(); // initially without scroll even make some articles visible
-    document.addEventListener("scroll", scrollListener, true);
-    return () => document.removeEventListener("scroll", scrollListener, true);
-  });
 
   return (
     <SlidingComponent>
