@@ -1,0 +1,420 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostCard renders 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="sc-bdfBwQ glRqFE"
+      >
+        <article
+          class="sc-eCssSg lflQyS"
+        >
+          <div
+            class="sc-jSgupP ddiXJn"
+          >
+            <div
+              class=" gatsby-image-wrapper"
+              style="position: relative; overflow: hidden;"
+            >
+              <div
+                aria-hidden="true"
+                style="width: 100%; padding-bottom: 56.5%;"
+              />
+              <img
+                alt=""
+                aria-hidden="true"
+                src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABgbGxOTCv/8QAGRAAAwADAAAAAAAAAAAAAAAAAQIQAxES/9oACAEBAAEFAkCk5E5M3P/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABYQAAMAAAAAAAAAAAAAAAAAAAERIP/aAAgBAQAGPwIOv//EABoQAQADAAMAAAAAAAAAAAAAAAEAEBEhMZH/2gAIAQEAAT8hMnhpDwPInNKe2v/aAAwDAQACAAMAAAAQzA//xAAWEQEBAQAAAAAAAAAAAAAAAAARECH/2gAIAQMBAT8QcJ//xAAWEQADAAAAAAAAAAAAAAAAAAAQESH/2gAIAQIBAT8QVH//xAAaEAEBAQEAAwAAAAAAAAAAAAABEQBBMVFx/9oACAEBAAE/ELF4lvNCAeV6fmnEMOeqr7XXf//Z"
+                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition-delay: 500ms;"
+              />
+              <picture>
+                <source
+                  sizes="(max-width: 640px) 100vw, 640px"
+                  srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/61e93/person-holding-compass-841286.webp 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/1f5c5/person-holding-compass-841286.webp 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/991d2/person-holding-compass-841286.webp 640w"
+                  type="image/webp"
+                />
+                <source
+                  sizes="(max-width: 640px) 100vw, 640px"
+                  srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w"
+                />
+                <img
+                  alt=""
+                  loading="lazy"
+                  sizes="(max-width: 640px) 100vw, 640px"
+                  src="/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg"
+                  srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w"
+                  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
+                />
+              </picture>
+              <noscript>
+                &lt;picture&gt;&lt;source type='image/webp' srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/61e93/person-holding-compass-841286.webp 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/1f5c5/person-holding-compass-841286.webp 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/991d2/person-holding-compass-841286.webp 640w" sizes="(max-width: 640px) 100vw, 640px" /&gt;&lt;source srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w" sizes="(max-width: 640px) 100vw, 640px" /&gt;&lt;img loading="lazy" sizes="(max-width: 640px) 100vw, 640px" srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w" src="/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+              </noscript>
+            </div>
+          </div>
+          <div
+            class="sc-pFZIQ kWevZg"
+          >
+            <div
+              class="sc-iBPRYJ iasoLC"
+            >
+              <div
+                class="sc-gKsewC gZjTcz"
+              >
+                <div
+                  class=" gatsby-image-wrapper"
+                  style="position: relative; overflow: hidden;"
+                >
+                  <div
+                    aria-hidden="true"
+                    style="width: 100%; padding-bottom: 56.5%;"
+                  />
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABgbGxOTCv/8QAGRAAAwADAAAAAAAAAAAAAAAAAQIQAxES/9oACAEBAAEFAkCk5E5M3P/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABYQAAMAAAAAAAAAAAAAAAAAAAERIP/aAAgBAQAGPwIOv//EABoQAQADAAMAAAAAAAAAAAAAAAEAEBEhMZH/2gAIAQEAAT8hMnhpDwPInNKe2v/aAAwDAQACAAMAAAAQzA//xAAWEQEBAQAAAAAAAAAAAAAAAAARECH/2gAIAQMBAT8QcJ//xAAWEQADAAAAAAAAAAAAAAAAAAAQESH/2gAIAQIBAT8QVH//xAAaEAEBAQEAAwAAAAAAAAAAAAABEQBBMVFx/9oACAEBAAE/ELF4lvNCAeV6fmnEMOeqr7XXf//Z"
+                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition-delay: 500ms;"
+                  />
+                  <picture>
+                    <source
+                      sizes="(max-width: 640px) 100vw, 640px"
+                      srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/61e93/person-holding-compass-841286.webp 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/1f5c5/person-holding-compass-841286.webp 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/991d2/person-holding-compass-841286.webp 640w"
+                      type="image/webp"
+                    />
+                    <source
+                      sizes="(max-width: 640px) 100vw, 640px"
+                      srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w"
+                    />
+                    <img
+                      alt=""
+                      loading="lazy"
+                      sizes="(max-width: 640px) 100vw, 640px"
+                      src="/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg"
+                      srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w"
+                      style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
+                    />
+                  </picture>
+                  <noscript>
+                    &lt;picture&gt;&lt;source type='image/webp' srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/61e93/person-holding-compass-841286.webp 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/1f5c5/person-holding-compass-841286.webp 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/991d2/person-holding-compass-841286.webp 640w" sizes="(max-width: 640px) 100vw, 640px" /&gt;&lt;source srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w" sizes="(max-width: 640px) 100vw, 640px" /&gt;&lt;img loading="lazy" sizes="(max-width: 640px) 100vw, 640px" srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w" src="/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+                  </noscript>
+                </div>
+              </div>
+              <div
+                class="sc-fubCfw cLOYDa"
+              >
+                <span
+                  class="sc-jrAGrp bAWcq"
+                >
+                  React Reducer a Short Example
+                </span>
+                <div
+                  class="sc-kEjbxe TNhzv"
+                >
+                  May 29th, 2020
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-dlfnbm epCchA"
+            >
+              <div
+                class="sc-hKgILt iQIbm"
+              >
+                #
+                js
+              </div>
+              <div
+                class="sc-hKgILt iQIbm"
+              >
+                #
+                react
+              </div>
+              <div
+                class="sc-hKgILt iQIbm"
+              >
+                #
+                reducer
+              </div>
+            </div>
+            <p
+              class="sc-iqHYGH iarBjC"
+            >
+              I often see this thing but never understood how it could be used for making life easier. Finally found some good examples and decided to…
+            </p>
+            <div
+              class="sc-crrsfI gQYKeq"
+            >
+              <div
+                class="sc-gsTCUz eQYmcj"
+              >
+                <a
+                  aria-current="page"
+                  class=""
+                  href="/"
+                >
+                  Read More...
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-bdfBwQ glRqFE"
+    >
+      <article
+        class="sc-eCssSg lflQyS"
+      >
+        <div
+          class="sc-jSgupP ddiXJn"
+        >
+          <div
+            class=" gatsby-image-wrapper"
+            style="position: relative; overflow: hidden;"
+          >
+            <div
+              aria-hidden="true"
+              style="width: 100%; padding-bottom: 56.5%;"
+            />
+            <img
+              alt=""
+              aria-hidden="true"
+              src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABgbGxOTCv/8QAGRAAAwADAAAAAAAAAAAAAAAAAQIQAxES/9oACAEBAAEFAkCk5E5M3P/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABYQAAMAAAAAAAAAAAAAAAAAAAERIP/aAAgBAQAGPwIOv//EABoQAQADAAMAAAAAAAAAAAAAAAEAEBEhMZH/2gAIAQEAAT8hMnhpDwPInNKe2v/aAAwDAQACAAMAAAAQzA//xAAWEQEBAQAAAAAAAAAAAAAAAAARECH/2gAIAQMBAT8QcJ//xAAWEQADAAAAAAAAAAAAAAAAAAAQESH/2gAIAQIBAT8QVH//xAAaEAEBAQEAAwAAAAAAAAAAAAABEQBBMVFx/9oACAEBAAE/ELF4lvNCAeV6fmnEMOeqr7XXf//Z"
+              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition-delay: 500ms;"
+            />
+            <picture>
+              <source
+                sizes="(max-width: 640px) 100vw, 640px"
+                srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/61e93/person-holding-compass-841286.webp 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/1f5c5/person-holding-compass-841286.webp 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/991d2/person-holding-compass-841286.webp 640w"
+                type="image/webp"
+              />
+              <source
+                sizes="(max-width: 640px) 100vw, 640px"
+                srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w"
+              />
+              <img
+                alt=""
+                loading="lazy"
+                sizes="(max-width: 640px) 100vw, 640px"
+                src="/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg"
+                srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w"
+                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
+              />
+            </picture>
+            <noscript>
+              &lt;picture&gt;&lt;source type='image/webp' srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/61e93/person-holding-compass-841286.webp 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/1f5c5/person-holding-compass-841286.webp 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/991d2/person-holding-compass-841286.webp 640w" sizes="(max-width: 640px) 100vw, 640px" /&gt;&lt;source srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w" sizes="(max-width: 640px) 100vw, 640px" /&gt;&lt;img loading="lazy" sizes="(max-width: 640px) 100vw, 640px" srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w" src="/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            </noscript>
+          </div>
+        </div>
+        <div
+          class="sc-pFZIQ kWevZg"
+        >
+          <div
+            class="sc-iBPRYJ iasoLC"
+          >
+            <div
+              class="sc-gKsewC gZjTcz"
+            >
+              <div
+                class=" gatsby-image-wrapper"
+                style="position: relative; overflow: hidden;"
+              >
+                <div
+                  aria-hidden="true"
+                  style="width: 100%; padding-bottom: 56.5%;"
+                />
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABgbGxOTCv/8QAGRAAAwADAAAAAAAAAAAAAAAAAQIQAxES/9oACAEBAAEFAkCk5E5M3P/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABYQAAMAAAAAAAAAAAAAAAAAAAERIP/aAAgBAQAGPwIOv//EABoQAQADAAMAAAAAAAAAAAAAAAEAEBEhMZH/2gAIAQEAAT8hMnhpDwPInNKe2v/aAAwDAQACAAMAAAAQzA//xAAWEQEBAQAAAAAAAAAAAAAAAAARECH/2gAIAQMBAT8QcJ//xAAWEQADAAAAAAAAAAAAAAAAAAAQESH/2gAIAQIBAT8QVH//xAAaEAEBAQEAAwAAAAAAAAAAAAABEQBBMVFx/9oACAEBAAE/ELF4lvNCAeV6fmnEMOeqr7XXf//Z"
+                  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition-delay: 500ms;"
+                />
+                <picture>
+                  <source
+                    sizes="(max-width: 640px) 100vw, 640px"
+                    srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/61e93/person-holding-compass-841286.webp 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/1f5c5/person-holding-compass-841286.webp 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/991d2/person-holding-compass-841286.webp 640w"
+                    type="image/webp"
+                  />
+                  <source
+                    sizes="(max-width: 640px) 100vw, 640px"
+                    srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w"
+                  />
+                  <img
+                    alt=""
+                    loading="lazy"
+                    sizes="(max-width: 640px) 100vw, 640px"
+                    src="/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg"
+                    srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w"
+                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
+                  />
+                </picture>
+                <noscript>
+                  &lt;picture&gt;&lt;source type='image/webp' srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/61e93/person-holding-compass-841286.webp 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/1f5c5/person-holding-compass-841286.webp 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/991d2/person-holding-compass-841286.webp 640w" sizes="(max-width: 640px) 100vw, 640px" /&gt;&lt;source srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w" sizes="(max-width: 640px) 100vw, 640px" /&gt;&lt;img loading="lazy" sizes="(max-width: 640px) 100vw, 640px" srcset="/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,
+/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w" src="/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+                </noscript>
+              </div>
+            </div>
+            <div
+              class="sc-fubCfw cLOYDa"
+            >
+              <span
+                class="sc-jrAGrp bAWcq"
+              >
+                React Reducer a Short Example
+              </span>
+              <div
+                class="sc-kEjbxe TNhzv"
+              >
+                May 29th, 2020
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-dlfnbm epCchA"
+          >
+            <div
+              class="sc-hKgILt iQIbm"
+            >
+              #
+              js
+            </div>
+            <div
+              class="sc-hKgILt iQIbm"
+            >
+              #
+              react
+            </div>
+            <div
+              class="sc-hKgILt iQIbm"
+            >
+              #
+              reducer
+            </div>
+          </div>
+          <p
+            class="sc-iqHYGH iarBjC"
+          >
+            I often see this thing but never understood how it could be used for making life easier. Finally found some good examples and decided to…
+          </p>
+          <div
+            class="sc-crrsfI gQYKeq"
+          >
+            <div
+              class="sc-gsTCUz eQYmcj"
+            >
+              <a
+                aria-current="page"
+                class=""
+                href="/"
+              >
+                Read More...
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -33,7 +33,11 @@ const PostList = ({ posts, totalVisible }: Props) => {
     <PostsSectionWrapper>
       <HeaderTagsList />
       {visiblePosts.map(({ node }, index) => (
-        <PostCard key={index} post={node} />
+        <PostCard
+          key={index}
+          post={node}
+          blogUrl={`blogs/${node.frontmatter.slug}`}
+        />
       ))}
     </PostsSectionWrapper>
   );

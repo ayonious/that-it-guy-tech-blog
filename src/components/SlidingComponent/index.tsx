@@ -8,10 +8,11 @@ const SlidingComponent = ({ children }: { children: any }) => {
   const [visible, changeVisible] = useState(false);
 
   const scrollListener = throttle(() => {
-    if (!inputRef.current) {
+    if (!inputRef || !inputRef.current) {
       return;
     }
     const { clientHeight } = document.documentElement;
+    // @ts-ignore
     const { top } = inputRef.current.getBoundingClientRect();
     const scrollPxFromBottom = clientHeight - top;
 

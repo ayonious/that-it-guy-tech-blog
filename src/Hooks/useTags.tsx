@@ -18,7 +18,7 @@ const query = graphql`
   }
 `;
 
-const useTags = () => {
+const useTags = (): string[] => {
   const {
     allMdx: { edges: posts },
   }: {

@@ -34,6 +34,7 @@ export interface PostCardData {
     excerpt: string;
   };
   key: number;
+  blogUrl: string;
 }
 
 const PostCard = (props: PostCardData) => {
@@ -50,6 +51,7 @@ const PostCard = (props: PostCardData) => {
       },
       excerpt,
     },
+    blogUrl,
   } = props;
 
   const {
@@ -75,11 +77,7 @@ const PostCard = (props: PostCardData) => {
           <TagsList tags={tags} />
           <InfoExcerptWrapper>{excerpt}</InfoExcerptWrapper>
           <ButtonWrapper>
-            <StyledButton
-              to={`blogs/${slug}`}
-              theme={theme}
-              title={"Read More..."}
-            />
+            <StyledButton to={blogUrl} theme={theme} title={"Read More..."} />
           </ButtonWrapper>
         </InfoDivWrapper>
       </CardArticleWrapper>
