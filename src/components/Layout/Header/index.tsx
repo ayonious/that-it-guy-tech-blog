@@ -1,15 +1,15 @@
 import Link from "gatsby-link";
 import React, { useContext } from "react";
-import ThemeSwitcher from "../ThemeSwitcher";
-import HeaderTagsList from "../../HeaderTagsList";
+
+import { PageSubTitle, PageTitle } from "../../../../config";
 import { Context as ThemeContext } from "../../../Context/Theme/ThemeContext";
+import ThemeSwitcher from "../ThemeSwitcher";
 import {
+  LinkDivWrapper,
   NavBar,
   PageSubTitleWrapper,
   PageTitleWrapper,
-  LinkDivWrapper,
 } from "./styles";
-import { PageSubTitle, PageTitle } from "../../../../config";
 
 interface Props {
   isHome?: boolean;

@@ -14,7 +14,7 @@ const ThemeSwitcher = () => {
 
   useEffect(() => {
     const themeInLocalStorage = localStorage.getItem("selectedTheme");
-    if (!["white", "dark"].includes(themeInLocalStorage)) {
+    if (!["white", "dark"].includes(themeInLocalStorage as string)) {
       if (["white", "dark"].includes(theme.themeName)) {
         changeTheme(theme.themeName);
       }

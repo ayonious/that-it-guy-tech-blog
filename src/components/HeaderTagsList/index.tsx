@@ -30,7 +30,6 @@ const HeaderTagsList = () => {
         value={tags.map((tag) => ({ label: tag, value: tag }))}
         options={allTags.map((tag) => ({ label: tag, value: tag }))}
         onChange={(items, lastEvent) => {
-          console.log(lastEvent);
           if (lastEvent.action === "select-option") {
             addTag(lastEvent.option.value);
           }

@@ -1,14 +1,13 @@
-import * as React from "react";
-import expect from "expect";
-
 import { render } from "@testing-library/react";
-import StyledButton from "../src/components/StyledButton";
-import { Provider } from "../src/Context/Theme/ThemeContext";
-import { Themes } from "../src/Context/Theme/ThemeEnums";
+import expect from "expect";
+import * as React from "react";
 
-it("TagsList renders", () => {
+import StyledButton from "../src/components/StyledButton";
+import { darkTheme } from "../src/Context/Theme/ThemeEnums";
+
+it("StyledButton renders", () => {
   const tree = render(
-    <StyledButton theme={Themes.white} title="Testing Title" to="/" />
+    <StyledButton theme={darkTheme} title="Testing Title" to="/" />
   );
   expect(tree).toMatchSnapshot();
 });

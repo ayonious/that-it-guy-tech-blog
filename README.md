@@ -17,7 +17,7 @@
 
 ### [Check the Demo✨](https://that-it-guy.netlify.app)
 
-# 🎁Features
+# 🎁 Features
 
 1.  **gatsby-plugin-mdx**
 
@@ -30,7 +30,7 @@ To access files in this folder using a graphQL api
 3. **gatsby-image, gatsby-plugin-sharp, gatsby-transformer-sharp**
 
 Its about making the saved images to different formats
-And also loads the images lazyly while webpage is refreshed
+And also loads the images lazily while webpage is refreshed
 
 4. **gatsby-plugin-styled-components**
 
@@ -82,7 +82,7 @@ Gatsby provides a plugin interface to add support for shipping a manifest with y
 https://www.gatsbyjs.org/docs/progressive-web-app/#it-must-implement-a-service-worker
 Gatsby also provides a plugin interface to create and load a service worker into your site
 
-# Lighthouse Score 💯
+# 💯 Lighthouse Score
 
 ![Lighthouse Score](DocumentationAssets/lighthouse.png)
 

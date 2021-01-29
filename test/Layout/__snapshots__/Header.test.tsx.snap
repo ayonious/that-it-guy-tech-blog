@@ -1,0 +1,375 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header HomePage renders 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        class="sc-gsTCUz hvACrQ"
+      >
+        <div
+          style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
+        >
+          <div
+            class="react-switch-bg"
+            style="height: 28px; width: 56px; margin: 0px; position: relative; background: rgb(0, 136, 0); border-radius: 14px; cursor: pointer; transition: background 0.25s;"
+          >
+            <div
+              style="height: 28px; width: 30px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
+            >
+              <span
+                class="sc-bdfBwQ uJjeH"
+              >
+                🌜
+              </span>
+            </div>
+            <div
+              style="height: 28px; width: 30px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
+            >
+              <span
+                class="sc-bdfBwQ uJjeH"
+              >
+                🌞
+              </span>
+            </div>
+          </div>
+          <div
+            class="react-switch-handle"
+            style="height: 26px; width: 26px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(29px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+          />
+          <input
+            aria-checked="true"
+            checked=""
+            role="switch"
+            style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
+            type="checkbox"
+          />
+        </div>
+        <div
+          class="sc-eCssSg leEkJN"
+        >
+          <a
+            aria-current="page"
+            class=""
+            href="/"
+          >
+            <div
+              class="sc-dlfnbm kWDNvM"
+            >
+              That IT Guy
+            </div>
+            <div
+              class="sc-hKgILt eWYgmj"
+            >
+              Personal Tech Blog
+            </div>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      class="sc-gsTCUz hvACrQ"
+    >
+      <div
+        style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
+      >
+        <div
+          class="react-switch-bg"
+          style="height: 28px; width: 56px; margin: 0px; position: relative; background: rgb(0, 136, 0); border-radius: 14px; cursor: pointer; transition: background 0.25s;"
+        >
+          <div
+            style="height: 28px; width: 30px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
+          >
+            <span
+              class="sc-bdfBwQ uJjeH"
+            >
+              🌜
+            </span>
+          </div>
+          <div
+            style="height: 28px; width: 30px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
+          >
+            <span
+              class="sc-bdfBwQ uJjeH"
+            >
+              🌞
+            </span>
+          </div>
+        </div>
+        <div
+          class="react-switch-handle"
+          style="height: 26px; width: 26px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(29px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+        />
+        <input
+          aria-checked="true"
+          checked=""
+          role="switch"
+          style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
+          type="checkbox"
+        />
+      </div>
+      <div
+        class="sc-eCssSg leEkJN"
+      >
+        <a
+          aria-current="page"
+          class=""
+          href="/"
+        >
+          <div
+            class="sc-dlfnbm kWDNvM"
+          >
+            That IT Guy
+          </div>
+          <div
+            class="sc-hKgILt eWYgmj"
+          >
+            Personal Tech Blog
+          </div>
+        </a>
+      </div>
+    </nav>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Header Non HomePage renders 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        class="sc-gsTCUz hvACrQ"
+      >
+        <div
+          style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
+        >
+          <div
+            class="react-switch-bg"
+            style="height: 28px; width: 56px; margin: 0px; position: relative; background: rgb(0, 136, 0); border-radius: 14px; cursor: pointer; transition: background 0.25s;"
+          >
+            <div
+              style="height: 28px; width: 30px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
+            >
+              <span
+                class="sc-bdfBwQ uJjeH"
+              >
+                🌜
+              </span>
+            </div>
+            <div
+              style="height: 28px; width: 30px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
+            >
+              <span
+                class="sc-bdfBwQ uJjeH"
+              >
+                🌞
+              </span>
+            </div>
+          </div>
+          <div
+            class="react-switch-handle"
+            style="height: 26px; width: 26px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(29px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+          />
+          <input
+            aria-checked="true"
+            checked=""
+            role="switch"
+            style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
+            type="checkbox"
+          />
+        </div>
+        <div
+          class="sc-eCssSg leEkJN"
+        >
+          <a
+            aria-current="page"
+            class=""
+            href="/"
+          >
+            <div
+              class="sc-dlfnbm kWDNvM"
+            >
+              That IT Guy
+            </div>
+            <div
+              class="sc-hKgILt eWYgmj"
+            >
+              Personal Tech Blog
+            </div>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      class="sc-gsTCUz hvACrQ"
+    >
+      <div
+        style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
+      >
+        <div
+          class="react-switch-bg"
+          style="height: 28px; width: 56px; margin: 0px; position: relative; background: rgb(0, 136, 0); border-radius: 14px; cursor: pointer; transition: background 0.25s;"
+        >
+          <div
+            style="height: 28px; width: 30px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
+          >
+            <span
+              class="sc-bdfBwQ uJjeH"
+            >
+              🌜
+            </span>
+          </div>
+          <div
+            style="height: 28px; width: 30px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
+          >
+            <span
+              class="sc-bdfBwQ uJjeH"
+            >
+              🌞
+            </span>
+          </div>
+        </div>
+        <div
+          class="react-switch-handle"
+          style="height: 26px; width: 26px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(29px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+        />
+        <input
+          aria-checked="true"
+          checked=""
+          role="switch"
+          style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
+          type="checkbox"
+        />
+      </div>
+      <div
+        class="sc-eCssSg leEkJN"
+      >
+        <a
+          aria-current="page"
+          class=""
+          href="/"
+        >
+          <div
+            class="sc-dlfnbm kWDNvM"
+          >
+            That IT Guy
+          </div>
+          <div
+            class="sc-hKgILt eWYgmj"
+          >
+            Personal Tech Blog
+          </div>
+        </a>
+      </div>
+    </nav>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
