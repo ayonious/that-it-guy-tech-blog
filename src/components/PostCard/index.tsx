@@ -1,29 +1,29 @@
 import Image from "gatsby-image";
+import { throttle } from "lodash";
 import React, {
-  useContext,
   createRef,
+  useContext,
   useEffect,
   useRef,
   useState,
 } from "react";
-import { throttle } from "lodash";
+
 import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
+import SlidingComponent from "../SlidingComponent";
 import StyledButton from "../StyledButton";
 import TagsList from "../TagsList";
 import {
+  ButtonWrapper,
   CardArticleWrapper,
   CardImageWrapper,
-  InfoDivWrapper,
   FlexRowWrapper,
-  InfoDateWrapper,
-  InfoHeadlineWrapper,
-  InfoExcerptWrapper,
-  ButtonWrapper,
-  MiniCardImageWrapper,
   HeadlineAndDateWrapper,
+  InfoDateWrapper,
+  InfoDivWrapper,
+  InfoExcerptWrapper,
+  InfoHeadlineWrapper,
+  MiniCardImageWrapper,
 } from "./styles";
-
-import SlidingComponent from "../SlidingComponent";
 
 export interface PostCardData {
   post: {
@@ -76,6 +76,7 @@ const PostCard = (props: PostCardData) => {
 
     if (scrollPxFromBottom > 20) {
       changeVisible(true);
+      document.removeEventListener("scroll", scrollListener, true);
     }
   }, 500);
 
