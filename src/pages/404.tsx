@@ -8,12 +8,12 @@ import {
   PageSubTitleWrapper,
 } from "../components/PostList/styles";
 
-import { Context } from "../Context/Theme/ThemeContext";
+import { Context as ThemeContext } from "../Context/Theme/ThemeContext";
 
 const Error = () => {
   const {
     state: { theme },
-  } = useContext(Context);
+  } = useContext(ThemeContext);
 
   return (
     <Layout>
