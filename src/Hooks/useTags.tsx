@@ -1,3 +1,6 @@
+/*
+Finds all possible Tags value from all posts
+*/
 import _ from "lodash";
 import { graphql, useStaticQuery } from "gatsby";
 import { Post } from "../components/PostList";

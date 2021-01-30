@@ -2352,10 +2352,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-select@^4.0.7":
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-4.0.7.tgz#574639e8561377f4238e5598a22afcc6a9e1d226"
-  integrity sha512-sIg+1SP4zjTKsLjr89QPB/LGeOy2/TMUKbAekRAcuBlG9/6qTJeecqqKZ982TPITo0CZWvE9vF8vjUmR9YRFsA==
+"@types/react-select@^4.0.8":
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-4.0.8.tgz#109e8223cf3d9a50c20b386b3bc7fbc46c701916"
+  integrity sha512-dOfoJxPq4s4shWmI9mDjhs6w7tXlH4bgQarqp5HulL3jgwzEPGK/DaGah4pdCNrY70mnIvMAN7cAzZbUWomESQ==
   dependencies:
     "@emotion/serialize" "^1.0.0"
     "@types/react" "*"
@@ -5866,9 +5866,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.634:
-  version "1.3.648"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.648.tgz#b05926eca1843c04b283e682a1fc6c10af7e9dda"
-  integrity sha512-4POzwyQ80tkDiBwkxn7IpfzioimrjRSFX1sCQ3pLZsYJ5ERYmwzdq0hZZ3nFP7Z6GtmnSn3xwWDm8FPlMeOoEQ==
+  version "1.3.649"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.649.tgz#3aa8be052d4d268ede45d8e98d0cd60ffefad607"
+  integrity sha512-ojGDupQ3UMkvPWcTICe4JYe17+o9OLiFMPoduoR72Zp2ILt1mRVeqnxBEd6s/ptekrnsFU+0A4lStfBe/wyG/A==
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
@@ -7342,10 +7342,10 @@ gatsby-plugin-react-helmet@^3.9.0:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-gatsby-plugin-sharp@^2.13.3:
-  version "2.13.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.13.3.tgz#f06f7928dfccea139a3e69424bc59962ee1ecf82"
-  integrity sha512-ke5yY1L0ov9nm8kliBAGdZ/R5rSwmQmZBku79kOfMimK3IXtxWUc3tsQpepmLtmdNsQIeMY65gyNPHE5OrsYzg==
+gatsby-plugin-sharp@^2.13.4:
+  version "2.13.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.13.4.tgz#67f730418113072e8c8a011d37416a25a241f680"
+  integrity sha512-51k2/aCHGw3Cic8wRyPR5ny59OVUTXs+AhHOe3BwEOTWiAtpZ5eDKVMPHNviYDHOmiUpn17L08Ht6njbohs39g==
   dependencies:
     "@babel/runtime" "^7.12.5"
     async "^3.2.0"
@@ -13499,9 +13499,9 @@ regjsgen@^0.5.1:
   integrity sha512-OFFT3MfrH90xIW8OOSyUrk6QHD5E9JOTeGodiJeBS3J6IwlgzJMNE/1bZklWz5oTg+9dCMyEetclvCVXOPoN3A==
 
 regjsparser@^0.6.4:
-  version "0.6.6"
-  resolved "https://registry.yarnpkg.com/regjsparser/-/regjsparser-0.6.6.tgz#6d8c939d1a654f78859b08ddcc4aa777f3fa800a"
-  integrity sha512-jjyuCp+IEMIm3N1H1LLTJW1EISEJV9+5oHdEyrt43Pg9cDSb6rrLZei2cVWpl0xTjmmlpec/lEQGYgM7xfpGCQ==
+  version "0.6.7"
+  resolved "https://registry.yarnpkg.com/regjsparser/-/regjsparser-0.6.7.tgz#c00164e1e6713c2e3ee641f1701c4b7aa0a7f86c"
+  integrity sha512-ib77G0uxsA2ovgiYbCVGx4Pv3PSttAx2vIwidqQzbL2U5S4Q+j00HdSAneSBuyVcMvEnTXMjiGgB+DlXozVhpQ==
   dependencies:
     jsesc "~0.5.0"
 
