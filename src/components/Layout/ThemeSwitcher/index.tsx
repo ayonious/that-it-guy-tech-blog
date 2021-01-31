@@ -32,6 +32,7 @@ const ThemeSwitcher = () => {
       checkedIcon={<Icon>{"🌜"}</Icon>}
       uncheckedIcon={<Icon>{"🌞"}</Icon>}
       offColor={"#000000"}
+      height={26}
     />
   );
 };
