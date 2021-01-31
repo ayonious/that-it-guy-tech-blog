@@ -1,35 +1,8 @@
+/*
+  Finds number of posts that should be lazy loaded
+*/
 import React, { useState, useEffect, useCallback } from "react";
 import _ from "lodash";
-import { Post } from "../components/PostList";
-import { graphql, useStaticQuery } from "gatsby";
-
-const query = graphql`
-  {
-    allMdx(
-      sort: { fields: frontmatter___date, order: DESC }
-      filter: { frontmatter: { published: { eq: "yes" } } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            slug
-            date(formatString: "MMMM Do, YYYY")
-            tags
-            image {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`;
 
 const tryLoadingMore = (toggleUpdating) => {
   const h = document.documentElement;
@@ -49,16 +22,7 @@ const tryLoadingMore = (toggleUpdating) => {
 const INITIAL_NUMBER_OF_POSTS = 5;
 const ADDITIONAL_NUMBER_OF_POSTS = 7;
 
-const useLazyPosts = () => {
-  const {
-    allMdx: { edges: posts },
-  }: {
-    allMdx: {
-      edges: Post[];
-    };
-  } = useStaticQuery(query);
-
-  const totalPosts = posts.length;
+const useLazyPosts = (totalPosts: number) => {
   const [totalVisible, changeVisible] = useState<number>(
     INITIAL_NUMBER_OF_POSTS
   );

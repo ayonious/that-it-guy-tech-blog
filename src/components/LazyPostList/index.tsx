@@ -60,7 +60,7 @@ const LazyPostList = () => {
 
   const filteredPosts = filterPosts(tags, posts);
 
-  const [totalVisible] = useLazyPosts();
+  const [totalVisible] = useLazyPosts(posts.length);
 
   return <PostList posts={filteredPosts} totalVisible={totalVisible} />;
 };
