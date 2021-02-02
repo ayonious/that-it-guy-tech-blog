@@ -9,14 +9,14 @@ Object {
         class="sc-gsTCUz hvACrQ"
       >
         <div
-          style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
+          style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
         >
           <div
             class="react-switch-bg"
-            style="height: 28px; width: 56px; margin: 0px; position: relative; background: rgb(0, 136, 0); border-radius: 14px; cursor: pointer; transition: background 0.25s;"
+            style="height: 26px; width: 56px; margin: 0px; position: relative; background: rgb(0, 136, 0); border-radius: 13px; cursor: pointer; transition: background 0.25s;"
           >
             <div
-              style="height: 28px; width: 30px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
+              style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
                 class="sc-bdfBwQ uJjeH"
@@ -25,7 +25,7 @@ Object {
               </span>
             </div>
             <div
-              style="height: 28px; width: 30px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
+              style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
                 class="sc-bdfBwQ uJjeH"
@@ -36,7 +36,7 @@ Object {
           </div>
           <div
             class="react-switch-handle"
-            style="height: 26px; width: 26px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(29px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+            style="height: 24px; width: 24px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(31px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
           />
           <input
             aria-checked="true"
@@ -74,14 +74,14 @@ Object {
       class="sc-gsTCUz hvACrQ"
     >
       <div
-        style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
+        style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
       >
         <div
           class="react-switch-bg"
-          style="height: 28px; width: 56px; margin: 0px; position: relative; background: rgb(0, 136, 0); border-radius: 14px; cursor: pointer; transition: background 0.25s;"
+          style="height: 26px; width: 56px; margin: 0px; position: relative; background: rgb(0, 136, 0); border-radius: 13px; cursor: pointer; transition: background 0.25s;"
         >
           <div
-            style="height: 28px; width: 30px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
+            style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
               class="sc-bdfBwQ uJjeH"
@@ -90,7 +90,7 @@ Object {
             </span>
           </div>
           <div
-            style="height: 28px; width: 30px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
+            style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
               class="sc-bdfBwQ uJjeH"
@@ -101,7 +101,7 @@ Object {
         </div>
         <div
           class="react-switch-handle"
-          style="height: 26px; width: 26px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(29px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+          style="height: 24px; width: 24px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(31px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
         />
         <input
           aria-checked="true"
@@ -196,14 +196,14 @@ Object {
         class="sc-gsTCUz hvACrQ"
       >
         <div
-          style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
+          style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
         >
           <div
             class="react-switch-bg"
-            style="height: 28px; width: 56px; margin: 0px; position: relative; background: rgb(0, 136, 0); border-radius: 14px; cursor: pointer; transition: background 0.25s;"
+            style="height: 26px; width: 56px; margin: 0px; position: relative; background: rgb(0, 136, 0); border-radius: 13px; cursor: pointer; transition: background 0.25s;"
           >
             <div
-              style="height: 28px; width: 30px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
+              style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
                 class="sc-bdfBwQ uJjeH"
@@ -212,7 +212,7 @@ Object {
               </span>
             </div>
             <div
-              style="height: 28px; width: 30px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
+              style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
                 class="sc-bdfBwQ uJjeH"
@@ -223,7 +223,7 @@ Object {
           </div>
           <div
             class="react-switch-handle"
-            style="height: 26px; width: 26px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(29px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+            style="height: 24px; width: 24px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(31px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
           />
           <input
             aria-checked="true"
@@ -261,14 +261,14 @@ Object {
       class="sc-gsTCUz hvACrQ"
     >
       <div
-        style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
+        style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
       >
         <div
           class="react-switch-bg"
-          style="height: 28px; width: 56px; margin: 0px; position: relative; background: rgb(0, 136, 0); border-radius: 14px; cursor: pointer; transition: background 0.25s;"
+          style="height: 26px; width: 56px; margin: 0px; position: relative; background: rgb(0, 136, 0); border-radius: 13px; cursor: pointer; transition: background 0.25s;"
         >
           <div
-            style="height: 28px; width: 30px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
+            style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
               class="sc-bdfBwQ uJjeH"
@@ -277,7 +277,7 @@ Object {
             </span>
           </div>
           <div
-            style="height: 28px; width: 30px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
+            style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
               class="sc-bdfBwQ uJjeH"
@@ -288,7 +288,7 @@ Object {
         </div>
         <div
           class="react-switch-handle"
-          style="height: 26px; width: 26px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(29px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+          style="height: 24px; width: 24px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(31px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
         />
         <input
           aria-checked="true"
