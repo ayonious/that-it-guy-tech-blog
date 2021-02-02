@@ -3,8 +3,8 @@
 </h1>
 
 <p align="center">
-  <a href="https://circleci.com/gh/ayonious/random-names">
-    <img alt="CircleCI" src="https://circleci.com/gh/ayonious/random-names.svg?style=svg">
+  <a href="https://circleci.com/gh/ayonious/that-it-guy-tech-blog">
+    <img alt="CircleCI" src="https://circleci.com/gh/ayonious/that-it-guy-tech-blog.svg?style=svg">
   </a>
   <a href="https://app.netlify.com/sites/that-it-guy/deploys">
     <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/e15f1837-6f79-42fe-98f4-59016ed63297/deploy-status">
