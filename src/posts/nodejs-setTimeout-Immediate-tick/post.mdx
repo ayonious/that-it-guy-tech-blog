@@ -1,0 +1,129 @@
+---
+title: Eventloop phase and setImmediate, setTimeout, nexttick
+slug: nodejs-setTimeout-Immediate-tick
+image: ./images/pexels-pixabay-414579.jpg
+date: "2021-02-05"
+published: yes
+tags: [js, nodejs, threads]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+There are many confusions in all over internet so thought to write my own short notes.
+
+# setTimeout
+
+- Execute something after some time
+
+<CodeDivWrapper>
+
+```js
+setTimeout(() => {
+  console.log(1);
+}, 10); // after 10 mili second output 1
+```
+
+</CodeDivWrapper>
+
+# setImmediate
+
+- Execute something immediately after this callStack execution is finished
+
+<CodeDivWrapper>
+
+```js
+console.log(1);
+setImmediate(() => {
+  console.log(2);
+});
+console.log(3);
+// output: 1,3,2
+```
+
+</CodeDivWrapper>
+
+# process.nextTick
+
+- Execute something immediately after this callStack execution is finished but before anything else
+
+<CodeDivWrapper>
+
+```js
+console.log(1);
+process.nextTick(() => {
+  console.log(2);
+});
+console.log(3);
+// output: 1,3,2
+```
+
+</CodeDivWrapper>
+
+# process.nextTick VS setImmediate VS setTimeout(()=>{}, 0)
+
+process.nextTick => puts the callback at the beginning[next pop of queue] of the Job queue
+setImmediate => puts the callback at the end[last pop of queue] of the Job queue
+setTimeout(()=>{}, 0) => after 0 seconds push it to job queue.
+
+# setTimeout(()=>{}, 0) VS setImmediate which is faster?
+
+It depends, any could be faster.
+
+<CodeDivWrapper>
+
+```js
+setTimeout(() => {
+  console.log("setTimeout");
+}, 0);
+
+setImmediate(() => {
+  console.log("setImmediate");
+});
+```
+
+</CodeDivWrapper>
+
+Output is different in different runs. setTimeout could push the function in job queue before setImmediate function is called.
+
+# Phases of Eventloop
+
+There are following phases of Eventloop that happens again and again. Each phase has its own queue. At each phase that queue is finished and next phase started
+
+<CodeDivWrapper>
+
+```Text
+   ┌──────────────────────────────────────────────┐
+┌─>│           timers       [Callback Queue]      │ # setTimeout, setInterval
+│  └─────────────┬────────────────────────────────┘
+│  ┌─────────────┴────────────────────────────────┐
+│  │     pending callbacks  [Callback Queue]      │
+│  └─────────────┬────────────────────────────────┘
+│  ┌─────────────┴────────────────────────────────┐
+│  │       idle, prepare    [Callback Queue]      │  # Used by system
+│  └─────────────┬────────────────────────────────┘
+│  ┌─────────────┴────────────────────────────────┐
+│  │           poll         [Callback Queue]      │  # Data fetching
+│  └─────────────┬────────────────────────────────┘
+│  ┌─────────────┴────────────────────────────────┐
+│  │           check        [Callback Queue]      │  # setImmediate
+│  └─────────────┬────────────────────────────────┘
+│  ┌─────────────┴────────────────────────────────┐
+└──┤      close callbacks   [Callback Queue]      │
+   └──────────────────────────────────────────────┘
+
+   ┌───────────────────────────┐
+   │      Micro Task Queue     │ # process.nextTick, then, catch => triggered at each tick
+   └───────────────────────────┘
+
+```
+
+</CodeDivWrapper>
+
+# Which is the fastest?
+
+`process.nextTick` => because this puts the job inside `Micro Task Queue`. Which is a special queue that always taken before other things.
+
+# Source
+
+1. https://medium.com/swlh/a-short-introduction-to-node-js-event-loop-558f6f2c2af7
+2. https://medium.com/javascript-in-plain-english/node-js-event-loop-explained-d27647ec8d53
