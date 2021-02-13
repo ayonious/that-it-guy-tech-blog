@@ -15,9 +15,9 @@
 
 ![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front.page.4.png)
 
-### [Check the Demo✨](https://that-it-guy.netlify.app)
+## [Check the Demo✨](https://that-it-guy.netlify.app)
 
-# 🎁 Features
+## 🎁 Features
 
 1.  **gatsby-plugin-mdx**
 
@@ -82,30 +82,30 @@ Gatsby provides a plugin interface to add support for shipping a manifest with y
 https://www.gatsbyjs.org/docs/progressive-web-app/#it-must-implement-a-service-worker
 Gatsby also provides a plugin interface to create and load a service worker into your site
 
-# 💯 Lighthouse Score
+## 💯 Lighthouse Score
 
 ![Lighthouse Score](DocumentationAssets/lighthouse.png)
 
-# 🖼 Screenshot and Design
+## 🖼 Screenshot and Design
 
-## 🎨 Theming
+### 🎨 Theming
 
 ![Themes](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/themes.1.png)
 
-## Syntax highlighting with Code copy
+### Syntax highlighting with Code copy
 
 ![SyntaxHighlight](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/syntax.highlighting.png)
 
-## Filter by Post Tags
+### Filter by Post Tags
 
 ![Filter](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/filter.1.png)
 
-# 💄 Styles
+## 💄 Styles
 
 1. Mostly are Styled Components
 2. Filterbox: react-select, Theme Toggle: react-switch, Icons: react-icons
 3. Some pure css styles
 
-# 🚀 Deploy
+## 🚀 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ayonious/that-it-guy-tech-blog)
