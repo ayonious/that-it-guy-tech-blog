@@ -4,7 +4,8 @@ export const CodeDivWrapper = styled.div`
   background: #232323;
   padding: 15px;
   border-radius: 8px;
-  margin: 0 -1rem 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 `;
 
 /*

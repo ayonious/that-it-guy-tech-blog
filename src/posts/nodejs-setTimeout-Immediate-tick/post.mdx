@@ -132,24 +132,21 @@ Output is different in different runs. setTimeout could push the function in job
 <CodeDivWrapper>
 
 ```Text
-
 while (true) {
     goto Next phase
 
     // beginning of a tick
 
-    lock this Queue
+    lock queue
+    queueCopyEvents = copy(queue)
+    unlock queue
 
-    forEachEvents stored in this queue {
+    forEachEvents stored in queueCopyEvents {
         InvokeThis Event;
     }
 
-    unlock this Queue
-
     // end of the tick
 }
-
-
 ```
 
 </CodeDivWrapper>

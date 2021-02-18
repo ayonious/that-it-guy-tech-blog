@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CodeDivWrapper, CopyButtonWrapper } from "./styles";
 import Highlight from "react-highlight.js";
 
-const witeInClipboard = (text) => {
+const witeInClipboard = (text: string) => {
   navigator.clipboard.writeText(text);
 };
 
@@ -12,12 +12,12 @@ const changeTextTemporarily = (changeText) => {
 };
 
 const CopyButton = (props) => {
-  const [text, changetext] = useState("Copy 📋");
+  const [text, changeText] = useState("Copy 📋");
   return (
     <CopyButtonWrapper
       onClick={() => {
         props.onCopy();
-        changeTextTemporarily(changetext);
+        changeTextTemporarily(changeText);
       }}
     >
       <span>{text}</span>
@@ -25,7 +25,7 @@ const CopyButton = (props) => {
   );
 };
 
-let isString = (inp) => typeof inp === "string";
+let isString = (inp: any) => typeof inp === "string";
 
 const getCodeText = (children) => {
   let current = children;

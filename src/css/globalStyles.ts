@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   h2 {
     margin: .8rem 0rem; 
   }
-  ol {
+  ol,ul {
     margin-bottom: 0.8rem; 
   }
 `;
