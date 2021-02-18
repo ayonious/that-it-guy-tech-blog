@@ -85,8 +85,6 @@ setImmediate(() => {
 
 Output is different in different runs. setTimeout could push the function in job queue before setImmediate function is called.
 
-# Phases of Eventloop
-
 - There are following phases of Eventloop that happens again and again.
 - Each phase has its own queue.
 - At each phase that queue is finished and next phase started
@@ -125,7 +123,39 @@ Output is different in different runs. setTimeout could push the function in job
 
 `process.nextTick` => because this puts the job inside `Micro Task Queue`. Which is a special queue that always taken before other things.
 
+# What the hell is Tick?
+
+- Tick is each phase change.
+- In each phase there could be a queue.
+- That queue is processed completely before starting a new tick.
+
+<CodeDivWrapper>
+
+```Text
+
+while (true) {
+    goto Next phase
+
+    // beginning of a tick
+
+    lock this Queue
+
+    forEachEvents stored in this queue {
+        InvokeThis Event;
+    }
+
+    unlock this Queue
+
+    // end of the tick
+}
+
+
+```
+
+</CodeDivWrapper>
+
 # Source
 
 1. https://medium.com/swlh/a-short-introduction-to-node-js-event-loop-558f6f2c2af7
-2. https://medium.com/javascript-in-plain-english/node-js-event-loop-explained-d27647ec8d53
+2. https://medium.com/javascript-in-plain-english/node-js-event-loop-explained-d27647ec8d53 3.https://stackoverflow.com/questions/19822668/what-exactly-is-a-node-js-event-loop-tick
+3. https://stackoverflow.com/questions/19822668/what-exactly-is-a-node-js-event-loop-tick
