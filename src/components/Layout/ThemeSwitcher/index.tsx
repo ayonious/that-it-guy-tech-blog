@@ -25,6 +25,7 @@ const ThemeSwitcher = () => {
 
   return (
     <Switch
+      aria-label="Toggle Theme"
       checked={isDark}
       onChange={() => {
         changeTheme(revertThemes[theme.themeName]);

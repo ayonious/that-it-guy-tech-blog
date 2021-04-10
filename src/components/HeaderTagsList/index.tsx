@@ -23,6 +23,7 @@ const HeaderTagsList = () => {
   return (
     <HeaderTagsWrapper>
       <Select
+        aria-label="Post Filter by Tag"
         styles={CustomSelectStyles(theme)}
         closeMenuOnSelect={false}
         isMulti
