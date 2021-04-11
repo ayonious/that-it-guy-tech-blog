@@ -29,3 +29,6 @@ export const themes = {
 };
 
 export const borderRadius = "8px";
+
+export const fonts =
+  "https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap";

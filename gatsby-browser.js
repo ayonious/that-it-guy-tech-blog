@@ -3,12 +3,12 @@ import GlobalStyle from './src/css/globalStyles';
 import React from "react";
 import { Provider as ThemeProvider } from "./src/Context/Theme/ThemeContext";
 import { Provider as TagFilterProvider } from "./src/Context/TagFilter/TagFilterContext";
-
+import { fonts } from './config';
 
 const AsyncFontLoad = () => (
   <link
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap"
+    href={ fonts }
   />
 );
 
