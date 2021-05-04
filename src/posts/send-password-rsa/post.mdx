@@ -1,0 +1,80 @@
+---
+title: Send a secret message
+slug: send-password-rsa
+image: ./images/pexels-pixabay-164425.jpg
+date: "2021-05-01"
+published: yes
+tags: [encryption]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Sending someone a password can be really challenging as you don't trust all the third party Messaging applications. There is one really practical solution to this. But of course only if you are Developer
+
+# Asymmetric Encryption
+
+I don't want to say the same thing as hundred of other pages in internet says. So I will tell in short.
+
+2 person A,B wants to exchange messages.
+
+1. First A and B creates their public private keys.
+2. Then they both share their public keys with each other.
+3. When person A wants to send something to B the message will be Encrypt(message, publicKeyOfB)
+4. Only B can decrypt this message
+
+# Try out in mac
+
+Suppose your friend want to send you a password
+
+### Generate keys
+
+<CodeDivWrapper>
+
+```bash
+ssh-keygen -m PEM -t rsa -b 4096 -C "yourmail@mail.com"
+```
+
+</CodeDivWrapper>
+
+Save the key as ~/.ssh/message_secret
+
+### Convert public key to pkcs8 format and share with friend
+
+<CodeDivWrapper>
+
+```bash
+ssh-keygen -f ~/.ssh/message_secret.pub -e -m pkcs8 > message_secret.pub.pkcs8
+```
+
+</CodeDivWrapper>
+
+Share this file "message_secret.pub.pkcs8" with your friend.
+
+### Friend encrypting his file with this key
+
+<CodeDivWrapper>
+
+```
+cat friends-secret-file.txt | openssl rsautl -encrypt -pubin -inkey message_secret.pub.pkcs8 > message.enc
+```
+
+</CodeDivWrapper>
+
+Now friend needs to send this file back to you.
+
+### You decrypting this file
+
+<CodeDivWrapper>
+
+```
+cat message.enc | openssl rsautl -decrypt -inkey ~/.ssh/message_secret > friends-secret-file.txt
+```
+
+</CodeDivWrapper>
+
+Enjoy!!
+
+# Source
+
+1. https://ati.ttu.ee/wiki/e/index.php/SSH_encrypt_and_decrypt
+2. https://superuser.com/questions/576506/how-to-use-ssh-rsa-public-key-to-encrypt-a-text
