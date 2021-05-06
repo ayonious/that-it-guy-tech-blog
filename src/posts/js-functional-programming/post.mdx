@@ -1,0 +1,68 @@
+---
+title: JS Functional Programming
+slug: js-functional-programming
+image: ./images/pexels-cottonbro-5532675.jpg
+date: "2021-05-06"
+published: yes
+tags: [js, functional programming]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+What is .filter(Boolean)? Sometimes the functions quite confuse me and sometimes I endup writing big functional code for small Problems. Here I want to collect all my experience of Exceptional(but useful) functions that I learned.
+
+I will just show examples here instead of going into details what they do as the examples are self explanatory.
+
+# filter(Boolean)
+
+<CodeDivWrapper>
+
+```
+[1,2,0,null,undefined,"",{}].filter(Boolean)
+// [1,2,{}]
+```
+
+</CodeDivWrapper>
+
+# some(() => {})
+
+A good shortcut to find at least one val exists
+
+<CodeDivWrapper>
+
+```
+[1,1,2,3].some( val => val === 1 )
+// true
+```
+
+</CodeDivWrapper>
+
+# every(() => {})
+
+<CodeDivWrapper>
+
+```
+[1,1,2,3].every( val => val < 4 )
+// true
+```
+
+</CodeDivWrapper>
+
+# find(() => {}) / findIndex / lastIndexOf
+
+Finds the first elem
+
+<CodeDivWrapper>
+
+```
+[1,1,4,2,3].find( val => val > 1 )
+// 4
+
+[1,1,4,2,3].findIndex( val => val > 1 )
+// 2
+
+[1,1,4,2,3].lastIndexOf( val => val > 1 )
+// 4
+```
+
+</CodeDivWrapper>
