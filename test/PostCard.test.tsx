@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { render } from "@testing-library/react";
 import expect from "expect";
 import * as React from "react";
@@ -19,8 +23,7 @@ it("PostCard renders", () => {
               base64:
                 "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABgbGxOTCv/8QAGRAAAwADAAAAAAAAAAAAAAAAAQIQAxES/9oACAEBAAEFAkCk5E5M3P/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABYQAAMAAAAAAAAAAAAAAAAAAAERIP/aAAgBAQAGPwIOv//EABoQAQADAAMAAAAAAAAAAAAAAAEAEBEhMZH/2gAIAQEAAT8hMnhpDwPInNKe2v/aAAwDAQACAAMAAAAQzA//xAAWEQEBAQAAAAAAAAAAAAAAAAARECH/2gAIAQMBAT8QcJ//xAAWEQADAAAAAAAAAAAAAAAAAAAQESH/2gAIAQIBAT8QVH//xAAaEAEBAQEAAwAAAAAAAAAAAAABEQBBMVFx/9oACAEBAAE/ELF4lvNCAeV6fmnEMOeqr7XXf//Z",
               aspectRatio: 1.7699115044247788,
-              src:
-                "/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg",
+              src: "/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg",
               srcSet:
                 "/static/b8db2eac530443fabe2a1827b2fb9c52/f836f/person-holding-compass-841286.jpg 200w,\n/static/b8db2eac530443fabe2a1827b2fb9c52/2244e/person-holding-compass-841286.jpg 400w,\n/static/b8db2eac530443fabe2a1827b2fb9c52/f422e/person-holding-compass-841286.jpg 640w",
               srcWebp:
