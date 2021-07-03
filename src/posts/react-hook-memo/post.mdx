@@ -1,0 +1,63 @@
+---
+title: React Hooks - memo
+slug: react-hooks-memo
+image: ./images/pexels-cottonbro-3832028.jpg
+date: "2021-07-03"
+published: yes
+tags: [js, react, hooks]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+import { Link } from "gatsby";
+
+In simple words this controls when to not re-render your component.
+
+I got a situation recently where a Form component was re-rendering and this was causing some glich to a field that user had to interact.
+
+# How React Re render using Props
+
+React looks at all the values of the props and if its different than previous props then it re-render. Its easy and simple mechanism. But this comparison is a shallow comparison.
+But if some props are object then React makes a shallow comparison for that.
+
+In short: Which means if same props are passed as object React will always Re-render.
+
+## How to stop react from re-rendering?
+
+### In pure react class components
+
+<CodeDivWrapper>
+
+```js
+shouldComponentUpdate(prevProps, nextProps) {
+  if(prevProps.props1.someval === nextProps.props1.someval) {
+    return true;
+  }
+  return false;
+}
+```
+
+</CodeDivWrapper>
+
+### In functional react components
+
+<CodeDivWrapper>
+
+```js
+import { memo } from 'react';
+
+const isPropsEqual = (prevProps, nextProps) {
+  if(prevProps.props1.someval === nextProps.props1.someval) {
+    return true;
+  }
+  return false;
+};
+
+const Component = (props) => {
+  return <></>;
+};
+
+export default memo(Component, isPropsEqual);
+```
+
+</CodeDivWrapper>
