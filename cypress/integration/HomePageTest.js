@@ -19,18 +19,18 @@ describe("Home Page", () => {
 
 
   it("Filter By Tags Work", () => {
-    cy.contains('Filter By Tags').click();
-    cy.contains('oop').click();
+    cy.contains('Filter By Tags').click({force: true});
+    cy.contains('oop').click({force: true});
     cy.contains('Is Js OOP?');
   });
 
   it("Home Page to Blog Post Navigation Works", () => {
-    cy.contains('Filter By Tags').click();
-    cy.contains('oop').click();
+    cy.contains('Filter By Tags').click({force: true});
+    cy.contains('oop').click({force: true});
     cy.contains('Is Js OOP?');
     cy.contains('Read More').click({force: true});
     cy.contains('But js creates this objects through prototypes.');
-    cy.contains('That IT Guy').click();
+    cy.contains('That IT Guy').click({force: true});
     cy.contains('But js creates this objects through prototypes.').should('not.exist');
   });
 });
