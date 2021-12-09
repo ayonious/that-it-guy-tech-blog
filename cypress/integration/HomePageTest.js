@@ -1,6 +1,6 @@
 describe("Home Page", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:9000");
+    cy.visit("http://localhost:9000").wait(2000); //waiting long enough for all page to load
   });
 
   it("Basic Elements are there", () => {
