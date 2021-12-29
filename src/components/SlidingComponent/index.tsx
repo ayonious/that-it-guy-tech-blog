@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { DivWrapper } from "./styles";
 
-const SlidingComponent = ({ children }: { children: any }) => {
+const SlidingComponent: React.FC = ({ children }) => {
   const inputRef = useRef(null);
   const [visible, changeVisible] = useState(false);
 
