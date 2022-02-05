@@ -1,0 +1,115 @@
+---
+title: HOC
+slug: react-hoc
+image: ./images/pexels-alexas-fotos-2315712.jpg
+date: "2022-02-05"
+published: yes
+tags: [js, react, design-pattern]
+---
+
+import CodeDivWrapper from "../../components/CodeWrapper";
+
+Higher Order Component is a Design pattern. Lets take a look at it with an example.
+
+## A sample Without HOC
+
+<CodeDivWrapper>
+
+```jsx
+import React, {useState} from "react";
+
+const ComponentWithSpinner = () => {
+  const [isDataFetching, setIsDataFetching] = useState(true);
+  const [isDataFetched, setIsDataFetched] = useState(true);
+  const [data, setData] = useState({});
+
+  useEffect( () => {
+    setIsDataFetching(true);
+    fetchData().then( fetchedData => {
+      setData(fetchedData);
+      setIsDataFetched(true);
+      setIsDataFetching(false);
+    })
+  }, []);
+
+  if(!isDataFetched) {
+    return <Spinner text = "Loading your Page...">;
+  }
+
+  return (
+      <Page data={data}/>
+  );
+};
+
+export default ComponentWithSpinner;
+```
+
+</CodeDivWrapper>
+
+## Whats the Problem here?
+
+This spinning logic should be applied to multiple pages. In that case all the code related to showing Spinner when page is not ready will be duplicated. We can maybe make it Generalized for all pages somehow so we dont need to write it again and again.
+
+## Now with HOC
+
+<CodeDivWrapper>
+
+```js
+import React, { useState } from "react";
+
+const withSpinner = (WrappedComponent) => {
+  const SpinnerOrComponent = ({ isLoading, ...otherProps }) => {
+    if(isLoading) {
+      return <Spinner text = "Loading your Page...">;
+    }
+    return <WrappedComponent {...otherProps} />;
+  };
+  return SpinnerOrComponent;
+};
+
+export default withSpinner;
+```
+
+</CodeDivWrapper>
+
+<CodeDivWrapper>
+
+```js
+import React, { useState } from "react";
+import withSpinner from "./withSpinner";
+
+const Page = ({data}) => {
+  ...
+};
+
+export default withSpinner(Page);
+```
+
+</CodeDivWrapper>
+
+<CodeDivWrapper>
+
+```js
+import React, { useState } from "react";
+
+const MainPage = () => {
+  const [isDataFetching, setIsDataFetching] = useState(true);
+  const [isDataFetched, setIsDataFetched] = useState(true);
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    setIsDataFetching(true);
+    fetchData().then((fetchedData) => {
+      setData(fetchedData);
+      setIsDataFetched(true);
+      setIsDataFetching(false);
+    });
+  }, []);
+
+  return <Page isLoading={isDataFetching || !isDataFetched} data={data} />;
+};
+
+export default withSpinner;
+```
+
+</CodeDivWrapper>
