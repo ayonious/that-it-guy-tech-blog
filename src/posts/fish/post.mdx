@@ -24,6 +24,46 @@ brew install fish
 
 </CodeDivWrapper>
 
+## Make fish default shell
+
+### Step1
+
+Find where is fish executable installed after homebrew installation.
+
+<CodeDivWrapper>
+
+```bash
+which fish
+```
+
+</CodeDivWrapper>
+
+For me the location is `/opt/homebrew/bin/fish`
+
+### Step2
+
+Put the location at end of `/etc/shells`
+
+<CodeDivWrapper>
+
+```bash
+sudo nano /etc/shells
+```
+
+</CodeDivWrapper>
+
+### Step2
+
+Run chsh with this location
+
+<CodeDivWrapper>
+
+```bash
+chsh -s /opt/homebrew/bin/fish
+```
+
+</CodeDivWrapper>
+
 
 ## Configure some cool console emojis
 
