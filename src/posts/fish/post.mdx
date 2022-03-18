@@ -113,7 +113,16 @@ set -U fish_user_paths /Applications/Contents/jre/jdk/Contents/Home/bin $fish_us
 
 ## Installing nvm with fish
 
-install fisher `https://github.com/jorgebucaran/fisher`
+Install fisher `https://github.com/jorgebucaran/fisher`
+
+<CodeDivWrapper>
+
+```bash
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+```
+
+</CodeDivWrapper>
+
 
 Now install bass
 
@@ -122,6 +131,8 @@ Now install bass
 ```bash
 fisher install edc/bass
 ```
+
+</CodeDivWrapper>
 
 Add this to `~/.config/fish/config.fish` file
 
@@ -168,4 +179,4 @@ history
 ## Source
 
 1. setting env variable: https://stackoverflow.com/questions/25632846/how-to-set-environment-variables-in-fish-shell
-2. installing fish (a little deprecated) https://eshlox.net/2019/01/27/how-to-use-nvm-with-fish-shell/
+2. installing fish (a little deprecated) https://eshlox.net/2019/01/27/how-to-use-nvm-with-fish-shell
