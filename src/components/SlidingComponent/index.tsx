@@ -1,9 +1,15 @@
 import { throttle } from "lodash";
-import React, { useEffect, useRef, useState } from "react";
+import React, {
+  FC,
+  useEffect,
+  useRef,
+  useState,
+  PropsWithChildren,
+} from "react";
 
 import { DivWrapper } from "./styles";
 
-const SlidingComponent: React.FC = ({ children }) => {
+const SlidingComponent: FC<PropsWithChildren<{}>> = ({ children }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [visible, changeVisible] = useState(false);
 
