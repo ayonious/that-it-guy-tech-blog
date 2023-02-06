@@ -52,7 +52,7 @@
     "@types/react-highlight.js": "^1.0.2",
     "@types/react-select": "^5.0.1",
     "@types/styled-components": "^5.1.25",
-    "cypress": "^9.6.1",
+    "cypress": "^12.5.1",
     "expect": "^27.5.1",
     "gatsby-plugin-playground": "^1.0.6",
     "jest": "^27.5.1",
