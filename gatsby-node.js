@@ -14,7 +14,7 @@ async function createBlogPages({ graphql, actions }) {
   );
   const result = await graphql(`
     {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+      allMdx(sort: {frontmatter: {date: DESC}}) {
         edges {
           node {
             frontmatter {

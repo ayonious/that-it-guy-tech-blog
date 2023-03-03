@@ -8,7 +8,7 @@ import PostList, { Post } from "../PostList";
 const query = graphql`
   {
     allMdx(
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { published: { eq: "yes" } } }
     ) {
       edges {
