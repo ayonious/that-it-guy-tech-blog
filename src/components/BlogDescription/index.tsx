@@ -1,7 +1,8 @@
 // this is to install code syntax highlighting
 import { graphql } from "gatsby";
 import Image from "gatsby-image";
-import React, { useContext } from "react";
+import { MDXProvider } from "@mdx-js/react";
+import React, { Children, useContext } from "react";
 import "../../../node_modules/highlight.js/styles/railscasts.css";
 import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
 import Layout from "../Layout";
@@ -34,7 +35,17 @@ interface TemplateData {
   children: any;
 }
 
-const postTemplate = ({ data, children }: TemplateData) => {
+const MyH1 = (props) => <h1 style={{ color: `tomato` }} {...props} />;
+const MyParagraph = (props) => (
+  <p style={{ fontSize: "18px", lineHeight: 1.6 }} {...props} />
+);
+
+const components = {
+  h1: MyH1,
+  p: MyParagraph,
+};
+
+const postTemplate = (props: TemplateData) => {
   const {
     frontmatter: {
       title,
@@ -44,7 +55,7 @@ const postTemplate = ({ data, children }: TemplateData) => {
       },
       tags,
     },
-  } = data.mdx;
+  } = props.data.mdx;
 
   const {
     state: { theme },
@@ -54,7 +65,7 @@ const postTemplate = ({ data, children }: TemplateData) => {
     title,
   };
 
-  console.log("children", children);
+  console.log("children", props);
 
   return (
     <Layout seoProps={seoProps}>
@@ -73,7 +84,9 @@ const postTemplate = ({ data, children }: TemplateData) => {
         <ImageWrapper>
           <Image fluid={img} />
         </ImageWrapper>
-        <PostDetails>{children}</PostDetails>
+        <MDXProvider components={components}>
+          <PostDetails>{props.children}</PostDetails>
+        </MDXProvider>
       </TemplateDivWrapper>
     </Layout>
   );
