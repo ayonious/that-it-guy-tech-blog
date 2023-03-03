@@ -1,4 +1,4 @@
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 import React, { useContext } from "react";
 
 import { PageSubTitle, PageTitle } from "../../../../config";
