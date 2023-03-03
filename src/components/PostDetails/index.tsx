@@ -1,14 +1,13 @@
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import $ from "jquery";
 import React, { useEffect } from "react";
 
 import { ContentDivWrapper } from "./styles";
 
 interface Props {
-  body: any;
+  children: any;
 }
 
-const PostDetails = ({ body }: Props) => {
+const PostDetails = ({ children }: Props) => {
   useEffect(() => {
     // adding hashed urls
     $("h1").wrapInner(`<span class="temporary_magic"></span>`);
@@ -24,11 +23,8 @@ const PostDetails = ({ body }: Props) => {
     $("span").removeClass("temporary_magic");
   }, []);
 
-  return (
-    <ContentDivWrapper>
-      <MDXRenderer>{body}</MDXRenderer>
-    </ContentDivWrapper>
-  );
+  console.log("children", children);
+  return <ContentDivWrapper>{children}</ContentDivWrapper>;
 };
 
 export default PostDetails;

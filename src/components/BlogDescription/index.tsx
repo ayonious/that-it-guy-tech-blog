@@ -29,12 +29,12 @@ interface TemplateData {
           };
         };
       };
-      body: any;
     };
   };
+  children: any;
 }
 
-const postTemplate = ({ data }: TemplateData) => {
+const postTemplate = ({ data, children }: TemplateData) => {
   const {
     frontmatter: {
       title,
@@ -44,7 +44,6 @@ const postTemplate = ({ data }: TemplateData) => {
       },
       tags,
     },
-    body,
   } = data.mdx;
 
   const {
@@ -54,6 +53,8 @@ const postTemplate = ({ data }: TemplateData) => {
   const seoProps = {
     title,
   };
+
+  console.log("children", children);
 
   return (
     <Layout seoProps={seoProps}>
@@ -72,7 +73,7 @@ const postTemplate = ({ data }: TemplateData) => {
         <ImageWrapper>
           <Image fluid={img} />
         </ImageWrapper>
-        <PostDetails body={body} />
+        <PostDetails>{children}</PostDetails>
       </TemplateDivWrapper>
     </Layout>
   );
@@ -94,7 +95,6 @@ export const query = graphql`
           }
         }
       }
-      body
     }
   }
 `;
