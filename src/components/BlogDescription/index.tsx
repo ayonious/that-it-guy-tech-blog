@@ -2,7 +2,7 @@
 import { graphql } from "gatsby";
 import Image from "gatsby-image";
 import { MDXProvider } from "@mdx-js/react";
-import React, { Children, useContext } from "react";
+import React, { useContext } from "react";
 import "../../../node_modules/highlight.js/styles/railscasts.css";
 import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
 import Layout from "../Layout";
@@ -19,6 +19,7 @@ import {
 interface TemplateData {
   data: {
     mdx: {
+      body: any;
       frontmatter: {
         title: string;
         date: string;
@@ -85,7 +86,7 @@ const postTemplate = (props: TemplateData) => {
           <Image fluid={img} />
         </ImageWrapper>
         <MDXProvider components={components}>
-          <PostDetails>{props.children}</PostDetails>
+          <PostDetails>{props.data.mdx.body}</PostDetails>
         </MDXProvider>
       </TemplateDivWrapper>
     </Layout>
@@ -95,6 +96,7 @@ const postTemplate = (props: TemplateData) => {
 export const query = graphql`
   query getPost($slug: String) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
         slug

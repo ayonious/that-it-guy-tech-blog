@@ -15,23 +15,24 @@ async function createBlogPages({ graphql, actions }) {
   const result = await graphql(`
     {
       allMdx(sort: {frontmatter: {date: DESC}}) {
-        edges {
-          node {
-            frontmatter {
-              slug
-            }
+        nodes {
+          frontmatter {
+            slug
+          }
+          internal {
+            contentFilePath
           }
         }
       }
     }
   `);
 
-  result.data.allMdx.edges.forEach((edge) => {
+  result.data.allMdx.nodes.forEach((node) => {
     createPage({
-      path: `blogs/${edge.node.frontmatter.slug}`,
-      component: blogPostTemplate,
+      path: `blogs/${node.frontmatter.slug}`,
+      component: `${blogPost}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
-        slug: edge.node.frontmatter.slug,
+        slug: node.frontmatter.slug,
       },
     });
   });
