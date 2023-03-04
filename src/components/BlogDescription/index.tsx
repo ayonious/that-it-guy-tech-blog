@@ -1,19 +1,21 @@
 // this is to install code syntax highlighting
-import { graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { MDXProvider } from "@mdx-js/react";
-import React, { useContext } from "react";
 import "../../../node_modules/highlight.js/styles/railscasts.css";
+
+import { MDXProvider } from "@mdx-js/react";
+import { graphql } from "gatsby";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
+import React, { useContext } from "react";
+
 import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
 import Layout from "../Layout";
 import PostDetails from "../PostDetails";
 import {
   DateDivWrapper,
+  ImageWrapper,
   PostTagDivWrapper,
   TagsDivWrapper,
   TemplateDivWrapper,
   TitleDivWrapper,
-  ImageWrapper,
 } from "./styles";
 
 interface TemplateData {
@@ -27,7 +29,7 @@ interface TemplateData {
         tags: string[];
         image: {
           childImageSharp: {
-            fluid: any;
+            gatsbyImageData: IGatsbyImageData;
           };
         };
       };
@@ -36,23 +38,13 @@ interface TemplateData {
   children: any;
 }
 
-const MyH1 = (props) => <h1 style={{ color: `tomato` }} {...props} />;
-const MyParagraph = (props) => (
-  <p style={{ fontSize: "18px", lineHeight: 1.6 }} {...props} />
-);
-
-const components = {
-  h1: MyH1,
-  p: MyParagraph,
-};
-
 const PostTemplate = (props: TemplateData) => {
   const {
     frontmatter: {
       title,
       date,
       image: {
-        childImageSharp: { fluid: img },
+        childImageSharp: { gatsbyImageData: img },
       },
       tags,
     },
@@ -65,8 +57,6 @@ const PostTemplate = (props: TemplateData) => {
   const seoProps = {
     title,
   };
-
-  console.log("children", props);
 
   return (
     <Layout seoProps={seoProps}>
@@ -83,31 +73,33 @@ const PostTemplate = (props: TemplateData) => {
           </TagsDivWrapper>
         </div>
         <ImageWrapper>
-          <GatsbyImage image={img} />
+          <GatsbyImage image={img} alt="img" />
         </ImageWrapper>
         <PostDetails>
-          <MDXProvider components={components}>{props.children}</MDXProvider>
+          <MDXProvider>{props.children}</MDXProvider>
         </PostDetails>
       </TemplateDivWrapper>
     </Layout>
   );
 };
 
-export const query = graphql`query getPost($slug: String) {
-  mdx(frontmatter: {slug: {eq: $slug}}) {
-    body
-    frontmatter {
-      title
-      slug
-      date(formatString: "MMMM Do, YYYY")
-      tags
-      image {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+export const query = graphql`
+  query getPost($slug: String) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      body
+      frontmatter {
+        title
+        slug
+        date(formatString: "MMMM Do, YYYY")
+        tags
+        image {
+          childImageSharp {
+            gatsbyImageData(layout: FIXED)
+          }
         }
       }
     }
   }
-}`;
+`;
 
 export default PostTemplate;
