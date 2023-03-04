@@ -38,7 +38,6 @@ export interface PostCardData {
 }
 
 const PostCard = (props: PostCardData) => {
-  console.log("sample", JSON.stringify(props));
   const {
     post: {
       frontmatter: {
