@@ -1,5 +1,6 @@
 import $ from "jquery";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { compile } from "@mdx-js/mdx";
 
 import { ContentDivWrapper } from "./styles";
 
@@ -23,7 +24,6 @@ const PostDetails = ({ children }: Props) => {
     $("span").removeClass("temporary_magic");
   }, []);
 
-  console.log("children", children);
   return <ContentDivWrapper>{children}</ContentDivWrapper>;
 };
 

@@ -30,7 +30,7 @@ async function createBlogPages({ graphql, actions }) {
   result.data.allMdx.nodes.forEach((node) => {
     createPage({
       path: `blogs/${node.frontmatter.slug}`,
-      component: `${blogPost}?__contentFilePath=${node.internal.contentFilePath}`,
+      component: `${blogPostTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         slug: node.frontmatter.slug,
       },

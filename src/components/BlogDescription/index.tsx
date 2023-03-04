@@ -46,7 +46,7 @@ const components = {
   p: MyParagraph,
 };
 
-const postTemplate = (props: TemplateData) => {
+const PostTemplate = (props: TemplateData) => {
   const {
     frontmatter: {
       title,
@@ -85,9 +85,9 @@ const postTemplate = (props: TemplateData) => {
         <ImageWrapper>
           <Image fluid={img} />
         </ImageWrapper>
-        <MDXProvider components={components}>
-          <PostDetails>{props.data.mdx.body}</PostDetails>
-        </MDXProvider>
+        <PostDetails>
+          <MDXProvider components={components}>{props.children}</MDXProvider>
+        </PostDetails>
       </TemplateDivWrapper>
     </Layout>
   );
@@ -114,4 +114,4 @@ export const query = graphql`
   }
 `;
 
-export default postTemplate;
+export default PostTemplate;
