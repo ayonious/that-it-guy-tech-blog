@@ -1,4 +1,4 @@
-import Image from "gatsby-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import React, { useContext } from "react";
 
 import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
@@ -27,7 +27,7 @@ export interface PostCardData {
       tags: string[];
       image: {
         childImageSharp: {
-          fluid: any;
+          gatsbyImageData: IGatsbyImageData;
         };
       };
     };
@@ -46,7 +46,7 @@ const PostCard = (props: PostCardData) => {
         slug,
         tags,
         image: {
-          childImageSharp: { fluid: img },
+          childImageSharp: { gatsbyImageData: img },
         },
       },
       excerpt,
@@ -62,12 +62,12 @@ const PostCard = (props: PostCardData) => {
     <SlidingComponent>
       <CardArticleWrapper theme={theme}>
         <CardImageWrapper>
-          <Image fluid={img} />
+          <GatsbyImage image={img} alt="asdf" />
         </CardImageWrapper>
         <InfoDivWrapper theme={theme}>
           <FlexRowWrapper>
             <MiniCardImageWrapper>
-              <Image fluid={img} />
+              <GatsbyImage image={img} alt="asdf" />
             </MiniCardImageWrapper>
             <HeadlineAndDateWrapper>
               <InfoHeadlineWrapper>{title}</InfoHeadlineWrapper>

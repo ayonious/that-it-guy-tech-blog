@@ -5,33 +5,29 @@ import { Context as TagFilterContext } from "../../Context/TagFilter/TagFilterCo
 import useLazyPosts from "../../Hooks/useLazyPosts";
 import PostList, { Post } from "../PostList";
 
-const query = graphql`
-  {
-    allMdx(
-      sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { published: { eq: "yes" } } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            slug
-            date(formatString: "MMMM Do, YYYY")
-            tags
-            image {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
+const query = graphql`{
+  allMdx(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {published: {eq: "yes"}}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          slug
+          date(formatString: "MMMM Do, YYYY")
+          tags
+          image {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
-          excerpt
         }
+        excerpt
       }
     }
   }
-`;
+}`;
 
 const filterPosts = (filterTags: string[], posts: Post[]) => {
   return filterTags.length === 0

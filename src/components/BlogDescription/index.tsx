@@ -1,6 +1,6 @@
 // this is to install code syntax highlighting
 import { graphql } from "gatsby";
-import Image from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXProvider } from "@mdx-js/react";
 import React, { useContext } from "react";
 import "../../../node_modules/highlight.js/styles/railscasts.css";
@@ -83,7 +83,7 @@ const PostTemplate = (props: TemplateData) => {
           </TagsDivWrapper>
         </div>
         <ImageWrapper>
-          <Image fluid={img} />
+          <GatsbyImage image={img} />
         </ImageWrapper>
         <PostDetails>
           <MDXProvider components={components}>{props.children}</MDXProvider>
@@ -93,25 +93,21 @@ const PostTemplate = (props: TemplateData) => {
   );
 };
 
-export const query = graphql`
-  query getPost($slug: String) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
-      body
-      frontmatter {
-        title
-        slug
-        date(formatString: "MMMM Do, YYYY")
-        tags
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
+export const query = graphql`query getPost($slug: String) {
+  mdx(frontmatter: {slug: {eq: $slug}}) {
+    body
+    frontmatter {
+      title
+      slug
+      date(formatString: "MMMM Do, YYYY")
+      tags
+      image {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
   }
-`;
+}`;
 
 export default PostTemplate;
