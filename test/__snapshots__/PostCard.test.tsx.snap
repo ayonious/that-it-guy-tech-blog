@@ -6,13 +6,13 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bcXHqe nQypH"
+        class="sc-beySbM bWCQsC"
       >
         <article
-          class="sc-eDvSVe fNeIRt"
+          class="sc-eDLJxc ekBwos"
         >
           <div
-            class="sc-jSUZER hQtWuL"
+            class="sc-jTQDnj ivLDTH"
           >
             <div
               class=" gatsby-image-wrapper"
@@ -65,13 +65,13 @@ Object {
             </div>
           </div>
           <div
-            class="sc-pyfCe kyxvZD"
+            class="sc-qZqnM kfIIkp"
           >
             <div
-              class="sc-iBYQkv fYiweY"
+              class="sc-iBdmCd jTEuYV"
             >
               <div
-                class="sc-gKPRtg kalWvG"
+                class="sc-gLLvby kreuZb"
               >
                 <div
                   class=" gatsby-image-wrapper"
@@ -124,52 +124,52 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ftTHYK OpyHj"
+                class="sc-fsYeqs dnlRLq"
               >
                 <span
-                  class="sc-jrcTuL bRnaFi"
+                  class="sc-jsEegt fgaaoo"
                 >
                   React Reducer a Short Example
                 </span>
                 <div
-                  class="sc-kDvujY FJGnx"
+                  class="sc-kFCsca loqIn"
                 >
                   May 29th, 2020
                 </div>
               </div>
             </div>
             <div
-              class="sc-dkrFOg hDpjqm"
+              class="sc-dmyDGi fiDrGR"
             >
               <div
-                class="sc-hLBbgP zblYi"
+                class="sc-hLQRIN cisxan"
               >
                 #
                 js
               </div>
               <div
-                class="sc-hLBbgP zblYi"
+                class="sc-hLQRIN cisxan"
               >
                 #
                 react
               </div>
               <div
-                class="sc-hLBbgP zblYi"
+                class="sc-hLQRIN cisxan"
               >
                 #
                 reducer
               </div>
             </div>
             <p
-              class="sc-ipEyDJ kurvKR"
+              class="sc-irLwvL fNazGe"
             >
               I often see this thing but never understood how it could be used for making life easier. Finally found some good examples and decided to…
             </p>
             <div
-              class="sc-csuSiG fTyZub"
+              class="sc-csKIKE cIICtV"
             >
               <div
-                class="sc-gswNZR cChstI"
+                class="sc-guDLRT dWLgND"
               >
                 <a
                   aria-current="page"
@@ -187,13 +187,13 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bcXHqe nQypH"
+      class="sc-beySbM bWCQsC"
     >
       <article
-        class="sc-eDvSVe fNeIRt"
+        class="sc-eDLJxc ekBwos"
       >
         <div
-          class="sc-jSUZER hQtWuL"
+          class="sc-jTQDnj ivLDTH"
         >
           <div
             class=" gatsby-image-wrapper"
@@ -246,13 +246,13 @@ Object {
           </div>
         </div>
         <div
-          class="sc-pyfCe kyxvZD"
+          class="sc-qZqnM kfIIkp"
         >
           <div
-            class="sc-iBYQkv fYiweY"
+            class="sc-iBdmCd jTEuYV"
           >
             <div
-              class="sc-gKPRtg kalWvG"
+              class="sc-gLLvby kreuZb"
             >
               <div
                 class=" gatsby-image-wrapper"
@@ -305,52 +305,52 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ftTHYK OpyHj"
+              class="sc-fsYeqs dnlRLq"
             >
               <span
-                class="sc-jrcTuL bRnaFi"
+                class="sc-jsEegt fgaaoo"
               >
                 React Reducer a Short Example
               </span>
               <div
-                class="sc-kDvujY FJGnx"
+                class="sc-kFCsca loqIn"
               >
                 May 29th, 2020
               </div>
             </div>
           </div>
           <div
-            class="sc-dkrFOg hDpjqm"
+            class="sc-dmyDGi fiDrGR"
           >
             <div
-              class="sc-hLBbgP zblYi"
+              class="sc-hLQRIN cisxan"
             >
               #
               js
             </div>
             <div
-              class="sc-hLBbgP zblYi"
+              class="sc-hLQRIN cisxan"
             >
               #
               react
             </div>
             <div
-              class="sc-hLBbgP zblYi"
+              class="sc-hLQRIN cisxan"
             >
               #
               reducer
             </div>
           </div>
           <p
-            class="sc-ipEyDJ kurvKR"
+            class="sc-irLwvL fNazGe"
           >
             I often see this thing but never understood how it could be used for making life easier. Finally found some good examples and decided to…
           </p>
           <div
-            class="sc-csuSiG fTyZub"
+            class="sc-csKIKE cIICtV"
           >
             <div
-              class="sc-gswNZR cChstI"
+              class="sc-guDLRT dWLgND"
             >
               <a
                 aria-current="page"
