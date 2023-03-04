@@ -1,23 +1,27 @@
 // this is to install code syntax highlighting
-import { graphql } from "gatsby";
-import Image from "gatsby-image";
-import React, { useContext } from "react";
 import "../../../node_modules/highlight.js/styles/railscasts.css";
+
+import { MDXProvider } from "@mdx-js/react";
+import { graphql } from "gatsby";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
+import React, { useContext } from "react";
+
 import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
 import Layout from "../Layout";
 import PostDetails from "../PostDetails";
 import {
   DateDivWrapper,
+  ImageWrapper,
   PostTagDivWrapper,
   TagsDivWrapper,
   TemplateDivWrapper,
   TitleDivWrapper,
-  ImageWrapper,
 } from "./styles";
 
 interface TemplateData {
   data: {
     mdx: {
+      body: any;
       frontmatter: {
         title: string;
         date: string;
@@ -25,27 +29,26 @@ interface TemplateData {
         tags: string[];
         image: {
           childImageSharp: {
-            fluid: any;
+            gatsbyImageData: IGatsbyImageData;
           };
         };
       };
-      body: any;
     };
   };
+  children: any;
 }
 
-const postTemplate = ({ data }: TemplateData) => {
+const PostTemplate = (props: TemplateData) => {
   const {
     frontmatter: {
       title,
       date,
       image: {
-        childImageSharp: { fluid: img },
+        childImageSharp: { gatsbyImageData: img },
       },
       tags,
     },
-    body,
-  } = data.mdx;
+  } = props.data.mdx;
 
   const {
     state: { theme },
@@ -70,9 +73,11 @@ const postTemplate = ({ data }: TemplateData) => {
           </TagsDivWrapper>
         </div>
         <ImageWrapper>
-          <Image fluid={img} />
+          <GatsbyImage image={img} alt="img" />
         </ImageWrapper>
-        <PostDetails body={body} />
+        <PostDetails>
+          <MDXProvider>{props.children}</MDXProvider>
+        </PostDetails>
       </TemplateDivWrapper>
     </Layout>
   );
@@ -81,6 +86,7 @@ const postTemplate = ({ data }: TemplateData) => {
 export const query = graphql`
   query getPost($slug: String) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
         slug
@@ -88,15 +94,12 @@ export const query = graphql`
         tags
         image {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
-      body
     }
   }
 `;
 
-export default postTemplate;
+export default PostTemplate;

@@ -25,10 +25,14 @@ module.exports = {
             resolve: "gatsby-remark-images",
           },
         ],
+        extensions: [`.mdx`, `.md`]
       },
     },
+    // these 3 are for gatsby images
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-playground`,

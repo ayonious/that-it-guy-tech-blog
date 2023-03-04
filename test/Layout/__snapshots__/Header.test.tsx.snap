@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header HomePage renders 1`] = `
-Object {
+{
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <nav
-        class="sc-gswNZR dVyBpv"
+        class="sc-guDLRT gqOpgE"
       >
         <div
           style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
@@ -19,7 +19,7 @@ Object {
               style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
-                class="sc-bcXHqe dewSpA"
+                class="sc-beySbM dNgWxJ"
               >
                 🌜
               </span>
@@ -28,7 +28,7 @@ Object {
               style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
-                class="sc-bcXHqe dewSpA"
+                class="sc-beySbM dNgWxJ"
               >
                 🌞
               </span>
@@ -48,7 +48,7 @@ Object {
           />
         </div>
         <div
-          class="sc-eDvSVe FsnEy"
+          class="sc-eDLJxc jxDlwD"
         >
           <a
             aria-current="page"
@@ -56,12 +56,12 @@ Object {
             href="/"
           >
             <div
-              class="sc-dkrFOg fpteCW"
+              class="sc-dmyDGi gJKnkV"
             >
               That IT Guy
             </div>
             <div
-              class="sc-hLBbgP dpnnSz"
+              class="sc-hLQRIN dvjWTG"
             >
               Personal Tech Blog
             </div>
@@ -72,7 +72,7 @@ Object {
   </body>,
   "container": <div>
     <nav
-      class="sc-gswNZR dVyBpv"
+      class="sc-guDLRT gqOpgE"
     >
       <div
         style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
@@ -85,7 +85,7 @@ Object {
             style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
-              class="sc-bcXHqe dewSpA"
+              class="sc-beySbM dNgWxJ"
             >
               🌜
             </span>
@@ -94,7 +94,7 @@ Object {
             style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
-              class="sc-bcXHqe dewSpA"
+              class="sc-beySbM dNgWxJ"
             >
               🌞
             </span>
@@ -114,7 +114,7 @@ Object {
         />
       </div>
       <div
-        class="sc-eDvSVe FsnEy"
+        class="sc-eDLJxc jxDlwD"
       >
         <a
           aria-current="page"
@@ -122,12 +122,12 @@ Object {
           href="/"
         >
           <div
-            class="sc-dkrFOg fpteCW"
+            class="sc-dmyDGi gJKnkV"
           >
             That IT Guy
           </div>
           <div
-            class="sc-hLBbgP dpnnSz"
+            class="sc-hLQRIN dvjWTG"
           >
             Personal Tech Blog
           </div>
@@ -190,12 +190,12 @@ Object {
 `;
 
 exports[`Header Non HomePage renders 1`] = `
-Object {
+{
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <nav
-        class="sc-gswNZR dVyBpv"
+        class="sc-guDLRT gqOpgE"
       >
         <div
           style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
@@ -208,7 +208,7 @@ Object {
               style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
-                class="sc-bcXHqe dewSpA"
+                class="sc-beySbM dNgWxJ"
               >
                 🌜
               </span>
@@ -217,7 +217,7 @@ Object {
               style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
-                class="sc-bcXHqe dewSpA"
+                class="sc-beySbM dNgWxJ"
               >
                 🌞
               </span>
@@ -237,7 +237,7 @@ Object {
           />
         </div>
         <div
-          class="sc-eDvSVe FsnEy"
+          class="sc-eDLJxc jxDlwD"
         >
           <a
             aria-current="page"
@@ -245,12 +245,12 @@ Object {
             href="/"
           >
             <div
-              class="sc-dkrFOg fpteCW"
+              class="sc-dmyDGi gJKnkV"
             >
               That IT Guy
             </div>
             <div
-              class="sc-hLBbgP dpnnSz"
+              class="sc-hLQRIN dvjWTG"
             >
               Personal Tech Blog
             </div>
@@ -261,7 +261,7 @@ Object {
   </body>,
   "container": <div>
     <nav
-      class="sc-gswNZR dVyBpv"
+      class="sc-guDLRT gqOpgE"
     >
       <div
         style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
@@ -274,7 +274,7 @@ Object {
             style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
-              class="sc-bcXHqe dewSpA"
+              class="sc-beySbM dNgWxJ"
             >
               🌜
             </span>
@@ -283,7 +283,7 @@ Object {
             style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
-              class="sc-bcXHqe dewSpA"
+              class="sc-beySbM dNgWxJ"
             >
               🌞
             </span>
@@ -303,7 +303,7 @@ Object {
         />
       </div>
       <div
-        class="sc-eDvSVe FsnEy"
+        class="sc-eDLJxc jxDlwD"
       >
         <a
           aria-current="page"
@@ -311,12 +311,12 @@ Object {
           href="/"
         >
           <div
-            class="sc-dkrFOg fpteCW"
+            class="sc-dmyDGi gJKnkV"
           >
             That IT Guy
           </div>
           <div
-            class="sc-hLBbgP dpnnSz"
+            class="sc-hLQRIN dvjWTG"
           >
             Personal Tech Blog
           </div>

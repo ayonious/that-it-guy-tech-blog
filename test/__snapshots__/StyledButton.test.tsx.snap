@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StyledButton renders 1`] = `
-Object {
+{
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="sc-bcXHqe jMRfMw"
+        class="sc-beySbM fmxyDt"
       >
         <a
           aria-current="page"
@@ -20,7 +20,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bcXHqe jMRfMw"
+      class="sc-beySbM fmxyDt"
     >
       <a
         aria-current="page"
