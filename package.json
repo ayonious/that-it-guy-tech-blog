@@ -13,7 +13,7 @@
     "serve": "gatsby serve",
     "cy:run": "cypress run",
     "unit-test": "jest --config jestconfig.json",
-    "test-integration": "start-server-and-test serve 9000 cy:run",
+    "test-integration": "start-server-and-test serve http://localhost:9000 cy:run",
     "clean": "gatsby clean"
   },
   "dependencies": {
