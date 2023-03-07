@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { CodeDivWrapper, CopyButtonWrapper } from "./styles";
+import React, { FC, PropsWithChildren, useState } from "react";
 import Highlight from "react-highlight.js";
+
+import { CodeDivWrapper, CopyButtonWrapper } from "./styles";
 
 const witeInClipboard = (text: string) => {
   navigator.clipboard.writeText(text);
@@ -35,7 +36,7 @@ const getCodeText = (children) => {
   return current;
 };
 
-const CodeWrapper = ({ children }) => {
+const CodeWrapper: FC<PropsWithChildren> = ({ children }) => {
   // a hacky way to getting the code part
   const codeText = getCodeText(children);
 

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, PropsWithChildren } from "react";
 
 import { Context as ThemeContext } from "../../Context/Theme/ThemeContext";
 import { TopMostDivWrapper } from "./styles";
@@ -6,12 +6,11 @@ import Footer from "./Footer";
 import Header from "./Header";
 import SEO from "./SEO";
 
-interface Props {
+interface Props extends PropsWithChildren {
   seoProps?: {
     title?: string;
     description?: string;
   };
-  children: any;
 }
 
 const Layout = ({ children, seoProps }: Props) => {

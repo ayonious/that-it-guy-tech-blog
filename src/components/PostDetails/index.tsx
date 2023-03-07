@@ -1,14 +1,9 @@
 import $ from "jquery";
-import React, { useEffect, useState } from "react";
-import { compile } from "@mdx-js/mdx";
+import React, { useEffect, PropsWithChildren, FC } from "react";
 
 import { ContentDivWrapper } from "./styles";
 
-interface Props {
-  children: any;
-}
-
-const PostDetails = ({ children }: Props) => {
+const PostDetails: FC<PropsWithChildren> = ({ children }) => {
   useEffect(() => {
     // adding hashed urls
     $("h1").wrapInner(`<span class="temporary_magic"></span>`);

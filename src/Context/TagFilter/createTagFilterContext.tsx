@@ -1,6 +1,10 @@
 import React, { useReducer } from "react";
 
-export default (reducer: any, actions: any, initialState: any) => {
+const createTagFilterContect = (
+  reducer: any,
+  actions: any,
+  initialState: any
+) => {
   const Context = React.createContext({
     state: {
       tags: [] as string[],
@@ -27,3 +31,5 @@ export default (reducer: any, actions: any, initialState: any) => {
 
   return { Context, Provider };
 };
+
+export default createTagFilterContect;

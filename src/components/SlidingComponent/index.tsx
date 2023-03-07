@@ -9,7 +9,7 @@ import React, {
 
 import { DivWrapper } from "./styles";
 
-const SlidingComponent: FC<PropsWithChildren<{}>> = ({ children }) => {
+const SlidingComponent: FC<PropsWithChildren> = ({ children }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [visible, changeVisible] = useState(false);
 
