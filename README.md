@@ -84,7 +84,7 @@ Gatsby also provides a plugin interface to create and load a service worker into
 
 ## 💯 Lighthouse Score
 
-![Lighthouse Score](DocumentationAssets/lighthouse.png)
+![Lighthouse Score](DocumentationAssets/lighthouse2.png)
 
 ## 🖼 Screenshot and Design
 
