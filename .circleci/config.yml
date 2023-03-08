@@ -18,7 +18,7 @@ jobs:
       - run:
           name: "Upload codecov report"
           command: yarn codecov
+      - run: yarn build
       - run:
           name: "Integration Tests"
           command: yarn test-integration
-      - run: yarn build
