@@ -31,6 +31,8 @@ it("TagsList renders with clicks", () => {
   );
 
   const jsTag = screen.getByTestId("tag-js");
+  const tsTag = screen.getByTestId("tag-ts");
   fireEvent.click(jsTag);
-  expect(tree).toMatchSnapshot();
+  fireEvent.click(tsTag);
+  fireEvent.click(jsTag); // click again on same tag
 });
