@@ -9,6 +9,9 @@
   <a href="https://app.netlify.com/sites/that-it-guy/deploys">
     <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/e15f1837-6f79-42fe-98f4-59016ed63297/deploy-status">
   </a>
+  <a href="https://codecov.io/gh/ayonious/that-it-guy-tech-blog" > 
+    <img src="https://codecov.io/gh/ayonious/that-it-guy-tech-blog/branch/master/graph/badge.svg?token=XH2SA0T5J8"/> 
+  </a>
 </p>
 
 > A technical Blog created by Gatsby. You can use it to write non tech blogs as well
