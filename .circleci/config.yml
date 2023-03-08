@@ -9,14 +9,16 @@ jobs:
           keys:
             - deps-hash-{{ checksum "yarn.lock" }}
             - deps-hash- # used if checksum fails
-
       - run: yarn install
-
       - save_cache:
           paths:
             - node_modules
           key: deps-hash-{{ checksum "yarn.lock" }}
-
       - run: yarn unit-test
+      - run:
+          name: "Upload codecov report"
+          command: yarn codecov
+      - run:
+          name: "Integration Tests"
+          command: yarn test-integration
       - run: yarn build
-      - run: yarn test-integration
