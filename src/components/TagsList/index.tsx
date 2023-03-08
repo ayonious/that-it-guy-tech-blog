@@ -18,9 +18,14 @@ const TagsList = (props: TagData) => {
   const { addTag } = useContext(TagFilterContext);
 
   return (
-    <TagsDivWrapper>
+    <TagsDivWrapper data-testid="tags">
       {tags.map((tag, index) => (
-        <TagDivWrapper key={index} theme={theme} onClick={() => addTag(tag)}>
+        <TagDivWrapper
+          key={index}
+          theme={theme}
+          onClick={() => addTag(tag)}
+          data-testid={`tag-${tag}`}
+        >
           #{tag}
         </TagDivWrapper>
       ))}

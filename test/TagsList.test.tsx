@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { render } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import { expect } from "@jest/globals";
 import * as React from "react";
 
@@ -18,5 +18,19 @@ it("TagsList renders", () => {
       </ThemeProvider>
     </TagsProvider>
   );
+  expect(tree).toMatchSnapshot();
+});
+
+it("TagsList renders with clicks", () => {
+  const tree = render(
+    <TagsProvider>
+      <ThemeProvider>
+        <TagsList tags={["js", "ts"]} />
+      </ThemeProvider>
+    </TagsProvider>
+  );
+
+  const jsTag = screen.getByTestId("tag-js");
+  fireEvent.click(jsTag);
   expect(tree).toMatchSnapshot();
 });
