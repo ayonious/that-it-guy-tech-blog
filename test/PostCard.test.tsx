@@ -6,8 +6,8 @@ import { render } from "@testing-library/react";
 import { expect } from "@jest/globals";
 import * as React from "react";
 
-import PostCard from ".";
-import { Provider as ThemeProvider } from "../../Context/Theme/ThemeContext";
+import PostCard from "../src/components/PostCard";
+import { Provider as ThemeProvider } from "../src/Context/Theme/ThemeContext";
 
 it("PostCard renders", () => {
   const postCard = {

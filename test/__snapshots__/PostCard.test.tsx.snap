@@ -120,21 +120,25 @@ exports[`PostCard renders 1`] = `
             </div>
             <div
               class="sc-dmyDGi fiDrGR"
+              data-testid="tags"
             >
               <div
                 class="sc-hLQRIN cisxan"
+                data-testid="tag-js"
               >
                 #
                 js
               </div>
               <div
                 class="sc-hLQRIN cisxan"
+                data-testid="tag-react"
               >
                 #
                 react
               </div>
               <div
                 class="sc-hLQRIN cisxan"
+                data-testid="tag-hooks"
               >
                 #
                 hooks
@@ -281,21 +285,25 @@ exports[`PostCard renders 1`] = `
           </div>
           <div
             class="sc-dmyDGi fiDrGR"
+            data-testid="tags"
           >
             <div
               class="sc-hLQRIN cisxan"
+              data-testid="tag-js"
             >
               #
               js
             </div>
             <div
               class="sc-hLQRIN cisxan"
+              data-testid="tag-react"
             >
               #
               react
             </div>
             <div
               class="sc-hLQRIN cisxan"
+              data-testid="tag-hooks"
             >
               #
               hooks
