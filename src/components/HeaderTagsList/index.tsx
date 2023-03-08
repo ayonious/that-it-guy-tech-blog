@@ -32,7 +32,9 @@ const HeaderTagsList = () => {
         options={allTags.map((tag) => ({ label: tag, value: tag }))}
         onChange={(items, lastEvent) => {
           if (lastEvent.action === "select-option") {
-            addTag(lastEvent.option.value);
+            if (lastEvent.option) {
+              addTag(lastEvent.option.value);
+            }
           }
           if (lastEvent.action === "remove-value") {
             removeTag(lastEvent.removedValue.value);

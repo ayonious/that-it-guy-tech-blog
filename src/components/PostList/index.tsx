@@ -13,7 +13,7 @@ export interface Post {
       tags: string[];
       image: {
         childImageSharp: {
-          fluid: any;
+          gatsbyImageData: any;
         };
       };
     };
