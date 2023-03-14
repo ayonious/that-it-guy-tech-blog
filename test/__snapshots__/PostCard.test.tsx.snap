@@ -6,13 +6,13 @@ exports[`PostCard renders 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="sc-beySbM bWCQsC"
+        class="sc-beqWaB xNMTH"
       >
         <article
-          class="sc-eDLJxc ekBwos"
+          class="sc-eDDNvR hzitca"
         >
           <div
-            class="sc-jTQDnj ivLDTH"
+            class="sc-jTrPJq eLgXwu"
           >
             <div
               class="gatsby-image-wrapper"
@@ -55,13 +55,13 @@ exports[`PostCard renders 1`] = `
             </div>
           </div>
           <div
-            class="sc-qZqnM kfIIkp"
+            class="sc-qRumB hoaZPs"
           >
             <div
-              class="sc-iBdmCd jTEuYV"
+              class="sc-iAEyYk fbSDPr"
             >
               <div
-                class="sc-gLLvby kreuZb"
+                class="sc-gLDzan kCebHi"
               >
                 <div
                   class="gatsby-image-wrapper"
@@ -104,40 +104,40 @@ exports[`PostCard renders 1`] = `
                 </div>
               </div>
               <div
-                class="sc-fsYeqs dnlRLq"
+                class="sc-fsQiph jBYILx"
               >
                 <span
-                  class="sc-jsEegt fgaaoo"
+                  class="sc-jsMahE lbJlyf"
                 >
                   React Hooks - memo
                 </span>
                 <div
-                  class="sc-kFCsca loqIn"
+                  class="sc-kFuwaP juZPID"
                 >
                   July 3rd, 2021
                 </div>
               </div>
             </div>
             <div
-              class="sc-dmyDGi fiDrGR"
+              class="sc-dmqHEX hzAYSD"
               data-testid="tags"
             >
               <div
-                class="sc-hLQRIN cisxan"
+                class="sc-hLseeU esFlpI"
                 data-testid="tag-js"
               >
                 #
                 js
               </div>
               <div
-                class="sc-hLQRIN cisxan"
+                class="sc-hLseeU esFlpI"
                 data-testid="tag-react"
               >
                 #
                 react
               </div>
               <div
-                class="sc-hLQRIN cisxan"
+                class="sc-hLseeU esFlpI"
                 data-testid="tag-hooks"
               >
                 #
@@ -145,15 +145,15 @@ exports[`PostCard renders 1`] = `
               </div>
             </div>
             <p
-              class="sc-irLwvL fNazGe"
+              class="sc-irTswW cfJQfV"
             >
               In simple words this controls when to not re-render your component. I got a situation recently where a Form component was re-rendering and…
             </p>
             <div
-              class="sc-csKIKE cIICtV"
+              class="sc-csCMJt bZdauM"
             >
               <div
-                class="sc-guDLRT dWLgND"
+                class="sc-gueYoa kuUmMC"
               >
                 <a
                   aria-current="page"
@@ -171,13 +171,13 @@ exports[`PostCard renders 1`] = `
   </body>,
   "container": <div>
     <div
-      class="sc-beySbM bWCQsC"
+      class="sc-beqWaB xNMTH"
     >
       <article
-        class="sc-eDLJxc ekBwos"
+        class="sc-eDDNvR hzitca"
       >
         <div
-          class="sc-jTQDnj ivLDTH"
+          class="sc-jTrPJq eLgXwu"
         >
           <div
             class="gatsby-image-wrapper"
@@ -220,13 +220,13 @@ exports[`PostCard renders 1`] = `
           </div>
         </div>
         <div
-          class="sc-qZqnM kfIIkp"
+          class="sc-qRumB hoaZPs"
         >
           <div
-            class="sc-iBdmCd jTEuYV"
+            class="sc-iAEyYk fbSDPr"
           >
             <div
-              class="sc-gLLvby kreuZb"
+              class="sc-gLDzan kCebHi"
             >
               <div
                 class="gatsby-image-wrapper"
@@ -269,40 +269,40 @@ exports[`PostCard renders 1`] = `
               </div>
             </div>
             <div
-              class="sc-fsYeqs dnlRLq"
+              class="sc-fsQiph jBYILx"
             >
               <span
-                class="sc-jsEegt fgaaoo"
+                class="sc-jsMahE lbJlyf"
               >
                 React Hooks - memo
               </span>
               <div
-                class="sc-kFCsca loqIn"
+                class="sc-kFuwaP juZPID"
               >
                 July 3rd, 2021
               </div>
             </div>
           </div>
           <div
-            class="sc-dmyDGi fiDrGR"
+            class="sc-dmqHEX hzAYSD"
             data-testid="tags"
           >
             <div
-              class="sc-hLQRIN cisxan"
+              class="sc-hLseeU esFlpI"
               data-testid="tag-js"
             >
               #
               js
             </div>
             <div
-              class="sc-hLQRIN cisxan"
+              class="sc-hLseeU esFlpI"
               data-testid="tag-react"
             >
               #
               react
             </div>
             <div
-              class="sc-hLQRIN cisxan"
+              class="sc-hLseeU esFlpI"
               data-testid="tag-hooks"
             >
               #
@@ -310,15 +310,15 @@ exports[`PostCard renders 1`] = `
             </div>
           </div>
           <p
-            class="sc-irLwvL fNazGe"
+            class="sc-irTswW cfJQfV"
           >
             In simple words this controls when to not re-render your component. I got a situation recently where a Form component was re-rendering and…
           </p>
           <div
-            class="sc-csKIKE cIICtV"
+            class="sc-csCMJt bZdauM"
           >
             <div
-              class="sc-guDLRT dWLgND"
+              class="sc-gueYoa kuUmMC"
             >
               <a
                 aria-current="page"

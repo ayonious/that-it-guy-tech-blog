@@ -6,30 +6,30 @@ exports[`Footer renders 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="sc-jTQDnj iOfJiF"
+        class="sc-jTrPJq gnnOSw"
       >
         <div
-          class="sc-beySbM hsKUHM"
+          class="sc-beqWaB aMWgJ"
         >
           <div
-            class="sc-dmyDGi eKoWHb"
+            class="sc-dmqHEX jmgPkl"
           >
             <span
-              class="sc-eDLJxc cDWzOx"
+              class="sc-eDDNvR iVMjGf"
             >
               This is an opensource project you can find the source code in
             </span>
             <a
-              class="sc-guDLRT bsCpJm"
+              class="sc-gueYoa iJSZnr"
               href="https://github.com/ayonious/that-it-guy-tech-blog"
             >
               <span
-                class="sc-eDLJxc cDWzOx"
+                class="sc-eDDNvR iVMjGf"
               >
                 github
               </span>
               <span
-                class="sc-hLQRIN hTQGWz"
+                class="sc-hLseeU cszBgY"
               >
                 <svg
                   fill="currentColor"
@@ -54,30 +54,30 @@ exports[`Footer renders 1`] = `
   </body>,
   "container": <div>
     <nav
-      class="sc-jTQDnj iOfJiF"
+      class="sc-jTrPJq gnnOSw"
     >
       <div
-        class="sc-beySbM hsKUHM"
+        class="sc-beqWaB aMWgJ"
       >
         <div
-          class="sc-dmyDGi eKoWHb"
+          class="sc-dmqHEX jmgPkl"
         >
           <span
-            class="sc-eDLJxc cDWzOx"
+            class="sc-eDDNvR iVMjGf"
           >
             This is an opensource project you can find the source code in
           </span>
           <a
-            class="sc-guDLRT bsCpJm"
+            class="sc-gueYoa iJSZnr"
             href="https://github.com/ayonious/that-it-guy-tech-blog"
           >
             <span
-              class="sc-eDLJxc cDWzOx"
+              class="sc-eDDNvR iVMjGf"
             >
               github
             </span>
             <span
-              class="sc-hLQRIN hTQGWz"
+              class="sc-hLseeU cszBgY"
             >
               <svg
                 fill="currentColor"
