@@ -6,7 +6,7 @@ exports[`Header HomePage renders 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="sc-gueYoa eMEPql"
+        class="sc-hKDTPf gjInFJ"
       >
         <div
           style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
@@ -19,7 +19,7 @@ exports[`Header HomePage renders 1`] = `
               style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
-                class="sc-beqWaB cxUhTA"
+                class="sc-bXdtCk eLkhOF"
               >
                 🌜
               </span>
@@ -28,7 +28,7 @@ exports[`Header HomePage renders 1`] = `
               style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
-                class="sc-beqWaB cxUhTA"
+                class="sc-bXdtCk eLkhOF"
               >
                 🌞
               </span>
@@ -48,20 +48,18 @@ exports[`Header HomePage renders 1`] = `
           />
         </div>
         <div
-          class="sc-eDDNvR XVHoV"
+          class="sc-dYOLZc duCmuC"
         >
           <a
-            aria-current="page"
-            class=""
             href="/"
           >
             <div
-              class="sc-dmqHEX kyYkCb"
+              class="sc-fmZSGO ifHdHZ"
             >
               That IT Guy
             </div>
             <div
-              class="sc-hLseeU llrlfZ"
+              class="sc-gwsNht gsfFzX"
             >
               Personal Tech Blog
             </div>
@@ -72,7 +70,7 @@ exports[`Header HomePage renders 1`] = `
   </body>,
   "container": <div>
     <nav
-      class="sc-gueYoa eMEPql"
+      class="sc-hKDTPf gjInFJ"
     >
       <div
         style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
@@ -85,7 +83,7 @@ exports[`Header HomePage renders 1`] = `
             style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
-              class="sc-beqWaB cxUhTA"
+              class="sc-bXdtCk eLkhOF"
             >
               🌜
             </span>
@@ -94,7 +92,7 @@ exports[`Header HomePage renders 1`] = `
             style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
-              class="sc-beqWaB cxUhTA"
+              class="sc-bXdtCk eLkhOF"
             >
               🌞
             </span>
@@ -114,20 +112,18 @@ exports[`Header HomePage renders 1`] = `
         />
       </div>
       <div
-        class="sc-eDDNvR XVHoV"
+        class="sc-dYOLZc duCmuC"
       >
         <a
-          aria-current="page"
-          class=""
           href="/"
         >
           <div
-            class="sc-dmqHEX kyYkCb"
+            class="sc-fmZSGO ifHdHZ"
           >
             That IT Guy
           </div>
           <div
-            class="sc-hLseeU llrlfZ"
+            class="sc-gwsNht gsfFzX"
           >
             Personal Tech Blog
           </div>
@@ -195,7 +191,7 @@ exports[`Header Non HomePage renders 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="sc-gueYoa eMEPql"
+        class="sc-hKDTPf gjInFJ"
       >
         <div
           style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
@@ -208,7 +204,7 @@ exports[`Header Non HomePage renders 1`] = `
               style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
-                class="sc-beqWaB cxUhTA"
+                class="sc-bXdtCk eLkhOF"
               >
                 🌜
               </span>
@@ -217,7 +213,7 @@ exports[`Header Non HomePage renders 1`] = `
               style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
-                class="sc-beqWaB cxUhTA"
+                class="sc-bXdtCk eLkhOF"
               >
                 🌞
               </span>
@@ -237,20 +233,18 @@ exports[`Header Non HomePage renders 1`] = `
           />
         </div>
         <div
-          class="sc-eDDNvR XVHoV"
+          class="sc-dYOLZc duCmuC"
         >
           <a
-            aria-current="page"
-            class=""
             href="/"
           >
             <div
-              class="sc-dmqHEX kyYkCb"
+              class="sc-fmZSGO ifHdHZ"
             >
               That IT Guy
             </div>
             <div
-              class="sc-hLseeU llrlfZ"
+              class="sc-gwsNht gsfFzX"
             >
               Personal Tech Blog
             </div>
@@ -261,7 +255,7 @@ exports[`Header Non HomePage renders 1`] = `
   </body>,
   "container": <div>
     <nav
-      class="sc-gueYoa eMEPql"
+      class="sc-hKDTPf gjInFJ"
     >
       <div
         style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
@@ -274,7 +268,7 @@ exports[`Header Non HomePage renders 1`] = `
             style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
-              class="sc-beqWaB cxUhTA"
+              class="sc-bXdtCk eLkhOF"
             >
               🌜
             </span>
@@ -283,7 +277,7 @@ exports[`Header Non HomePage renders 1`] = `
             style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
-              class="sc-beqWaB cxUhTA"
+              class="sc-bXdtCk eLkhOF"
             >
               🌞
             </span>
@@ -303,20 +297,18 @@ exports[`Header Non HomePage renders 1`] = `
         />
       </div>
       <div
-        class="sc-eDDNvR XVHoV"
+        class="sc-dYOLZc duCmuC"
       >
         <a
-          aria-current="page"
-          class=""
           href="/"
         >
           <div
-            class="sc-dmqHEX kyYkCb"
+            class="sc-fmZSGO ifHdHZ"
           >
             That IT Guy
           </div>
           <div
-            class="sc-hLseeU llrlfZ"
+            class="sc-gwsNht gsfFzX"
           >
             Personal Tech Blog
           </div>

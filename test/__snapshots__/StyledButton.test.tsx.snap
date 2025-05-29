@@ -6,11 +6,9 @@ exports[`StyledButton renders 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="sc-beqWaB gonUFQ"
+        class="sc-bXdtCk jogXKy"
       >
         <a
-          aria-current="page"
-          class=""
           href="/"
         >
           Testing Title
@@ -20,11 +18,9 @@ exports[`StyledButton renders 1`] = `
   </body>,
   "container": <div>
     <div
-      class="sc-beqWaB gonUFQ"
+      class="sc-bXdtCk jogXKy"
     >
       <a
-        aria-current="page"
-        class=""
         href="/"
       >
         Testing Title
