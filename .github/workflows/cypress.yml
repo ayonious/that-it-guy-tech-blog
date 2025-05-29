@@ -1,0 +1,98 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+    
+    # Add permissions needed for PR comments
+    permissions:
+      contents: read
+      pull-requests: write
+    
+    strategy:
+      matrix:
+        node-version: [22.x]  # Latest LTS version
+      # Don't cancel other matrix jobs if one fails
+      fail-fast: false
+    
+    steps:
+      - uses: actions/checkout@v4.2.2
+      
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4.4.0
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+      
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      
+      - name: Get Cypress cache
+        uses: actions/cache@v4.2.3
+        id: cypress-cache
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            cypress-${{ runner.os }}-
+      
+      - name: Install Cypress
+        if: steps.cypress-cache.outputs.cache-hit != 'true'
+        run: yarn cypress install
+      
+      - name: Run Cypress tests
+        id: cypress
+        uses: cypress-io/github-action@v6.9.2
+        with:
+          start: yarn start
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 120
+          browser: chrome
+          record: false
+      
+      - name: Upload Cypress screenshots
+        uses: actions/upload-artifact@v4.6.2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          if-no-files-found: ignore
+      
+      - name: Upload Cypress videos
+        uses: actions/upload-artifact@v4.6.2
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+          if-no-files-found: ignore
+
+      # Add test summary to PR
+      - name: Add PR Comment
+        if: github.event_name == 'pull_request' && (success() || failure())
+        uses: actions/github-script@v7.0.1
+        with:
+          script: |
+            const testStatus = '${{ steps.cypress.outcome }}' === 'success' ? '✅' : '❌';
+            const artifactsUrl = '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}';
+            
+            const comment = `## Cypress Test Results ${testStatus}
+            
+            **Status:** ${testStatus === '✅' ? 'All tests passed!' : 'Some tests failed'}
+            
+            ${testStatus === '❌' ? `### Test Artifacts
+            - [View Screenshots and Videos](${artifactsUrl})` : ''}
+            
+            [View Full Test Run](${artifactsUrl})`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            }); 

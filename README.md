@@ -12,6 +12,9 @@
   <a href="https://codecov.io/gh/ayonious/that-it-guy-tech-blog" > 
     <img src="https://codecov.io/gh/ayonious/that-it-guy-tech-blog/branch/master/graph/badge.svg?token=XH2SA0T5J8"/> 
   </a>
+  <a href="https://github.com/ayonious/that-it-guy-tech-blog/actions/workflows/cypress.yml">
+    <img alt="Cypress Tests" src="https://github.com/ayonious/that-it-guy-tech-blog/actions/workflows/cypress.yml/badge.svg">
+  </a>
 </p>
 
 > A technical Blog created by Gatsby. You can use it to write non tech blogs as well
