@@ -22,16 +22,25 @@ jobs:
       fail-fast: false
     
     steps:
-      - uses: actions/checkout@v4.2.2
+      - name: Checkout
+        uses: actions/checkout@v4
       
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4.4.0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '22.x'
           cache: 'yarn'
       
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      
+      - name: Clean Gatsby cache
+        run: |
+          yarn clean
+          rm -rf .cache public
+      
+      - name: Build Gatsby site
+        run: yarn build
       
       - name: Get Cypress cache
         uses: actions/cache@v4.2.3
@@ -47,30 +56,30 @@ jobs:
         run: yarn cypress install
       
       - name: Run Cypress tests
-        id: cypress
-        uses: cypress-io/github-action@v6.9.2
+        uses: cypress-io/github-action@v6
         with:
-          start: yarn start
-          wait-on: 'http://localhost:3000'
-          wait-on-timeout: 120
+          start: yarn serve
+          wait-on: 'http://localhost:9000'
+          wait-on-timeout: 300000
           browser: chrome
-          record: false
+          headless: true
+          config: baseUrl=http://localhost:9000
       
-      - name: Upload Cypress screenshots
-        uses: actions/upload-artifact@v4.6.2
+      - name: Upload screenshots on failure
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
-          if-no-files-found: ignore
+          retention-days: 7
       
-      - name: Upload Cypress videos
-        uses: actions/upload-artifact@v4.6.2
-        if: always()
+      - name: Upload videos on failure
+        uses: actions/upload-artifact@v4
+        if: failure()
         with:
           name: cypress-videos
           path: cypress/videos
-          if-no-files-found: ignore
+          retention-days: 7
 
       # Add test summary to PR
       - name: Add PR Comment
