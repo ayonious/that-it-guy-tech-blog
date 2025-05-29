@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: "/that-it-guy-tech-blog",
   siteMetadata: {
     title: "That IT Guy",
     description: "My Personal Techblog",
