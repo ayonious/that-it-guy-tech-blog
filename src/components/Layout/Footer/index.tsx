@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { GoMarkGithub } from "react-icons/go";
+import { VscGithubInverted } from "react-icons/vsc";
 
 import { Context as ThemeContext } from "../../../Context/Theme/ThemeContext";
 import {
@@ -26,7 +26,7 @@ const Footer = () => {
           <LinkCenter href="https://github.com/ayonious/that-it-guy-tech-blog">
             <SpanWrapper>github</SpanWrapper>
             <IconWrapper>
-              <GoMarkGithub />
+              <VscGithubInverted />
             </IconWrapper>
           </LinkCenter>
         </NavHeader>
