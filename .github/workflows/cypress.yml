@@ -40,7 +40,7 @@ jobs:
           rm -rf .cache public
       
       - name: Build Gatsby site
-        run: yarn build --prefix-paths
+        run: yarn build
       
       - name: Get Cypress cache
         uses: actions/cache@v4.2.3
@@ -58,12 +58,12 @@ jobs:
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
         with:
-          start: yarn serve --prefix-paths
-          wait-on: 'http://localhost:9000/that-it-guy-tech-blog'
+          start: yarn serve
+          wait-on: 'http://localhost:9000'
           wait-on-timeout: 300000
           browser: chrome
           headless: true
-          config: baseUrl=http://localhost:9000/that-it-guy-tech-blog
+          config: baseUrl=http://localhost:9000
       
       - name: Upload screenshots on failure
         uses: actions/upload-artifact@v4
