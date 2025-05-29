@@ -6,7 +6,7 @@
   "scripts": {
     "cypress-headless": "cypress run --browser chrome --headless",
     "cypress-web": "cypress open",
-    "build": "gatsby build --prefix-paths",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "gatsby develop",
