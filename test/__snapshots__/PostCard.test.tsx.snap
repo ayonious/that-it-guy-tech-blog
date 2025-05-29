@@ -3,16 +3,165 @@
 exports[`PostCard renders 1`] = `
 {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .c0 {
+  opacity: 0;
+  margin-top: 100px;
+  transition: all 0.35s ease-in-out;
+}
+
+.c13 a {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 4px 8px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+}
+
+.c13 a :hover {
+  background: rgb(255, 255, 255);
+  color: rgb(25, 25, 25);
+}
+
+.c9 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.c10 {
+  background: rgb(255, 255, 255);
+  border-radius: 7px;
+  padding: 0.2px 4px;
+  color: rgb(25, 25, 25);
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  font-size: 0.9rem;
+  margin-right: 0.2rem;
+  transition: all 0.35s ease-in-out;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.c10 :hover {
+  transition: all 0.35s ease-in-out;
+  border: 1px solid #8e8e8e;
+}
+
+.c1 {
+  border: 2px solid #8e8e8e;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.c2 {
+  display: none;
+}
+
+.c5 {
+  display: flex;
+}
+
+.c5 div {
+  width: 100px;
+}
+
+.c4 {
+  display: flex;
+  flex-direction: row;
+}
+
+.c6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 1rem;
+}
+
+.c3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.c7 {
+  font-size: 30px;
+  margin-bottom: 5px;
+  text-align: left;
+  text-overflow: clip;
+}
+
+.c8 {
+  font-size: 13px;
+  text-align: left;
+}
+
+.c11 {
+  margin-top: 1rem;
+  text-align: left;
+  text-overflow: clip;
+}
+
+.c12 {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 769px) {
+  .c1 {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .c2 {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .c2 div {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 250px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .c5 {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .c6 {
+    margin-left: 0rem;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .c7 {
+    text-overflow: clip;
+  }
+}
+
+<body>
     <div>
       <div
-        class="sc-beqWaB xNMTH"
+        class="c0"
       >
         <article
-          class="sc-eDDNvR hzitca"
+          class="c1"
         >
           <div
-            class="sc-jTrPJq eLgXwu"
+            class="c2"
           >
             <div
               class="gatsby-image-wrapper"
@@ -55,13 +204,13 @@ exports[`PostCard renders 1`] = `
             </div>
           </div>
           <div
-            class="sc-qRumB hoaZPs"
+            class="c3"
           >
             <div
-              class="sc-iAEyYk fbSDPr"
+              class="c4"
             >
               <div
-                class="sc-gLDzan kCebHi"
+                class="c5"
               >
                 <div
                   class="gatsby-image-wrapper"
@@ -104,40 +253,40 @@ exports[`PostCard renders 1`] = `
                 </div>
               </div>
               <div
-                class="sc-fsQiph jBYILx"
+                class="c6"
               >
                 <span
-                  class="sc-jsMahE lbJlyf"
+                  class="c7"
                 >
                   React Hooks - memo
                 </span>
                 <div
-                  class="sc-kFuwaP juZPID"
+                  class="c8"
                 >
                   July 3rd, 2021
                 </div>
               </div>
             </div>
             <div
-              class="sc-dmqHEX hzAYSD"
+              class="c9"
               data-testid="tags"
             >
               <div
-                class="sc-hLseeU esFlpI"
+                class="c10"
                 data-testid="tag-js"
               >
                 #
                 js
               </div>
               <div
-                class="sc-hLseeU esFlpI"
+                class="c10"
                 data-testid="tag-react"
               >
                 #
                 react
               </div>
               <div
-                class="sc-hLseeU esFlpI"
+                class="c10"
                 data-testid="tag-hooks"
               >
                 #
@@ -145,19 +294,17 @@ exports[`PostCard renders 1`] = `
               </div>
             </div>
             <p
-              class="sc-irTswW cfJQfV"
+              class="c11"
             >
               In simple words this controls when to not re-render your component. I got a situation recently where a Form component was re-rendering and…
             </p>
             <div
-              class="sc-csCMJt bZdauM"
+              class="c12"
             >
               <div
-                class="sc-gueYoa kuUmMC"
+                class="c13"
               >
                 <a
-                  aria-current="page"
-                  class=""
                   href="/"
                 >
                   Read More...
@@ -169,15 +316,164 @@ exports[`PostCard renders 1`] = `
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .c0 {
+  opacity: 0;
+  margin-top: 100px;
+  transition: all 0.35s ease-in-out;
+}
+
+.c13 a {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 4px 8px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+}
+
+.c13 a :hover {
+  background: rgb(255, 255, 255);
+  color: rgb(25, 25, 25);
+}
+
+.c9 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.c10 {
+  background: rgb(255, 255, 255);
+  border-radius: 7px;
+  padding: 0.2px 4px;
+  color: rgb(25, 25, 25);
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  font-size: 0.9rem;
+  margin-right: 0.2rem;
+  transition: all 0.35s ease-in-out;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.c10 :hover {
+  transition: all 0.35s ease-in-out;
+  border: 1px solid #8e8e8e;
+}
+
+.c1 {
+  border: 2px solid #8e8e8e;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.c2 {
+  display: none;
+}
+
+.c5 {
+  display: flex;
+}
+
+.c5 div {
+  width: 100px;
+}
+
+.c4 {
+  display: flex;
+  flex-direction: row;
+}
+
+.c6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 1rem;
+}
+
+.c3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.c7 {
+  font-size: 30px;
+  margin-bottom: 5px;
+  text-align: left;
+  text-overflow: clip;
+}
+
+.c8 {
+  font-size: 13px;
+  text-align: left;
+}
+
+.c11 {
+  margin-top: 1rem;
+  text-align: left;
+  text-overflow: clip;
+}
+
+.c12 {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 769px) {
+  .c1 {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .c2 {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .c2 div {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 250px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .c5 {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .c6 {
+    margin-left: 0rem;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .c7 {
+    text-overflow: clip;
+  }
+}
+
+<div>
     <div
-      class="sc-beqWaB xNMTH"
+      class="c0"
     >
       <article
-        class="sc-eDDNvR hzitca"
+        class="c1"
       >
         <div
-          class="sc-jTrPJq eLgXwu"
+          class="c2"
         >
           <div
             class="gatsby-image-wrapper"
@@ -220,13 +516,13 @@ exports[`PostCard renders 1`] = `
           </div>
         </div>
         <div
-          class="sc-qRumB hoaZPs"
+          class="c3"
         >
           <div
-            class="sc-iAEyYk fbSDPr"
+            class="c4"
           >
             <div
-              class="sc-gLDzan kCebHi"
+              class="c5"
             >
               <div
                 class="gatsby-image-wrapper"
@@ -269,40 +565,40 @@ exports[`PostCard renders 1`] = `
               </div>
             </div>
             <div
-              class="sc-fsQiph jBYILx"
+              class="c6"
             >
               <span
-                class="sc-jsMahE lbJlyf"
+                class="c7"
               >
                 React Hooks - memo
               </span>
               <div
-                class="sc-kFuwaP juZPID"
+                class="c8"
               >
                 July 3rd, 2021
               </div>
             </div>
           </div>
           <div
-            class="sc-dmqHEX hzAYSD"
+            class="c9"
             data-testid="tags"
           >
             <div
-              class="sc-hLseeU esFlpI"
+              class="c10"
               data-testid="tag-js"
             >
               #
               js
             </div>
             <div
-              class="sc-hLseeU esFlpI"
+              class="c10"
               data-testid="tag-react"
             >
               #
               react
             </div>
             <div
-              class="sc-hLseeU esFlpI"
+              class="c10"
               data-testid="tag-hooks"
             >
               #
@@ -310,19 +606,17 @@ exports[`PostCard renders 1`] = `
             </div>
           </div>
           <p
-            class="sc-irTswW cfJQfV"
+            class="c11"
           >
             In simple words this controls when to not re-render your component. I got a situation recently where a Form component was re-rendering and…
           </p>
           <div
-            class="sc-csCMJt bZdauM"
+            class="c12"
           >
             <div
-              class="sc-gueYoa kuUmMC"
+              class="c13"
             >
               <a
-                aria-current="page"
-                class=""
                 href="/"
               >
                 Read More...

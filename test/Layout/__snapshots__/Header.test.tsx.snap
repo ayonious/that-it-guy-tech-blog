@@ -3,10 +3,39 @@
 exports[`Header HomePage renders 1`] = `
 {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .c1 {
+  padding-left: 5px;
+}
+
+.c0 {
+  padding: 1rem 1.2rem;
+}
+
+.c3 {
+  text-align: center;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  font-size: 58px;
+  text-decoration: none;
+}
+
+.c4 {
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 15px;
+  font-style: none;
+  text-decoration: none;
+}
+
+.c2 a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+<body>
     <div>
       <nav
-        class="sc-gueYoa eMEPql"
+        class="c0"
       >
         <div
           style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
@@ -19,7 +48,7 @@ exports[`Header HomePage renders 1`] = `
               style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
-                class="sc-beqWaB cxUhTA"
+                class="c1"
               >
                 🌜
               </span>
@@ -28,7 +57,7 @@ exports[`Header HomePage renders 1`] = `
               style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
-                class="sc-beqWaB cxUhTA"
+                class="c1"
               >
                 🌞
               </span>
@@ -48,20 +77,18 @@ exports[`Header HomePage renders 1`] = `
           />
         </div>
         <div
-          class="sc-eDDNvR XVHoV"
+          class="c2"
         >
           <a
-            aria-current="page"
-            class=""
             href="/"
           >
             <div
-              class="sc-dmqHEX kyYkCb"
+              class="c3"
             >
               That IT Guy
             </div>
             <div
-              class="sc-hLseeU llrlfZ"
+              class="c4"
             >
               Personal Tech Blog
             </div>
@@ -70,9 +97,38 @@ exports[`Header HomePage renders 1`] = `
       </nav>
     </div>
   </body>,
-  "container": <div>
+  "container": .c1 {
+  padding-left: 5px;
+}
+
+.c0 {
+  padding: 1rem 1.2rem;
+}
+
+.c3 {
+  text-align: center;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  font-size: 58px;
+  text-decoration: none;
+}
+
+.c4 {
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 15px;
+  font-style: none;
+  text-decoration: none;
+}
+
+.c2 a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+<div>
     <nav
-      class="sc-gueYoa eMEPql"
+      class="c0"
     >
       <div
         style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
@@ -85,7 +141,7 @@ exports[`Header HomePage renders 1`] = `
             style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
-              class="sc-beqWaB cxUhTA"
+              class="c1"
             >
               🌜
             </span>
@@ -94,7 +150,7 @@ exports[`Header HomePage renders 1`] = `
             style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
-              class="sc-beqWaB cxUhTA"
+              class="c1"
             >
               🌞
             </span>
@@ -114,20 +170,18 @@ exports[`Header HomePage renders 1`] = `
         />
       </div>
       <div
-        class="sc-eDDNvR XVHoV"
+        class="c2"
       >
         <a
-          aria-current="page"
-          class=""
           href="/"
         >
           <div
-            class="sc-dmqHEX kyYkCb"
+            class="c3"
           >
             That IT Guy
           </div>
           <div
-            class="sc-hLseeU llrlfZ"
+            class="c4"
           >
             Personal Tech Blog
           </div>
@@ -192,10 +246,39 @@ exports[`Header HomePage renders 1`] = `
 exports[`Header Non HomePage renders 1`] = `
 {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .c1 {
+  padding-left: 5px;
+}
+
+.c0 {
+  padding: 1rem 1.2rem;
+}
+
+.c3 {
+  text-align: center;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  font-size: 58px;
+  text-decoration: none;
+}
+
+.c4 {
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 15px;
+  font-style: none;
+  text-decoration: none;
+}
+
+.c2 a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+<body>
     <div>
       <nav
-        class="sc-gueYoa eMEPql"
+        class="c0"
       >
         <div
           style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
@@ -208,7 +291,7 @@ exports[`Header Non HomePage renders 1`] = `
               style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
-                class="sc-beqWaB cxUhTA"
+                class="c1"
               >
                 🌜
               </span>
@@ -217,7 +300,7 @@ exports[`Header Non HomePage renders 1`] = `
               style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
             >
               <span
-                class="sc-beqWaB cxUhTA"
+                class="c1"
               >
                 🌞
               </span>
@@ -237,20 +320,18 @@ exports[`Header Non HomePage renders 1`] = `
           />
         </div>
         <div
-          class="sc-eDDNvR XVHoV"
+          class="c2"
         >
           <a
-            aria-current="page"
-            class=""
             href="/"
           >
             <div
-              class="sc-dmqHEX kyYkCb"
+              class="c3"
             >
               That IT Guy
             </div>
             <div
-              class="sc-hLseeU llrlfZ"
+              class="c4"
             >
               Personal Tech Blog
             </div>
@@ -259,9 +340,38 @@ exports[`Header Non HomePage renders 1`] = `
       </nav>
     </div>
   </body>,
-  "container": <div>
+  "container": .c1 {
+  padding-left: 5px;
+}
+
+.c0 {
+  padding: 1rem 1.2rem;
+}
+
+.c3 {
+  text-align: center;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  font-size: 58px;
+  text-decoration: none;
+}
+
+.c4 {
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 15px;
+  font-style: none;
+  text-decoration: none;
+}
+
+.c2 a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+<div>
     <nav
-      class="sc-gueYoa eMEPql"
+      class="c0"
     >
       <div
         style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
@@ -274,7 +384,7 @@ exports[`Header Non HomePage renders 1`] = `
             style="height: 26px; width: 32px; position: relative; opacity: 1; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
-              class="sc-beqWaB cxUhTA"
+              class="c1"
             >
               🌜
             </span>
@@ -283,7 +393,7 @@ exports[`Header Non HomePage renders 1`] = `
             style="height: 26px; width: 32px; position: absolute; opacity: 0; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
           >
             <span
-              class="sc-beqWaB cxUhTA"
+              class="c1"
             >
               🌞
             </span>
@@ -303,20 +413,18 @@ exports[`Header Non HomePage renders 1`] = `
         />
       </div>
       <div
-        class="sc-eDDNvR XVHoV"
+        class="c2"
       >
         <a
-          aria-current="page"
-          class=""
           href="/"
         >
           <div
-            class="sc-dmqHEX kyYkCb"
+            class="c3"
           >
             That IT Guy
           </div>
           <div
-            class="sc-hLseeU llrlfZ"
+            class="c4"
           >
             Personal Tech Blog
           </div>

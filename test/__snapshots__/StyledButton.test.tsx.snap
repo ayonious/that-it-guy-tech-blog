@@ -3,14 +3,25 @@
 exports[`StyledButton renders 1`] = `
 {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .c0 a {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 4px 8px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+}
+
+.c0 a :hover {
+  background: rgb(255, 255, 255);
+  color: rgb(25, 25, 25);
+}
+
+<body>
     <div>
       <div
-        class="sc-beqWaB gonUFQ"
+        class="c0"
       >
         <a
-          aria-current="page"
-          class=""
           href="/"
         >
           Testing Title
@@ -18,13 +29,24 @@ exports[`StyledButton renders 1`] = `
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .c0 a {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 4px 8px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+}
+
+.c0 a :hover {
+  background: rgb(255, 255, 255);
+  color: rgb(25, 25, 25);
+}
+
+<div>
     <div
-      class="sc-beqWaB gonUFQ"
+      class="c0"
     >
       <a
-        aria-current="page"
-        class=""
         href="/"
       >
         Testing Title

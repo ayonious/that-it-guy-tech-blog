@@ -3,21 +3,47 @@
 exports[`TagsList renders 1`] = `
 {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .c0 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.c1 {
+  background: rgb(255, 255, 255);
+  border-radius: 7px;
+  padding: 0.2px 4px;
+  color: rgb(25, 25, 25);
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  font-size: 0.9rem;
+  margin-right: 0.2rem;
+  transition: all 0.35s ease-in-out;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.c1 :hover {
+  transition: all 0.35s ease-in-out;
+  border: 1px solid #8e8e8e;
+}
+
+<body>
     <div>
       <div
-        class="sc-beqWaB eaBAic"
+        class="c0"
         data-testid="tags"
       >
         <div
-          class="sc-gueYoa eAYDpa"
+          class="c1"
           data-testid="tag-1"
         >
           #
           1
         </div>
         <div
-          class="sc-gueYoa eAYDpa"
+          class="c1"
           data-testid="tag-2"
         >
           #
@@ -26,20 +52,46 @@ exports[`TagsList renders 1`] = `
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .c0 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.c1 {
+  background: rgb(255, 255, 255);
+  border-radius: 7px;
+  padding: 0.2px 4px;
+  color: rgb(25, 25, 25);
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  font-size: 0.9rem;
+  margin-right: 0.2rem;
+  transition: all 0.35s ease-in-out;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.c1 :hover {
+  transition: all 0.35s ease-in-out;
+  border: 1px solid #8e8e8e;
+}
+
+<div>
     <div
-      class="sc-beqWaB eaBAic"
+      class="c0"
       data-testid="tags"
     >
       <div
-        class="sc-gueYoa eAYDpa"
+        class="c1"
         data-testid="tag-1"
       >
         #
         1
       </div>
       <div
-        class="sc-gueYoa eAYDpa"
+        class="c1"
         data-testid="tag-2"
       >
         #
