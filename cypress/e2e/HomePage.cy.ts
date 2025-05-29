@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe("Home Page", () => {
   beforeEach(() => {
     cy.visit("http://localhost:9000").wait(2000); //waiting long enough for all page to load
@@ -17,7 +19,6 @@ describe("Home Page", () => {
     cy.contains('🌜');
   });
 
-
   it("Filter By Tags Work", () => {
     cy.contains('Filter By Tags').click({force: true});
     cy.contains('oop').click({force: true});
@@ -33,4 +34,4 @@ describe("Home Page", () => {
     cy.contains('That IT Guy').click({force: true});
     cy.contains('But js creates this objects through prototypes.').should('not.exist');
   });
-});
+}); 

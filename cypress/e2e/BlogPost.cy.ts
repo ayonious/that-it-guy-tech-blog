@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe("Blog Page", () => {
   beforeEach(() => {
     cy.visit("http://localhost:9000/blogs/js-throttling-debounce").wait(2000); //waiting long enough for all page to load;
@@ -14,4 +16,4 @@ describe("Blog Page", () => {
     cy.contains('🌞').click({force: true});
     cy.contains('🌜');
   });
-});
+}); 
