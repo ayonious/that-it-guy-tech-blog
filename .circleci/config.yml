@@ -1,4 +1,5 @@
 version: 2.1
+
 jobs:
   build:
     docker:
@@ -8,14 +9,22 @@ jobs:
       - restore_cache:
           keys:
             - deps-hash-{{ checksum "yarn.lock" }}
-            - deps-hash- # used if checksum fails
+            - deps-hash-
       - run: yarn install
       - save_cache:
           paths:
             - node_modules
           key: deps-hash-{{ checksum "yarn.lock" }}
-      - run: yarn unit-test
+      - run: 
+          name: "Run unit tests with coverage"
+          command: yarn unit-test
       - run:
-          name: "Upload codecov report"
-          command: yarn codecov
+          name: "Download and run Codecov uploader"
+          command: |
+            curl -Os https://uploader.codecov.io/latest/linux/codecov
+            chmod +x codecov
+            ./codecov -f ./coverage/lcov.info
+      - store_artifacts:
+          path: coverage
+          destination: coverage
       - run: yarn build
