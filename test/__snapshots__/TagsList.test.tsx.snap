@@ -4,27 +4,36 @@ exports[`TagsList renders 1`] = `
 {
   "asFragment": [Function],
   "baseElement": .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 0.5rem;
 }
 
 .c1 {
-  background: rgb(255, 255, 255);
+  background: rgb(255,255,255);
   border-radius: 7px;
   padding: 0.2px 4px;
-  color: rgb(25, 25, 25);
+  color: rgb(25,25,25);
   margin-top: 0.1rem;
   margin-bottom: 0.1rem;
   font-size: 0.9rem;
   margin-right: 0.2rem;
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   border: 1px solid transparent;
   cursor: pointer;
 }
 
-.c1 :hover {
+.c1:hover {
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   border: 1px solid #8e8e8e;
 }
@@ -53,27 +62,36 @@ exports[`TagsList renders 1`] = `
     </div>
   </body>,
   "container": .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 0.5rem;
 }
 
 .c1 {
-  background: rgb(255, 255, 255);
+  background: rgb(255,255,255);
   border-radius: 7px;
   padding: 0.2px 4px;
-  color: rgb(25, 25, 25);
+  color: rgb(25,25,25);
   margin-top: 0.1rem;
   margin-bottom: 0.1rem;
   font-size: 0.9rem;
   margin-right: 0.2rem;
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   border: 1px solid transparent;
   cursor: pointer;
 }
 
-.c1 :hover {
+.c1:hover {
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   border: 1px solid #8e8e8e;
 }

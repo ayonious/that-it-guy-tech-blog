@@ -13,22 +13,31 @@ exports[`Header HomePage renders 1`] = `
 
 .c3 {
   text-align: center;
+  -webkit-letter-spacing: 5px;
+  -moz-letter-spacing: 5px;
+  -ms-letter-spacing: 5px;
   letter-spacing: 5px;
   margin-bottom: 10px;
   font-size: 58px;
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c4 {
+  -webkit-letter-spacing: 3px;
+  -moz-letter-spacing: 3px;
+  -ms-letter-spacing: 3px;
   letter-spacing: 3px;
   text-align: center;
   font-size: 15px;
   font-style: none;
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2 a {
-  color: rgb(255, 255, 255);
+  color: rgb(255,255,255);
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -107,22 +116,31 @@ exports[`Header HomePage renders 1`] = `
 
 .c3 {
   text-align: center;
+  -webkit-letter-spacing: 5px;
+  -moz-letter-spacing: 5px;
+  -ms-letter-spacing: 5px;
   letter-spacing: 5px;
   margin-bottom: 10px;
   font-size: 58px;
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c4 {
+  -webkit-letter-spacing: 3px;
+  -moz-letter-spacing: 3px;
+  -ms-letter-spacing: 3px;
   letter-spacing: 3px;
   text-align: center;
   font-size: 15px;
   font-style: none;
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2 a {
-  color: rgb(255, 255, 255);
+  color: rgb(255,255,255);
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -256,22 +274,31 @@ exports[`Header Non HomePage renders 1`] = `
 
 .c3 {
   text-align: center;
+  -webkit-letter-spacing: 5px;
+  -moz-letter-spacing: 5px;
+  -ms-letter-spacing: 5px;
   letter-spacing: 5px;
   margin-bottom: 10px;
   font-size: 58px;
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c4 {
+  -webkit-letter-spacing: 3px;
+  -moz-letter-spacing: 3px;
+  -ms-letter-spacing: 3px;
   letter-spacing: 3px;
   text-align: center;
   font-size: 15px;
   font-style: none;
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2 a {
-  color: rgb(255, 255, 255);
+  color: rgb(255,255,255);
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -350,22 +377,31 @@ exports[`Header Non HomePage renders 1`] = `
 
 .c3 {
   text-align: center;
+  -webkit-letter-spacing: 5px;
+  -moz-letter-spacing: 5px;
+  -ms-letter-spacing: 5px;
   letter-spacing: 5px;
   margin-bottom: 10px;
   font-size: 58px;
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c4 {
+  -webkit-letter-spacing: 3px;
+  -moz-letter-spacing: 3px;
+  -ms-letter-spacing: 3px;
   letter-spacing: 3px;
   text-align: center;
   font-size: 15px;
   font-style: none;
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2 a {
-  color: rgb(255, 255, 255);
+  color: rgb(255,255,255);
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 

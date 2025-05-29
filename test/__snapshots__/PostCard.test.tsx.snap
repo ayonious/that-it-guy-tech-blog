@@ -6,44 +6,56 @@ exports[`PostCard renders 1`] = `
   "baseElement": .c0 {
   opacity: 0;
   margin-top: 100px;
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
 
 .c13 a {
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgb(255,255,255);
   padding: 4px 8px;
-  color: rgb(255, 255, 255);
+  color: rgb(255,255,255);
+  -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
 
-.c13 a :hover {
-  background: rgb(255, 255, 255);
-  color: rgb(25, 25, 25);
+.c13 a:hover {
+  background: rgb(255,255,255);
+  color: rgb(25,25,25);
 }
 
 .c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 0.5rem;
 }
 
 .c10 {
-  background: rgb(255, 255, 255);
+  background: rgb(255,255,255);
   border-radius: 7px;
   padding: 0.2px 4px;
-  color: rgb(25, 25, 25);
+  color: rgb(25,25,25);
   margin-top: 0.1rem;
   margin-bottom: 0.1rem;
   font-size: 0.9rem;
   margin-right: 0.2rem;
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   border: 1px solid transparent;
   cursor: pointer;
 }
 
-.c10 :hover {
+.c10:hover {
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   border: 1px solid #8e8e8e;
 }
@@ -60,6 +72,9 @@ exports[`PostCard renders 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -68,20 +83,41 @@ exports[`PostCard renders 1`] = `
 }
 
 .c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
   justify-content: left;
   margin-left: 1rem;
 }
 
 .c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
   justify-content: left;
   margin: 1rem;
   margin-top: 1rem;
@@ -108,25 +144,41 @@ exports[`PostCard renders 1`] = `
 
 .c12 {
   margin-top: 0.8rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width:769px) {
   .c1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width:769px) {
   .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width:769px) {
   .c2 div {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -134,19 +186,19 @@ exports[`PostCard renders 1`] = `
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width:769px) {
   .c5 {
     display: none;
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width:769px) {
   .c6 {
     margin-left: 0rem;
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width:769px) {
   .c7 {
     text-overflow: clip;
   }
@@ -319,44 +371,56 @@ exports[`PostCard renders 1`] = `
   "container": .c0 {
   opacity: 0;
   margin-top: 100px;
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
 
 .c13 a {
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgb(255,255,255);
   padding: 4px 8px;
-  color: rgb(255, 255, 255);
+  color: rgb(255,255,255);
+  -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
 
-.c13 a :hover {
-  background: rgb(255, 255, 255);
-  color: rgb(25, 25, 25);
+.c13 a:hover {
+  background: rgb(255,255,255);
+  color: rgb(25,25,25);
 }
 
 .c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 0.5rem;
 }
 
 .c10 {
-  background: rgb(255, 255, 255);
+  background: rgb(255,255,255);
   border-radius: 7px;
   padding: 0.2px 4px;
-  color: rgb(25, 25, 25);
+  color: rgb(25,25,25);
   margin-top: 0.1rem;
   margin-bottom: 0.1rem;
   font-size: 0.9rem;
   margin-right: 0.2rem;
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   border: 1px solid transparent;
   cursor: pointer;
 }
 
-.c10 :hover {
+.c10:hover {
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   border: 1px solid #8e8e8e;
 }
@@ -373,6 +437,9 @@ exports[`PostCard renders 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -381,20 +448,41 @@ exports[`PostCard renders 1`] = `
 }
 
 .c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
   justify-content: left;
   margin-left: 1rem;
 }
 
 .c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
   justify-content: left;
   margin: 1rem;
   margin-top: 1rem;
@@ -421,25 +509,41 @@ exports[`PostCard renders 1`] = `
 
 .c12 {
   margin-top: 0.8rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width:769px) {
   .c1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width:769px) {
   .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width:769px) {
   .c2 div {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -447,19 +551,19 @@ exports[`PostCard renders 1`] = `
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width:769px) {
   .c5 {
     display: none;
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width:769px) {
   .c6 {
     margin-left: 0rem;
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width:769px) {
   .c7 {
     text-overflow: clip;
   }
