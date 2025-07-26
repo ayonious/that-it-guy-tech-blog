@@ -25,7 +25,7 @@
 
 ## 🎁 Features
 
-1.  **gatsby-plugin-mdx**
+1.  ***gatsby-plugin-mdx***
 
 To convert md files to websites
 
