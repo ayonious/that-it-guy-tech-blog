@@ -4,7 +4,12 @@ exports[`Header HomePage renders 1`] = `
 {
   "asFragment": [Function],
   "baseElement": .c1 {
-  padding-left: 5px;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  line-height: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -98,7 +103,12 @@ exports[`Header HomePage renders 1`] = `
     </div>
   </body>,
   "container": .c1 {
-  padding-left: 5px;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  line-height: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -247,7 +257,12 @@ exports[`Header Non HomePage renders 1`] = `
 {
   "asFragment": [Function],
   "baseElement": .c1 {
-  padding-left: 5px;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  line-height: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -341,7 +356,12 @@ exports[`Header Non HomePage renders 1`] = `
     </div>
   </body>,
   "container": .c1 {
-  padding-left: 5px;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  line-height: 1;
+  width: 100%;
 }
 
 .c0 {
