@@ -19,6 +19,22 @@
 
 > A technical Blog created by Gatsby. You can use it to write non tech blogs as well
 
+## Run locally
+
+Use Node.js 26 (also specified in `.nvmrc`).
+
+```sh
+nvm use
+npm install
+npm start
+```
+
+Open http://localhost:8000. Use `npm run build` for a production build and
+`npm run unit-test -- --runInBand` to run the unit tests.
+
+MDX stays on version 2 because `gatsby-plugin-mdx` requires it. TypeScript stays
+on version 6 because `ts-jest` does not support version 7 yet.
+
 ![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front.page.4.png)
 
 ## [Check the Demo✨](https://that-it-guy.netlify.app)

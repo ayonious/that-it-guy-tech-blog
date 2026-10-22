@@ -1,10 +1,10 @@
 import { themes } from "../../../config";
 export interface ThemeDetails {
   themeName: Themes;
-  mainGrey: String;
-  mainWhite: String;
-  mainBlack: String;
-  darkGrey: String;
+  mainGrey: string;
+  mainWhite: string;
+  mainBlack: string;
+  darkGrey: string;
 }
 
 export enum Themes {

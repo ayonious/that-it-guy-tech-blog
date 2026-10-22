@@ -10,7 +10,7 @@ export const ContentDivWrapper = styled.div`
     text-transform: capitalize;
     margin-bottom: 1rem;
     margin-left: -2rem;
-    :hover > .header-anchor {
+    &:hover > .header-anchor {
       opacity: 1;
     }
   }

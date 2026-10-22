@@ -1,5 +1,5 @@
 // this is to install code syntax highlighting
-import "../../../node_modules/highlight.js/styles/railscasts.css";
+import "highlight.js/styles/base16/railscasts.css";
 
 import { MDXProvider } from "@mdx-js/react";
 import { graphql } from "gatsby";
