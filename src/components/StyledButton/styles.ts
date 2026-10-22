@@ -8,7 +8,7 @@ export const LinkDivWrapper = styled.div`
     color: ${(p) => p.theme.mainBlack};
     text-decoration: none;
     transition: ${transitionAnimationStyle};
-    :hover {
+    &:hover {
       background: ${(p) => p.theme.mainBlack};
       color: ${(p) => p.theme.mainWhite};
     }

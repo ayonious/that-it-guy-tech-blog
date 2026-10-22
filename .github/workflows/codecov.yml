@@ -17,11 +17,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: '26.x'
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile --ignore-engines
 
       - name: Run unit tests with coverage
         run: yarn unit-test --coverage
@@ -35,4 +35,4 @@ jobs:
           flags: unittests
           name: codecov-umbrella
           fail_ci_if_error: true
-          verbose: true 
+          verbose: true

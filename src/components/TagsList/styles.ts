@@ -22,7 +22,7 @@ export const TagDivWrapper = styled.div`
   transition: ${transitionAnimationStyle};
   border: 1px solid transparent;
   cursor: pointer;
-  :hover {
+  &:hover {
     transition: ${transitionAnimationStyle};
     border: 1px solid ${(p) => p.theme.mainGrey};
   }

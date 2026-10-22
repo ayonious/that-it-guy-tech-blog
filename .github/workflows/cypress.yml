@@ -17,7 +17,7 @@ jobs:
     
     strategy:
       matrix:
-        node-version: [22.x]  # Latest LTS version
+        node-version: [26.x]
       # Don't cancel other matrix jobs if one fails
       fail-fast: false
     
@@ -28,11 +28,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: '26.x'
           cache: 'yarn'
       
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile --ignore-engines
       
       - name: Clean Gatsby cache
         run: |
@@ -104,4 +104,4 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: comment
-            }); 
+            });
