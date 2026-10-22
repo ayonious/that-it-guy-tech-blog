@@ -56,13 +56,12 @@ jobs:
         run: yarn cypress install
       
       - name: Run Cypress tests
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7
         with:
           start: yarn serve
           wait-on: 'http://localhost:9000'
           wait-on-timeout: 300000
           browser: chrome
-          headless: true
           config: baseUrl=http://localhost:9000
       
       - name: Upload screenshots on failure
