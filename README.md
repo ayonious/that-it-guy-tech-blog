@@ -25,12 +25,12 @@ Use Node.js 26 (also specified in `.nvmrc`).
 
 ```sh
 nvm use
-npm install
-npm start
+yarn install
+yarn start
 ```
 
-Open http://localhost:8000. Use `npm run build` for a production build and
-`npm run unit-test -- --runInBand` to run the unit tests.
+Open http://localhost:8000. Use `yarn build` for a production build and
+`yarn unit-test --runInBand` to run the unit tests.
 
 MDX stays on version 2 because `gatsby-plugin-mdx` requires it. TypeScript stays
 on version 6 because `ts-jest` does not support version 7 yet.
