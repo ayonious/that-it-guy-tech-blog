@@ -1,5 +1,0 @@
-{
-  "framework": "gatsby",
-  "buildCommand": "yarn build",
-  "outputDirectory": "public"
-}
