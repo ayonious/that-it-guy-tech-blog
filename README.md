@@ -124,7 +124,3 @@ Gatsby also provides a plugin interface to create and load a service worker into
 1. Mostly are Styled Components
 2. Filterbox: react-select, Theme Toggle: react-switch, Icons: react-icons
 3. Some pure css styles
-
-## 🚀 Deploy
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ayonious/that-it-guy-tech-blog)
