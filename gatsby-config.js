@@ -5,6 +5,8 @@
  */
 
 module.exports = {
+  // applied only with `gatsby build --prefix-paths` (GitHub Pages deploy)
+  pathPrefix: "/that-it-guy-tech-blog",
   siteMetadata: {
     title: "That IT Guy",
     description: "My Personal Techblog",
