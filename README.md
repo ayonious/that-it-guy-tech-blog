@@ -34,7 +34,7 @@ on version 6 because `ts-jest` does not support version 7 yet.
 
 ![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front.page.4.png)
 
-## [Check the Demo✨](https://that-it-guy.vercel.app)
+## [Check the Demo✨](https://ayonious.github.io/that-it-guy-tech-blog)
 
 ## 🎁 Features
 
@@ -60,7 +60,7 @@ https://github.com/gatsbyjs/gatsby/issues/9911#issuecomment-450099671
 5. **jquery to add hash links**
 
 This allows you to have urls like this
-https://that-it-guy.vercel.app/blogs/jquery-react#the-problem
+https://ayonious.github.io/that-it-guy-tech-blog/blogs/jquery-react#the-problem
 
 6. **Themes to change to dark mode**
 
