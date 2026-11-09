@@ -1,9 +1,17 @@
 {
-  "include": ["./src/*", "test", "test/PostCard.test.tsx", "test/StyledButton.test.tsx"],
+  "include": [
+    "./src/*",
+    "test",
+    "test/PostCard.test.tsx",
+    "test/StyledButton.test.tsx"
+  ],
   "compilerOptions": {
-    "lib": ["dom", "es2015"],
+    "lib": [
+      "dom",
+      "es2015"
+    ],
     "jsx": "react",
-    "target": "es5",
+    "target": "es2020",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -11,9 +19,10 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "rootDir": "."
   }
 }

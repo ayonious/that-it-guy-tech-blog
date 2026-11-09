@@ -1,21 +1,19 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`StyledButton renders 1`] = `
 {
   "asFragment": [Function],
   "baseElement": .c0 a {
-  border: 1px solid rgb(255,255,255);
+  border: 1px solid rgb(255, 255, 255);
   padding: 4px 8px;
-  color: rgb(255,255,255);
-  -webkit-text-decoration: none;
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
 
 .c0 a:hover {
-  background: rgb(255,255,255);
-  color: rgb(25,25,25);
+  background: rgb(255, 255, 255);
+  color: rgb(25, 25, 25);
 }
 
 <body>
@@ -32,18 +30,16 @@ exports[`StyledButton renders 1`] = `
     </div>
   </body>,
   "container": .c0 a {
-  border: 1px solid rgb(255,255,255);
+  border: 1px solid rgb(255, 255, 255);
   padding: 4px 8px;
-  color: rgb(255,255,255);
-  -webkit-text-decoration: none;
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
 
 .c0 a:hover {
-  background: rgb(255,255,255);
-  color: rgb(25,25,25);
+  background: rgb(255, 255, 255);
+  color: rgb(25, 25, 25);
 }
 
 <div>

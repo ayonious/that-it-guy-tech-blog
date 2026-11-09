@@ -10,7 +10,7 @@ import React, {
 import { DivWrapper } from "./styles";
 
 const SlidingComponent: FC<PropsWithChildren> = ({ children }) => {
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLDivElement>(null);
   const [visible, changeVisible] = useState(false);
 
   const scrollListener = throttle(() => {
@@ -18,7 +18,6 @@ const SlidingComponent: FC<PropsWithChildren> = ({ children }) => {
       return;
     }
     const { clientHeight } = document.documentElement;
-    // @ts-ignore
     const { top } = inputRef.current.getBoundingClientRect();
     const scrollPxFromBottom = clientHeight - top;
 
@@ -35,7 +34,7 @@ const SlidingComponent: FC<PropsWithChildren> = ({ children }) => {
   });
 
   return (
-    <DivWrapper ref={inputRef} visible={visible}>
+    <DivWrapper ref={inputRef} $visible={visible}>
       {children}
     </DivWrapper>
   );

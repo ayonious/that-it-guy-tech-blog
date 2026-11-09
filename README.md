@@ -6,9 +6,6 @@
   <a href="https://github.com/ayonious/that-it-guy-tech-blog/actions">
     <img alt="CI" src="https://github.com/ayonious/that-it-guy-tech-blog/workflows/CI/badge.svg">
   </a>
-  <a href="https://app.netlify.com/sites/that-it-guy/deploys">
-    <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/e15f1837-6f79-42fe-98f4-59016ed63297/deploy-status">
-  </a>
   <a href="https://codecov.io/gh/ayonious/that-it-guy-tech-blog" > 
     <img src="https://codecov.io/gh/ayonious/that-it-guy-tech-blog/branch/master/graph/badge.svg?token=XH2SA0T5J8"/> 
   </a>
@@ -19,13 +16,29 @@
 
 > A technical Blog created by Gatsby. You can use it to write non tech blogs as well
 
+## Run locally
+
+Use Node.js 26 (also specified in `.nvmrc`).
+
+```sh
+nvm use
+yarn install
+yarn start
+```
+
+Open http://localhost:8000. Use `yarn build` for a production build and
+`yarn unit-test --runInBand` to run the unit tests.
+
+MDX stays on version 2 because `gatsby-plugin-mdx` requires it. TypeScript stays
+on version 6 because `ts-jest` does not support version 7 yet.
+
 ![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/that-it-guy-tech-blog@master/DocumentationAssets/front.page.4.png)
 
-## [Check the Demo✨](https://that-it-guy.netlify.app)
+## [Check the Demo✨](https://that-it-guy.vercel.app)
 
 ## 🎁 Features
 
-1.  **gatsby-plugin-mdx**
+1.  ***gatsby-plugin-mdx***
 
 To convert md files to websites
 
@@ -47,7 +60,7 @@ https://github.com/gatsbyjs/gatsby/issues/9911#issuecomment-450099671
 5. **jquery to add hash links**
 
 This allows you to have urls like this
-https://that-it-guy.netlify.app/blogs/jquery-react#the-problem
+https://that-it-guy.vercel.app/blogs/jquery-react#the-problem
 
 6. **Themes to change to dark mode**
 
@@ -114,4 +127,4 @@ Gatsby also provides a plugin interface to create and load a service worker into
 
 ## 🚀 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ayonious/that-it-guy-tech-blog)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ayonious/that-it-guy-tech-blog)

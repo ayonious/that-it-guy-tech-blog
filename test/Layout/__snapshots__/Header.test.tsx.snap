@@ -1,10 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Header HomePage renders 1`] = `
 {
   "asFragment": [Function],
   "baseElement": .c1 {
-  padding-left: 5px;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  line-height: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -13,31 +18,22 @@ exports[`Header HomePage renders 1`] = `
 
 .c3 {
   text-align: center;
-  -webkit-letter-spacing: 5px;
-  -moz-letter-spacing: 5px;
-  -ms-letter-spacing: 5px;
   letter-spacing: 5px;
   margin-bottom: 10px;
   font-size: 58px;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c4 {
-  -webkit-letter-spacing: 3px;
-  -moz-letter-spacing: 3px;
-  -ms-letter-spacing: 3px;
   letter-spacing: 3px;
   text-align: center;
   font-size: 15px;
   font-style: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2 a {
-  color: rgb(255,255,255);
-  -webkit-text-decoration: none;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -47,7 +43,7 @@ exports[`Header HomePage renders 1`] = `
         class="c0"
       >
         <div
-          style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
+          style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;"
         >
           <div
             class="react-switch-bg"
@@ -107,7 +103,12 @@ exports[`Header HomePage renders 1`] = `
     </div>
   </body>,
   "container": .c1 {
-  padding-left: 5px;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  line-height: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -116,31 +117,22 @@ exports[`Header HomePage renders 1`] = `
 
 .c3 {
   text-align: center;
-  -webkit-letter-spacing: 5px;
-  -moz-letter-spacing: 5px;
-  -ms-letter-spacing: 5px;
   letter-spacing: 5px;
   margin-bottom: 10px;
   font-size: 58px;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c4 {
-  -webkit-letter-spacing: 3px;
-  -moz-letter-spacing: 3px;
-  -ms-letter-spacing: 3px;
   letter-spacing: 3px;
   text-align: center;
   font-size: 15px;
   font-style: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2 a {
-  color: rgb(255,255,255);
-  -webkit-text-decoration: none;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -149,7 +141,7 @@ exports[`Header HomePage renders 1`] = `
       class="c0"
     >
       <div
-        style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
+        style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;"
       >
         <div
           class="react-switch-bg"
@@ -265,7 +257,12 @@ exports[`Header Non HomePage renders 1`] = `
 {
   "asFragment": [Function],
   "baseElement": .c1 {
-  padding-left: 5px;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  line-height: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -274,31 +271,22 @@ exports[`Header Non HomePage renders 1`] = `
 
 .c3 {
   text-align: center;
-  -webkit-letter-spacing: 5px;
-  -moz-letter-spacing: 5px;
-  -ms-letter-spacing: 5px;
   letter-spacing: 5px;
   margin-bottom: 10px;
   font-size: 58px;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c4 {
-  -webkit-letter-spacing: 3px;
-  -moz-letter-spacing: 3px;
-  -ms-letter-spacing: 3px;
   letter-spacing: 3px;
   text-align: center;
   font-size: 15px;
   font-style: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2 a {
-  color: rgb(255,255,255);
-  -webkit-text-decoration: none;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -308,7 +296,7 @@ exports[`Header Non HomePage renders 1`] = `
         class="c0"
       >
         <div
-          style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
+          style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;"
         >
           <div
             class="react-switch-bg"
@@ -368,7 +356,12 @@ exports[`Header Non HomePage renders 1`] = `
     </div>
   </body>,
   "container": .c1 {
-  padding-left: 5px;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  line-height: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -377,31 +370,22 @@ exports[`Header Non HomePage renders 1`] = `
 
 .c3 {
   text-align: center;
-  -webkit-letter-spacing: 5px;
-  -moz-letter-spacing: 5px;
-  -ms-letter-spacing: 5px;
   letter-spacing: 5px;
   margin-bottom: 10px;
   font-size: 58px;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c4 {
-  -webkit-letter-spacing: 3px;
-  -moz-letter-spacing: 3px;
-  -ms-letter-spacing: 3px;
   letter-spacing: 3px;
   text-align: center;
   font-size: 15px;
   font-style: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2 a {
-  color: rgb(255,255,255);
-  -webkit-text-decoration: none;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -410,7 +394,7 @@ exports[`Header Non HomePage renders 1`] = `
       class="c0"
     >
       <div
-        style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; user-select: none;"
+        style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 13px; transition: opacity 0.25s; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;"
       >
         <div
           class="react-switch-bg"
