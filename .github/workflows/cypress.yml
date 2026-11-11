@@ -37,7 +37,7 @@ jobs:
         run: yarn build
       
       - name: Get Cypress cache
-        uses: actions/cache@v4.2.3
+        uses: actions/cache@v6.1.0
         id: cypress-cache
         with:
           path: ~/.cache/Cypress
