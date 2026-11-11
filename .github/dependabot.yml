@@ -1,0 +1,19 @@
+# Weekly updates: one grouped PR per ecosystem for all minor/patch bumps, and a
+# separate PR for each major bump.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      non-major:
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      non-major:
+        update-types: [minor, patch]
